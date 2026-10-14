@@ -1,0 +1,50 @@
+@startuml DImp-Geral-01
+title DImp-Geral-01 – Implantação do sistema Minha UFG
+left to right direction
+
+node "Smartphone" <<device>> as Smartphone {
+  node "Android" <<executionEnvironment>> as Android {
+    artifact "minha-ufg.apk\n(app Minha UFG v3.1.1)" as Apk
+    artifact "Navegador" as Navegador
+    artifact "Play Store" as PlayStoreApp
+    artifact "Visualizador de PDF" as VisPDF
+  }
+  node "Receptor GNSS (GPS)" <<device>> as Gps
+}
+
+node "Servidor de aplicação UFG" <<device>> as SrvApp {
+  node "Ambiente de execução web" <<executionEnvironment>> as AmbApi {
+    artifact "API Minha UFG" as Api
+  }
+}
+
+node "Servidor de banco de dados UFG" <<device>> as SrvBd {
+  node "SGBD" <<executionEnvironment>> as Sgbd {
+    artifact "Base Minha UFG" as Base
+  }
+}
+
+node "Servidor do painel web UFG" <<device>> as SrvPainel {
+  artifact "Painel web Minha UFG" as Painel
+}
+
+node "Estação do gestor" <<device>> as EstGestor {
+  artifact "Navegador do gestor" as NavGestor
+}
+
+node "Provedor de mapa" <<device>> as ProvMapa
+node "Google Play (servidores)" <<device>> as GooglePlay
+node "Sites da UFG\n(portal de notícias e eventos,\nstreaming da Rádio UFG,\nsistema web de segurança)" <<device>> as SitesUfg
+
+Apk -- Api : HTTPS / REST (JSON)
+Apk -- ProvMapa : HTTPS (blocos do mapa)
+Apk -- Gps : Android Location API
+Apk -- Navegador : Intent Android (ACTION_VIEW, URL)
+Apk -- PlayStoreApp : Intent Android (market://)
+Apk -- VisPDF : Intent Android (ACTION_VIEW, application/pdf)
+Navegador -- SitesUfg : HTTPS
+PlayStoreApp -- GooglePlay : HTTPS
+Api -- Base : TCP/IP (SQL)
+Painel -- Api : HTTPS / REST (JSON)
+NavGestor -- Painel : HTTPS
+@enduml
