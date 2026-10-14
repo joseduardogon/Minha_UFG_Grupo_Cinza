@@ -51,9 +51,10 @@ A entrega o modelo de dados da Avaliação até 10/10. Enquanto isso, B começa 
 - **Membro da comunidade UFG** (anônimo)
 - **Avaliador** (membro da comunidade que registra avaliação; anônimo)
 - **Servidor/API**
-- **Painel web**
-- **Play Store / navegador**
+- **Aplicativo externo**, generalização de três atores: **Play Store**, **Navegador** e **Visualizador de PDF**
 - **Provedor de mapa / GPS**
+
+O **Painel web** não interage com o app; ele alimenta o Servidor/API. Por isso aparece só no DImp, não nos DCdu.
 
 D publica o rascunho do diagrama de casos de uso geral; cada pessoa detalha os casos de uso da sua fatia, sem limite de quantidade: os que forem necessários para cobrir a funcionalidade por completo.
 
