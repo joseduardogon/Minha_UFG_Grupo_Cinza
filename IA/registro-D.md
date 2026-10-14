@@ -9,7 +9,7 @@ A referência ABNT que vai para a bibliografia aparece no fim de cada entrada.
 - **URL:** claude.ai
 - **Data de acesso:** 14 de outubro de 2026.
 - **Contexto fornecido:** enunciado da APS (2026-2-INF0290-Definio_de_APS.pdf), contrato-base.md, contexto-equipe.md, "Roteiro de atividades pessoa D semana 1" e 17 capturas de tela do app Minha UFG v3.1.1.
-- **Uso da resposta:** verificação de lacunas antes do D-PRE-01; geração da estrutura de pastas do repositório, do `Template-Item.md` e deste registro; orientação para aplicar as alterações via git bundle; definição dos atores e do rascunho do DCdu geral (D-DST-01); ajuste da seção 5 do contrato.
+- **Uso da resposta:** verificação de lacunas antes do D-PRE-01; geração da estrutura de pastas do repositório, do `Template-Item.md` e deste registro; orientação para aplicar as alterações via git bundle; definição dos atores e do rascunho do DCdu geral (D-DST-01); ajuste da seção 5 do contrato; geração do DPac e do DImp (D-DST-02) e dos componentes, classes e estados do pacote Comum (D-DST-03).
 
 ### Prompt 1
 
@@ -68,6 +68,10 @@ A referência ABNT que vai para a bibliografia aparece no fim de cada entrada.
 > sobre o que você assumiu e deduziu, tá tudo correto.
 >
 > com isso, qual a maneira mais pratica de você me enviar a implementação? via bundle? não vou abrir o PR ainda. vou deixar para abrir um pr único com os commits relativos a D-DST-01 até D-DST-03
+
+### Prompt 10
+
+> diagrama ok. vamos agilizar esse processo. já me mande de uma vez o bundle completo para D-DST-02 e D-DST-03. eu reviso tudo de uma vez e se tiver alguma inconsistencia e erro te aviso e vamos ajustando. mande o bundle detalhado e completo.
 
 ### Referência (ABNT)
 

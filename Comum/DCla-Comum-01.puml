@@ -1,0 +1,37 @@
+@startuml DCla-Comum-01
+title DCla-Comum-01 – Classes do componente LinkExterno
+hide empty members
+
+interface ILinkExterno {
+  + abrirUrl(url: String): ResultadoAbertura
+  + abrirLoja(idPacote: String): ResultadoAbertura
+  + abrirDocumento(url: String, tipoMime: String): ResultadoAbertura
+}
+
+class AberturaLinkExterno {
+  - prefixoLoja: String = "market://details?id="
+  - prefixoLojaWeb: String = "https://play.google.com/store/apps/details?id="
+  + abrirUrl(url: String): ResultadoAbertura
+  + abrirLoja(idPacote: String): ResultadoAbertura
+  + abrirDocumento(url: String, tipoMime: String): ResultadoAbertura
+  - urlValida(url: String): Boolean
+  - existeAppCompativel(intencao: Intencao): Boolean
+  - disparar(intencao: Intencao): void
+}
+
+class Intencao {
+  + acao: String
+  + dados: String
+  + tipoMime: String
+}
+
+enum ResultadoAbertura {
+  ABERTO
+  URL_INVALIDA
+  SEM_APP_COMPATIVEL
+}
+
+ILinkExterno <|.. AberturaLinkExterno
+AberturaLinkExterno ..> Intencao : <<create>>
+ILinkExterno ..> ResultadoAbertura
+@enduml

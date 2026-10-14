@@ -1,0 +1,27 @@
+@startuml DEst-Comum-01
+title DEst-Comum-01 – Estados genéricos de tela com conteúdo remoto
+hide empty description
+
+[*] --> Carregando : aoEntrarNaTela
+
+state Carregando : entry / fonte.carregar()
+state Exibindo : entry / exibir dados
+state Vazio : entry / exibir mensagem de vazio
+state "Indisponível" as Indisponivel : entry / exibir mensagem de indisponibilidade
+
+Carregando --> Exibindo : carga concluída [dados não vazios]
+Carregando --> Vazio : carga concluída [dados vazios]
+Carregando --> Indisponivel : ErroApi [qualquer tipo]
+
+Exibindo --> Carregando : recarregar
+Vazio --> Carregando : recarregar
+Indisponivel --> Carregando : recarregar
+
+Exibindo --> Carregando : aoEntrarNaTela\n(voltar à tela)
+Vazio --> Carregando : aoEntrarNaTela\n(voltar à tela)
+Indisponivel --> Carregando : aoEntrarNaTela\n(voltar à tela)
+
+Exibindo --> [*] : sair da tela
+Vazio --> [*] : sair da tela
+Indisponivel --> [*] : sair da tela
+@enduml

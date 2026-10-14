@@ -1,0 +1,38 @@
+@startuml DCmp-Comum-01
+title DCmp-Comum-01 – Componentes do pacote Comum
+left to right direction
+skinparam componentStyle uml2
+
+package "Comum" {
+  component "LinkExterno" as LinkExterno
+  component "AcessoApi" as AcessoApi
+  component "EstadosTelaRemota" as EstadosTelaRemota
+  component "ProvedorMapa" as ProvedorMapa
+
+  interface "ILinkExterno" as ILinkExterno
+  interface "IAcessoApi" as IAcessoApi
+  interface "IControladorTelaRemota" as IControladorTelaRemota
+  interface "IProvedorMapa" as IProvedorMapa
+  interface "ILocalizacao" as ILocalizacao
+  interface "IFonteDados" as IFonteDados
+}
+
+LinkExterno -- ILinkExterno
+AcessoApi -- IAcessoApi
+EstadosTelaRemota -- IControladorTelaRemota
+ProvedorMapa -- IProvedorMapa
+ProvedorMapa -- ILocalizacao
+
+EstadosTelaRemota ..> IAcessoApi : <<use>>\nErroApi
+EstadosTelaRemota ..> IFonteDados : <<use>>
+
+interface "Intent Android" as Intent
+interface "HTTPS / REST" as Https
+interface "SDK do provedor de mapa" as SdkMapa
+interface "Android Location API" as LocApi
+
+LinkExterno ..> Intent : <<use>>
+AcessoApi ..> Https : <<use>>
+ProvedorMapa ..> SdkMapa : <<use>>
+ProvedorMapa ..> LocApi : <<use>>
+@enduml
