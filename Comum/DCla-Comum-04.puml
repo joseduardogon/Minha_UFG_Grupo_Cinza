@@ -1,0 +1,51 @@
+@startuml DCla-Comum-04
+title DCla-Comum-04 – Classes do componente ProvedorMapa
+hide empty members
+
+interface IProvedorMapa {
+  + exibirMapa(centro: Coordenada, zoom: Integer): void
+  + adicionarMarcador(marcador: Marcador): void
+  + destacarMarcador(idMarcador: String): void
+  + centralizarEm(posicao: Coordenada): void
+  + limparMarcadores(): void
+}
+
+interface ILocalizacao {
+  + permissaoConcedida(): Boolean
+  + solicitarPermissao(): Boolean
+  + obterLocalizacaoAtual(): Coordenada
+}
+
+class AdaptadorProvedorMapa {
+  - zoomPadrao: Integer
+  + exibirMapa(centro: Coordenada, zoom: Integer): void
+  + adicionarMarcador(marcador: Marcador): void
+  + destacarMarcador(idMarcador: String): void
+  + centralizarEm(posicao: Coordenada): void
+  + limparMarcadores(): void
+}
+
+class AdaptadorGps {
+  + permissaoConcedida(): Boolean
+  + solicitarPermissao(): Boolean
+  + obterLocalizacaoAtual(): Coordenada
+}
+
+class Marcador {
+  + id: String
+  + rotulo: String
+  + cor: String
+  + destacado: Boolean
+}
+
+class Coordenada {
+  + latitude: Real
+  + longitude: Real
+}
+
+IProvedorMapa <|.. AdaptadorProvedorMapa
+ILocalizacao <|.. AdaptadorGps
+AdaptadorProvedorMapa "1" o-- "0..*" Marcador : marcadores
+Marcador --> "1" Coordenada : posicao
+AdaptadorGps ..> Coordenada : <<create>>
+@enduml

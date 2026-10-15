@@ -1,0 +1,47 @@
+@startuml DPac-Geral-01
+title DPac-Geral-01 – Pacotes do app Minha UFG
+skinparam packageStyle folder
+skinparam nodesep 25
+skinparam ranksep 70
+
+package "Inicio" as Inicio
+
+package "Seguranca" as Seguranca
+package "Radio" as Radio
+package "Guia" as Guia
+package "Eventos" as Eventos
+package "Noticias" as Noticias
+package "RU" as RU
+package "AppsUFG" as AppsUFG
+package "AvalConsultar" as AvalConsultar
+package "AvalRegistrar" as AvalRegistrar
+package "Locais" as Locais
+
+package "Comum" as Comum
+
+Inicio ..> Seguranca
+Inicio ..> Radio
+Inicio ..> Guia
+Inicio ..> Eventos
+Inicio ..> Noticias
+Inicio ..> RU
+Inicio ..> AppsUFG
+Inicio ..> AvalConsultar
+Inicio ..> AvalRegistrar
+Inicio ..> Locais
+
+AvalConsultar ..> AvalRegistrar
+AvalConsultar ..> Locais
+AvalRegistrar ..> Locais
+
+Seguranca ..> Comum
+Radio ..> Comum
+Guia ..> Comum
+Eventos ..> Comum
+Noticias ..> Comum
+RU ..> Comum
+AppsUFG ..> Comum
+AvalConsultar ..> Comum
+AvalRegistrar ..> Comum
+Locais ..> Comum
+@enduml

@@ -1,0 +1,59 @@
+@startuml DCdu-Geral-01
+title DCdu-Geral-01 – Casos de uso gerais do app Minha UFG (rascunho)
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membro da comunidade UFG" as Membro
+actor "Avaliador" as Avaliador
+Avaliador -up-|> Membro
+
+actor "Servidor/API" as API <<sistema>>
+actor "Provedor de mapa / GPS" as Mapa <<sistema>>
+actor "Aplicativo externo" as AppExt <<sistema>>
+actor "Play Store" as PlayStore <<sistema>>
+actor "Navegador" as Navegador <<sistema>>
+actor "Visualizador de PDF" as VisPDF <<sistema>>
+PlayStore -up-|> AppExt
+Navegador -up-|> AppExt
+VisPDF -up-|> AppExt
+
+rectangle "App Minha UFG" {
+  usecase "Solicitar apoio\nde segurança" as UC01
+  usecase "Consultar programação\nda rádio" as UC02
+  usecase "Consultar guia\nestudantil" as UC03
+  usecase "Consultar eventos" as UC04
+  usecase "Consultar notícias" as UC05
+  usecase "Consultar cardápio\ndo RU" as UC06
+  usecase "Localizar locais" as UC07
+  usecase "Consultar apps UFG" as UC08
+  usecase "Avaliar UA" as UC09
+  usecase "Consultar notas\nde avaliação" as UC10
+}
+
+Membro --> UC01
+Membro --> UC02
+Membro --> UC03
+Membro --> UC04
+Membro --> UC05
+Membro --> UC06
+Membro --> UC07
+Membro --> UC08
+Membro --> UC10
+Avaliador --> UC09
+
+UC01 --> Navegador
+UC01 --> PlayStore
+UC02 --> API
+UC02 --> Navegador
+UC03 --> VisPDF
+UC04 --> API
+UC04 --> Navegador
+UC05 --> API
+UC05 --> Navegador
+UC06 --> API
+UC07 --> API
+UC07 --> Mapa
+UC08 --> PlayStore
+UC09 --> API
+UC10 --> API
+@enduml

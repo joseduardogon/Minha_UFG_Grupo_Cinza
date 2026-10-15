@@ -1,0 +1,50 @@
+@startuml DCla-Comum-03
+title DCla-Comum-03 – Classes do componente EstadosTelaRemota
+hide empty members
+
+package "AcessoApi (DCla-Comum-02)" {
+  class ErroApi
+}
+
+interface "IFonteDados<T>" as IFonteDados {
+  + carregar(): List<T>
+}
+
+interface "IControladorTelaRemota<T>" as IControlador {
+  + aoEntrarNaTela(): void
+  + recarregar(): void
+  + obterEstado(): EstadoTela
+  + obterDados(): List<T>
+  + registrarObservador(o: IObservadorEstado): void
+}
+
+class "ControladorTelaRemota<T>" as Controlador {
+  - dados: List<T>
+  + ControladorTelaRemota(fonte: IFonteDados<T>)
+  + aoEntrarNaTela(): void
+  + recarregar(): void
+  + obterEstado(): EstadoTela
+  + obterDados(): List<T>
+  + registrarObservador(o: IObservadorEstado): void
+  - definirEstado(novo: EstadoTela): void
+  - notificar(): void
+}
+
+interface IObservadorEstado {
+  + aoMudarEstado(estado: EstadoTela): void
+}
+
+enum EstadoTela {
+  CARREGANDO
+  EXIBINDO
+  VAZIO
+  INDISPONIVEL
+}
+
+IControlador <|.. Controlador
+Controlador --> "1" IFonteDados : fonte
+Controlador --> "0..*" IObservadorEstado : observadores
+Controlador --> "1" EstadoTela : estadoAtual
+Controlador ..> ErroApi : <<use>>
+
+@enduml
