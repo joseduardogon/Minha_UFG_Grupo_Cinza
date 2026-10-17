@@ -1,0 +1,27 @@
+@startuml DCmp-Eventos-01
+title DCmp-Eventos-01 – Componentes do pacote Eventos
+skinparam componentStyle uml2
+skinparam nodesep 40
+skinparam ranksep 70
+
+package "Eventos" {
+  component "TelaEventos" as Tela
+  component "FonteEventos" as Fonte
+  rectangle "<<interface>>\nIFiltroEventos" as IFiltro
+}
+
+package "Interfaces do pacote Comum" {
+  rectangle "<<interface>>\nIControladorTelaRemota" as IControlador
+  rectangle "<<interface>>\nILinkExterno" as ILinkExterno
+  rectangle "<<interface>>\nIFonteDados" as IFonteDados
+  rectangle "<<interface>>\nIAcessoApi" as IAcessoApi
+}
+
+Tela ..|> IFiltro : oferece
+Fonte ..|> IFonteDados : oferece
+
+Tela ..> IControlador : requer
+Tela ..> ILinkExterno : requer
+Fonte ..> IAcessoApi : requer
+Fonte ..> IFiltro : requer
+@enduml

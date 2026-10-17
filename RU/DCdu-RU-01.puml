@@ -1,0 +1,18 @@
+@startuml DCdu-RU-01
+title DCdu-RU-01 – Casos de uso da funcionalidade Restaurante Universitário
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membro da comunidade UFG" as Membro
+actor "Servidor/API" as API <<sistema>>
+
+rectangle "Restaurante Universitário" {
+  usecase "UC-RU-01\nConsultar o cardápio\nde uma refeição" as UC01
+  usecase "UC-RU-02\nEscolher o dia\nda semana" as UC02
+}
+
+Membro --> UC01
+Membro --> UC02
+UC01 --> API
+UC02 --> API
+@enduml

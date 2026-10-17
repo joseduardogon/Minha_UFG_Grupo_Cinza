@@ -1,0 +1,28 @@
+@startuml DAtv-Noticias-01
+title DAtv-Noticias-01 – Atividades de UC-NO-01: consultar notícias de uma regional
+|Membro|
+start
+:**A1** Abre a tela Notícias;
+|App|
+:Seleciona a primeira aba de regional;
+repeat
+  :Pede ao servidor as notícias da regional;
+  |Servidor/API|
+  :Devolve as notícias ou falha;
+  |App|
+  if (Houve falha de comunicação?) then (sim)
+    :Exibe a mensagem de indisponibilidade;
+  elseif (Há notícias?) then (sim)
+    :Exibe um cartão por notícia\n(imagem, título e resumo);
+  else (não)
+    :Exibe a mensagem de vazio;
+  endif
+  |Membro|
+  if (Toca em outra aba de regional?) then (sim)
+    :**A2** Toca em outra aba de regional;
+    |App|
+  else (não)
+  endif
+repeat while (Continua consultando?) is (sim) not (não)
+stop
+@enduml

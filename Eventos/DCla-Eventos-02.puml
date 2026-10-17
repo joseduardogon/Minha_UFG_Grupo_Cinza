@@ -1,0 +1,44 @@
+@startuml DCla-Eventos-02
+title DCla-Eventos-02 – Classes do componente FonteEventos
+hide empty members
+
+package "Comum" {
+  interface "IFonteDados<Evento>" as IFonteDados <<Comum>> {
+    + carregar(): List<Evento>
+  }
+  interface IAcessoApi <<Comum>> {
+    + obter(caminho: String, parametros: Map<String, String>): RespostaApi
+  }
+  class Regional <<Comum (proposta)>>
+}
+
+interface IFiltroEventos <<DCla-Eventos-01>> {
+  + obterDataSelecionada(): Date
+  + obterRegionalSelecionada(): Regional
+}
+
+class FonteEventos {
+  - acesso: IAcessoApi
+  - filtro: IFiltroEventos
+  + FonteEventos(acesso: IAcessoApi, filtro: IFiltroEventos)
+  + carregar(): List<Evento>
+  - montarParametros(): Map<String, String>
+  - converter(corpo: String): List<Evento>
+}
+
+class Evento {
+  + id: Integer
+  + titulo: String
+  + dataInicio: Date
+  + dataFim: Date
+  + local: String
+  + url: String
+  + temUrl(): Boolean
+}
+
+IFonteDados <|.. FonteEventos
+FonteEventos --> "1" IAcessoApi : acesso
+FonteEventos --> "1" IFiltroEventos : filtro
+FonteEventos ..> Evento : <<create>>
+Evento --> "1" Regional : regional
+@enduml

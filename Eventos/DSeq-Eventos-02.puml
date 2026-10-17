@@ -1,0 +1,15 @@
+@startuml DSeq-Eventos-02
+title DSeq-Eventos-02 – Sequência de A2: escolher outra data
+actor "Membro" as M
+participant ":TelaEventos" as T
+participant ":CalendarioEventos" as C
+participant ":ControladorTelaRemota<Evento>" as K
+participant ":FonteEventos" as F
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T : tocarDia(data)
+T -> C : selecionarData(data)
+T -> K : recarregar()
+ref over K, S : Carregar e exibir os eventos\n(grupo "Carregar e exibir" de DSeq-Eventos-01)
+@enduml

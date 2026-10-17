@@ -1,0 +1,28 @@
+@startuml DEst-Eventos-01
+title DEst-Eventos-01 – Estados da tela Eventos
+hide empty description
+
+[*] --> Carregando : aoEntrarNaTela (E0)
+
+state Carregando : entry / controlador.aoEntrarNaTela()\nou controlador.recarregar()
+state "Fora do app" as Fora : página do evento aberta no Navegador
+
+state Resultado {
+  state Exibindo : entry / mostrar lista
+  state Vazio : entry / mostrar "sem eventos"
+  state "Indisponível" as Indisponivel : entry / mostrar indisponibilidade
+}
+
+Carregando --> Exibindo : carga concluída [há eventos]
+Carregando --> Vazio : carga concluída [não há eventos]
+Carregando --> Indisponivel : ErroApi [qualquer tipo]
+
+Resultado --> Carregando : E1 escolher regional\nE2/E3 trocar mês\nE4 escolher data\naoEntrarNaTela
+
+Exibindo --> Fora : E5 tocar evento [evento.temUrl()]\n/ linkExterno.abrirUrl(url)
+Exibindo --> Exibindo : E5 tocar evento [sem URL]
+Fora --> Carregando : aoEntrarNaTela (voltar ao app)
+
+Resultado --> [*] : sair da tela
+Fora --> [*] : sair do app
+@enduml

@@ -1,0 +1,13 @@
+@startsalt DIhc-RU-02
+{+
+  <b>Café da Manhã
+  <i>Sexta-feira, 16 de outubro de 2026
+  ==
+  { [S] | [T] | [Q] | [Q] | <b>[S] | [S] } (E1)
+  ==
+  { <b>Leite | Leite desnatado e integral }
+  { <b>Fruta | Mamão }
+  { <b>Quitanda (vegana) | Bolo formigueiro vegano }
+  { <b>Pães e quitandas | Pão francês / Bolo formigueiro }
+}
+@endsalt

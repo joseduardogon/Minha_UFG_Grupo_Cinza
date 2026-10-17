@@ -1,0 +1,22 @@
+@startuml DCdu-Eventos-01
+title DCdu-Eventos-01 – Casos de uso da funcionalidade Eventos
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membro da comunidade UFG" as Membro
+actor "Servidor/API" as API <<sistema>>
+actor "Navegador" as Navegador <<sistema>>
+
+rectangle "Eventos" {
+  usecase "UC-EV-01\nConsultar eventos por\nregional e data" as UC01
+  usecase "UC-EV-02\nTrocar o mês\ndo calendário" as UC02
+  usecase "UC-EV-03\nAbrir a página\ndo evento" as UC03
+}
+
+Membro --> UC01
+Membro --> UC02
+Membro --> UC03
+UC01 --> API
+UC02 --> API
+UC03 --> Navegador
+@enduml

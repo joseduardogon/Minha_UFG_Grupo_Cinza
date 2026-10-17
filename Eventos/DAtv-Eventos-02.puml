@@ -1,0 +1,11 @@
+@startuml DAtv-Eventos-02
+title DAtv-Eventos-02 – Atividades de UC-EV-02: trocar o mês do calendário
+|Membro|
+start
+:**A1** Toca na seta de mês anterior\nou seguinte;
+|App|
+:Exibe o novo mês;
+:Seleciona o primeiro dia do novo mês;
+:Consulta e exibe os eventos\n(fluxo de DAtv-Eventos-01);
+stop
+@enduml

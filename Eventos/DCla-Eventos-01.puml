@@ -1,0 +1,64 @@
+@startuml DCla-Eventos-01
+title DCla-Eventos-01 – Classes do componente TelaEventos
+hide empty members
+
+package "Comum" {
+  interface "IControladorTelaRemota<Evento>" as IControlador <<Comum>> {
+    + aoEntrarNaTela(): void
+    + recarregar(): void
+  }
+  interface IObservadorEstado <<Comum>> {
+    + aoMudarEstado(estado: EstadoTela): void
+  }
+  interface ILinkExterno <<Comum>> {
+    + abrirUrl(url: String): ResultadoAbertura
+  }
+  enum EstadoTela <<Comum>>
+  class Regional <<Comum (proposta)>> {
+    + id: Integer
+    + nome: String
+  }
+}
+
+class TelaEventos {
+  - controlador: IControladorTelaRemota<Evento>
+  - calendario: CalendarioEventos
+  - linkExterno: ILinkExterno
+  + aoExibir(): void
+  + aoEscolherData(data: Date): void
+  + aoEscolherRegional(regional: Regional): void
+  + aoTrocarMes(deslocamento: Integer): void
+  + aoTocarEvento(evento: Evento): void
+  + aoMudarEstado(estado: EstadoTela): void
+}
+
+interface IFiltroEventos {
+  + obterDataSelecionada(): Date
+  + obterRegionalSelecionada(): Regional
+}
+
+class CalendarioEventos {
+  - mesExibido: Date
+  - dataSelecionada: Date
+  - regionalSelecionada: Regional
+  + CalendarioEventos(hoje: Date, regionalInicial: Regional)
+  + trocarMes(deslocamento: Integer): void
+  + selecionarData(data: Date): void
+  + selecionarRegional(regional: Regional): void
+  + obterDiasDoMes(): List<Date>
+  + obterMesExibido(): Date
+  + obterDataSelecionada(): Date
+  + obterRegionalSelecionada(): Regional
+}
+
+class Evento <<DCla-Eventos-02>>
+
+IObservadorEstado <|.. TelaEventos
+IFiltroEventos <|.. CalendarioEventos
+TelaEventos *-- "1" CalendarioEventos
+TelaEventos --> "1" IControlador : controlador
+TelaEventos --> "1" ILinkExterno : linkExterno
+TelaEventos ..> Evento : <<use>>
+TelaEventos ..> EstadoTela : <<use>>
+CalendarioEventos --> "1" Regional : regionalSelecionada
+@enduml
