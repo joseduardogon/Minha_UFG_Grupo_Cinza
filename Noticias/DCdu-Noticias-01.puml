@@ -1,0 +1,19 @@
+@startuml DCdu-Noticias-01
+title DCdu-Noticias-01 – Casos de uso da funcionalidade Notícias
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membro da comunidade UFG" as Membro
+actor "Servidor/API" as API <<sistema>>
+actor "Navegador" as Navegador <<sistema>>
+
+rectangle "Notícias" {
+  usecase "UC-NO-01\nConsultar notícias\nde uma regional" as UC01
+  usecase "UC-NO-02\nAbrir a notícia" as UC02
+}
+
+Membro --> UC01
+Membro --> UC02
+UC01 --> API
+UC02 --> Navegador
+@enduml

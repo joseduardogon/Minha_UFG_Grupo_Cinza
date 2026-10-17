@@ -1,0 +1,15 @@
+@startuml DSeq-Eventos-03
+title DSeq-Eventos-03 – Sequência de A3: escolher outra regional
+actor "Membro" as M
+participant ":TelaEventos" as T
+participant ":CalendarioEventos" as C
+participant ":ControladorTelaRemota<Evento>" as K
+participant ":FonteEventos" as F
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T : escolherRegional(regional)
+T -> C : selecionarRegional(regional)
+T -> K : recarregar()
+ref over K, S : Carregar e exibir os eventos\n(grupo "Carregar e exibir" de DSeq-Eventos-01)
+@enduml

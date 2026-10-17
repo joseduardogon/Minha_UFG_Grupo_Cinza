@@ -1,0 +1,15 @@
+@startsalt DIhc-Noticias-01
+{+
+  <b>Notícias
+  ==
+  { <b>[GOIÂNIA] | [outras regionais] } (E1)
+  ==
+  { [imagem da notícia A] }
+  <b>Título da notícia A
+  Resumo curto da notícia A (E2)
+  ==
+  { [imagem da notícia B] }
+  <b>Título da notícia B
+  Resumo curto da notícia B (E2)
+}
+@endsalt

@@ -1,0 +1,16 @@
+
+/* Ajustes da versão resumida (--compacto): sem capa, texto adensado. */
+@page { margin: 1.5cm 1.5cm 1.8cm 1.5cm; }
+body { font-size: 9.3pt; line-height: 1.33; }
+.capa { min-height: 0; display: block; text-align: left; padding: 0; line-height: 1.4; }
+.capa > p:first-child { font-size: 9.5pt; }
+.capa h1 { font-size: 17pt; margin: 0.25cm 0 0.1cm; }
+.capa > p:nth-of-type(2) { font-size: 9pt; margin-bottom: 0.15cm; }
+h2 { font-size: 12pt; margin: 0.32cm 0 0.12cm; padding-bottom: 1px; }
+h3 { font-size: 9.5pt; margin: 0.25cm 0 0.1cm; }
+p { margin: 0 0 0.14cm; }
+ul, ol { margin-bottom: 0.14cm; }
+table { font-size: 8.5pt; line-height: 1.25; margin: 0.05cm 0 0.18cm; }
+th, td { padding: 1.5px 4px; }
+p:has(+ table) { font-size: 8pt; margin: 0.18cm 0 0.05cm; }
+code { font-size: 8.5pt; }

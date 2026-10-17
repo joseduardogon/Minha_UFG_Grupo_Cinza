@@ -1,0 +1,19 @@
+@startuml DSeq-Eventos-05
+title DSeq-Eventos-05 – Sequência de A1 de UC-EV-03: tocar em um evento
+actor "Membro" as M
+participant ":TelaEventos" as T
+participant ":AberturaLinkExterno" as L
+participant "Navegador" as N <<sistema>>
+
+M -> T : tocarEvento(evento)
+alt evento.temUrl()
+  T -> L : abrirUrl(evento.url)
+  L -> L : urlValida(url)
+  L -> L : existeAppCompativel(intencao)
+  L -> N : disparar(intencao)
+  N --> M : mostra a página do evento
+  L --> T : ResultadoAbertura
+else evento sem endereço
+  T -> T : ignora o toque
+end
+@enduml
