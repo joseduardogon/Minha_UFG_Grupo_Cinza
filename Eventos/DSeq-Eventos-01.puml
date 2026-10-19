@@ -1,0 +1,44 @@
+@startuml DSeq-Eventos-01
+title DSeq-Eventos-01 – Sequência de A1: abrir a tela Eventos
+actor "Membro" as M
+participant ":TelaEventos" as T
+participant ":CalendarioEventos" as C
+participant ":ControladorTelaRemota<Evento>" as K
+participant ":FonteEventos" as F
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T : abrirTela()
+T -> C : <<create>>(hoje, regionalInicial)
+T -> K : aoEntrarNaTela()
+group Carregar e exibir (referenciado em DSeq-Eventos-02, 03 e 04)
+  K -> K : definirEstado(CARREGANDO)
+  K -> T : aoMudarEstado(CARREGANDO)
+
+  K -> F : carregar()
+  F -> C : obterDataSelecionada()
+  C --> F : data
+  F -> C : obterRegionalSelecionada()
+  C --> F : regional
+  F -> A : obter("/eventos", {regional, data})
+  A -> S : GET /eventos?regional=..&data=..
+  alt resposta recebida
+    S --> A : JSON com os eventos
+    A --> F : RespostaApi
+    F -> F : converter(corpo)
+    F --> K : List<Evento>
+    alt lista com itens
+      K -> T : aoMudarEstado(EXIBINDO)
+      T -> M : mostra a lista de eventos
+    else lista vazia
+      K -> T : aoMudarEstado(VAZIO)
+      T -> M : mostra "sem eventos"
+    end
+  else falha de comunicação
+    A --> F : ErroApi
+    F --> K : ErroApi
+    K -> T : aoMudarEstado(INDISPONIVEL)
+    T -> M : mostra a mensagem de indisponibilidade
+  end
+end
+@enduml

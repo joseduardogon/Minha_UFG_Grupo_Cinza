@@ -1,0 +1,15 @@
+@startuml DAtv-Noticias-02
+title DAtv-Noticias-02 – Atividades de UC-NO-02: abrir a notícia
+|Membro|
+start
+:**A1** Toca em uma notícia da lista;
+|App|
+:Pede ao Navegador que abra a página da notícia;
+|Navegador|
+:Exibe a página da notícia;
+|Membro|
+:Volta ao app;
+|App|
+:Recarrega as notícias;
+stop
+@enduml
