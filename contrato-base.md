@@ -25,7 +25,6 @@ Regras que todos seguem para produzir sua fatia sem conflitos na integração. R
 | 4 | Tudo produzido (incluindo contratos e regras E-C-A) e revisado |
 | 5 | Só correções e montagem do PDF. Nenhum diagrama novo |
 
-As datas intermediárias foram flexibilizadas em acordo com o professor (ver `Docs/decisoes.md`); valem as datas de entrega acima.
 
 ## 3. Ferramentas
 
