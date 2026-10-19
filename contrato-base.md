@@ -17,14 +17,14 @@ Regras que todos seguem para produzir sua fatia sem conflitos na integração. R
 - Entrega interna (PDF pronto): **02/11/2026**.
 - Checkpoint semanal: **quartas, 19h**, 30 min, com ata.
 
-| Semana | Período | Marco |
-|---|---|---|
-| 1 | até 13/10 | Contrato publicado; entidades de todos entregues a D |
-| 2 | 14/10 a 20/10 | Cada pessoa com ao menos uma funcionalidade com a cascata completa; D fecha implantação, pacotes e modelo de dados integrado |
-| 3 | 21/10 a 27/10 | Tudo produzido (incluindo contratos e regras E-C-A) e revisado |
-| 4 | 28/10 a 04/11 | Só correções e montagem do PDF. Nenhum diagrama novo |
+| Etapa | Marco |
+|---|---|
+| 1 | Contrato publicado; A, B e C destravados pelo pacote Comum e pela arquitetura de D |
+| 2 | Cada pessoa entrega ao menos uma funcionalidade com a cascata completa (pode entregar todas), junto com as entradas do dicionário de dados das suas entidades |
+| 3 | Integração por D: modelo de dados integrado, fechamento de DCdu geral, DPac e DImp, e rastreabilidade |
+| 4 | Tudo produzido (incluindo contratos e regras E-C-A) e revisado |
+| 5 | Só correções e montagem do PDF. Nenhum diagrama novo |
 
-A entrega o modelo de dados da Avaliação até 10/10. Enquanto isso, B começa por Locais.
 
 ## 3. Ferramentas
 

@@ -76,6 +76,8 @@ Ordem de produção dentro de cada fatia, para não refazer diagramas: casos de 
 
 ## Timeline (4 semanas)
 
+> **Nota (19/10/2026):** esta timeline é o plano original. A ordem foi alterada: D integra o modelo de dados e os modelos gerais só depois das entregas das etapas 1 e 2 de A, B e C. A versão vigente está no `contrato-base.md`, seção 2, e a decisão em `Docs/decisoes.md`.
+
 1. **Semana 1:** reunião de contrato nos primeiros 2 a 3 dias; depois, casos de uso, atividades e IHC de cada fatia. Marco: contrato publicado e entidades de todos entregues a D.
 2. **Semana 2:** classes, sequências e estados. D fecha implantação, pacotes e modelo de dados integrado. Marco: cada pessoa com ao menos uma funcionalidade com a cascata completa.
 3. **Semana 3:** terminar tudo, incluindo contratos e regras E-C-A; na segunda metade, revisões em dupla. Marco: tudo revisado.
