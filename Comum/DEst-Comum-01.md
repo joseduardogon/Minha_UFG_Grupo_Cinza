@@ -28,7 +28,7 @@ O diagrama especifica o ciclo de vida de toda tela com conteúdo remoto, impleme
 
 **Eventos.**
 - `aoEntrarNaTela`: a tela foi exibida, seja na primeira entrada, seja ao voltar de outra tela ou de um aplicativo externo. Sempre leva a Carregando, pois o app não guarda cache. É assim que se realiza o "recarregar ao voltar" do contrato.
-- `recarregar`: a tela pediu nova carga por mudança de filtro (data, dia, aba).
+- `recarregar`: a tela pediu nova carga por mudança de filtro (data, dia).
 - `ErroApi`: falha na comunicação com a API, de qualquer tipo (`DCla-Comum-02`).
 - `sair da tela`: o usuário volta ao menu ou sai do app; o controlador é descartado.
 

@@ -225,3 +225,19 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-09 – Fechamento do Comum (D-IND-08)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, classes e estados do pacote Comum, itens do Guia, da Rádio e de Eventos.
+- **Uso da resposta:** geração de `Contrato-Comum-01` a `04` e `ECA-Comum-01`; correção do texto de `DCla-Comum-03` e `DEst-Comum-01` (a Rádio não recarrega ao trocar de aba); texto do pedido de revisão à Pessoa C e do PR da fase 2.
+
+### Prompt 1
+
+> sim, siga para o D-IND-08
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
