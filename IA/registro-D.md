@@ -189,3 +189,19 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-07 – Rádio: detalhamento (D-IND-06)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, itens do D-IND-04 e do D-IND-05, pacote Comum e itens de Eventos (padrão de DSeq, contratos e ECA).
+- **Uso da resposta:** geração de `DSeq-Radio-01` a `03`, `DEst-Radio-01`, `Contrato-Radio-01` e `ECA-Radio-01`.
+
+### Prompt 1
+
+> sim, siga para o D-IND-06
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.

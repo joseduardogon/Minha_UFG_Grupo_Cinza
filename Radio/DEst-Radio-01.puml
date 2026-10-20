@@ -1,0 +1,35 @@
+@startuml DEst-Radio-01
+title DEst-Radio-01 – Estados da tela da Rádio
+hide empty description
+
+[*] --> Carregando : aoExibir\n/ diaSelecionado = dia atual
+
+state Carregando : entry / fonte.carregar()
+state "Exibindo" as Exibindo {
+  state "Dia com programas" as ComProgramas : entry / mostrar programas do dia
+  state "Dia vazio" as DiaVazio : entry / mostrar mensagem de vazio
+  state c <<choice>>
+  [*] --> c
+  c --> ComProgramas : [programasDoDia(diaSelecionado) não vazio]
+  c --> DiaVazio : [programasDoDia(diaSelecionado) vazio]
+  ComProgramas --> c : E2 aoTocarAba(dia)\n/ diaSelecionado = dia
+  DiaVazio --> c : E2 aoTocarAba(dia)\n/ diaSelecionado = dia
+}
+state Vazio : entry / mostrar mensagem de vazio
+state "Indisponível" as Indisponivel : entry / mostrar mensagem de indisponibilidade
+state "Player no navegador" as Player : fora do app
+
+Carregando --> Exibindo : carga concluída [semana não vazia]
+Carregando --> Vazio : carga concluída [semana vazia]
+Carregando --> Indisponivel : ErroApi
+
+Exibindo --> Player : E3 aoTocarPlay\n/ abrirUrl(urlPlayer)
+Vazio --> Player : E3 aoTocarPlay\n/ abrirUrl(urlPlayer)
+Indisponivel --> Player : E3 aoTocarPlay\n/ abrirUrl(urlPlayer)
+Player --> Carregando : voltar ao app\n(aoExibir)
+
+Carregando --> [*] : E1 aoVoltar
+Exibindo --> [*] : E1 aoVoltar
+Vazio --> [*] : E1 aoVoltar
+Indisponivel --> [*] : E1 aoVoltar
+@enduml
