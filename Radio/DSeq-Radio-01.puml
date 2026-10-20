@@ -1,0 +1,43 @@
+@startuml DSeq-Radio-01
+title DSeq-Radio-01 – Sequência: entrar na tela e carregar a programação
+actor "Membro" as M
+participant ":TelaRadio" as T
+participant ":ControladorTelaRemota<HorarioPrograma>" as K
+participant ":FonteProgramacaoRadio" as F
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T : tocar no cartão "Rádio" (tela inicial)
+T -> T : diaSelecionado = dia atual
+T -> K : aoEntrarNaTela()
+group Carregar e exibir (referenciado em DSeq-Radio-03)
+  K -> T : aoMudarEstado(CARREGANDO)
+  T -> M : mostra o indicador de carregamento
+  K -> F : carregar()
+  F -> A : obter("/radio/programacao", {})
+  A -> S : GET programação da semana atual
+  alt resposta recebida
+    S --> A : JSON com a programação da semana
+    A --> F : RespostaApi
+    F -> F : converter(corpo)
+    F --> K : List<HorarioPrograma>
+    alt lista com itens
+      K -> T : aoMudarEstado(EXIBINDO)
+      T -> T : programasDoDia(diaSelecionado)
+      alt dia com programas
+        T -> M : mostra horário, nome e descrição
+      else dia sem programas
+        T -> M : mostra a mensagem de vazio
+      end
+    else lista vazia
+      K -> T : aoMudarEstado(VAZIO)
+      T -> M : mostra a mensagem de vazio
+    end
+  else falha de comunicação
+    A --> F : ErroApi
+    F --> K : ErroApi
+    K -> T : aoMudarEstado(INDISPONIVEL)
+    T -> M : mostra a mensagem de indisponibilidade
+  end
+end
+@enduml

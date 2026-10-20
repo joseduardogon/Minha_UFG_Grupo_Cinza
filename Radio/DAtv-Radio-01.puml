@@ -1,0 +1,33 @@
+@startuml DAtv-Radio-01
+title DAtv-Radio-01 – Consultar programação da rádio
+
+|Usuário|
+start
+:Tocar no cartão "Rádio"\nna tela inicial;
+|App|
+:Exibir a tela da Rádio com a aba\ndo dia atual selecionada;
+:Exibir indicador de carregamento;
+:Solicitar a programação da semana atual;
+|Servidor/API|
+:Devolver a programação da semana;
+|App|
+if (Resposta recebida?) then (sim)
+  :Guardar a programação da semana em memória;
+  if (Há programas no dia selecionado?) then (sim)
+    :Exibir os programas do dia\n(horário, nome e descrição);
+  else (não)
+    :Exibir mensagem de vazio;
+  endif
+else (não)
+  :Exibir mensagem de indisponibilidade;
+endif
+|Usuário|
+:Voltar à tela inicial;
+|App|
+:Descartar a programação em memória;
+note right
+  Ao entrar de novo na tela,
+  uma nova chamada à API é feita.
+end note
+stop
+@enduml

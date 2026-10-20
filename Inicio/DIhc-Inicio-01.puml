@@ -1,0 +1,15 @@
+@startsalt DIhc-Inicio-01
+{+
+  <b>Minha UFG
+  ==
+  {#
+    [Segurança] (E1) | [Rádio] (E2)
+    [Guia Estudantil] (E3) | [Eventos] (E4)
+    [Notícias] (E5) | [Locais] (E6)
+    [RU] (E7) | [Apps UFG] (E8)
+    [Avaliação de UA] (E9) | .
+  }
+  ==
+  v3.1.1
+}
+@endsalt

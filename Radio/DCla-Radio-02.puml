@@ -1,0 +1,47 @@
+@startuml DCla-Radio-02
+title DCla-Radio-02 – Classes do componente FonteProgramacaoRadio
+hide empty members
+
+package "Comum" {
+  interface "IFonteDados<HorarioPrograma>" as IFonteDados <<Comum>> {
+    + carregar(): List<HorarioPrograma>
+  }
+  interface IAcessoApi <<Comum>> {
+    + obter(caminho: String, parametros: Map<String, String>): RespostaApi
+  }
+}
+
+class FonteProgramacaoRadio {
+  - acesso: IAcessoApi
+  + FonteProgramacaoRadio(acesso: IAcessoApi)
+  + carregar(): List<HorarioPrograma>
+  - converter(corpo: String): List<HorarioPrograma>
+}
+
+class ProgramaRadio {
+  + nome: String
+  + descricao: String
+}
+
+class HorarioPrograma {
+  + diaSemana: DiaSemana
+  + horaInicio: Time
+  + horaFim: Time
+}
+
+enum DiaSemana {
+  DOM
+  SEG
+  TER
+  QUA
+  QUI
+  SEX
+  SAB
+}
+
+IFonteDados <|.. FonteProgramacaoRadio
+FonteProgramacaoRadio --> "1" IAcessoApi : acesso
+FonteProgramacaoRadio ..> HorarioPrograma : <<create>>
+FonteProgramacaoRadio ..> ProgramaRadio : <<create>>
+ProgramaRadio "1" -- "1..*" HorarioPrograma : vai ao ar em >
+@enduml

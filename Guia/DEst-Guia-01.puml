@@ -1,0 +1,15 @@
+@startuml DEst-Guia-01
+title DEst-Guia-01 – Estados da abertura do guia estudantil
+hide empty description
+
+state "Tela inicial" as Inicio
+state "Seletor de apps aberto" as Seletor : sistema Android
+state "PDF no app externo" as Pdf : fora do app
+
+[*] --> Inicio
+Inicio --> Seletor : E1 tocar no cartão\n/ abrirGuia()
+Seletor --> Pdf : E2 escolher app
+Seletor --> Inicio : E3 fechar o seletor
+Pdf --> Inicio : voltar ao app
+Inicio --> [*] : sair do app
+@enduml

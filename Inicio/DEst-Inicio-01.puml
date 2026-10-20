@@ -1,0 +1,39 @@
+@startuml DEst-Inicio-01
+title DEst-Inicio-01 – Estados da tela inicial
+hide empty description
+left to right direction
+
+state "Menu exibido" as Menu : entry / mostrar cartões e versão
+state "Segurança" as Seg : DEst-Seguranca-01
+state "Rádio" as Radio : DEst-Radio-01
+state "Seletor de apps (Guia)" as Guia : DEst-Guia-01
+state "Eventos" as Ev : DEst-Eventos-01
+state "Notícias" as Not : DEst-Noticias-01
+state "Locais" as Loc : DEst-Locais-01
+state "RU" as RU : DEst-RU-01
+state "Apps UFG" as Apps : DEst-AppsUFG-01
+state "Avaliação de UA" as Aval : AvalRegistrar / AvalConsultar
+
+[*] --> Menu : abrir o app
+Menu --> Seg : E1 tocar em Segurança
+Menu --> Radio : E2 tocar em Rádio
+Menu --> Guia : E3 tocar em Guia Estudantil\n/ abrirGuia()
+Menu --> Ev : E4 tocar em Eventos
+Menu --> Not : E5 tocar em Notícias
+Menu --> Loc : E6 tocar em Locais
+Menu --> RU : E7 tocar em RU
+Menu --> Apps : E8 tocar em Apps UFG
+Menu --> Aval : E9 tocar em Avaliação de UA
+
+Seg --> Menu : voltar
+Radio --> Menu : voltar
+Guia --> Menu : voltar
+Ev --> Menu : voltar
+Not --> Menu : voltar
+Loc --> Menu : voltar
+RU --> Menu : voltar
+Apps --> Menu : voltar
+Aval --> Menu : voltar
+
+Menu --> [*] : voltar (sair do app)
+@enduml

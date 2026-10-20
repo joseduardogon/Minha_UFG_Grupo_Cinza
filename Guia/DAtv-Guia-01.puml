@@ -1,0 +1,25 @@
+@startuml DAtv-Guia-01
+title DAtv-Guia-01 – Consultar guia estudantil
+
+|Usuário|
+start
+:Tocar no cartão "Guia Estudantil"\nna tela inicial;
+|App|
+:Solicitar abertura do guiaestudantil.pdf\n(URL externa, tipo application/pdf);
+|Android|
+:Exibir seletor de apps;
+|Usuário|
+if (Escolhe um app?) then (sim)
+  :Escolher app ("Desta vez" ou "Sempre");
+  |Visualizador de PDF|
+  :Baixar o PDF da URL externa;
+  :Exibir guiaestudantil.pdf;
+  |Usuário|
+  :Voltar ao app;
+else (não)
+  :Fechar o seletor;
+endif
+|App|
+:Exibir tela inicial;
+stop
+@enduml

@@ -29,7 +29,7 @@ O componente EstadosTelaRemota padroniza o comportamento de toda tela que exibe 
 | `ErroApi` (qualquer tipo) | `INDISPONIVEL` |
 
 - `aoEntrarNaTela()` é chamado sempre que a tela é exibida, inclusive ao voltar de outra tela, e dispara nova carga, porque o app não tem cache.
-- `recarregar()` é chamado pela própria tela quando um filtro muda, como a data em Eventos, o dia no RU ou a aba na Rádio.
+- `recarregar()` é chamado pela própria tela quando um filtro muda, como a data em Eventos ou o dia no RU. A Rádio não usa `recarregar`: carrega a semana inteira e filtra a aba em memória (`DCla-Radio-01`).
 - `IObservadorEstado` é implementada pela tela, que é notificada a cada mudança de estado para atualizar o que mostra.
 
 Na versão atual, sem internet, o app mostra uma tela em branco ou uma mensagem genérica. O modelo separa `VAZIO` de `INDISPONIVEL` porque são situações distintas; cada funcionalidade decide no seu DIhc como apresentar cada uma.

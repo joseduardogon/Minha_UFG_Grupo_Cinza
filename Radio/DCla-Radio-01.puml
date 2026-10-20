@@ -1,0 +1,44 @@
+@startuml DCla-Radio-01
+title DCla-Radio-01 – Classes do componente TelaRadio
+hide empty members
+
+package "Comum" {
+  interface "IControladorTelaRemota<HorarioPrograma>" as IControlador <<Comum>> {
+    + aoEntrarNaTela(): void
+    + obterDados(): List<HorarioPrograma>
+  }
+  interface IObservadorEstado <<Comum>> {
+    + aoMudarEstado(estado: EstadoTela): void
+  }
+  interface ILinkExterno <<Comum>> {
+    + abrirUrl(url: String): ResultadoAbertura
+  }
+  enum EstadoTela <<Comum>>
+}
+
+class TelaRadio {
+  - controlador: IControladorTelaRemota<HorarioPrograma>
+  - linkExterno: ILinkExterno
+  - diaSelecionado: DiaSemana
+  + aoExibir(): void
+  + aoTocarAba(dia: DiaSemana): void
+  + aoTocarPlay(): void
+  + aoVoltar(): void
+  + aoMudarEstado(estado: EstadoTela): void
+  - programasDoDia(dia: DiaSemana): List<HorarioPrograma>
+}
+
+class ConfiguracaoRadio <<constantes>> {
+  + {static} urlPlayer: String
+}
+
+class HorarioPrograma <<DCla-Radio-02>>
+enum DiaSemana <<DCla-Radio-02>>
+
+IObservadorEstado <|.. TelaRadio
+TelaRadio --> "1" IControlador : controlador
+TelaRadio --> "1" ILinkExterno : linkExterno
+TelaRadio ..> ConfiguracaoRadio : <<use>>
+TelaRadio ..> HorarioPrograma : <<use>>
+TelaRadio ..> EstadoTela : <<use>>
+@enduml
