@@ -129,3 +129,19 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-04 – Guia Estudantil: detalhamento (D-IND-03)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, itens do D-IND-01 e do D-IND-02, pacote Comum e itens de Eventos (padrão de DSeq e contratos).
+- **Uso da resposta:** geração de `DSeq-Guia-01`, `DSeq-Guia-02`, `DEst-Guia-01` e `Contrato-Guia-01`; justificativa da ausência de regras E-C-A no Guia.
+
+### Prompt 1
+
+> sim
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.

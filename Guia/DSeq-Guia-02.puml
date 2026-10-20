@@ -1,0 +1,20 @@
+@startuml DSeq-Guia-02
+title DSeq-Guia-02 – Sequência de E2/E3: retorno do seletor de apps
+actor "Membro" as M
+participant "Android\n(seletor de apps)" as A <<sistema>>
+participant "Visualizador de PDF" as V <<sistema>>
+participant ":TelaInicial" as T
+
+alt E2: escolhe um app
+  M -> A : escolher app ("Desta vez" ou "Sempre")
+  A -> V : abrir url (application/pdf)
+  V -> V : baixar o PDF da URL externa
+  V -> M : exibe guiaestudantil.pdf
+  M -> V : voltar
+  V -> T : retomar o app
+else E3: fecha o seletor
+  M -> A : voltar ou tocar fora
+  A -> T : retomar o app
+end
+T -> M : exibe a tela inicial
+@enduml
