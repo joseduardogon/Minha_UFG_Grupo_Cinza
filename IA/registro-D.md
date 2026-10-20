@@ -145,3 +145,31 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-05 – Rádio: comportamento (D-IND-04)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, contexto-equipe.md, roteiro-pessoa-D.md, print 03 (Rádio) e pacote Comum.
+- **Uso da resposta:** plano do D-IND-04; geração de `DCdu-Radio-01`, `DAtv-Radio-01` a `03` e `DIhc-Radio-01`; registro da decisão "Carga semanal da programação da Rádio" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> sim, siga para o D-IND-04.
+
+### Prompt 2
+
+> sobre o plano proposto, aprovado, siga em frente com ele.
+>
+> sobre as suas dúvidas:
+> 1. o app sempre busca a semana atual inteira de uma vez. filtra ao mudar de aba mas o dado já está em memória. por se tratar de apenas texto, o peso é bem baixo e o desempenho não é comprometido. mas se eu sair do rádio e entrar novamente, uma outra chamada de api é feita.
+> 2. fixa no app. não há parâmetro dinâmico que vai junto com a abertura do rádio. apenas abre a url fixa.
+> 3. não. só clicando no dia específico mesmo.
+> 4. como na semana atual a programação da rádio está cheia, não consigo verificar manualmente esse estado vazio. então siga com a mensagem genérica de vazio mesmo
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+<!-- O prompt 2 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->

@@ -1,0 +1,24 @@
+@startsalt DIhc-Radio-01
+{+
+  { [<] (E1) | <b>Rádio UFG 88,5 FM }
+  ==
+  { [DOM] | [SEG] | [TER] | <b>[QUA] | [QUI] | [SEX] | [SAB] | (E2) }
+  ==
+  {
+    00:00 - 02:00
+    <b>Constelações
+    O programa traz a melhor compilação de sucessos...
+    --
+    02:00 - 05:00
+    <b>Madrugada Nacional
+    Rádio UFG 88,5 FM
+    --
+    05:00 - 07:00
+    <b>Brasil de canto a canto
+    Programa de música regional...
+    --
+    ...
+  }
+  { . | . | . | . | . | . | . | [▶] (E3) }
+}
+@endsalt

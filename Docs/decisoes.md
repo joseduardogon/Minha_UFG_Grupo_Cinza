@@ -2,6 +2,12 @@
 
 Decisões de planejamento e de modelagem que alteram o contrato ou o roteiro. Uma entrada por decisão, da mais recente para a mais antiga.
 
+## 20/10/2026 – Carga semanal da programação da Rádio
+
+- **Decisão:** a tela da Rádio busca a programação da semana atual inteira numa única chamada ao entrar. A troca de aba filtra os dados em memória, sem nova chamada. Ao sair e entrar de novo, nova chamada é feita. A URL do player é fixa no app, sem parâmetros. Dia sem programas usa a mensagem genérica de vazio do Comum.
+- **Motivo:** comportamento informado pela equipe a partir do app real; os dados são só texto e pesam pouco. O estado vazio não pôde ser observado, porque a programação da semana está cheia.
+- **Alternativas:** uma chamada por dia ao trocar de aba (descartada: não é o comportamento do app); URL do player vinda da API (descartada: é fixa).
+
 ## 20/10/2026 – URL do Guia Estudantil como configuração fixa
 
 - **Decisão:** a URL do `guiaestudantil.pdf` é uma constante do app (`ConfiguracaoGuia`, `DCla-Guia-01`). O Guia não tem entidade de domínio e não entra no DDados nem no DD consolidados.
