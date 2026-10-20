@@ -30,7 +30,7 @@ O app é organizado em um pacote por funcionalidade, um pacote `Inicio` e um pac
 
 **Dependências.**
 
-- `Inicio` depende de todos os pacotes de funcionalidade, pois cada cartão do menu abre a tela inicial de uma funcionalidade.
+- `Inicio` depende de todos os pacotes de funcionalidade, pois cada cartão do menu abre a tela inicial de uma funcionalidade. As oito funcionalidades da versão 3.1.1 têm um cartão cada; a evolução acrescenta um nono cartão, "Avaliação de UA", ponto de entrada único de `AvalRegistrar` e `AvalConsultar` (`DIhc-Inicio-01`).
 - Todo pacote de funcionalidade depende de `Comum`, pois usa ao menos um dos seus componentes (acesso à API, estados de tela remota, abertura de link externo ou provedor de mapa).
 - `AvalRegistrar` depende de `Locais`, porque a avaliação é feita sobre uma Unidade Acadêmica, entidade definida por B (contrato, seção 7).
 - `AvalConsultar` depende de `Locais` (Unidade Acadêmica e Área de conhecimento) e de `AvalRegistrar` (Avaliação, Dimensão de qualidade e Elemento educacional, cujas notas ele agrega).

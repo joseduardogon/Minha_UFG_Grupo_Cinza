@@ -205,3 +205,23 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-08 – Tela inicial (D-IND-07)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, contexto-equipe.md, print 01 (tela inicial), `DPac-Geral-01` e itens do Guia e da Rádio.
+- **Uso da resposta:** identificação do conflito entre os 8 cartões do app e as dependências do `DPac-Geral-01`; geração de `DIhc-Inicio-01` e `DEst-Inicio-01`; ajuste do texto do `DPac-Geral-01`; registro da decisão "Cartão Avaliação de UA na tela inicial" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> sim, siga para o D-IND-07
+
+### Prompt 2
+
+> opção b, versão é só texto fixo. pode seguir
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.

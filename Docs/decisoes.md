@@ -2,6 +2,12 @@
 
 Decisões de planejamento e de modelagem que alteram o contrato ou o roteiro. Uma entrada por decisão, da mais recente para a mais antiga.
 
+## 20/10/2026 – Cartão "Avaliação de UA" na tela inicial
+
+- **Decisão:** a tela inicial mantém os oito cartões da versão 3.1.1 e ganha um nono, "Avaliação de UA", ponto de entrada único de `AvalRegistrar` e `AvalConsultar`. A tela aberta por ele é definida por A e B. O texto do `DPac-Geral-01` foi ajustado; o diagrama não muda.
+- **Motivo:** nenhuma fonte define o ponto de entrada da evolução; um único cartão novo preserva a tela real e não depende de decisões ainda não tomadas por A e B.
+- **Alternativas:** oito cartões, com a avaliação acessada por Locais (descartada: depende de decisão de A e B e exige mudar o DPac); dez cartões, um para avaliar e outro para consultar (descartada: duplica o ponto de entrada).
+
 ## 20/10/2026 – Entidades da Rádio
 
 - **Decisão:** a programação é modelada como `ProgramaRadio` (nome, descrição) 1 — 1..* `HorarioPrograma` (dia da semana, hora de início, hora de fim). O controlador genérico do Comum trabalha com `HorarioPrograma`; a tela filtra pelo dia e trata sozinha o vazio de um único dia.
