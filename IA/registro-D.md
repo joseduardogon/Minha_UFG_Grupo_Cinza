@@ -109,3 +109,23 @@ ANTHROPIC. **Claude**. Assistente de IA. Disponível em: claude.ai. Acesso em: 1
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
 
 <!-- O prompt 3 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
+
+## D-IA-03 – Guia Estudantil: estrutura (D-IND-02)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, contrato-base.md, roteiro-pessoa-D.md, itens do D-IND-01 e do pacote Comum.
+- **Uso da resposta:** plano do D-IND-02; geração de `DD-Guia-01`, `DCmp-Guia-01` e `DCla-Guia-01`; registro da decisão "URL do Guia Estudantil como configuração fixa" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> push somente no fim da fase 2. vamos seguir para D-IND-02
+
+### Prompt 2
+
+> opção a, configuração fixa no app. pode seguir
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.

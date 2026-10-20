@@ -1,0 +1,14 @@
+@startuml DCmp-Guia-01
+title DCmp-Guia-01 – Componentes do pacote Guia
+skinparam componentStyle uml2
+
+package "Guia" {
+  component "AberturaGuia" as Abertura
+}
+
+package "Interfaces do pacote Comum" {
+  rectangle "<<interface>>\nILinkExterno" as ILinkExterno
+}
+
+Abertura ..> ILinkExterno : requer
+@enduml

@@ -2,6 +2,12 @@
 
 Decisões de planejamento e de modelagem que alteram o contrato ou o roteiro. Uma entrada por decisão, da mais recente para a mais antiga.
 
+## 20/10/2026 – URL do Guia Estudantil como configuração fixa
+
+- **Decisão:** a URL do `guiaestudantil.pdf` é uma constante do app (`ConfiguracaoGuia`, `DCla-Guia-01`). O Guia não tem entidade de domínio e não entra no DDados nem no DD consolidados.
+- **Motivo:** o seletor de apps abre logo após o toque, sem estado de carregando nem chamada ao servidor (prints 04 e 05).
+- **Alternativas:** entidade `DocumentoGuia` obtida do Servidor/API (descartada: exigiria tela remota e chamada à API, sem indício no app).
+
 ## 20/10/2026 – Guia Estudantil sem tela própria
 
 - **Decisão:** o `DIhc-Guia-01` mostra o trecho da tela inicial com o cartão do Guia e o seletor de apps do Android, marcado como componente do sistema. O app só passa a URL externa do `guiaestudantil.pdf` ao `ILinkExterno.abrirDocumento`; o download, a exibição e as falhas de abertura ficam com o app externo ou com o Android e não retornam ao app.
