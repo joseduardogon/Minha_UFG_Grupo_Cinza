@@ -78,3 +78,34 @@ A referência ABNT que vai para a bibliografia aparece no fim de cada entrada.
 ANTHROPIC. **Claude**. Assistente de IA. Disponível em: claude.ai. Acesso em: 14 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
 
 <!-- Os dois prompts têm mais de um parágrafo, então vão para o apêndice de prompts. Preencher <X> na editoração. -->
+
+## D-IA-02 – Guia Estudantil: comportamento (D-IND-01)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, contrato-base.md, contexto-equipe.md, roteiro-pessoa-D.md e os prints 04 e 05 (Guia Estudantil).
+- **Uso da resposta:** plano do D-IND-01; geração de `DCdu-Guia-01`, `DAtv-Guia-01` e `DIhc-Guia-01` (.puml, .png e .md); registro da decisão "Guia Estudantil sem tela própria" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> vamos seguir com o roteiro-pessoa-d. fase 0 e 1 estão finalizadas. vamos para a fase 2 (D-IND-01). tem algo pendente para o início da fase 2? ou podemos seguir? seria interessante criar outra branch ou dá para seguir na atual?
+
+### Prompt 2
+
+> sim, apresente o plano do D-IND-01
+
+### Prompt 3
+
+> sobre o plano proposto, aprovado, siga em frente com ele.
+>
+> sobre as suas dúvidas:
+> 1. o pdf é sempre baixado de uma url externa.
+> 2. isso não é preocupação do app. vai aparecer o erro do próprio dispositivo (algo como "formato incompatível com o dispositivo"). o aplicativo não se preocupa com a capacidade de abertura do formato pdf do dispositivo. erros de abertura do pdf não retornam para o app.
+> 3. escolha o que for mais simples
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+<!-- O prompt 3 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
