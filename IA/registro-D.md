@@ -173,3 +173,19 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
 
 <!-- O prompt 2 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
+
+## D-IA-06 – Rádio: estrutura (D-IND-05)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, itens do D-IND-04, pacote Comum e itens de Eventos (padrão de componentes e classes).
+- **Uso da resposta:** geração de `DD-Radio-01`, `DCmp-Radio-01`, `DCla-Radio-01` e `DCla-Radio-02`; registro da decisão "Entidades da Rádio" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> está certo a sua dedução ao voltar. siga em frente com D-IND-05
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.

@@ -2,6 +2,12 @@
 
 Decisões de planejamento e de modelagem que alteram o contrato ou o roteiro. Uma entrada por decisão, da mais recente para a mais antiga.
 
+## 20/10/2026 – Entidades da Rádio
+
+- **Decisão:** a programação é modelada como `ProgramaRadio` (nome, descrição) 1 — 1..* `HorarioPrograma` (dia da semana, hora de início, hora de fim). O controlador genérico do Comum trabalha com `HorarioPrograma`; a tela filtra pelo dia e trata sozinha o vazio de um único dia.
+- **Motivo:** o mesmo programa vai ao ar em vários dias e horários (print 03); separar evita repetir nome e descrição (critério 4.2). O controlador do Comum decide VAZIO pela lista inteira, e a carga é semanal.
+- **Alternativas:** uma única entidade `ItemProgramacao` com todos os campos (descartada: redundância); um controlador por dia (descartada: a carga é única para a semana).
+
 ## 20/10/2026 – Carga semanal da programação da Rádio
 
 - **Decisão:** a tela da Rádio busca a programação da semana atual inteira numa única chamada ao entrar. A troca de aba filtra os dados em memória, sem nova chamada. Ao sair e entrar de novo, nova chamada é feita. A URL do player é fixa no app, sem parâmetros. Dia sem programas usa a mensagem genérica de vazio do Comum.
