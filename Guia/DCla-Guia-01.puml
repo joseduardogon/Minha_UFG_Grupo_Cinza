@@ -1,0 +1,20 @@
+@startuml DCla-Guia-01
+title DCla-Guia-01 – Classes do componente AberturaGuia
+hide empty members
+
+class ControladorGuia {
+  + abrirGuia(): void
+}
+
+class ConfiguracaoGuia <<constantes>> {
+  + {static} urlGuia: String
+  + {static} tipoMime: String = "application/pdf"
+}
+
+interface ILinkExterno <<Comum>> {
+  + abrirDocumento(url: String, tipoMime: String): ResultadoAbertura
+}
+
+ControladorGuia ..> ConfiguracaoGuia : <<use>>
+ControladorGuia ..> ILinkExterno : <<use>>
+@enduml

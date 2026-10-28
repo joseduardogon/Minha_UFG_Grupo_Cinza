@@ -1,0 +1,17 @@
+@startuml DCdu-Guia-01
+title DCdu-Guia-01 – Casos de uso do Guia Estudantil
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membro da comunidade UFG" as Membro
+actor "Aplicativo externo" as AppExt <<sistema>>
+actor "Visualizador de PDF" as VisPDF <<sistema>>
+VisPDF -up-|> AppExt
+
+rectangle "App Minha UFG – Guia Estudantil" {
+  usecase "Consultar guia\nestudantil" as UC03
+}
+
+Membro --> UC03
+UC03 --> VisPDF
+@enduml

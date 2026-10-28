@@ -1,0 +1,22 @@
+@startuml DSeq-Guia-01
+title DSeq-Guia-01 – Sequência de E1: tocar no cartão e abrir o guia
+actor "Membro" as M
+participant ":TelaInicial" as T
+participant ":ControladorGuia" as G
+participant "ConfiguracaoGuia" as C
+participant ":AberturaLinkExterno" as L
+participant "Android\n(seletor de apps)" as A <<sistema>>
+
+M -> T : tocar no cartão "Guia Estudantil"
+T -> G : abrirGuia()
+G -> C : urlGuia, tipoMime
+C --> G : url, "application/pdf"
+G -> L : abrirDocumento(url, "application/pdf")
+L -> L : urlValida(url)
+L -> L : <<create>> Intencao(VIEW, url, tipoMime)
+L -> L : existeAppCompativel(intencao)
+L -> A : disparar(intencao)
+A -> M : exibe o seletor de apps
+L --> G : ResultadoAbertura
+note right of G : resultado descartado;\nfalhas são tratadas pelo Android
+@enduml

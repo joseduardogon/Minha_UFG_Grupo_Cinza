@@ -1,0 +1,20 @@
+@startuml DAtv-Radio-02
+title DAtv-Radio-02 – Trocar o dia da programação
+
+|Usuário|
+start
+note right
+  Pré-condição: a programação da semana
+  já foi carregada (DAtv-Radio-01).
+end note
+:Tocar na aba de um dia (DOM a SAB);
+|App|
+:Selecionar a aba do dia;
+:Filtrar a programação em memória\npelo dia selecionado;
+if (Há programas no dia?) then (sim)
+  :Exibir os programas do dia\n(horário, nome e descrição);
+else (não)
+  :Exibir mensagem de vazio;
+endif
+stop
+@enduml

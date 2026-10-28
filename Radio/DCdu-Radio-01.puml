@@ -1,0 +1,23 @@
+@startuml DCdu-Radio-01
+title DCdu-Radio-01 – Casos de uso da Rádio
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membro da comunidade UFG" as Membro
+actor "Servidor/API" as API <<sistema>>
+actor "Aplicativo externo" as AppExt <<sistema>>
+actor "Navegador" as Nav <<sistema>>
+Nav -up-|> AppExt
+
+rectangle "App Minha UFG – Rádio" {
+  usecase "Consultar programação\nda rádio" as UC021
+  usecase "Trocar o dia da\nprogramação" as UC022
+  usecase "Ouvir a rádio" as UC023
+}
+
+Membro --> UC021
+Membro --> UC023
+UC022 .> UC021 : <<extend>>
+UC021 --> API
+UC023 --> Nav
+@enduml

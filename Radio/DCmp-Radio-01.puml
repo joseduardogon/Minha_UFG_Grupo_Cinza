@@ -1,0 +1,22 @@
+@startuml DCmp-Radio-01
+title DCmp-Radio-01 – Componentes do pacote Radio
+skinparam componentStyle uml2
+
+package "Radio" {
+  component "TelaRadio" as Tela
+  component "FonteProgramacaoRadio" as Fonte
+}
+
+package "Interfaces do pacote Comum" {
+  rectangle "<<interface>>\nIControladorTelaRemota" as IControlador
+  rectangle "<<interface>>\nILinkExterno" as ILinkExterno
+  rectangle "<<interface>>\nIFonteDados" as IFonteDados
+  rectangle "<<interface>>\nIAcessoApi" as IAcessoApi
+}
+
+Fonte ..|> IFonteDados : oferece
+
+Tela ..> IControlador : requer
+Tela ..> ILinkExterno : requer
+Fonte ..> IAcessoApi : requer
+@enduml

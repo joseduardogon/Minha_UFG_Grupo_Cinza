@@ -1,0 +1,25 @@
+@startsalt DIhc-Guia-01
+{
+  {+
+    <b>Minha UFG
+    ==
+    {#
+      Segurança | Rádio
+      <b>[Guia Estudantil] (E1) | Eventos
+    }
+  }
+  .
+  {+
+    <i>Seletor de apps do Android (sistema)
+    ==
+    <b>Abrir com Drive
+    { [Desta vez] (E2) | [Sempre] (E2) }
+    ==
+    Usar outro app
+    [Files do Google] (E2)
+    [Outros apps] (E2)
+    ==
+    [Voltar] (E3)
+  }
+}
+@endsalt

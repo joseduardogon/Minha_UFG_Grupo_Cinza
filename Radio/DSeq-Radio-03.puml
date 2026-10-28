@@ -1,0 +1,22 @@
+@startuml DSeq-Radio-03
+title DSeq-Radio-03 – Sequência de E3: ouvir a rádio
+actor "Membro" as M
+participant ":TelaRadio" as T
+participant "ConfiguracaoRadio" as C
+participant ":AberturaLinkExterno" as L
+participant "Navegador" as N <<sistema>>
+participant ":ControladorTelaRemota<HorarioPrograma>" as K
+
+M -> T : aoTocarPlay()
+T -> C : urlPlayer
+C --> T : url
+T -> L : abrirUrl(url)
+L -> N : disparar(intencao)
+N -> M : abre o site do player
+L --> T : ResultadoAbertura
+note right of T : resultado descartado
+M -> N : voltar ao app
+N -> T : aoExibir()
+T -> K : aoEntrarNaTela()
+ref over T, K : Carregar e exibir (DSeq-Radio-01)
+@enduml

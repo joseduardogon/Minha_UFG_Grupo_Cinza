@@ -1,0 +1,18 @@
+@startuml DSeq-Radio-02
+title DSeq-Radio-02 – Sequência de E2: trocar o dia
+actor "Membro" as M
+participant ":TelaRadio" as T
+participant ":ControladorTelaRemota<HorarioPrograma>" as K
+
+M -> T : aoTocarAba(dia)
+T -> T : diaSelecionado = dia
+T -> K : obterDados()
+K --> T : List<HorarioPrograma> (semana em memória)
+T -> T : programasDoDia(dia)
+alt dia com programas
+  T -> M : mostra horário, nome e descrição
+else dia sem programas
+  T -> M : mostra a mensagem de vazio
+end
+note over T, K : sem chamada à API
+@enduml

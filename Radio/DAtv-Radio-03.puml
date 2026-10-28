@@ -1,0 +1,16 @@
+@startuml DAtv-Radio-03
+title DAtv-Radio-03 – Ouvir a rádio
+
+|Usuário|
+start
+:Tocar no botão de play;
+|App|
+:Solicitar a abertura da URL fixa do player;
+|Navegador|
+:Abrir o site do player da Rádio UFG;
+|Usuário|
+:Voltar ao app;
+|App|
+:Exibir a tela da Rádio e recarregar\na programação da semana;
+stop
+@enduml

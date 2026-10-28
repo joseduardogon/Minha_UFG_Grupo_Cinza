@@ -78,3 +78,166 @@ A referência ABNT que vai para a bibliografia aparece no fim de cada entrada.
 ANTHROPIC. **Claude**. Assistente de IA. Disponível em: claude.ai. Acesso em: 14 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
 
 <!-- Os dois prompts têm mais de um parágrafo, então vão para o apêndice de prompts. Preencher <X> na editoração. -->
+
+## D-IA-02 – Guia Estudantil: comportamento (D-IND-01)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, contrato-base.md, contexto-equipe.md, roteiro-pessoa-D.md e os prints 04 e 05 (Guia Estudantil).
+- **Uso da resposta:** plano do D-IND-01; geração de `DCdu-Guia-01`, `DAtv-Guia-01` e `DIhc-Guia-01` (.puml, .png e .md); registro da decisão "Guia Estudantil sem tela própria" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> vamos seguir com o roteiro-pessoa-d. fase 0 e 1 estão finalizadas. vamos para a fase 2 (D-IND-01). tem algo pendente para o início da fase 2? ou podemos seguir? seria interessante criar outra branch ou dá para seguir na atual?
+
+### Prompt 2
+
+> sim, apresente o plano do D-IND-01
+
+### Prompt 3
+
+> sobre o plano proposto, aprovado, siga em frente com ele.
+>
+> sobre as suas dúvidas:
+> 1. o pdf é sempre baixado de uma url externa.
+> 2. isso não é preocupação do app. vai aparecer o erro do próprio dispositivo (algo como "formato incompatível com o dispositivo"). o aplicativo não se preocupa com a capacidade de abertura do formato pdf do dispositivo. erros de abertura do pdf não retornam para o app.
+> 3. escolha o que for mais simples
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+<!-- O prompt 3 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
+
+## D-IA-03 – Guia Estudantil: estrutura (D-IND-02)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, contrato-base.md, roteiro-pessoa-D.md, itens do D-IND-01 e do pacote Comum.
+- **Uso da resposta:** plano do D-IND-02; geração de `DD-Guia-01`, `DCmp-Guia-01` e `DCla-Guia-01`; registro da decisão "URL do Guia Estudantil como configuração fixa" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> push somente no fim da fase 2. vamos seguir para D-IND-02
+
+### Prompt 2
+
+> opção a, configuração fixa no app. pode seguir
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-04 – Guia Estudantil: detalhamento (D-IND-03)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, itens do D-IND-01 e do D-IND-02, pacote Comum e itens de Eventos (padrão de DSeq e contratos).
+- **Uso da resposta:** geração de `DSeq-Guia-01`, `DSeq-Guia-02`, `DEst-Guia-01` e `Contrato-Guia-01`; justificativa da ausência de regras E-C-A no Guia.
+
+### Prompt 1
+
+> sim
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-05 – Rádio: comportamento (D-IND-04)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, contexto-equipe.md, roteiro-pessoa-D.md, print 03 (Rádio) e pacote Comum.
+- **Uso da resposta:** plano do D-IND-04; geração de `DCdu-Radio-01`, `DAtv-Radio-01` a `03` e `DIhc-Radio-01`; registro da decisão "Carga semanal da programação da Rádio" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> sim, siga para o D-IND-04.
+
+### Prompt 2
+
+> sobre o plano proposto, aprovado, siga em frente com ele.
+>
+> sobre as suas dúvidas:
+> 1. o app sempre busca a semana atual inteira de uma vez. filtra ao mudar de aba mas o dado já está em memória. por se tratar de apenas texto, o peso é bem baixo e o desempenho não é comprometido. mas se eu sair do rádio e entrar novamente, uma outra chamada de api é feita.
+> 2. fixa no app. não há parâmetro dinâmico que vai junto com a abertura do rádio. apenas abre a url fixa.
+> 3. não. só clicando no dia específico mesmo.
+> 4. como na semana atual a programação da rádio está cheia, não consigo verificar manualmente esse estado vazio. então siga com a mensagem genérica de vazio mesmo
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+<!-- O prompt 2 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
+
+## D-IA-06 – Rádio: estrutura (D-IND-05)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, itens do D-IND-04, pacote Comum e itens de Eventos (padrão de componentes e classes).
+- **Uso da resposta:** geração de `DD-Radio-01`, `DCmp-Radio-01`, `DCla-Radio-01` e `DCla-Radio-02`; registro da decisão "Entidades da Rádio" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> está certo a sua dedução ao voltar. siga em frente com D-IND-05
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-07 – Rádio: detalhamento (D-IND-06)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, itens do D-IND-04 e do D-IND-05, pacote Comum e itens de Eventos (padrão de DSeq, contratos e ECA).
+- **Uso da resposta:** geração de `DSeq-Radio-01` a `03`, `DEst-Radio-01`, `Contrato-Radio-01` e `ECA-Radio-01`.
+
+### Prompt 1
+
+> sim, siga para o D-IND-06
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-08 – Tela inicial (D-IND-07)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, contexto-equipe.md, print 01 (tela inicial), `DPac-Geral-01` e itens do Guia e da Rádio.
+- **Uso da resposta:** identificação do conflito entre os 8 cartões do app e as dependências do `DPac-Geral-01`; geração de `DIhc-Inicio-01` e `DEst-Inicio-01`; ajuste do texto do `DPac-Geral-01`; registro da decisão "Cartão Avaliação de UA na tela inicial" em `Docs/decisoes.md`.
+
+### Prompt 1
+
+> sim, siga para o D-IND-07
+
+### Prompt 2
+
+> opção b, versão é só texto fixo. pode seguir
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-09 – Fechamento do Comum (D-IND-08)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 20 de outubro de 2026.
+- **Contexto fornecido:** repositório da equipe, classes e estados do pacote Comum, itens do Guia, da Rádio e de Eventos.
+- **Uso da resposta:** geração de `Contrato-Comum-01` a `04` e `ECA-Comum-01`; correção do texto de `DCla-Comum-03` e `DEst-Comum-01` (a Rádio não recarrega ao trocar de aba); texto do pedido de revisão à Pessoa C e do PR da fase 2.
+
+### Prompt 1
+
+> sim, siga para o D-IND-08
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
