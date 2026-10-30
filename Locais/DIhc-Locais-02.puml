@@ -1,0 +1,22 @@
+@startsalt DIhc-Locais-02
+{+
+  { [<] (E1) | <b>Campus Samambaia }
+  ==
+  {
+    . | <i>[Área Cartográfica do Campus Samambaia]
+    . | (Azul) CEU 5
+    . | (Amarelo) Centro Editorial Gráfico
+    . | (Verde) <b>Instituto de Informatica [DESTACADO]
+    . | (Laranja) Biblioteca Central
+    . | (Cinza) Correios
+    . | (Azul) Rotatória Central de Segurança
+    . | ...
+    . | { . | . | . | . | . | . | <b>[⊕ GPS] (E4) }
+  }
+  ==
+  {
+    [≡ Locais] (E5) | <b>[• Mapa]
+  }
+}
+@endsalt
+

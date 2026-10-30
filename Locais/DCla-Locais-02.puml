@@ -1,0 +1,47 @@
+@startuml DCla-Locais-02
+title DCla-Locais-02 – Classes de domínio e fonte de dados de Locais
+hide empty members
+
+package "Comum" {
+  interface "IFonteDados<Local>" as IFonteDados <<Comum>> {
+    + carregar(): List<Local>
+  }
+  interface IAcessoApi <<Comum>> {
+    + obter(caminho: String, parametros: Map<String, String>): RespostaApi
+  }
+  class Coordenada <<Comum>> {
+    + latitude: Real
+    + longitude: Real
+  }
+}
+
+class FonteLocais {
+  - acessoApi: IAcessoApi
+  + FonteLocais(acessoApi: IAcessoApi)
+  + carregar(): List<Local>
+  - converter(corpoJson: String): List<Local>
+}
+
+class Local {
+  + id: Integer
+  + nome: String
+  + fotoUrl: String
+  + corMarcador: String
+  + campus: String
+  + coordenada: Coordenada
+  + ehUnidadeAcademica(): Boolean
+}
+
+class UnidadeAcademica {
+  + sigla: String
+  + areaConhecimento: String
+  + ehUnidadeAcademica(): Boolean
+}
+
+IFonteDados <|.. FonteLocais
+FonteLocais --> "1" IAcessoApi : acessoApi
+FonteLocais ..> Local : <<create>>
+Local <|-- UnidadeAcademica
+Local --> "1" Coordenada : coordenada
+@enduml
+

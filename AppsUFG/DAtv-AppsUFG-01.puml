@@ -1,0 +1,38 @@
+@startuml DAtv-AppsUFG-01
+title DAtv-AppsUFG-01 – Consultar apps UFG e abrir na loja
+
+|Usuário|
+start
+:Tocar no cartão "Apps UFG"\nna tela inicial;
+
+|App|
+:Carregar lista fixa de aplicativos;
+:Exibir tela "Apps UFG"\ncom os 3 cartões;
+
+|Usuário|
+if (Deseja abrir algum app?) then (sim)
+  :Tocar no cartão do aplicativo\n(RU UFG, Inventário ou CS);
+  |App|
+  :Identificar idPacote do app selecionado;
+  :Solicitar abertura na loja\n(ILinkExterno.abrirLoja);
+  |Play Store|
+  if (Item disponível na loja?) then (sim)
+    :Exibir página do aplicativo\nna Google Play Store;
+  else (não [ex.: CS - Candidato])
+    :Exibir mensagem nativa da loja\n"Item não encontrado";
+  endif
+  |Usuário|
+  :Retornar ao app Minha UFG\n(botão voltar do SO);
+  |App|
+  :Exibir tela "Apps UFG";
+else (não)
+endif
+
+|Usuário|
+:Tocar no botão voltar\n(barra superior);
+
+|App|
+:Exibir tela inicial;
+stop
+@enduml
+

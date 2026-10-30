@@ -1,0 +1,22 @@
+@startuml DCdu-AppsUFG-01
+title DCdu-AppsUFG-01 – Casos de uso de Apps UFG
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membro da comunidade UFG" as Membro
+actor "Aplicativo externo" as AppExt <<sistema>>
+actor "Play Store" as PlayStore <<sistema>>
+PlayStore -up-|> AppExt
+
+rectangle "App Minha UFG – Apps UFG" {
+  usecase "Visualizar catálogo\nde apps UFG" as UC01
+  usecase "Abrir aplicativo\nna Play Store" as UC02
+}
+
+Membro --> UC01
+Membro --> UC02
+
+UC02 ..> UC01 : <<extend>>
+UC02 --> PlayStore
+@enduml
+

@@ -1,0 +1,16 @@
+@startuml DEst-AppsUFG-01
+title DEst-AppsUFG-01 – Estados da tela de Apps UFG
+hide empty description
+
+state "Tela inicial" as Inicio
+state "Exibindo catálogo" as Catalogo : TelaAppsUFG ativa
+state "Play Store em primeiro plano" as Loja : sistema externo Android
+
+[*] --> Inicio
+Inicio --> Catalogo : tocar no cartão "Apps UFG"
+Catalogo --> Loja : E2/E3/E4 tocar em aplicativo\n/ abrirNaLoja()
+Loja --> Catalogo : voltar ao app (navegação do SO)
+Catalogo --> Inicio : E1 tocar no botão voltar
+Inicio --> [*] : sair do app
+@enduml
+

@@ -1,0 +1,19 @@
+@startuml DCmp-Locais-01
+title DCmp-Locais-01 – Componentes do pacote Locais
+skinparam componentStyle uml2
+
+package "Locais" {
+  component "ModuloLocais" as ModLocais
+}
+
+package "Interfaces do pacote Comum" {
+  rectangle "<<interface>>\nIAcessoApi" as IAcessoApi
+  rectangle "<<interface>>\nIProvedorMapa" as IProvedorMapa
+  rectangle "<<interface>>\nILocalizacao" as ILocalizacao
+}
+
+ModLocais ..> IAcessoApi : requer
+ModLocais ..> IProvedorMapa : requer
+ModLocais ..> ILocalizacao : requer
+@enduml
+

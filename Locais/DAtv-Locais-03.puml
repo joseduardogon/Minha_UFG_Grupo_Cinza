@@ -1,0 +1,35 @@
+@startuml DAtv-Locais-03
+title DAtv-Locais-03 – Atividades de UC03: centralizar em minha localização atual
+
+|Usuário|
+start
+:Tocar no botão de GPS (mira)\nno canto inferior direito do mapa;
+
+|App|
+:Solicitar verificação de localização\n(ILocalizacao.solicitarPermissao);
+
+|Android / GPS|
+if (Precisão de local desativada?) then (sim)
+  :Exibir diálogo de precisão de local\n("Ativar" ou "Agora não");
+  |Usuário|
+  :Escolher opção no diálogo;
+  |Android / GPS|
+else (não [já ativada])
+endif
+
+if (Permissão e precisão concedidas?) then (sim)
+  :Obter coordenadas do sensor de GPS;
+  |App|
+  :Repassar coordenadas ao provedor de mapa;
+  |Provedor de Mapa|
+  :Centralizar câmera na posição do usuário\n(IProvedorMapa.centralizarEm);
+  :Renderizar marcador de posição atual;
+else (não [usuário escolheu "Agora não"])
+  |Provedor de Mapa|
+  :Manter visualização nas coordenadas\npadrão do Campus Samambaia;
+endif
+
+|Usuário|
+:Visualizar mapa;
+stop
+@enduml

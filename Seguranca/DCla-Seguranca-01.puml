@@ -1,0 +1,39 @@
+@startuml DCla-Seguranca-01
+title DCla-Seguranca-01 – Classes do pacote Seguranca
+hide empty members
+
+class TelaSeguranca {
+  - controlador: ControladorSeguranca
+  + exibirTela(): void
+  + aoTocarVersaoWeb(): void
+  + aoTocarPlayStore(): void
+  + aoTocarVoltar(): void
+}
+
+class ControladorSeguranca {
+  + abrirVersaoWeb(): ResultadoAbertura
+  + abrirPlayStore(): ResultadoAbertura
+}
+
+class ConfiguracaoSeguranca <<constantes>> {
+  + {static} urlWeb: String = "https://seguranca.web.ufg.br"
+  + {static} idPacoteApp: String = "br.ufg.cercomp.sistemaseguranca"
+}
+
+interface ILinkExterno <<Comum>> {
+  + abrirUrl(url: String): ResultadoAbertura
+  + abrirLoja(idPacote: String): ResultadoAbertura
+}
+
+enum ResultadoAbertura <<Comum>> {
+  ABERTO
+  URL_INVALIDA
+  SEM_APP_COMPATIVEL
+}
+
+TelaSeguranca --> ControladorSeguranca
+ControladorSeguranca ..> ConfiguracaoSeguranca : <<use>>
+ControladorSeguranca ..> ILinkExterno : <<use>>
+ControladorSeguranca ..> ResultadoAbertura : <<use>>
+@enduml
+

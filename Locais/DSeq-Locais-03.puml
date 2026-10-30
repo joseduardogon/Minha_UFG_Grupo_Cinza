@@ -1,0 +1,38 @@
+@startuml DSeq-Locais-03
+title DSeq-Locais-03 – Sequência de centralização via GPS
+actor "Membro" as M
+participant ":AbaMapaLocais" as MView
+participant ":AdaptadorGps" as G <<Comum>>
+participant "Android\n(Google Play Services)" as GPS <<sistema>>
+participant ":AdaptadorProvedorMapa" as P <<Comum>>
+
+M -> MView : tocar no botão de mira GPS
+MView -> G : solicitarPermissao()
+alt Precisão de local ligada
+  G -> G : permissaoConcedida = true
+else Precisão desligada
+  G -> GPS : exibirDialogoPrecisao()
+  GPS -> M : exibe diálogo nativo ("Ativar" ou "Agora não")
+  alt Usuário clica em "Ativar"
+    M -> GPS : clicar "Ativar"
+    GPS -> GPS : ativarPrecisao()
+    GPS --> G : permissaoConcedida = true
+  else Usuário clica em "Agora não"
+    M -> GPS : clicar "Agora não"
+    GPS --> G : permissaoConcedida = false
+  end
+end
+
+alt Permissão concedida
+  MView -> G : obterLocalizacaoAtual()
+  G -> GPS : lerCoordenadas()
+  GPS --> G : Coordenada(lat, lon)
+  G --> MView : posicaoAtual
+  MView -> P : centralizarEm(posicaoAtual)
+  P --> M : centraliza mapa na posição do usuário
+else Permissão recusada
+  MView -> P : manter visualização no Campus Samambaia
+  P --> M : mantém visualização padrão do campus
+end
+@enduml
+

@@ -1,0 +1,70 @@
+@startuml DCla-Locais-01
+title DCla-Locais-01 – Classes de interface e controle de Locais
+hide empty members
+
+package "Comum" {
+  interface "IControladorTelaRemota<Local>" as IControlador <<Comum>>
+  interface IObservadorEstado <<Comum>> {
+    + aoMudarEstado(estado: EstadoTela): void
+  }
+  interface IProvedorMapa <<Comum>> {
+    + centralizarEm(posicao: Coordenada): void
+    + destacarMarcador(idMarcador: String): void
+    + adicionarMarcador(marcador: Marcador): void
+  }
+  interface ILocalizacao <<Comum>> {
+    + permissaoConcedida(): Boolean
+    + solicitarPermissao(): Boolean
+    + obterLocalizacaoAtual(): Coordenada
+  }
+  enum EstadoTela <<Comum>>
+}
+
+class TelaLocais {
+  - controlador: ControladorLocais
+  - abaAtiva: AbaAtiva
+  - abaLista: AbaListaLocais
+  - abaMapa: AbaMapaLocais
+  + aoExibir(): void
+  + aoSelecionarAba(aba: AbaAtiva): void
+  + aoTocarVoltar(): void
+  + aoMudarEstado(estado: EstadoTela): void
+}
+
+enum AbaAtiva {
+  LOCAIS
+  MAPA
+}
+
+class ControladorLocais {
+  - controladorRemoto: IControladorTelaRemota<Local>
+  - localSelecionado: Local
+  + carregarLocais(): void
+  + obterLocais(): List<Local>
+  + selecionarLocal(local: Local): void
+  + obterLocalSelecionado(): Local
+}
+
+class AbaListaLocais {
+  + exibirLista(locais: List<Local>): void
+  + aoTocarItem(local: Local): void
+}
+
+class AbaMapaLocais {
+  - provedorMapa: IProvedorMapa
+  - servicoLocalizacao: ILocalizacao
+  + exibirMapaComLocais(locais: List<Local>): void
+  + focarLocal(local: Local): void
+  + aoTocarBotaoGps(): void
+}
+
+IObservadorEstado <|.. TelaLocais
+TelaLocais *-- "1" AbaListaLocais
+TelaLocais *-- "1" AbaMapaLocais
+TelaLocais --> "1" ControladorLocais : controlador
+TelaLocais ..> AbaAtiva
+ControladorLocais --> "1" IControlador : controladorRemoto
+AbaMapaLocais --> "1" IProvedorMapa : provedorMapa
+AbaMapaLocais --> "1" ILocalizacao : servicoLocalizacao
+@enduml
+

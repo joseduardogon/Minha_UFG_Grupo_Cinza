@@ -1,0 +1,26 @@
+@startsalt DIhc-Locais-01
+{+
+  { [<] (E1) | <b>Campus Samambaia }
+  ==
+  {
+    (O) | <b>Restaurante Universitário - Samambaia
+    --
+    (O) | <b>Restaurante da Agronomia
+    --
+    (O) | <b>Instituto de Informatica
+    --
+    (O) | <b>Laboratório de Genética e Biodiversidade
+    --
+    (O) | <b>Herbário - Unidade de Conservação
+    --
+    (O) | <b>Laboratório de Ecologia e Evolução
+    --
+    ... | ...
+  } (E2)
+  ==
+  {
+    <b>[≡ Locais] | [• Mapa] (E3)
+  }
+}
+@endsalt
+

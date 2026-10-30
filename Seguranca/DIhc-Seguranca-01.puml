@@ -1,0 +1,24 @@
+@startsalt DIhc-Seguranca-01
+{+
+  { [<] (E1) | <b>Minha UFG - Segurança }
+  ==
+  .
+  {+
+    {
+      [ (Ícone Escudo) ]
+      <b>Acessar Versao Web
+    } (E2)
+  }
+  .
+  ==
+  .
+  {+
+    {
+      [ DISPONÍVEL NO Google Play ]
+      <b>Baixar na Play Store (Android)
+    } (E3)
+  }
+  .
+}
+@endsalt
+

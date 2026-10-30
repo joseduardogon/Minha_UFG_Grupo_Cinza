@@ -1,0 +1,33 @@
+@startuml DSeq-Locais-01
+title DSeq-Locais-01 – Sequência de carga remota de locais via API
+actor "Membro" as M
+participant ":TelaLocais" as T
+participant ":ControladorLocais" as C
+participant ":ControladorTelaRemota<Local>" as R <<Comum>>
+participant ":FonteLocais" as F
+participant ":AcessoApi" as A <<Comum>>
+participant "Servidor/API" as S <<sistema>>
+
+M -> T : tocar no cartão "Locais"
+T -> C : carregarLocais()
+C -> R : aoEntrarNaTela()
+R -> R : definirEstado(CARREGANDO)
+R -> R : notificar()
+R --> T : aoMudarEstado(CARREGANDO)
+T -> T : exibirPopUp("Carregando locais...")
+R -> F : carregar()
+F -> A : obter("/locais", vazio)
+A -> S : GET /locais
+S --> A : 200 OK (corpoJson)
+A --> F : RespostaApi(sucesso, corpoJson)
+F -> F : converter(corpoJson)
+F --> R : List<Local>
+R -> R : definirEstado(EXIBINDO)
+R -> R : notificar()
+R --> T : aoMudarEstado(EXIBINDO)
+T -> T : fecharPopUp()
+T -> C : obterLocais()
+C --> T : List<Local>
+T -> T : abaLista.exibirLista(locais)
+@enduml
+

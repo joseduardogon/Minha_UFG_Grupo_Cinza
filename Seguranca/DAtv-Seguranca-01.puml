@@ -1,0 +1,61 @@
+@startuml DAtv-Seguranca-01
+title DAtv-Seguranca-01 – Solicitar apoio de segurança
+skinparam nodesep 30
+skinparam ranksep 30
+
+|Usuário|
+start
+:Tocar no cartão "Segurança"
+na tela inicial;
+
+|App|
+:Exibir tela "Minha UFG - Segurança"
+com as duas opções;
+
+|Usuário|
+if (Qual canal deseja acessar?) then (Versão Web)
+  :Tocar no cartão
+"Acessar Versao Web";
+  |App|
+    -> \n\n;
+  :Ler URL de segurança web
+(ConfiguracaoSeguranca.urlWeb);
+  :Solicitar abertura no navegador
+(ILinkExterno.abrirUrl);
+  |Navegador|
+    -> \n;
+  :Abrir portal de segurança
+no navegador web;
+  :Interagir com o portal;
+  |Usuário|
+  :Retornar ao Minha UFG;
+else (Play Store)
+  |Usuário|
+
+  :Tocar no cartão
+"Baixar na Play Store";
+  |App|
+  -> ;
+  :Ler idPacote da segurança
+(ConfiguracaoSeguranca.idPacoteApp);
+  :Solicitar abertura na loja
+(ILinkExterno.abrirLoja);
+  |Play Store|
+  :Exibir aplicativo de segurança
+na Google Play Store;
+  :Instalar/abrir o aplicativo;
+  |Usuário|
+  :Retornar ao Minha UFG;
+endif
+
+|App|
+:Restaurar tela "Minha UFG - Segurança";
+
+|Usuário|
+:Tocar no botão voltar
+(barra superior);
+
+|App|
+:Exibir tela inicial;
+stop
+@enduml
