@@ -3,17 +3,27 @@ title DSeq-Eventos-01 – Sequência de A1: abrir a tela Eventos
 actor "Membro" as M
 participant ":TelaEventos" as T
 participant ":CalendarioEventos" as C
-participant ":ControladorTelaRemota<Evento>" as K
 participant ":FonteEventos" as F
+participant ":ControladorTelaRemota<Evento>" as K
 participant ":ClienteApi" as A
 participant "Servidor/API" as S <<sistema>>
 
-M -> T : abrirTela()
-T -> C : <<create>>(hoje, regionalInicial)
+M -> T : aoExibir()
+note right of T : TelaEventos foi criada pelo menu inicial ao tocar\nno cartão Eventos, com regionaisOferecidas (P-EV-2)
+group Primeira exibição (entrada pelo menu): criar filtro, fonte e controlador
+  create C
+  T -> C : <<create>>(hoje, regionalInicial)
+  create F
+  T -> F : <<create>>(acesso, calendario)
+  create K
+  T -> K : <<create>>(fonte)
+  T -> K : registrarObservador(T)
+end
 T -> K : aoEntrarNaTela()
-group Carregar e exibir (referenciado em DSeq-Eventos-02, 03 e 04)
+group Carregar e exibir (referenciado em DSeq-Eventos-02, 03, 04 e 05)
   K -> K : definirEstado(CARREGANDO)
   K -> T : aoMudarEstado(CARREGANDO)
+  T -> M : mostra o indicador de carregamento
 
   K -> F : carregar()
   F -> C : obterDataSelecionada()
@@ -29,10 +39,12 @@ group Carregar e exibir (referenciado em DSeq-Eventos-02, 03 e 04)
     F --> K : List<Evento>
     alt lista com itens
       K -> T : aoMudarEstado(EXIBINDO)
-      T -> M : mostra a lista de eventos
+      T -> K : obterDados()
+      K --> T : List<Evento>
+      T -> M : mostra a lista de eventos e a aba de regional
     else lista vazia
       K -> T : aoMudarEstado(VAZIO)
-      T -> M : mostra "sem eventos"
+      T -> M : mostra "Sem eventos" (calendário visível,\naba de regional oculta)
     end
   else falha de comunicação
     A --> F : ErroApi

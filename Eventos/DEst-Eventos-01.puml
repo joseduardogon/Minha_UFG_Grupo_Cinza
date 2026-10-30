@@ -2,27 +2,28 @@
 title DEst-Eventos-01 – Estados da tela Eventos
 hide empty description
 
-[*] --> Carregando : aoEntrarNaTela (E0)
+[*] -down-> Carregando : E0 aoExibir\n(entrada pelo menu:\nfiltro = hoje e\nregional inicial)
 
 state Carregando : entry / controlador.aoEntrarNaTela()\nou controlador.recarregar()
 state "Fora do app" as Fora : página do evento aberta no Navegador
 
 state Resultado {
-  state Exibindo : entry / mostrar lista
-  state Vazio : entry / mostrar "sem eventos"
-  state "Indisponível" as Indisponivel : entry / mostrar indisponibilidade
+  state Exibindo : entry / mostrar lista e\nfaixa de abas de regional
+  state Vazio : entry / mostrar "Sem eventos"\n(faixa de abas oculta)
+  state "Indisponível" as Indisponivel : entry / mostrar indisponibilidade\n(faixa de abas oculta)
 }
 
 Carregando --> Exibindo : carga concluída [há eventos]
 Carregando --> Vazio : carga concluída [não há eventos]
 Carregando --> Indisponivel : ErroApi [qualquer tipo]
 
-Resultado --> Carregando : E1 escolher regional\nE2/E3 trocar mês\nE4 escolher data\naoEntrarNaTela
+Exibindo -up-> Carregando : E1 aoEscolherRegional\n(só com a faixa de abas)
+Resultado --> Carregando : E2/E3 aoTrocarMes\nE4 aoEscolherData\n(calendário visível em todos)
 
-Exibindo --> Fora : E5 tocar evento [evento.temUrl()]\n/ linkExterno.abrirUrl(url)
-Exibindo --> Exibindo : E5 tocar evento [sem URL]
-Fora --> Carregando : aoEntrarNaTela (voltar ao app)
+Exibindo --> Fora : E5 aoTocarEvento [evento.temUrl()]\n/ linkExterno.abrirUrl(url)
+Exibindo --> Exibindo : E5 aoTocarEvento [sem URL]
+Fora --> Carregando : E0 aoExibir\n(retorno do Navegador: filtro mantido)
 
-Resultado --> [*] : sair da tela
-Fora --> [*] : sair do app
+Carregando --> [*] : E6 aoVoltar
+Resultado --> [*] : E6 aoVoltar
 @enduml

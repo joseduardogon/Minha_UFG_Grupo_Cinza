@@ -31,8 +31,9 @@ class Evento {
   + titulo: String
   + dataInicio: Date
   + dataFim: Date
-  + local: String
-  + url: String
+  + url: String [0..1]
+  + urlImagem: String [0..1]
+  + idRegional: Integer
   + temUrl(): Boolean
 }
 
@@ -40,5 +41,5 @@ IFonteDados <|.. FonteEventos
 FonteEventos --> "1" IAcessoApi : acesso
 FonteEventos --> "1" IFiltroEventos : filtro
 FonteEventos ..> Evento : <<create>>
-Evento --> "1" Regional : regional
+Evento --> "1" Regional : regional (idRegional)
 @enduml

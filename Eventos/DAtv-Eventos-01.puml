@@ -1,10 +1,10 @@
 @startuml DAtv-Eventos-01
-title DAtv-Eventos-01 – Atividades de UC-EV-01: consultar eventos por regional e data
+title DAtv-Eventos-01 – Atividades de UC04.1: consultar eventos por regional e data
 |Membro|
 start
-:**A1** Abre a tela Eventos;
+:**A1** Abre a tela Eventos (E0);
 |App|
-:Exibe o calendário do mês atual\ncom a data de hoje selecionada;
+:Exibe o calendário do mês atual\ncom a data de hoje e a regional inicial;
 repeat
   :Pede ao servidor os eventos\nda regional e da data selecionadas;
   |Servidor/API|
@@ -13,16 +13,20 @@ repeat
   if (Houve falha de comunicação?) then (sim)
     :Exibe a mensagem de indisponibilidade;
   elseif (Há eventos na data?) then (sim)
-    :Exibe a lista de eventos;
+    :Exibe a lista de eventos\ne a aba de regional;
   else (não)
-    :Exibe a mensagem "sem eventos";
+    :Exibe "Sem eventos" (o calendário\ncontinua visível, sem a aba de regional);
   endif
   |Membro|
   if (Escolhe outra data ou outra regional?) then (sim)
-    :**A2** Escolhe outra data\nou **A3** escolhe outra regional;
+    :**A2** Escolhe outra data (E4)\nou, com a lista exibida,\n**A3** escolhe outra regional (E1);
     |App|
   else (não)
   endif
 repeat while (Continua consultando?) is (sim) not (não)
+|Membro|
+:Toca na seta de voltar (E6);
+|App|
+:Encerra a tela e descarta o filtro\ne os eventos em memória;
 stop
 @enduml

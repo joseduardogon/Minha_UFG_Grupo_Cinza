@@ -1,0 +1,70 @@
+@startuml DCla-Noticias-01
+title DCla-Noticias-01 – Classes do componente TelaNoticias
+hide empty members
+
+package "Comum" {
+  interface "IControladorTelaRemota<Noticia>" as IControlador <<Comum>> {
+    + aoEntrarNaTela(): void
+    + recarregar(): void
+    + obterEstado(): EstadoTela
+    + obterDados(): List<Noticia>
+    + registrarObservador(o: IObservadorEstado): void
+  }
+  class "ControladorTelaRemota<Noticia>" as Controlador <<Comum>>
+  interface IObservadorEstado <<Comum>> {
+    + aoMudarEstado(estado: EstadoTela): void
+  }
+  interface ILinkExterno <<Comum>> {
+    + abrirUrl(url: String): ResultadoAbertura
+  }
+  interface IAcessoApi <<Comum>>
+  enum EstadoTela <<Comum>>
+  class Regional <<Comum (proposta)>> {
+    + id: Integer
+    + nome: String
+  }
+}
+
+class TelaNoticias {
+  - regionaisOferecidas: List<Regional>
+  - acesso: IAcessoApi
+  - controlador: IControladorTelaRemota<Noticia>
+  - filtro: FiltroNoticias
+  - linkExterno: ILinkExterno
+  + TelaNoticias(regionaisOferecidas: List<Regional>, acesso: IAcessoApi, linkExterno: ILinkExterno)
+  + aoExibir(): void
+  + aoEscolherRegional(regional: Regional): void
+  + aoTocarNoticia(noticia: Noticia): void
+  + aoVoltar(): void
+  + aoMudarEstado(estado: EstadoTela): void
+}
+
+interface IFiltroNoticias {
+  + obterRegionalSelecionada(): Regional
+}
+
+class FiltroNoticias {
+  - regionalSelecionada: Regional
+  + FiltroNoticias(regionalInicial: Regional)
+  + selecionarRegional(regional: Regional): void
+  + obterRegionalSelecionada(): Regional
+}
+
+class Noticia <<DCla-Noticias-02>>
+class FonteNoticias <<DCla-Noticias-02>>
+
+IObservadorEstado <|.. TelaNoticias
+IFiltroNoticias <|.. FiltroNoticias
+IControlador <|.. Controlador
+TelaNoticias *-- "1" FiltroNoticias
+TelaNoticias --> "1" IControlador : controlador
+TelaNoticias --> "1" ILinkExterno : linkExterno
+TelaNoticias --> "1" IAcessoApi : acesso
+TelaNoticias --> "1..*" Regional : regionaisOferecidas
+TelaNoticias ..> Controlador : <<create>>
+TelaNoticias ..> FonteNoticias : <<create>>
+Controlador --> "0..*" IObservadorEstado : registrarObservador(tela)
+TelaNoticias ..> Noticia : <<use>>
+TelaNoticias ..> EstadoTela : <<use>>
+FiltroNoticias --> "1" Regional : regionalSelecionada
+@enduml

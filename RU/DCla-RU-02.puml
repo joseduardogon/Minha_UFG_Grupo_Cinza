@@ -1,0 +1,65 @@
+@startuml DCla-RU-02
+title DCla-RU-02 – Classes do componente FonteCardapio
+hide empty members
+
+package "Comum" {
+  interface "IFonteDados<Refeicao>" as IFonteDados <<Comum>> {
+    + carregar(): List<Refeicao>
+  }
+  interface IAcessoApi <<Comum>> {
+    + obter(caminho: String, parametros: Map<String, String>): RespostaApi
+  }
+}
+
+interface IFiltroCardapio <<DCla-RU-01>> {
+  + obterTipoRefeicao(): TipoRefeicao
+}
+
+class FonteCardapio {
+  - acesso: IAcessoApi
+  - filtro: IFiltroCardapio
+  + FonteCardapio(acesso: IAcessoApi, filtro: IFiltroCardapio)
+  + carregar(): List<Refeicao>
+  - montarParametros(): Map<String, String>
+  - converter(corpo: String): List<Refeicao>
+}
+
+class Cardapio {
+  + id: Integer
+  + dataInicio: Date
+  + dataFim: Date
+}
+
+class Refeicao {
+  + id: Integer
+  + tipo: TipoRefeicao
+  + data: Date
+}
+
+class ItemCardapio {
+  + id: Integer
+  + descricao: String
+}
+
+class CategoriaItem {
+  + id: Integer
+  + nome: String
+}
+
+enum TipoRefeicao {
+  CAFE_DA_MANHA
+  ALMOCO
+  JANTAR
+}
+
+IFonteDados <|.. FonteCardapio
+FonteCardapio --> "1" IAcessoApi : acesso
+FonteCardapio --> "1" IFiltroCardapio : filtro
+FonteCardapio ..> Refeicao : <<create>>
+FonteCardapio ..> ItemCardapio : <<create>>
+FonteCardapio ..> CategoriaItem : <<create>>
+Cardapio "1" -- "1..*" Refeicao : reúne >
+Refeicao "1" -- "0..*" ItemCardapio : tem >
+ItemCardapio "0..*" --> "1" CategoriaItem : categoria
+Refeicao --> "1" TipoRefeicao : tipo
+@enduml

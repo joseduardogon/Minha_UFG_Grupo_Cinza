@@ -1,13 +1,28 @@
 @startsalt DIhc-RU-02
 {+
-  <b>Café da Manhã
-  <i>Sexta-feira, 16 de outubro de 2026
+  { [<] (E2) | <b>Almoço }
+  <i>Barra e fundo na cor do dia selecionado (terça-feira: roxo)
   ==
-  { [S] | [T] | [Q] | [Q] | <b>[S] | [S] } (E1)
-  ==
-  { <b>Leite | Leite desnatado e integral }
-  { <b>Fruta | Mamão }
-  { <b>Quitanda (vegana) | Bolo formigueiro vegano }
-  { <b>Pães e quitandas | Pão francês / Bolo formigueiro }
+  {
+    {
+      [S]
+      [<back:yellow><b>T</b>]
+      [Q]
+      [Q]
+      [S]
+      [S]
+      (E1)
+    } | {
+      <i>Terça-feira, 27 de outubro de 2026
+      ..
+      {+ <b>Prato Proteico | Bife bovino acebolado (1ª) }
+      {+ <b>Opção Ovolactovegetariana | Soja em grãos acebolada }
+      {+ <b>Opção Vegana | Soja em grãos acebolada }
+      {+ <b>Guarnição | Chuchu ao alho e óleo com cheiro verde }
+    }
+  }
+  ..
+  <i>Jantar: o seletor tem cinco letras (S T Q Q S), sem sábado
+  (E0: entrada na tela, pela tela RU)
 }
 @endsalt

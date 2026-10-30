@@ -1,11 +1,13 @@
 @startuml DSeq-Eventos-05
-title DSeq-Eventos-05 – Sequência de A1 de UC-EV-03: tocar em um evento
+title DSeq-Eventos-05 – Sequência de A1 e A2 de UC04.3: tocar em um evento e voltar ao app
 actor "Membro" as M
 participant ":TelaEventos" as T
 participant ":AberturaLinkExterno" as L
 participant "Navegador" as N <<sistema>>
+participant ":ControladorTelaRemota<Evento>" as K
+participant "Servidor/API" as S <<sistema>>
 
-M -> T : tocarEvento(evento)
+M -> T : aoTocarEvento(evento)
 alt evento.temUrl()
   T -> L : abrirUrl(evento.url)
   L -> L : urlValida(url)
@@ -13,6 +15,11 @@ alt evento.temUrl()
   L -> N : disparar(intencao)
   N --> M : mostra a página do evento
   L --> T : ResultadoAbertura
+  note over T : a tela descarta o ResultadoAbertura
+  M -> T : aoExibir() [retorno do Navegador]
+  note right of T : o CalendarioEventos e o controlador já existem:\no filtro (data e regional) é mantido
+  T -> K : aoEntrarNaTela()
+  ref over K, S : Carregar e exibir os eventos\n(grupo "Carregar e exibir" de DSeq-Eventos-01)
 else evento sem endereço
   T -> T : ignora o toque
 end

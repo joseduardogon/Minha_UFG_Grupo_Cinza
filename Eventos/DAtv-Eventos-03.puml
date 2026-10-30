@@ -1,17 +1,17 @@
 @startuml DAtv-Eventos-03
-title DAtv-Eventos-03 – Atividades de UC-EV-03: abrir a página do evento
+title DAtv-Eventos-03 – Atividades de UC04.3: abrir a página do evento
 |Membro|
 start
-:**A1** Toca em um evento da lista;
+:**A1** Toca em um evento da lista (E5);
 |App|
 if (O evento tem endereço (URL)?) then (sim)
   :Pede ao Navegador que abra a URL;
   |Navegador|
   :Exibe a página do evento;
   |Membro|
-  :Volta ao app;
+  :**A2** Volta ao app (E0, retorno);
   |App|
-  :Recarrega os eventos;
+  :Recarrega os eventos\ncom a mesma regional e data;
 else (não)
   :Não faz nada;
 endif

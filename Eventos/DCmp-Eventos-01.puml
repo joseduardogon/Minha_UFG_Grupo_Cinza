@@ -22,6 +22,7 @@ Fonte ..|> IFonteDados : oferece
 
 Tela ..> IControlador : requer
 Tela ..> ILinkExterno : requer
+Tela ..> IAcessoApi : requer
 Fonte ..> IAcessoApi : requer
 Fonte ..> IFiltro : requer
 @enduml

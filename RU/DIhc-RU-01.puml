@@ -1,6 +1,6 @@
 @startsalt DIhc-RU-01
 {+
-  <b>RU
+  { [<] (E2) | <b>RU }
   ==
   <b>Café da Manhã
   [        imagem do café da manhã        ] (E1)
@@ -12,5 +12,6 @@
   [          imagem do jantar          ] (E1)
   ==
   <i>Cardápio sujeito a alterações!
+  (E0: entrada na tela, pelo cartão RU do menu inicial)
 }
 @endsalt

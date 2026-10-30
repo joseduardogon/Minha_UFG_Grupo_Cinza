@@ -1,0 +1,22 @@
+@startuml DSeq-Noticias-03
+title DSeq-Noticias-03 – Sequência de A1 de UC05.2: tocar em uma notícia e voltar ao app
+actor "Membro" as M
+participant ":TelaNoticias" as T
+participant ":AberturaLinkExterno" as L
+participant "Navegador" as N <<sistema>>
+participant ":ControladorTelaRemota<Noticia>" as K
+participant "Servidor/API" as S <<sistema>>
+
+M -> T : aoTocarNoticia(noticia)
+T -> L : abrirUrl(noticia.url)
+L -> L : urlValida(url)
+L -> L : existeAppCompativel(intencao)
+L -> N : disparar(intencao)
+N --> M : mostra a página da notícia
+L --> T : ResultadoAbertura
+note over T : a tela descarta o ResultadoAbertura
+M -> T : aoExibir() [retorno do Navegador]
+note right of T : o FiltroNoticias e o controlador já existem:\na regional escolhida é mantida
+T -> K : aoEntrarNaTela()
+ref over K, S : Carregar e exibir as notícias\n(grupo "Carregar e exibir" de DSeq-Noticias-01)
+@enduml

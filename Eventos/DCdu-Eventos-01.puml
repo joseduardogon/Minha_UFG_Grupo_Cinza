@@ -5,18 +5,20 @@ skinparam packageStyle rectangle
 
 actor "Membro da comunidade UFG" as Membro
 actor "Servidor/API" as API <<sistema>>
-actor "Navegador" as Navegador <<sistema>>
+actor "Aplicativo externo" as AppExt <<sistema>>
+actor "Navegador" as Nav <<sistema>>
+Nav -up-|> AppExt
 
-rectangle "Eventos" {
-  usecase "UC-EV-01\nConsultar eventos por\nregional e data" as UC01
-  usecase "UC-EV-02\nTrocar o mês\ndo calendário" as UC02
-  usecase "UC-EV-03\nAbrir a página\ndo evento" as UC03
+rectangle "App Minha UFG – Eventos" {
+  usecase "UC04.1\nConsultar eventos por\nregional e data" as UC041
+  usecase "UC04.2\nTrocar o mês\ndo calendário" as UC042
+  usecase "UC04.3\nAbrir a página\ndo evento" as UC043
 }
 
-Membro --> UC01
-Membro --> UC02
-Membro --> UC03
-UC01 --> API
-UC02 --> API
-UC03 --> Navegador
+Membro --> UC041
+UC042 .> UC041 : <<extend>>
+UC043 .> UC041 : <<extend>>
+UC041 --> API
+UC042 --> API
+UC043 --> Nav
 @enduml

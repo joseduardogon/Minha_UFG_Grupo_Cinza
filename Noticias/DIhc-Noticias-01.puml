@@ -1,14 +1,17 @@
 @startsalt DIhc-Noticias-01
 {+
-  <b>Notícias
+  { [<] (E3) | <b>Notícias | (barra de título fixa) }
+  (E0: a tela foi exibida)
   ==
-  { <b>[GOIÂNIA] | [outras regionais] } (E1)
+  { (a faixa de abas e a lista rolam juntas) }
+  {/ <b>GOIÂNIA }
+  (E1: toque em uma aba de regional, só com a lista exibida)
   ==
-  { [imagem da notícia A] }
+  { [imagem do banner da notícia A] }
   <b>Título da notícia A
   Resumo curto da notícia A (E2)
   ==
-  { [imagem da notícia B] }
+  { [imagem do banner da notícia B] }
   <b>Título da notícia B
   Resumo curto da notícia B (E2)
 }
