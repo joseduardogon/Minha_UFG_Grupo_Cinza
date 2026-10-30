@@ -1,0 +1,19 @@
+@startuml DEst-Seguranca-01
+title DEst-Seguranca-01 – Estados da tela de Segurança
+hide empty description
+
+state "Tela inicial" as Inicio
+state "Tela de Segurança" as Seguranca : TelaSeguranca ativa
+state "Navegador em primeiro plano" as Web : portal web externo
+state "Play Store em primeiro plano" as Loja : app nativo da loja
+
+[*] --> Inicio
+Inicio --> Seguranca : tocar no cartão "Segurança"
+Seguranca --> Web : E2 tocar em Versão Web\n/ abrirVersaoWeb()
+Seguranca --> Loja : E3 tocar em Play Store\n/ abrirPlayStore()
+Web --> Seguranca : voltar ao app (navegação do SO)
+Loja --> Seguranca : voltar ao app (navegação do SO)
+Seguranca --> Inicio : E1 tocar no botão voltar
+Inicio --> [*] : sair do app
+@enduml
+

@@ -1,0 +1,29 @@
+@startuml DSeq-AppsUFG-01
+title DSeq-AppsUFG-01 – Sequência de seleção de aplicativo e abertura na Play Store
+actor "Membro" as M
+participant ":TelaAppsUFG" as T
+participant ":ControladorAppsUFG" as C
+participant "app:AplicativoUFG" as A
+participant ":AberturaLinkExterno" as L <<Comum>>
+participant "Android\n(Play Store)" as P <<sistema>>
+
+M -> T : tocar no cartão do aplicativo (E2/E3/E4)
+T -> C : abrirNaLoja(app)
+C -> A : idPacote
+A --> C : idPacote
+C -> L : abrirLoja(idPacote)
+L -> L : prefixoLoja + idPacote ("market://details?id=...")
+L -> L : <<create>> Intencao(VIEW, uri)
+L -> L : existeAppCompativel(intencao)
+alt Play Store disponível no aparelho
+  L -> P : disparar(intencao)
+  P -> M : exibe página do app na Play Store\n(ou "Item não encontrado" se descontinuado)
+  L --> C : ABERTO
+else Sem loja instalada
+  L -> L : fallback web ("https://play.google.com/...")
+  L --> C : ABERTO
+end
+C --> T : ResultadoAbertura
+note over T, P : Ao retornar pelo botão do sistema operacional, a TelaAppsUFG permanece visível
+@enduml
+

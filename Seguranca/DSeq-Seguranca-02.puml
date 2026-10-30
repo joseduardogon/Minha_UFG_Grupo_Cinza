@@ -1,0 +1,24 @@
+@startuml DSeq-Seguranca-02
+title DSeq-Seguranca-02 – Sequência de E3: baixar aplicativo na Play Store
+actor "Membro" as M
+participant ":TelaSeguranca" as T
+participant ":ControladorSeguranca" as C
+participant "ConfiguracaoSeguranca" as S
+participant ":AberturaLinkExterno" as L <<Comum>>
+participant "Android\n(Play Store)" as P <<sistema>>
+
+M -> T : tocar no cartão "Baixar na Play Store" (E3)
+T -> C : abrirPlayStore()
+C -> S : idPacoteApp
+S --> C : "br.ufg.cercomp.sistemaseguranca"
+C -> L : abrirLoja("br.ufg.cercomp.sistemaseguranca")
+L -> L : prefixoLoja + idPacote ("market://details?id=...")
+L -> L : <<create>> Intencao(VIEW, uri)
+L -> L : existeAppCompativel(intencao)
+L -> P : disparar(intencao)
+P -> M : exibe aplicativo de segurança na Play Store
+L --> C : ABERTO
+C --> T : ResultadoAbertura
+note over T, P : Ao retornar pelo botão do sistema operacional, a TelaSeguranca permanece visível
+@enduml
+

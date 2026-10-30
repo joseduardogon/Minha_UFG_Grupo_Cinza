@@ -1,0 +1,27 @@
+@startsalt DIhc-AppsUFG-01
+{+
+  { [<] (E1) | <b>Apps UFG }
+  ==
+  {+
+    {
+      [ (Ícone RU) ] | <b>RU UFG
+      .              | Play Store [ ▶ ]
+    } (E2)
+  }
+  ==
+  {+
+    {
+      [ (Ícone IP) ] | <b>INVENTARIO PATRIMONIAL
+      .              | Play Store [ ▶ ]
+    } (E3)
+  }
+  ==
+  {+
+    {
+      [ (Ícone CS) ] | <b>CS - CANDIDATO
+      .              | Play Store [ ▶ ]
+    } (E4)
+  }
+}
+@endsalt
+

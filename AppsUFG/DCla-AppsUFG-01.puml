@@ -1,0 +1,45 @@
+@startuml DCla-AppsUFG-01
+title DCla-AppsUFG-01 – Classes do pacote Apps UFG
+hide empty members
+
+class TelaAppsUFG {
+  - controlador: ControladorAppsUFG
+  - listaAplicativos: List<AplicativoUFG>
+  + exibirCatalogo(): void
+  + aoTocarAplicativo(aplicativo: AplicativoUFG): void
+  + aoTocarVoltar(): void
+}
+
+class ControladorAppsUFG {
+  + obterAplicativos(): List<AplicativoUFG>
+  + abrirNaLoja(aplicativo: AplicativoUFG): ResultadoAbertura
+}
+
+class AplicativoUFG {
+  + id: String
+  + nome: String
+  + idPacote: String
+  + iconeRes: String
+  + {static} RU_UFG: AplicativoUFG
+  + {static} INVENTARIO_PATRIMONIAL: AplicativoUFG
+  + {static} CS_CANDIDATO: AplicativoUFG
+  + {static} obterTodos(): List<AplicativoUFG>
+}
+
+interface ILinkExterno <<Comum>> {
+  + abrirLoja(idPacote: String): ResultadoAbertura
+}
+
+enum ResultadoAbertura <<Comum>> {
+  ABERTO
+  URL_INVALIDA
+  SEM_APP_COMPATIVEL
+}
+
+TelaAppsUFG --> ControladorAppsUFG
+TelaAppsUFG ..> AplicativoUFG : <<use>>
+ControladorAppsUFG ..> AplicativoUFG : <<use>>
+ControladorAppsUFG ..> ILinkExterno : <<use>>
+ControladorAppsUFG ..> ResultadoAbertura : <<use>>
+@enduml
+

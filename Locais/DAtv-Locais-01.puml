@@ -1,0 +1,29 @@
+@startuml DAtv-Locais-01
+title DAtv-Locais-01 – Atividades de UC01: consultar lista de locais
+
+|Usuário|
+start
+:Tocar no cartão "Locais"\nna tela inicial;
+
+|App|
+:Exibir pop-up "Carregando locais...";
+:Pedir lista de locais ao servidor\n(IAcessoApi.obter);
+
+|Servidor/API|
+:Processar requisição e devolver locais;
+
+|App|
+if (Houve falha de comunicação / sem internet?) then (sim)
+  :Exibir mensagem de indisponibilidade\n(EstadoTela.INDISPONIVEL);
+elseif (Lista retornada vazia?) then (sim)
+  :Exibir mensagem de nenhum local encontrado\n(EstadoTela.VAZIO);
+else (não)
+  :Instanciar objetos Local e UnidadeAcademica;
+  :Exibir aba "Locais" com título "Campus Samambaia",\nrolagem, fotos circulares e nomes;
+endif
+
+|Usuário|
+:Visualizar locais cadastrados;
+stop
+@enduml
+

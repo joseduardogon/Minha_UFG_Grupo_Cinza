@@ -1,0 +1,28 @@
+@startuml DAtv-Locais-02
+title DAtv-Locais-02 – Atividades de UC02: visualizar local no mapa
+
+|Usuário|
+start
+if (Forma de acesso ao mapa) then (Toque em local da lista)
+  :Tocar no local desejado\n(ex.: Instituto de Informática);
+else (Toque na aba Mapa)
+  :Tocar na aba "Mapa"\nna barra inferior;
+endif
+
+|App|
+:Alternar para a aba "Mapa";
+if (Local específico selecionado?) then (sim)
+  :Obter coordenadas e ID do local;
+  :Solicitar foco e destaque do marcador;
+  |Provedor de Mapa|
+  :Centralizar câmera nas coordenadas\n(IProvedorMapa.centralizarEm);
+  :Destacar marcador correspondente\n(IProvedorMapa.destacarMarcador);
+else (não)
+  |Provedor de Mapa|
+  :Exibir visão geral do campus\ncom todos os marcadores coloridos;
+endif
+
+|Usuário|
+:Explorar locais no mapa (pan e zoom);
+stop
+@enduml

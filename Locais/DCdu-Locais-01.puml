@@ -1,0 +1,23 @@
+@startuml DCdu-Locais-01
+title DCdu-Locais-01 – Casos de uso de Locais
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membro da comunidade UFG" as Membro
+actor "Servidor/API" as API <<sistema>>
+actor "Provedor de mapa / GPS" as Mapa <<sistema>>
+
+rectangle "App Minha UFG – Locais" {
+  usecase "UC01\nConsultar lista\nde locais" as UC01
+  usecase "UC02\nVisualizar local\nno mapa" as UC02
+  usecase "UC03\nCentralizar em minha\nlocalização atual" as UC03
+}
+
+Membro --> UC01
+Membro --> UC02
+Membro --> UC03
+
+UC01 --> API
+UC02 --> Mapa
+UC03 --> Mapa
+@enduml

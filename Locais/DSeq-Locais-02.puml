@@ -1,0 +1,20 @@
+@startuml DSeq-Locais-02
+title DSeq-Locais-02 – Sequência de seleção de local na lista e foco no mapa
+actor "Membro" as M
+participant ":AbaListaLocais" as L
+participant ":TelaLocais" as T
+participant ":ControladorLocais" as C
+participant ":AbaMapaLocais" as MView
+participant ":AdaptadorProvedorMapa" as P <<Comum>>
+
+M -> L : tocar no item da lista (ex.: Instituto de Informática)
+L -> T : aoTocarItem(localEscolhido)
+T -> C : selecionarLocal(localEscolhido)
+C -> C : localSelecionado = localEscolhido
+T -> T : abaAtiva = MAPA
+T -> MView : focarLocal(localEscolhido)
+MView -> P : centralizarEm(localEscolhido.coordenada)
+MView -> P : destacarMarcador(localEscolhido.id)
+P --> M : exibe mapa focado no local com pino destacado
+@enduml
+

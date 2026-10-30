@@ -1,0 +1,29 @@
+@startuml DEst-Locais-01
+title DEst-Locais-01 – Estados da tela de Locais
+hide empty description
+
+[*] --> Carregando : entrada pelo cartão "Locais"
+
+state Carregando : entry / exibe pop-up "Carregando locais..."\ncontrolador.carregarLocais()
+
+state Resultado {
+  state "Exibindo Lista" as ExibindoLista : abaAtiva = LOCAIS\nrenderiza lista com fotos e nomes
+  state "Exibindo Mapa" as ExibindoMapa : abaAtiva = MAPA\nrenderiza mapa com marcadores coloridos
+  state Vazio : exibe mensagem de nenhum local encontrado
+  state "Indisponível" as Indisponivel : exibe erro de conexão com opção de recarga
+}
+
+Carregando --> ExibindoLista : carga concluída [há locais]
+Carregando --> Vazio : carga concluída [lista vazia]
+Carregando --> Indisponivel : ErroApi [falha de rede ou timeout]
+
+Indisponivel --> Carregando : tentar novamente / recarregar()
+
+ExibindoLista --> ExibindoMapa : E2 tocar em local da lista / focarLocal()
+ExibindoLista --> ExibindoMapa : E3 tocar na aba Mapa
+ExibindoMapa --> ExibindoLista : E5 tocar na aba Locais
+ExibindoMapa --> ExibindoMapa : E4 tocar no botão GPS / centralizarEm()
+
+Resultado --> [*] : E1 tocar no botão voltar / sair da tela
+@enduml
+

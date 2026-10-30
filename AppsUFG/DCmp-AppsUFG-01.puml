@@ -1,0 +1,15 @@
+@startuml DCmp-AppsUFG-01
+title DCmp-AppsUFG-01 – Componentes do pacote Apps UFG
+skinparam componentStyle uml2
+
+package "AppsUFG" {
+  component "CatalogoAppsUFG" as Catalogo
+}
+
+package "Interfaces do pacote Comum" {
+  rectangle "<<interface>>\nILinkExterno" as ILinkExterno
+}
+
+Catalogo ..> ILinkExterno : requer
+@enduml
+

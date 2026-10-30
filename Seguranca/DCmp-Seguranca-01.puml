@@ -1,0 +1,14 @@
+@startuml DCmp-Seguranca-01
+title DCmp-Seguranca-01 – Componentes do pacote Seguranca
+skinparam componentStyle uml2
+
+package "Seguranca" {
+  component "ApoioSeguranca" as ApoioSeg
+}
+
+package "Interfaces do pacote Comum" {
+  rectangle "<<interface>>\nILinkExterno" as ILinkExterno
+}
+
+ApoioSeg ..> ILinkExterno : requer
+@enduml

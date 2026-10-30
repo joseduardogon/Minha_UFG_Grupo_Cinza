@@ -1,0 +1,24 @@
+@startuml DSeq-Seguranca-01
+title DSeq-Seguranca-01 – Sequência de E2: acessar central de segurança via web
+actor "Membro" as M
+participant ":TelaSeguranca" as T
+participant ":ControladorSeguranca" as C
+participant "ConfiguracaoSeguranca" as S
+participant ":AberturaLinkExterno" as L <<Comum>>
+participant "Android\n(Navegador)" as N <<sistema>>
+
+M -> T : tocar no cartão "Acessar Versao Web" (E2)
+T -> C : abrirVersaoWeb()
+C -> S : urlWeb
+S --> C : "https://seguranca.web.ufg.br"
+C -> L : abrirUrl("https://seguranca.web.ufg.br")
+L -> L : urlValida(url)
+L -> L : <<create>> Intencao(VIEW, url)
+L -> L : existeAppCompativel(intencao)
+L -> N : disparar(intencao)
+N -> M : exibe portal de segurança no navegador
+L --> C : ABERTO
+C --> T : ResultadoAbertura
+note over T, N : Ao retornar pelo botão do sistema operacional, a TelaSeguranca permanece visível
+@enduml
+
