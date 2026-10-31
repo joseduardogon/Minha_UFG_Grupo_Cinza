@@ -1,0 +1,48 @@
+@startuml DSeq-AvalRegistrar-01
+title DSeq-AvalRegistrar-01 – Sequência de E1: abrir a lista de unidades acadêmicas
+actor "Avaliador" as M
+participant ":TelaAvaliacao" as T0
+participant ":TelaEscolherUA" as T
+participant ":ControladorTelaRemota<UnidadeAcademica>" as K
+participant ":FonteUnidades" as F
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T0 : aoTocarAvaliar()
+create T
+T0 -> T : TelaEscolherUA(acesso)
+T0 -> T : aoExibir()
+create F
+T -> F : FonteUnidades(acesso)
+create K
+T -> K : ControladorTelaRemota<UnidadeAcademica>(fonte)
+T -> K : registrarObservador(this)
+T -> K : aoEntrarNaTela()
+group Carregar e exibir (referenciado em DSeq-AvalRegistrar-02)
+  K -> T : aoMudarEstado(CARREGANDO)
+  T -> M : mostra o indicador de carregamento
+  K -> F : carregar()
+  F -> A : obter("/unidades-academicas", {})
+  A -> S : GET lista de unidades acadêmicas
+  alt resposta recebida
+    S --> A : JSON com as unidades acadêmicas
+    A --> F : RespostaApi
+    F -> F : converter(corpo)
+    F --> K : List<UnidadeAcademica>
+    alt lista com itens
+      K -> T : aoMudarEstado(EXIBINDO)
+      T -> K : obterDados()
+      K --> T : List<UnidadeAcademica>
+      T -> M : mostra a lista (nome e sigla)
+    else lista vazia
+      K -> T : aoMudarEstado(VAZIO)
+      T -> M : mostra a mensagem de vazio
+    end
+  else falha de comunicação
+    A --> F : ErroApi
+    F --> K : ErroApi
+    K -> T : aoMudarEstado(INDISPONIVEL)
+    T -> M : mostra a mensagem de indisponibilidade
+  end
+end
+@enduml
