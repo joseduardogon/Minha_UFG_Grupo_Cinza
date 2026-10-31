@@ -1,0 +1,27 @@
+@startuml DCmp-RU-01
+title DCmp-RU-01 – Componentes do pacote RU
+skinparam componentStyle uml2
+skinparam nodesep 40
+skinparam ranksep 70
+
+package "RU" {
+  component "TelasRU" as Telas
+  component "FonteCardapio" as Fonte
+  rectangle "<<interface>>\nIFiltroCardapio" as IFiltro
+}
+
+package "Interfaces do pacote Comum" {
+  rectangle "<<interface>>\nIControladorTelaRemota" as IControlador
+  rectangle "<<interface>>\nIFonteDados" as IFonteDados
+  rectangle "<<interface>>\nIAcessoApi" as IAcessoApi
+}
+
+Telas ..|> IFiltro : oferece
+Fonte ..|> IFonteDados : oferece
+
+Telas ..> IControlador : requer
+Telas ..> IAcessoApi : requer
+Telas ..> Fonte : <<create>>
+Fonte ..> IAcessoApi : requer
+Fonte ..> IFiltro : requer
+@enduml

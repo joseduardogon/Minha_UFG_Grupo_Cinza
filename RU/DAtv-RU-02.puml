@@ -1,11 +1,20 @@
 @startuml DAtv-RU-02
-title DAtv-RU-02 – Atividades de UC-RU-02: escolher o dia da semana
+title DAtv-RU-02 – Atividades de UC06.2: escolher o dia da semana
 |Membro|
 start
-:**A1** Toca em uma letra do seletor de dia\n(segunda a sábado);
+note right
+  Pré-condição: a tela de uma refeição
+  mostra o cardápio da semana (DAtv-RU-01).
+end note
+:**A1** Toca em uma letra do seletor de dia\n(segunda a sábado; segunda a sexta no Jantar);
 |App|
-:Destaca o dia escolhido;
+:Destaca o dia escolhido e muda a cor\nda barra e do fundo;
 :Atualiza a data por extenso;
-:Consulta e exibe o cardápio da refeição\nna nova data (fluxo de DAtv-RU-01);
+:Filtra o cardápio da semana, já em\nmemória, pelo dia escolhido;
+if (O dia escolhido tem itens?) then (sim)
+  :Exibe um cartão por categoria,\ncom o nome e a descrição dos itens;
+else (não)
+  :Exibe a mensagem de vazio;
+endif
 stop
 @enduml

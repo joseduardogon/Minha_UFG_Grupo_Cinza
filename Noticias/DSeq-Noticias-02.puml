@@ -1,0 +1,16 @@
+@startuml DSeq-Noticias-02
+title DSeq-Noticias-02 – Sequência de A2: tocar em outra aba de regional
+actor "Membro" as M
+participant ":TelaNoticias" as T
+participant ":FiltroNoticias" as Fi
+participant ":ControladorTelaRemota<Noticia>" as K
+participant ":FonteNoticias" as F
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T : aoEscolherRegional(regional)
+note right of T : só ocorre com a lista exibida (EXIBINDO):\na faixa de abas não aparece nos outros estados (P-NO-1)
+T -> Fi : selecionarRegional(regional)
+T -> K : recarregar()
+ref over K, S : Carregar e exibir as notícias\n(grupo "Carregar e exibir" de DSeq-Noticias-01)
+@enduml

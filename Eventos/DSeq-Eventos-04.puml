@@ -1,5 +1,5 @@
 @startuml DSeq-Eventos-04
-title DSeq-Eventos-04 – Sequência de A1 de UC-EV-02: trocar o mês
+title DSeq-Eventos-04 – Sequência de A1 de UC04.2: trocar o mês
 actor "Membro" as M
 participant ":TelaEventos" as T
 participant ":CalendarioEventos" as C
@@ -8,8 +8,9 @@ participant ":FonteEventos" as F
 participant ":ClienteApi" as A
 participant "Servidor/API" as S <<sistema>>
 
-M -> T : tocarSetaDeMes(deslocamento)
+M -> T : aoTrocarMes(deslocamento)
 T -> C : trocarMes(deslocamento)
+note right of C : mantém o número do dia selecionado\n(se o mês novo é mais curto,\nvai para o último dia do mês)
 T -> K : recarregar()
 ref over K, S : Carregar e exibir os eventos\n(grupo "Carregar e exibir" de DSeq-Eventos-01)
 @enduml

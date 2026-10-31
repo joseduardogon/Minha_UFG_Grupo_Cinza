@@ -6,13 +6,18 @@ package "Comum" {
   interface "IControladorTelaRemota<Evento>" as IControlador <<Comum>> {
     + aoEntrarNaTela(): void
     + recarregar(): void
+    + obterEstado(): EstadoTela
+    + obterDados(): List<Evento>
+    + registrarObservador(o: IObservadorEstado): void
   }
+  class "ControladorTelaRemota<Evento>" as Controlador <<Comum>>
   interface IObservadorEstado <<Comum>> {
     + aoMudarEstado(estado: EstadoTela): void
   }
   interface ILinkExterno <<Comum>> {
     + abrirUrl(url: String): ResultadoAbertura
   }
+  interface IAcessoApi <<Comum>>
   enum EstadoTela <<Comum>>
   class Regional <<Comum (proposta)>> {
     + id: Integer
@@ -21,14 +26,18 @@ package "Comum" {
 }
 
 class TelaEventos {
+  - regionaisOferecidas: List<Regional>
+  - acesso: IAcessoApi
   - controlador: IControladorTelaRemota<Evento>
   - calendario: CalendarioEventos
   - linkExterno: ILinkExterno
+  + TelaEventos(regionaisOferecidas: List<Regional>, acesso: IAcessoApi, linkExterno: ILinkExterno)
   + aoExibir(): void
   + aoEscolherData(data: Date): void
   + aoEscolherRegional(regional: Regional): void
   + aoTrocarMes(deslocamento: Integer): void
   + aoTocarEvento(evento: Evento): void
+  + aoVoltar(): void
   + aoMudarEstado(estado: EstadoTela): void
 }
 
@@ -52,12 +61,19 @@ class CalendarioEventos {
 }
 
 class Evento <<DCla-Eventos-02>>
+class FonteEventos <<DCla-Eventos-02>>
 
 IObservadorEstado <|.. TelaEventos
 IFiltroEventos <|.. CalendarioEventos
+IControlador <|.. Controlador
 TelaEventos *-- "1" CalendarioEventos
 TelaEventos --> "1" IControlador : controlador
 TelaEventos --> "1" ILinkExterno : linkExterno
+TelaEventos --> "1" IAcessoApi : acesso
+TelaEventos --> "1..*" Regional : regionaisOferecidas
+TelaEventos ..> Controlador : <<create>>
+TelaEventos ..> FonteEventos : <<create>>
+Controlador --> "0..*" IObservadorEstado : registrarObservador(tela)
 TelaEventos ..> Evento : <<use>>
 TelaEventos ..> EstadoTela : <<use>>
 CalendarioEventos --> "1" Regional : regionalSelecionada

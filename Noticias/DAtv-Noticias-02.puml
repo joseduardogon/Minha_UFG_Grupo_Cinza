@@ -1,15 +1,20 @@
 @startuml DAtv-Noticias-02
-title DAtv-Noticias-02 – Atividades de UC-NO-02: abrir a notícia
+title DAtv-Noticias-02 – Atividades de UC05.2: abrir a notícia
 |Membro|
 start
+note right
+  Pré-condição: a lista de notícias
+  está exibida (DAtv-Noticias-01).
+end note
 :**A1** Toca em uma notícia da lista;
 |App|
-:Pede ao Navegador que abra a página da notícia;
+:Pede ao Navegador que abra\na página da notícia;
 |Navegador|
-:Exibe a página da notícia;
+:Exibe a página da notícia\n(título, data e hora, texto);
 |Membro|
 :Volta ao app;
 |App|
-:Recarrega as notícias;
+:Exibe a tela Notícias de novo\ncom a regional mantida;
+:Recarrega as notícias da regional\n(ciclo de DAtv-Noticias-01);
 stop
 @enduml

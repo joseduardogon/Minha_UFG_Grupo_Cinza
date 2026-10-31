@@ -1,0 +1,31 @@
+@startuml DEst-Noticias-01
+title DEst-Noticias-01 – Estados da tela Notícias
+hide empty description
+skinparam nodesep 60
+skinparam ranksep 70
+
+[*] -down-> Carregando : aoExibir (E0)
+
+state Carregando : entry / controlador.aoEntrarNaTela()\nou controlador.recarregar()
+state "Fora do app" as Fora : página da notícia aberta no Navegador
+
+state Resultado {
+  state Exibindo : entry / mostrar a faixa de abas\ne um cartão por notícia
+  state Vazio : entry / mostrar a mensagem de vazio,\nsem a faixa de abas
+  state "Indisponível" as Indisponivel : entry / mostrar a tela em branco,\nsem a faixa de abas e sem mensagem
+}
+
+Carregando -down-> Exibindo : carga concluída\n[há notícias]
+Carregando -down-> Vazio : carga concluída\n[não há notícias]
+Carregando -down-> Indisponivel : ErroApi\n[qualquer tipo]
+
+Exibindo -up-> Carregando : E1 tocar em aba de regional
+Resultado -up-> Carregando : aoExibir\n(voltar à tela)
+
+Exibindo -right-> Fora : E2 tocar em notícia\n/ linkExterno.abrirUrl(url)
+Fora -left-> Carregando : aoExibir\n(voltar ao app)
+
+Carregando -left-> [*] : E3 voltar
+Resultado -down-> [*] : E3 voltar
+Fora -down-> [*] : sair do app
+@enduml

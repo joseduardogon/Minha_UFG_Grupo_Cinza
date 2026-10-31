@@ -1,24 +1,30 @@
 @startuml DAtv-RU-01
-title DAtv-RU-01 – Atividades de UC-RU-01: consultar o cardápio de uma refeição
+title DAtv-RU-01 – Atividades de UC06.1: consultar o cardápio de uma refeição
 |Membro|
 start
-:Abre a tela RU;
+:Toca no cartão RU do menu inicial;
 |App|
 :Mostra os cartões Café da Manhã, Almoço e Jantar\ne o aviso "Cardápio sujeito a alterações!";
 |Membro|
 :**A1** Toca no cartão de uma refeição;
 |App|
-:Abre a tela da refeição com o dia de hoje\nselecionado e a data por extenso;
-:Pede ao servidor o cardápio da\nrefeição e da data;
+:Abre a tela da refeição;
+:Pede ao servidor o cardápio da semana\ninteira da refeição;
 |Servidor/API|
-:Devolve o cardápio ou falha;
+:Devolve as refeições da semana ou falha;
 |App|
 if (Houve falha de comunicação?) then (sim)
-  :Exibe a mensagem de indisponibilidade;
-elseif (A refeição tem itens na data?) then (sim)
-  :Exibe um cartão por categoria,\ncom o nome e a descrição dos itens;
-else (não)
+  :Exibe a ilustração e a mensagem\n"Cardápio indisponível.";
+elseif (A semana tem refeições?) then (não)
   :Exibe a mensagem de vazio;
+else (sim)
+  :Seleciona o dia (hoje, ou segunda-feira\nse hoje não está no seletor);
+  :Exibe a cor do dia, a data por extenso\ne o seletor de dia;
+  if (O dia selecionado tem itens?) then (sim)
+    :Exibe um cartão por categoria,\ncom o nome e a descrição dos itens;
+  else (não)
+    :Exibe a mensagem de vazio;
+  endif
 endif
 stop
 @enduml

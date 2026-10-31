@@ -6,11 +6,11 @@
 | **Dono (autor)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
 | **Entregue a** | Phablo Tavares Paixão (Pessoa D), para integração no `DDados-Geral` e no `DD-Geral` |
 | **Usada por** | RU |
-| **Status** | Entregue para integração (primeira versão) |
+| **Status** | Entregue para integração (atualizada em 30/10/2026) |
 
 ## Descrição
 
-Cardápio da semana do Restaurante Universitário. É único para todos os restaurantes da UFG, por isso não se liga a campus nem a regional. Reúne as refeições de cada dia da semana.
+Cardápio da semana do Restaurante Universitário, agrupador das refeições no servidor (o painel web cadastra o cardápio por semana). É único para todos os restaurantes da UFG, por isso não se liga a campus nem a regional. **O app não usa nem instancia o `Cardapio`:** ele busca a semana inteira de uma refeição numa só chamada e recebe só as `Refeicao`, com a semana implícita nas datas. A entidade foi mantida para registrar a regra de unicidade por semana; a integração pode retirá-la sem afetar o app. O conteúdo desta ficha é o mesmo do `DD-RU-01` (`RU/DD-RU-01.md`).
 
 ## Entrada do dicionário de dados
 
@@ -33,14 +33,18 @@ Cardápio da semana do Restaurante Universitário. É único para todos os resta
 
 ## Premissas a confirmar
 
-- A tela mostra apenas o dia escolhido; se o servidor devolve só o cardápio do dia, e não o da semana, `Cardapio` pode ser tratado como o agrupador de uma consulta. O formato da resposta da API não é observável no app (premissa `P-RU-6`, em `RU/README.md`).
+- O app consulta a API por refeição, sem data, e recebe a semana inteira (rota `GET /cardapio`, com o parâmetro `refeicao`); a carga semanal é informação do autor do projeto (`P-RU-3`), e a rota e o formato da resposta não são observáveis no app (premissa de projeto `P-RU-10`, em `RU/README.md`).
 
 ## Trecho PlantUML (diagrama de dados)
 
-Classes sem atributos e sem operações, só com as associações (formato do `DDados`).
+Com atributos (formato do `DD`). No `DDados`, as classes ficam sem atributos e sem operações, só com as associações.
 
 ```plantuml
-class Cardapio
+class Cardapio {
+  id: Integer
+  dataInicio: Date
+  dataFim: Date
+}
 class Refeicao
-Cardapio "1" -- "1..*" Refeicao
+Cardapio "1" -- "1..*" Refeicao : reúne >
 ```
