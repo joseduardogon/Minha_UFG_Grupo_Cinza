@@ -280,3 +280,37 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-11 – Revisão do PR #11 de Avaliação – Registrar (D-REV-01)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 31 de outubro de 2026.
+- **Contexto fornecido:** PR #11 da Pessoa C (branch `a/avalregistrar-pr`), enunciado da APS, contrato-base, Comum e entidades de Locais.
+- **Uso da resposta:** compilação dos diagramas; levantamento de achados, depois filtrados pela Pessoa D; parecer `Integracao/revisoes/REV-PR11-AvalRegistrar.md` e texto da aprovação publicada no PR.
+
+<!-- O prompt 2 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
+
+### Prompt 1
+
+> pode começar o #11
+
+### Prompt 2
+
+> sobre os dois pontos
+> - concordo
+> - deixe fora do parecer mesmo. a gente tá revisando sem pessoa fixa, quem tiver livre revisa
+>
+> sobre esse PR, eu concordo com os bloqueantes mas alinhei com o josé e vamos fazer o seguinte: vou aceitar esse PR e eu mesmo vou pegar esses bloqueantes e corrigir em conjunto com a minha atividade na parte de avaliação. isso para agilizar o processo já que preciso dessas alterações do pr 11 para iniciar a minha parte e o josé não está livre nesse exato momento, portanto isso me atrasaria.
+>
+> portanto, decisão final: aceitar esse pr e eu mesmo corrigir os pontos na minha produção individual atividade.
+>
+> escreva o parecer, mostre o rascunho.
+
+### Prompt 3
+
+> aprovado. sobre o aviso, já remova essa proibição de alteração
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
