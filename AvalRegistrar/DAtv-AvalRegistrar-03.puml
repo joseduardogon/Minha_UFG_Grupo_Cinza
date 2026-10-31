@@ -1,0 +1,45 @@
+@startuml DAtv-AvalRegistrar-03
+title DAtv-AvalRegistrar-03 – Enviar a avaliação e validar o preenchimento (UC09.3 e UC09.4)
+
+|Avaliador|
+start
+:**A1** Tocar em "Enviar"\nna última dimensão;
+|App|
+:Validar o preenchimento (UC09.4):\nconferir se toda questão tem nota de 0 a 5;
+if (Todas as questões têm nota?) then (sim)
+  :Montar a avaliação (UA e notas,\nsem identificação do avaliador);
+  :Exibir o indicador de envio;
+  :Enviar a avaliação;
+  |Servidor/API|
+  :Registrar a avaliação\n(data e hora definidas pelo servidor) ou falhar;
+  |App|
+  if (A avaliação foi registrada?) then (sim)
+    :Exibir a TelaConfirmacao:\n"Avaliação registrada. Obrigado por contribuir!";
+    note right
+      Desfecho: registrada.
+    end note
+    |Avaliador|
+    :Tocar em "Concluir";
+    |App|
+    :Voltar à TelaAvaliacao;
+    stop
+  else (não)
+    :Avisar que a avaliação não foi registrada\ne manter as notas na tela;
+    note right
+      Desfecho: falha no envio.
+    end note
+    |Avaliador|
+    :Tocar em "Enviar" de novo;
+    stop
+  endif
+else (não)
+  :Marcar as questões pendentes, ir à dimensão\nda primeira pendente e exibir o aviso\nde que faltam notas;
+  note right
+    Nada é enviado.
+    Desfecho: pendências.
+  end note
+  |Avaliador|
+  :Completar as notas pendentes\n(DAtv-AvalRegistrar-02) e tocar\nem "Enviar" de novo;
+  stop
+endif
+@enduml

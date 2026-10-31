@@ -1,0 +1,23 @@
+@startuml DAtv-AvalRegistrar-04
+title DAtv-AvalRegistrar-04 – Validar o preenchimento (UC09.4)
+
+|App|
+start
+:Receber o pedido de validação\n(passo interno de A1 de DAtv-AvalRegistrar-03);
+:Obter as dimensões do questionário\ncarregado (controlador.obterDados());
+:Iniciar a lista de questões pendentes (vazia);
+repeat
+  :Tomar a próxima questão, na ordem do questionário\n(dimensão, elemento, questão);
+  :Consultar a nota da questão no rascunho\n(rascunho.obterNota(questao));
+  if (A questão tem nota (inteira de 0 a 5)?) then (não)
+    :Acrescentar a questão à lista de pendentes;
+  else (sim)
+  endif
+repeat while (Há outra questão?) is (sim) not (não)
+if (A lista de pendentes está vazia?) then (sim)
+  :Resultado: aprovado\n(o envio segue em DAtv-AvalRegistrar-03);
+else (não)
+  :Resultado: reprovado, com a lista de pendentes\n(nada é enviado; ver P-AR-28);
+endif
+stop
+@enduml

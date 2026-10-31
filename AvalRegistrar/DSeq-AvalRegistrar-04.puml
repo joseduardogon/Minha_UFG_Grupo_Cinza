@@ -1,0 +1,24 @@
+@startuml DSeq-AvalRegistrar-04
+title DSeq-AvalRegistrar-04 – Sequência de E2/E3: navegar entre dimensões
+actor "Avaliador" as M
+participant ":TelaQuestionario" as T
+participant ":ControladorTelaRemota<DimensaoQualidade>" as K
+participant ":RascunhoAvaliacao" as R
+
+alt E2: toca em "Próxima"
+  M -> T : aoAvancarDimensao()
+  T -> T : dimensaoAtual = dimensaoAtual + 1
+else E3: toca em "Anterior"
+  M -> T : aoVoltarDimensao()
+  T -> T : dimensaoAtual = dimensaoAtual - 1
+end
+T -> T : mostrarDimensao()
+T -> K : obterDados()
+K --> T : List<DimensaoQualidade>
+loop para cada questão da dimensão exibida
+  T -> R : obterNota(questao)
+  R --> T : valor (nulo se não informada)
+end
+T -> M : mostra "Dimensão k de n", os elementos, as questões e as notas já dadas
+note over T, R : sem chamada à API; as dimensões já estão no controlador
+@enduml
