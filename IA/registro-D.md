@@ -241,3 +241,42 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-10 – Revisão do PR #10 de Eventos, Notícias e RU (D-REV-02)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 31 de outubro de 2026.
+- **Contexto fornecido:** PR #10 da Pessoa C (branch `ultima_entrega(c)`), contrato-base, Comum, contexto da equipe e prints 06, 07 e 10 a 16.
+- **Uso da resposta:** identificação dos PRs pendentes; compilação dos diagramas; levantamento de achados, depois filtrados pela Pessoa D; parecer `Integracao/revisoes/REV-PR10-Eventos-Noticias-RU.md`; correção do texto de `DCla-Comum-03` (o RU não recarrega ao trocar de dia).
+
+<!-- O prompt 4 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
+
+### Prompt 1
+
+> instalei e autentiquei o gh. ja deve estar disponível. na verdade tem 2 pr do josé que vamos revisar. identiique ambos prs e me resuma o que tem pra ser revisado e qual deve ser revisado pimeiro (se fizer diferença a ordem )
+
+### Prompt 2
+
+> comece pelo #10, use D-REV-02 como código. antes de começar a revisão de fato, me diga o que você faz na revisão além de analisar o código. você deixa um comentário e já aceita e nega p pr? como funciona?
+
+### Prompt 3
+
+> pode sim.
+
+### Prompt 4
+
+> sobre os 8 bloqueantes:
+> 1-7. certo concordo são bloqueantes
+> 8. pode ignorar completamente análise de registro de ia. a regra vamos entrar em acordo depois.
+>
+>
+> sobre as sugestões: como não são bloqueantes, ignore completamente todas(decisão final não questione).
+>
+> sobre as decisões:
+> 1. fica de fora, ignore.
+> 2. sim a ele está certo, a correção seria no meu mesmo. sim pode gerar commit para isso (sem push ainda).
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
