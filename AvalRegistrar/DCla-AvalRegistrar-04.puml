@@ -1,0 +1,65 @@
+@startuml DCla-AvalRegistrar-04
+title DCla-AvalRegistrar-04 – Classes do componente ServicoEnvioAvaliacao
+hide empty members
+
+package "Comum" {
+  interface IAcessoApi <<Comum>> {
+    + obter(caminho: String, parametros: Map<String, String>): RespostaApi
+    + enviar(caminho: String, corpo: String): RespostaApi
+  }
+  class RespostaApi <<Comum>> {
+    + codigoStatus: Integer
+    + corpo: String
+    + bemSucedida(): Boolean
+  }
+  class ErroApi <<Comum>> {
+    + mensagem: String
+  }
+  enum TipoErroApi <<Comum>> {
+    SEM_CONEXAO
+    TEMPO_ESGOTADO
+    ERRO_SERVIDOR
+    RESPOSTA_INVALIDA
+  }
+}
+
+package "Locais" {
+  class UnidadeAcademica <<Locais>>
+}
+
+class Questao <<DCla-AvalRegistrar-03>>
+
+class ServicoEnvioAvaliacao {
+  - acesso: IAcessoApi
+  + ServicoEnvioAvaliacao(acesso: IAcessoApi)
+  + enviar(avaliacao: Avaliacao): ResultadoEnvio
+  - serializar(avaliacao: Avaliacao): String
+}
+
+enum ResultadoEnvio {
+  REGISTRADA
+  NAO_REGISTRADA
+}
+
+class Avaliacao {
+  + unidade: UnidadeAcademica
+  + notas: List<NotaQuestao>
+}
+
+class NotaQuestao {
+  + questao: Questao
+  + valor: Integer
+}
+
+ServicoEnvioAvaliacao --> "1" IAcessoApi : acesso
+ServicoEnvioAvaliacao ..> Avaliacao : <<use>>
+ServicoEnvioAvaliacao ..> ResultadoEnvio : <<create>>
+ServicoEnvioAvaliacao ..> RespostaApi : <<use>>
+ServicoEnvioAvaliacao ..> ErroApi : <<catch>>
+IAcessoApi ..> RespostaApi
+IAcessoApi ..> ErroApi : <<throws>>
+ErroApi --> "1" TipoErroApi : tipo
+Avaliacao "*" --> "1" UnidadeAcademica : unidade
+Avaliacao "1" *-- "1..*" NotaQuestao : notas
+NotaQuestao "*" --> "1" Questao : questao
+@enduml

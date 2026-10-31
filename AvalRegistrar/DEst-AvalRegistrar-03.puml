@@ -1,0 +1,52 @@
+@startuml DEst-AvalRegistrar-03
+title DEst-AvalRegistrar-03 – Estados da TelaQuestionario
+hide empty description
+
+[*] --> Carregando : E0 aoExibir\n/ criar rascunho, fonte, controlador e serviço;\ndimensaoAtual = 0
+
+state Carregando : entry / controlador.aoEntrarNaTela()
+state Vazio : entry / mostrar mensagem de vazio
+state "Indisponível" as Indisponivel : entry / mostrar mensagem de indisponibilidade
+
+state Preenchendo {
+  state "Dimensão incompleta" as Incompleta : há questão da dimensão atual sem nota
+  state "Dimensão completa" as Completa : todas as questões da dimensão atual têm nota
+  state d <<choice>>
+  [*] --> d
+  d --> Incompleta : [dimensão atual com questão sem nota]
+  d --> Completa : [dimensão atual completa]
+  Incompleta --> d : E1 aoDarNota(questao, valor)\nE2 aoAvancarDimensao [dimensaoAtual < n-1]\nE3 aoVoltarDimensao [dimensaoAtual > 0]
+  Completa --> d : E1 aoDarNota(questao, valor)\nE2 aoAvancarDimensao [dimensaoAtual < n-1]\nE3 aoVoltarDimensao [dimensaoAtual > 0]
+}
+
+state "Validação reprovada" as Reprovada : entry / marcarPendentes(pendentes)\nvai à dimensão da primeira pendente
+state Enviando : entry / servicoEnvio.enviar(montarAvaliacao())\ntoques ignorados até a resposta
+state "Falha no envio" as Falha : entry / mostrarFalhaNoEnvio()\nnotas mantidas
+state "TelaConfirmacao\n(DEst-AvalRegistrar-04)" as Confirmacao
+
+Carregando --> Preenchendo : carga concluída [há dimensões]\n/ mostrarDimensao()
+Carregando --> Vazio : carga concluída [sem dimensões]
+Carregando --> Indisponivel : ErroApi [qualquer tipo]
+
+
+state c <<choice>>
+Preenchendo --> c : E4 aoEnviar [dimensaoAtual = n-1]
+Reprovada --> c : E4 aoEnviar
+Falha --> c : E4 aoEnviar
+c --> Enviando : [rascunho.estaCompleto(dimensoes)]
+c --> Reprovada : [não completo]
+
+Reprovada --> Preenchendo : E1 aoDarNota(questao, valor)
+Reprovada --> Reprovada : E2 ou E3
+Falha --> Preenchendo : E1, E2 ou E3
+
+Enviando --> Confirmacao : resultado = REGISTRADA\n/ criar TelaConfirmacao; aoExibir()
+Enviando --> Falha : resultado = NAO_REGISTRADA
+
+Carregando --> [*] : E5 aoVoltar
+Vazio --> [*] : E5 aoVoltar
+Indisponivel --> [*] : E5 aoVoltar
+Preenchendo --> [*] : E5 aoVoltar\n(descarta o rascunho)
+Reprovada --> [*] : E5 aoVoltar
+Falha --> [*] : E5 aoVoltar
+@enduml
