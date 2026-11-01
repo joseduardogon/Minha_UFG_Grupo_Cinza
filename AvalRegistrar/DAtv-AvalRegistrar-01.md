@@ -30,7 +30,7 @@ O Avaliador toca no cartão "Avaliação de UA" da tela inicial (E9 do `DIhc-Ini
 
 Em A1 o app cria a `TelaEscolherUA`, mostra o indicador de carregamento e pede ao Servidor/API a lista de unidades acadêmicas (P-AR-2). A resposta segue o ciclo genérico de tela remota (`DEst-Comum-01`, `DEst-AvalRegistrar-02`): lista exibida (nome e sigla de cada UA, sem busca nem filtro, P-AR-18), mensagem de vazio ou mensagem de indisponibilidade, com a apresentação do padrão do Comum (P-AR-10). Nos dois últimos casos, o usuário só sai pela seta de voltar, pois a versão atual não tem "tentar de novo". A chamada ao servidor e o desfecho ficam dentro do DSeq da atividade que os dispara, e não em atividades separadas.
 
-Em A2 o app guarda a UA escolhida, cria a `TelaQuestionario` e passa ao UC09.2 (`DAtv-AvalRegistrar-02`).
+Em A2 o app guarda a UA escolhida, cria a `TelaQuestionario` e passa ao UC09.2 (`DAtv-AvalRegistrar-02`), que começa com a carga do questionário. Essa carga é modelada como atividade no `DAtv-AvalRegistrar-02` e, por ser disparada por A2, sua sequência fica no `DSeq-AvalRegistrar-02`.
 
 ## Referências
 
