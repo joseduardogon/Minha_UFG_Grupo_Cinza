@@ -1,0 +1,43 @@
+@startuml DSeq-AvalConsultar-03
+title DSeq-AvalConsultar-03 – Sequência de A3: tocar em uma UA e carregar as notas por dimensão
+actor "Membro" as M
+participant ":TelaNotasArea" as T0
+participant ":TelaNotasUA" as T
+participant ":ControladorTelaRemota<NotaDimensao>" as K
+participant ":FonteNotasUnidade" as F
+participant "FormatoNota" as N
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T0 : aoEscolherUA(nota)
+create T
+T0 -> T : TelaNotasUA(acesso, nota.unidade)
+T0 -> T : aoExibir()
+create F
+T -> F : FonteNotasUnidade(acesso, unidade)
+create K
+T -> K : ControladorTelaRemota<NotaDimensao>(fonte)
+T -> K : registrarObservador(this)
+T -> K : aoEntrarNaTela()
+ref over T, K, F, A, S
+  Carregar e exibir notas (DSeq-AvalConsultar-01)
+  Neste uso: fonte = FonteNotasUnidade,
+  chamada = obter("/avaliacao/notas/unidade", {unidade: unidade.id}),
+  dados = List<NotaDimensao>; a fonte guarda notaUnidade.
+end ref
+alt UA com avaliações (EXIBINDO)
+  T -> K : obterDados()
+  K --> T : List<NotaDimensao>
+  T -> F : obterNotaUnidade()
+  F --> T : notaUnidade
+  loop nota da UA e cada dimensão
+    T -> N : formatar(nota)
+    N --> T : "4,3"
+  end
+  T -> M : mostra a nota da UA e as notas por dimensão
+else UA sem avaliações (VAZIO)
+  T -> M : mostra "Sem avaliações"
+else falha de comunicação (INDISPONIVEL)
+  T -> M : mostra a mensagem de indisponibilidade
+end
+@enduml

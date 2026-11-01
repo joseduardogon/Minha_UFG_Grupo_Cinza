@@ -360,3 +360,20 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-14 – Avaliação – Consultar notas: detalhamento (D-AVC-03)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 1 de novembro de 2026.
+- **Contexto fornecido:** itens do D-AVC-01 e do D-AVC-02, pacote Comum e itens de `AvalRegistrar/` e de `Radio/` como modelo.
+- **Itens produzidos:** `DSeq-AvalConsultar-01` a `03`, `DEst-AvalConsultar-01` a `03`, `Contrato-AvalConsultar-01` (com as regras de cálculo R1 a R7) e `ECA-AvalConsultar-01`.
+- **Uso da resposta:** rascunho dos diagramas e dos textos, revisado pela Pessoa D.
+
+### Prompt 1
+
+> certo, vamos para d-avc-03. tem algo a ser esclarecido por mim antes? se não, já implemente
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.

@@ -25,6 +25,14 @@ Cada item de informação desta pasta é um par de arquivos com o mesmo nome:
 | [`DCmp-AvalConsultar-01`](DCmp-AvalConsultar-01.md) | Componentes do pacote | Em produção |
 | [`DCla-AvalConsultar-01`](DCla-AvalConsultar-01.md) | Classes do componente `TelasNotas` | Em produção |
 | [`DCla-AvalConsultar-02`](DCla-AvalConsultar-02.md) | Classes das fontes de notas | Em produção |
+| [`DSeq-AvalConsultar-01`](DSeq-AvalConsultar-01.md) | Sequência de A1: tocar em "Ver notas" e carregar as notas da UFG | Em produção |
+| [`DSeq-AvalConsultar-02`](DSeq-AvalConsultar-02.md) | Sequência de A2: tocar em uma área e carregar as notas das UAs | Em produção |
+| [`DSeq-AvalConsultar-03`](DSeq-AvalConsultar-03.md) | Sequência de A3: tocar em uma UA e carregar as notas por dimensão | Em produção |
+| [`DEst-AvalConsultar-01`](DEst-AvalConsultar-01.md) | Estados da TelaNotas | Em produção |
+| [`DEst-AvalConsultar-02`](DEst-AvalConsultar-02.md) | Estados da TelaNotasArea | Em produção |
+| [`DEst-AvalConsultar-03`](DEst-AvalConsultar-03.md) | Estados da TelaNotasUA | Em produção |
+| [`Contrato-AvalConsultar-01`](Contrato-AvalConsultar-01.md) | Contratos de Avaliação – Consultar notas | Em produção |
+| [`ECA-AvalConsultar-01`](ECA-AvalConsultar-01.md) | Regras E-C-A de Avaliação – Consultar notas | Em produção |
 
 ## Premissas
 

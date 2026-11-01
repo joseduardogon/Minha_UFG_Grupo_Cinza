@@ -1,0 +1,43 @@
+@startuml DSeq-AvalConsultar-02
+title DSeq-AvalConsultar-02 – Sequência de A2: tocar em uma área e carregar as notas das UAs
+actor "Membro" as M
+participant ":TelaNotas" as T0
+participant ":TelaNotasArea" as T
+participant ":ControladorTelaRemota<NotaUnidade>" as K
+participant ":FonteNotasArea" as F
+participant "FormatoNota" as N
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T0 : aoEscolherArea(area)
+create T
+T0 -> T : TelaNotasArea(acesso, area)
+T0 -> T : aoExibir()
+create F
+T -> F : FonteNotasArea(acesso, area.areaConhecimento)
+create K
+T -> K : ControladorTelaRemota<NotaUnidade>(fonte)
+T -> K : registrarObservador(this)
+T -> K : aoEntrarNaTela()
+ref over T, K, F, A, S
+  Carregar e exibir notas (DSeq-AvalConsultar-01)
+  Neste uso: fonte = FonteNotasArea,
+  chamada = obter("/avaliacao/notas/area", {area: areaConhecimento}),
+  dados = List<NotaUnidade>; a fonte guarda mediaArea.
+end ref
+alt UAs na área (EXIBINDO)
+  T -> K : obterDados()
+  K --> T : List<NotaUnidade>
+  T -> F : obterMediaArea()
+  F --> T : mediaArea
+  loop média da área e cada UA
+    T -> N : formatar(nota)
+    N --> T : "4,3" ou "Sem avaliações"
+  end
+  T -> M : mostra a média da área e as UAs (nome, sigla e nota)
+else área sem UAs (VAZIO)
+  T -> M : mostra a mensagem de vazio
+else falha de comunicação (INDISPONIVEL)
+  T -> M : mostra a mensagem de indisponibilidade
+end
+@enduml
