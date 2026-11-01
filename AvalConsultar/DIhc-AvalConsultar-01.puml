@@ -1,0 +1,22 @@
+@startsalt DIhc-AvalConsultar-01
+{+
+  { [<] (E2) | <b>Notas das unidades }
+  ==
+  (E0: ao exibir a tela)
+  .
+  { <b>UFG | <b>3,8 }
+  Média das notas de todas as UAs avaliadas
+  ==
+  Médias por área do conhecimento (CNPq)
+  --
+  { Ciências Exatas e da Terra | 4,1 | [>] (E1) }
+  --
+  { Ciências Humanas | 3,6 | [>] (E1) }
+  --
+  { Ciências da Saúde | 3,9 | [>] (E1) }
+  --
+  { Linguística, Letras e Artes | Sem avaliações | [>] (E1) }
+  --
+  ...
+}
+@endsalt

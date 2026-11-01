@@ -2,6 +2,12 @@
 
 Decisões de planejamento e de modelagem que alteram o contrato ou o roteiro. Uma entrada por decisão, da mais recente para a mais antiga.
 
+## 31/10/2026 – Consulta de notas da Avaliação de UA (AvalConsultar)
+
+- **Decisão:** (1) confirma-se a P-AR-1: o cartão "Avaliação de UA" abre a `TelaAvaliacao`, e o botão "Ver notas" abre a `TelaNotas`; (2) a consulta tem três telas em profundidade: `TelaNotas` (nota da UFG e médias por área CNPq), `TelaNotasArea` (UAs da área com notas) e `TelaNotasUA` (notas por dimensão); (3) nota da UA = média das notas de suas avaliações; média da área = média das notas das UAs; nota da UFG = média das notas das UAs; (4) UA sem avaliação aparece com "Sem avaliações" e fica fora das médias; (5) dependência entre pacotes: só `AvalRegistrar` → `AvalConsultar`, pela navegação do botão "Ver notas"; `AvalConsultar` lê as entidades da avaliação pelo Servidor/API e não depende de `AvalRegistrar` na navegação. O ajuste do `DPac-Geral-01` fica para o D-AVC-02.
+- **Motivo:** o enunciado exige a nota por UA, a média por área CNPq e a nota da UFG, mas não define as telas nem a agregação entre avaliações. A média de médias segue a definição de nota da UFG do enunciado e mantém a mesma regra nos três níveis. Contar uma UA sem avaliação como zero distorceria as médias. Uma só direção de dependência evita o ciclo de pacotes apontado no README de `AvalRegistrar`.
+- **Alternativas:** duas telas, sem as notas por dimensão (descartada: perde a informação que o enunciado define no cálculo); tela única (descartada: lista longa e mistura níveis); média da área ponderada pelas avaliações (descartada: UAs com mais avaliações pesariam mais, diferente da regra da UFG); esconder UAs sem avaliação (descartada: o usuário não saberia se a UA existe).
+
 ## 20/10/2026 – Cartão "Avaliação de UA" na tela inicial
 
 - **Decisão:** a tela inicial mantém os oito cartões da versão 3.1.1 e ganha um nono, "Avaliação de UA", ponto de entrada único de `AvalRegistrar` e `AvalConsultar`. A tela aberta por ele é definida por A e B. O texto do `DPac-Geral-01` foi ajustado; o diagrama não muda.

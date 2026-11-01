@@ -1,0 +1,39 @@
+@startuml DAtv-AvalConsultar-01
+title DAtv-AvalConsultar-01 – Consultar a nota da UFG e as médias por área CNPq (UC10.1)
+
+|Membro|
+start
+note right
+  Pré-condição: o usuário está na
+  TelaAvaliacao (DIhc-AvalRegistrar-01).
+end note
+:**A1** Tocar em "Ver notas";
+|App|
+:Exibir a TelaNotas\ncom indicador de carregamento;
+:Solicitar a nota da UFG\ne as médias por área CNPq;
+|Servidor/API|
+:Devolver as notas\nou falhar;
+|App|
+if (Houve falha de comunicação?) then (sim)
+  :Exibir mensagem de indisponibilidade;
+  stop
+elseif (Há áreas com unidades acadêmicas?) then (não)
+  :Exibir mensagem de vazio;
+  stop
+else (sim)
+  :Exibir a nota da UFG e a lista de áreas\ncom a média de cada uma\n("Sem avaliações" quando não há nota);
+endif
+|Membro|
+if (O que o usuário faz?) then (escolhe uma área)
+  :Tocar em uma área;
+  |App|
+  :Abrir a TelaNotasArea\n(UC10.2, DAtv-AvalConsultar-02);
+  stop
+else (volta)
+  |Membro|
+  :Tocar na seta de voltar;
+  |App|
+  :Voltar à TelaAvaliacao\ne descartar as notas em memória;
+  stop
+endif
+@enduml

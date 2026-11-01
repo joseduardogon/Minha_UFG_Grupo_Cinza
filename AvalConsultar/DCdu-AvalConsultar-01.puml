@@ -1,0 +1,22 @@
+@startuml DCdu-AvalConsultar-01
+title DCdu-AvalConsultar-01 – Casos de uso de Avaliação de UA (consultar notas)
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Membro da comunidade UFG" as Membro
+actor "Servidor/API" as API <<sistema>>
+
+rectangle "App Minha UFG – Avaliação de UA (consultar notas)" {
+  usecase "UC10.1\nConsultar a nota da UFG\ne as médias por área CNPq" as UC101
+  usecase "UC10.2\nConsultar as notas das\nUAs de uma área" as UC102
+  usecase "UC10.3\nConsultar as notas de\numa UA por dimensão" as UC103
+}
+
+Membro --> UC101
+Membro --> UC102
+Membro --> UC103
+
+UC101 --> API
+UC102 --> API
+UC103 --> API
+@enduml

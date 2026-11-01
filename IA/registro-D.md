@@ -314,3 +314,28 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-12 – Avaliação – Consultar notas: comportamento (D-AVC-01)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 31 de outubro de 2026.
+- **Contexto fornecido:** enunciado da APS (Apêndice A), contrato-base, itens de `AvalRegistrar/` (PR #11), parecer `Integracao/revisoes/REV-PR11-AvalRegistrar.md`, `DD-Locais-01` e Comum.
+- **Itens produzidos:** correção dos bloqueantes B1 e B2 em `DAtv-AvalRegistrar-01` e `02` (commit à parte); `DCdu-AvalConsultar-01`, `DAtv-AvalConsultar-01` a `03`, `DIhc-AvalConsultar-01` a `03`, premissas no `AvalConsultar/README.md` e decisão de 31/10/2026 em `Docs/decisoes.md`.
+- **Uso da resposta:** rascunho dos diagramas e dos textos; as decisões de navegação e de cálculo foram tomadas pela Pessoa D entre opções apresentadas pela IA.
+
+### Prompt 1
+
+> vamos seguir com d-avc-01. precisa confirmar algo antes ou já tem tudo que precisa para fazer?
+
+### Prompt 2 (respostas às perguntas da IA)
+
+> Telas: "Drill-down 3 níveis". UA sem nota: "'Sem avaliações', fora". Médias: "Média de médias". P-AR-1: "Confirmar P-AR-1".
+
+### Prompt 3
+
+> sim
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
