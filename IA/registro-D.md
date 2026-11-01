@@ -339,3 +339,24 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-13 – Avaliação – Consultar notas: estrutura (D-AVC-02)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 1 de novembro de 2026.
+- **Contexto fornecido:** itens do D-AVC-01, pacote Comum, `DPac-Geral-01`, itens de `AvalRegistrar/` e `DD-Locais-01`.
+- **Itens produzidos:** `DD-AvalConsultar-01`, `DCmp-AvalConsultar-01`, `DCla-AvalConsultar-01` e `02`, ajustes em `DCla-AvalRegistrar-01`, `DCmp-AvalRegistrar-01` e `DPac-Geral-01`, decisão de 01/11/2026 em `Docs/decisoes.md` e premissas no `AvalConsultar/README.md`.
+- **Uso da resposta:** rascunho dos diagramas e dos textos; as decisões sobre o cálculo no servidor e a quebra do ciclo de pacotes foram tomadas pela Pessoa D entre opções apresentadas pela IA.
+
+### Prompt 1
+
+> certo, vamos para d-avc-02. tem algo a ser esclarecido por mim antes? se não, já implemente
+
+### Prompt 2 (respostas às perguntas da IA)
+
+> Ciclo: dependência só de entidade (manter `AvalConsultar` → `AvalRegistrar` e tirar a dependência contrária). Cálculo: "Servidor calcula".
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.

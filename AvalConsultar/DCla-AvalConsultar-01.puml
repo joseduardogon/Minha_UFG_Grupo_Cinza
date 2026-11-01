@@ -1,0 +1,92 @@
+@startuml DCla-AvalConsultar-01
+title DCla-AvalConsultar-01 – Classes do componente TelasNotas
+hide empty members
+
+package "Comum" {
+  interface IAcessoApi <<Comum>>
+  interface IObservadorEstado <<Comum>> {
+    + aoMudarEstado(estado: EstadoTela): void
+  }
+  interface "IControladorTelaRemota<T>" as IControlador <<Comum>> {
+    + aoEntrarNaTela(): void
+    + obterEstado(): EstadoTela
+    + obterDados(): List<T>
+    + registrarObservador(o: IObservadorEstado): void
+  }
+  class "ControladorTelaRemota<T>" as Controlador <<Comum>>
+  enum EstadoTela <<Comum>>
+}
+
+package "Locais" {
+  class UnidadeAcademica <<Locais>>
+}
+
+package "Outros componentes de AvalConsultar" {
+  class FonteNotasUFG <<DCla-AvalConsultar-02>>
+  class FonteNotasArea <<DCla-AvalConsultar-02>>
+  class FonteNotasUnidade <<DCla-AvalConsultar-02>>
+  class MediaArea <<DCla-AvalConsultar-02>>
+  class NotaUnidade <<DCla-AvalConsultar-02>>
+  class NotaDimensao <<DCla-AvalConsultar-02>>
+}
+
+class TelaNotas {
+  - acesso: IAcessoApi
+  - fonte: FonteNotasUFG
+  - controlador: IControladorTelaRemota<MediaArea>
+  + TelaNotas(acesso: IAcessoApi)
+  + aoExibir(): void
+  + aoEscolherArea(area: MediaArea): void
+  + aoVoltar(): void
+  + aoMudarEstado(estado: EstadoTela): void
+}
+
+class TelaNotasArea {
+  - acesso: IAcessoApi
+  - area: MediaArea
+  - fonte: FonteNotasArea
+  - controlador: IControladorTelaRemota<NotaUnidade>
+  + TelaNotasArea(acesso: IAcessoApi, area: MediaArea)
+  + aoExibir(): void
+  + aoEscolherUA(nota: NotaUnidade): void
+  + aoVoltar(): void
+  + aoMudarEstado(estado: EstadoTela): void
+}
+
+class TelaNotasUA {
+  - unidade: UnidadeAcademica
+  - fonte: FonteNotasUnidade
+  - controlador: IControladorTelaRemota<NotaDimensao>
+  + TelaNotasUA(acesso: IAcessoApi, unidade: UnidadeAcademica)
+  + aoExibir(): void
+  + aoVoltar(): void
+  + aoMudarEstado(estado: EstadoTela): void
+}
+
+class FormatoNota <<utilitário>> {
+  + {static} formatar(nota: Real [0..1]): String
+}
+
+IObservadorEstado <|.. TelaNotas
+IObservadorEstado <|.. TelaNotasArea
+IObservadorEstado <|.. TelaNotasUA
+
+TelaNotas ..> FonteNotasUFG : <<create>>
+TelaNotas ..> Controlador : <<create>>
+TelaNotas ..> TelaNotasArea : <<create>>
+TelaNotasArea ..> FonteNotasArea : <<create>>
+TelaNotasArea ..> Controlador : <<create>>
+TelaNotasArea ..> TelaNotasUA : <<create>>
+TelaNotasUA ..> FonteNotasUnidade : <<create>>
+TelaNotasUA ..> Controlador : <<create>>
+
+TelaNotas --> "1" IControlador : controlador
+TelaNotasArea --> "1" IControlador : controlador
+TelaNotasUA --> "1" IControlador : controlador
+TelaNotas ..> FormatoNota : <<use>>
+TelaNotasArea ..> FormatoNota : <<use>>
+TelaNotasUA ..> FormatoNota : <<use>>
+TelaNotasArea ..> NotaUnidade : <<use>>
+TelaNotasUA ..> NotaDimensao : <<use>>
+Controlador ..|> IControlador
+@enduml

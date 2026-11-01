@@ -30,10 +30,10 @@ O app é organizado em um pacote por funcionalidade, um pacote `Inicio` e um pac
 
 **Dependências.**
 
-- `Inicio` depende de todos os pacotes de funcionalidade, pois cada cartão do menu abre a tela inicial de uma funcionalidade. As oito funcionalidades da versão 3.1.1 têm um cartão cada; a evolução acrescenta um nono cartão, "Avaliação de UA", ponto de entrada único de `AvalRegistrar` e `AvalConsultar` (`DIhc-Inicio-01`).
+- `Inicio` depende de todos os pacotes de funcionalidade, pois cada cartão do menu abre a tela inicial de uma funcionalidade. As oito funcionalidades da versão 3.1.1 têm um cartão cada; a evolução acrescenta um nono cartão, "Avaliação de UA", ponto de entrada único da avaliação: ele abre a `TelaAvaliacao` de `AvalRegistrar` (`DIhc-Inicio-01`, `DIhc-AvalRegistrar-01`). Por isso `Inicio` não depende de `AvalConsultar`: a consulta é aberta pelo botão "Ver notas" da `TelaAvaliacao`, por um Intent implícito do Android (ação `VER_NOTAS`), sem dependência de classe entre `AvalRegistrar` e `AvalConsultar` (decisão de 01/11/2026).
 - Todo pacote de funcionalidade depende de `Comum`, pois usa ao menos um dos seus componentes (acesso à API, estados de tela remota, abertura de link externo ou provedor de mapa).
 - `AvalRegistrar` depende de `Locais`, porque a avaliação é feita sobre uma Unidade Acadêmica, entidade definida por B (contrato, seção 7).
-- `AvalConsultar` depende de `Locais` (Unidade Acadêmica e Área de conhecimento) e de `AvalRegistrar` (Avaliação, Dimensão de qualidade e Elemento educacional, cujas notas ele agrega).
+- `AvalConsultar` depende de `Locais` (Unidade Acadêmica, com sua área de conhecimento) e de `AvalRegistrar` (Dimensão de qualidade, cujas notas exibe); as médias são calculadas pelo Servidor/API (`DCmp-AvalConsultar-01`). Não há a dependência contrária, o que evita ciclo.
 
 **Decisões de arquitetura.**
 

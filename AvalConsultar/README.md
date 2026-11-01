@@ -21,6 +21,10 @@ Cada item de informação desta pasta é um par de arquivos com o mesmo nome:
 | [`DIhc-AvalConsultar-01`](DIhc-AvalConsultar-01.md) | Protótipo da `TelaNotas` | Em produção |
 | [`DIhc-AvalConsultar-02`](DIhc-AvalConsultar-02.md) | Protótipo da `TelaNotasArea` | Em produção |
 | [`DIhc-AvalConsultar-03`](DIhc-AvalConsultar-03.md) | Protótipo da `TelaNotasUA` | Em produção |
+| [`DD-AvalConsultar-01`](DD-AvalConsultar-01.md) | Entidades derivadas e origem de cada nota | Em produção |
+| [`DCmp-AvalConsultar-01`](DCmp-AvalConsultar-01.md) | Componentes do pacote | Em produção |
+| [`DCla-AvalConsultar-01`](DCla-AvalConsultar-01.md) | Classes do componente `TelasNotas` | Em produção |
+| [`DCla-AvalConsultar-02`](DCla-AvalConsultar-02.md) | Classes das fontes de notas | Em produção |
 
 ## Premissas
 
@@ -33,6 +37,7 @@ A consulta de notas é evolução do app e não tem comportamento observado. O q
 | P-AC-3 | Nota da UA = média das notas de suas avaliações; média da área = média das notas das UAs da área; nota da UFG = média das notas de todas as UAs (enunciado) | Decisão de 31/10/2026 |
 | P-AC-4 | UA sem avaliação aparece com "Sem avaliações" e não entra na média da área nem na da UFG; área ou UFG sem nenhuma UA avaliada também mostra "Sem avaliações"; na `TelaNotasUA`, é o estado vazio | Decisão de 31/10/2026 |
 | P-AC-5 | Notas exibidas na escala de 0 a 5, com uma casa decimal | Premissa de projeto |
-| P-AC-6 | O Servidor/API entrega as notas já calculadas e o app só as exibe (provisória; decisão formal no D-AVC-02) | Premissa de projeto |
+| P-AC-6 | O Servidor/API calcula as médias a cada consulta e entrega as notas prontas; só as notas por questão são armazenadas, e o app só exibe | Decisão de 01/11/2026 |
 | P-AC-7 | Listas na ordem recebida do servidor, sem busca, filtro nem ordenação no app | Premissa de projeto |
 | P-AC-8 | A nota de uma dimensão na UA é a média, entre as avaliações da UA, da nota daquela dimensão em cada avaliação; mostram-se as dimensões que aparecem nas avaliações da UA, agregadas pelo `id` (`DD-AvalRegistrar-01`, "Para quem consome", item 3) | Premissa de projeto |
+| P-AC-9 | A API tem as rotas `GET /avaliacao/notas`, `GET /avaliacao/notas/area` (parâmetro `area`) e `GET /avaliacao/notas/unidade` (parâmetro `unidade`), com corpo em JSON; não são observáveis | Premissa de projeto (não observável) |

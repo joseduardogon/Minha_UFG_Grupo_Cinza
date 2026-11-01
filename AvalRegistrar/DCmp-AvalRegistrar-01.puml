@@ -23,9 +23,7 @@ package "Locais (pacote de Maicon)" {
   rectangle "<<entidade>>\nUnidadeAcademica" as UA
 }
 
-package "AvalConsultar (pacote de Phablo)" {
-  rectangle "Tela de AvalConsultar" as Consulta
-}
+interface "Intent Android" as Intent
 
 Telas ..|> IObservador : oferece
 FonteUA ..|> IFonteDados : oferece\n(UnidadeAcademica)
@@ -44,5 +42,5 @@ Telas ..> Servico : cria
 Telas ..> UA : usa
 FonteUA ..> UA : cria
 Servico ..> UA : usa
-Telas ..> Consulta : abre\n("Ver notas")
+Telas ..> Intent : <<use>>\n("Ver notas", VER_NOTAS)
 @enduml
