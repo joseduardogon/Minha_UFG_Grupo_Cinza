@@ -415,3 +415,32 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-17 – Correção de setas sobrepostas nos DAtv
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 2 de novembro de 2026.
+- **Contexto fornecido:** relato da Pessoa B (prints do diagrama e da conversa da equipe) sobre linhas sobrepostas em diagramas de atividades; todos os DAtv do repositório.
+- **Itens produzidos:** revisão visual dos 23 DAtv; correção da sobreposição em `DAtv-AvalConsultar-01`, `DAtv-AvalConsultar-02`, `DAtv-AvalRegistrar-02` (também com o abandono do questionário movido para a saída do laço, eliminando a seta solta) e `DAtv-AvalRegistrar-03` (também com "Marcar as questões pendentes" movida para a raia App); PNGs renderizados de novo.
+- **Uso da resposta:** correções conferidas e aprovadas pela Pessoa D.
+
+### Prompt 1
+
+> o maicon relatou esses problemas visuais em alguns diagramas. revise todas as imagens de diagramas e detecte se esse problema ainda está presente
+
+### Prompt 2
+
+> já entrei em acordo com o time e eu vou corrigir esse ponto. corrija todos que tiverem com essa sobreposição e renderize novamente as imagens. não gere o commit ainda apenas altere
+
+### Prompt 3
+
+> sim corrija visualmente o DAtv-AvalRegistrar-02. além da linha solta começando do nada, tem duas setas que se conectam a uma linha horizontal que não leva a lugar nenhum. corrija isso ainda está errado.
+
+### Prompt 4
+
+> tudo bem da maneira que ficou está correto. pode registrar o uso de ia.
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.

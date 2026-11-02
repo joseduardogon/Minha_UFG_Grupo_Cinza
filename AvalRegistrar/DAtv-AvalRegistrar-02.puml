@@ -34,22 +34,24 @@ repeat
   |Avaliador|
   if (O que o usuário faz?) then (responde)
     :**A1** Dar nota (0 a 5)\na uma questão;
+    -> \n\n\n\n;
     |App|
     :Guardar a nota no rascunho\ne destacar a opção escolhida;
-  elseif () then (navega)
+  else (navega)
     |Avaliador|
     :**A2** Navegar entre as dimensões\n("Próxima" ou "Anterior");
     |App|
     :Atualizar a dimensão atual e exibir\nos elementos e as questões dela;
-  else (abandona)
-    |Avaliador|
-    :Tocar na seta de voltar;
-    |App|
-    :Descartar o rascunho\n(nada é enviado);
-    stop
   endif
 repeat while (Continua respondendo?) is (sim) not (não)
 |Avaliador|
-:Na última dimensão, tocar em "Enviar"\n(UC09.3, DAtv-AvalRegistrar-03);
-stop
+if (Como sai do questionário?) then (envia)
+  :Na última dimensão, tocar em "Enviar"\n(UC09.3, DAtv-AvalRegistrar-03);
+  stop
+else (abandona)
+  :Tocar na seta de voltar;
+  |App|
+  :Descartar o rascunho\n(nada é enviado);
+  stop
+endif
 @enduml
