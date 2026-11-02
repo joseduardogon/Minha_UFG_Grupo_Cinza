@@ -544,3 +544,28 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026.
+
+## D-IA-22 – Matriz de rastreabilidade (D-INT-04)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 2 de novembro de 2026.
+- **Contexto fornecido:** campo "Rastreia para" dos 171 itens de informação do repositório.
+- **Itens produzidos:** `Integracao/rastreabilidade.md` (verificações, achados e matriz); correção do R-01 em `DCla-Locais-02`.
+- **Uso da resposta:** a conferir pela Pessoa D.
+
+### Prompt 1
+
+> tudo certo para iniciar d-int-04?
+
+### Prompt 2
+
+> pode iniciar a d-int-04
+
+### Prompt 3
+
+> 1. sim , 2. fica so como observação mesmo.
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026.

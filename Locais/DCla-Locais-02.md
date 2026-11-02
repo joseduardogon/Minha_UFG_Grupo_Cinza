@@ -7,7 +7,7 @@
 | **Autor(a)** | Maicon Brendo da Silva |
 | **Revisor(a)** | Revisor(a) a definir |
 | **Status** | Em produção |
-| **Rastreia para** | `DPac-Geral-01`, `DD-Locais-01`, `DCla-Locais-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DSeq-Locais-01`, `DD-Eventos-01` |
+| **Rastreia para** | `DPac-Geral-01`, `DCmp-Locais-01`, `DD-Locais-01`, `DCla-Locais-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DSeq-Locais-01`, `DD-Eventos-01` |
 
 ## Diagrama
 
