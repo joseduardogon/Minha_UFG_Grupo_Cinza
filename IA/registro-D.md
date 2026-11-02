@@ -502,3 +502,20 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-20 – Modelo de dados integrado (D-INT-02)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 2 de novembro de 2026.
+- **Contexto fornecido:** entradas de DD de todos os pacotes, `Integracao/recebimento.md`, `DCla-Comum-04`.
+- **Itens produzidos:** `DDados-Geral-01` (.puml, .png, .md) e `DD-Geral-01`.
+- **Uso da resposta:** a conferir pela Pessoa D e revisar pela Pessoa C.
+
+### Prompt 1
+
+> implemente D-INT-02. se precisar de alguma confirmação avise.
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026.

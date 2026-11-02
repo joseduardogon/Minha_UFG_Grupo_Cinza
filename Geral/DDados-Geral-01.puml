@@ -1,0 +1,73 @@
+@startuml DDados-Geral-01
+title DDados-Geral-01 – Modelo conceitual de dados integrado
+hide empty members
+
+package Comum {
+  class Regional
+  class Campus
+  class Coordenada
+}
+
+package Eventos {
+  class Evento
+}
+
+package Noticias {
+  class Noticia
+}
+
+package RU {
+  class Refeicao
+  class ItemCardapio
+  class CategoriaItem
+}
+
+package Radio {
+  class ProgramaRadio
+  class HorarioPrograma
+}
+
+package Locais {
+  class Local
+  class UnidadeAcademica
+  class AreaConhecimento
+}
+
+package AvalRegistrar {
+  class DimensaoQualidade
+  class ElementoEducacional
+  class Questao
+  class Avaliacao
+  class NotaQuestao
+}
+
+package AvalConsultar {
+  class MediaArea
+  class NotaUnidade
+  class NotaDimensao
+}
+
+Regional "1" -- "0..*" Campus : agrupa >
+Regional "1" -- "0..*" Evento : promove >
+Regional "1" -- "0..*" Noticia : publica >
+
+Campus "1" -- "0..*" Local : contém >
+Local "1" *-- "1" Coordenada : localiza-se em >
+Local <|-- UnidadeAcademica
+UnidadeAcademica "0..*" -- "1" AreaConhecimento : pertence a >
+
+Refeicao "1" -- "0..*" ItemCardapio : tem >
+CategoriaItem "1" -- "0..*" ItemCardapio : agrupa >
+
+ProgramaRadio "1" -- "1..*" HorarioPrograma : vai ao ar em >
+
+DimensaoQualidade "1" -- "1..*" ElementoEducacional : é caracterizada por >
+ElementoEducacional "1" -- "1..*" Questao : tem >
+Avaliacao "0..*" -- "1" UnidadeAcademica : avalia >
+Avaliacao "1" *-- "1..*" NotaQuestao : é composta por >
+NotaQuestao "0..*" -- "1" Questao : responde a >
+
+MediaArea "0..*" --> "1" AreaConhecimento : areaConhecimento
+NotaUnidade "0..*" --> "1" UnidadeAcademica : unidade
+NotaDimensao "0..*" --> "1" DimensaoQualidade : dimensao
+@enduml
