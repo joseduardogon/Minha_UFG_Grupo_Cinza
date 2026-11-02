@@ -58,7 +58,7 @@ class CalendarioEventos {
 
 class Evento <<DCla-Eventos-02>>
 class FonteEventos <<DCla-Eventos-02>>
-class Regional <<DD-Eventos-01>>
+class Regional <<Comum>>
 
 IObservadorEstado <|.. TelaEventos
 IFiltroEventos <|.. CalendarioEventos

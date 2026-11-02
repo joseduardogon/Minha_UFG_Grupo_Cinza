@@ -13,6 +13,7 @@ package "Comum" {
     + latitude: Real
     + longitude: Real
   }
+  class Campus <<Comum>>
 }
 
 class FonteLocais {
@@ -27,14 +28,14 @@ class Local {
   + nome: String
   + fotoUrl: String
   + corMarcador: String
-  + campus: String
   + coordenada: Coordenada
+  + campus: Campus
   + ehUnidadeAcademica(): Boolean
 }
 
 class UnidadeAcademica {
   + sigla: String
-  + areaConhecimento: String
+  + area: AreaConhecimento
   + ehUnidadeAcademica(): Boolean
 }
 
@@ -43,5 +44,13 @@ FonteLocais --> "1" IAcessoApi : acessoApi
 FonteLocais ..> Local : <<create>>
 Local <|-- UnidadeAcademica
 Local --> "1" Coordenada : coordenada
+Local "0..*" --> "1" Campus : campus
+
+class AreaConhecimento {
+  + nome: String
+}
+UnidadeAcademica "0..*" --> "1" AreaConhecimento : area
+FonteLocais ..> AreaConhecimento : <<create>>
+FonteLocais ..> Campus : <<create>>
 @enduml
 

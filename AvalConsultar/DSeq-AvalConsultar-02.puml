@@ -22,7 +22,7 @@ T -> K : aoEntrarNaTela()
 ref over T, K, F, A, S
   Carregar e exibir notas (DSeq-AvalConsultar-01)
   Neste uso: fonte = FonteNotasArea,
-  chamada = obter("/avaliacao/notas/area", {area: areaConhecimento}),
+  chamada = obter("/avaliacao/notas/area", {area: areaConhecimento.nome}),
   dados = List<NotaUnidade>; a fonte guarda mediaArea.
 end ref
 alt UAs na área (EXIBINDO)

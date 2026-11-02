@@ -48,7 +48,7 @@ Especificação formal dos contratos de operação das classes da funcionalidade
 
 | Operação | Pré-condição | Pós-condição | Erros / Exceções |
 |---|---|---|---|
-| `carregar(): List<Local>` | Acesso de rede disponível | Executa `acessoApi.obter("/locais", vazio)`; realiza parse do JSON criando instâncias de `Local` ou `UnidadeAcademica` | Lança exceção de rede repassada ao controlador remoto caso o status HTTP seja diferente de 200 |
+| `carregar(): List<Local>` | Acesso de rede disponível | Executa `acessoApi.obter("/locais", vazio)`; realiza parse do JSON criando instâncias de `Local` ou `UnidadeAcademica`, cada uma ligada ao seu `Campus` e, se for UA, à sua `AreaConhecimento` | Lança exceção de rede repassada ao controlador remoto caso o status HTTP seja diferente de 200 |
 
 ## Referências
 

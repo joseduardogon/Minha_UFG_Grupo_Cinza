@@ -6,7 +6,7 @@
 | **Dono (autor)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
 | **Entregue a** | Phablo Tavares Paixão (Pessoa D), para integração no `DDados-Geral` e no `DD-Geral` |
 | **Usada por** | RU |
-| **Status** | Entregue para integração (atualizada em 30/10/2026) |
+| **Status** | **Retirada na integração** (02/11/2026): o app não usa a entidade; ver `Docs/decisoes.md` e `Integracao/recebimento.md` (I-06). Ficha mantida só como histórico. |
 
 ## Descrição
 

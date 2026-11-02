@@ -24,7 +24,7 @@ class FonteNoticias {
   - converter(corpo: String): List<Noticia>
 }
 
-class Regional <<DD-Eventos-01>>
+class Regional <<Comum>>
 
 class Noticia {
   + id: Integer

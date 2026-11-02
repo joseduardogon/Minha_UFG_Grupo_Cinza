@@ -17,7 +17,7 @@ Fonte: [`DIhc-AvalConsultar-01.puml`](DIhc-AvalConsultar-01.puml)
 
 ## Descrição
 
-Protótipo da `TelaNotas`, aberta pelo botão "Ver notas" da `TelaAvaliacao` (E2 do `DIhc-AvalRegistrar-01`). **Esta tela não existe no app atual**; o protótipo parte do enunciado, sem captura de tela. O desenho, em PlantUML Salt, mostra a barra de título com a seta de voltar, a nota da UFG em destaque e a lista das áreas do conhecimento (CNPq) com a média de cada uma. Os nomes das áreas e as notas são ilustrativos; as áreas vêm do atributo `areaConhecimento` da UA (`DD-Locais-01`).
+Protótipo da `TelaNotas`, aberta pelo botão "Ver notas" da `TelaAvaliacao` (E2 do `DIhc-AvalRegistrar-01`). **Esta tela não existe no app atual**; o protótipo parte do enunciado, sem captura de tela. O desenho, em PlantUML Salt, mostra a barra de título com a seta de voltar, a nota da UFG em destaque e a lista das áreas do conhecimento (CNPq) com a média de cada uma. Os nomes das áreas e as notas são ilustrativos; as áreas vêm da entidade `AreaConhecimento`, à qual cada UA está associada (`DD-Locais-01`).
 
 **Tabela 1 – Eventos da TelaNotas**
 

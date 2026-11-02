@@ -11,7 +11,7 @@
 
 ## Descrição
 
-Entidades de Eventos, para o DD consolidado (`DD-Geral-01`) e o modelo de dados integrado (`DDados-Geral-01`): **Regional**, **Campus** e **Evento**. Dono das três: Pessoa C (contrato-base, seção 7). `Regional` e `Campus` são compartilhadas: `Regional` é usada também por Notícias e, via `Campus`, por Locais (Pessoa B). A localização delas no `DPac-Geral-01` é a pendência `D-INT-03`; a proposta da Pessoa C é mantê-las no pacote `Comum`, e a decisão final é da integração (os `DCla` de Eventos e de Notícias desenham `Regional` fora do pacote Comum e sem atributos, só como referência, com o estereótipo `<<DD-Eventos-01>>`). As fichas de entrega a D são [`Entidade-Regional`](../Integracao/entidades/Entidade-Regional.md), [`Entidade-Campus`](../Integracao/entidades/Entidade-Campus.md) e [`Entidade-Evento`](../Integracao/entidades/Entidade-Evento.md), com o mesmo conteúdo deste item.
+Entidades de Eventos, para o DD consolidado (`DD-Geral-01`) e o modelo de dados integrado (`DDados-Geral-01`): **Regional**, **Campus** e **Evento**. Dono das três: Pessoa C (contrato-base, seção 7). `Regional` e `Campus` são compartilhadas: `Regional` é usada também por Notícias e, via `Campus`, por Locais (Pessoa B). As duas ficam no pacote `Comum` (decisão da integração de 02/11/2026, `Docs/decisoes.md`), e a Pessoa C continua dona da definição; os `DCla` de Eventos, de Notícias e de Locais as desenham sem atributos, só como referência, com o estereótipo `<<Comum>>`. As fichas de entrega a D são [`Entidade-Regional`](../Integracao/entidades/Entidade-Regional.md), [`Entidade-Campus`](../Integracao/entidades/Entidade-Campus.md) e [`Entidade-Evento`](../Integracao/entidades/Entidade-Evento.md), com o mesmo conteúdo deste item.
 
 Um evento acontece em um período (data de início e data de fim, que podem ser iguais) e é consultado no app por regional e por data: aparece na consulta de toda data entre `dataInicio` e `dataFim`, inclusive (observado: um evento de 30/09/2026 a 14/12/2026 aparece em 30/10 e em 30/11, capturas 19 e 28; P-EV-9). Os eventos são cadastrados pelo painel web e chegam ao app pelo Servidor/API.
 
@@ -47,7 +47,7 @@ Um evento acontece em um período (data de início e data de fim, que podem ser 
 | Regional e Campus | 1 — 0..* | Uma regional tem vários campi; cada campus pertence a uma única regional |
 | Regional e Evento | 1 — 0..* | Uma regional tem vários eventos; cada evento pertence a uma regional |
 | Regional e Noticia | 1 — 0..* | Uma regional tem várias notícias (associação descrita no DD de Notícias; aparece aqui só para completar a `Regional`) |
-| Campus e Local | 1 — 0..* | Um campus contém vários locais. **A confirmar:** `Local` é entidade da Pessoa B, e a multiplicidade é proposta da Pessoa C |
+| Campus e Local | 1 — 0..* | Um campus contém vários locais; cada local pertence a um único campus (confirmado na integração, `DD-Locais-01`) |
 
 **Regras e restrições:** A ligação com a regional é expressa pela associação, não por atributo de chave estrangeira (como em `DD-RU-01`; correção B2 da revisão REV-PR10). O nome da regional é único; o nome do campus é único dentro da regional; `dataFim` é igual ou posterior a `dataInicio`; uma regional pode existir sem campi, eventos ou notícias.
 
@@ -84,7 +84,6 @@ class Local <<Pessoa B>>
 Regional "1" -- "0..*" Campus : agrupa >
 Regional "1" -- "0..*" Evento : promove >
 Campus "1" -- "0..*" Local : contém >
-note on link : a confirmar com a Pessoa B
 ```
 
 ## Referências

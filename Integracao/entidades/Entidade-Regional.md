@@ -36,7 +36,7 @@ Divisão administrativa da UFG que agrupa campi e à qual pertencem eventos e no
 ## Premissas a confirmar
 
 - Em Eventos, como em Notícias (capturas 5 e 11), a regional é escolhida em abas, e a única visível é "GOIÂNIA", selecionada ao abrir (capturas 19, 28 e 29, versão 3.2.0). A faixa de abas some quando não há eventos (captura 29). Falta confirmar quais outras regionais existem e como se chamam, se a lista é fixa no app e se Eventos e Notícias usam a mesma lista (P-EV-2, `Eventos/README.md`).
-- Localização da entidade no `DPac-Geral-01`: pendência da integração (`D-INT-03`). Proposta da Pessoa C: manter `Regional` e `Campus` no pacote `Comum`, já que três pacotes de funcionalidade as usam e o `DPac-Geral-01` não permite dependência entre pacotes de funcionalidade.
+- Localização: `Regional` e `Campus` ficam no pacote `Comum` (decisão da integração de 02/11/2026), já que três pacotes de funcionalidade as usam e o `DPac-Geral-01` não permite dependência entre pacotes de funcionalidade.
 
 ## Trecho PlantUML (diagrama de dados)
 

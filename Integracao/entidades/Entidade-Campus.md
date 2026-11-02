@@ -25,7 +25,7 @@ Unidade física da UFG, vinculada a uma regional (por exemplo, o Campus Samambai
 | Com | Multiplicidade | Significado |
 |---|---|---|
 | Regional | 0..* para 1 | Cada campus pertence a uma única regional |
-| Local | 1 para 0..* | Um campus contém vários locais. **A confirmar:** `Local` é entidade da Pessoa B, e a multiplicidade é proposta da Pessoa C |
+| Local | 1 para 0..* | Um campus contém vários locais (confirmado na integração, `DD-Locais-01`) |
 
 ## Regras e restrições
 
@@ -53,5 +53,4 @@ class Campus {
 class Local <<Pessoa B>>
 Regional "1" -- "0..*" Campus : agrupa >
 Campus "1" -- "0..*" Local : contém >
-note on link : a confirmar com a Pessoa B
 ```

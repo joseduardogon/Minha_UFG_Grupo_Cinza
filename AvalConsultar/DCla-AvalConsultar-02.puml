@@ -14,6 +14,7 @@ package "Comum" {
 
 package "Locais" {
   class UnidadeAcademica <<Locais>>
+  class AreaConhecimento <<Locais>>
 }
 
 package "AvalRegistrar" {
@@ -31,9 +32,9 @@ class FonteNotasUFG {
 
 class FonteNotasArea {
   - acesso: IAcessoApi
-  - areaConhecimento: String
+  - areaConhecimento: AreaConhecimento
   - mediaArea: Real [0..1]
-  + FonteNotasArea(acesso: IAcessoApi, areaConhecimento: String)
+  + FonteNotasArea(acesso: IAcessoApi, areaConhecimento: AreaConhecimento)
   + carregar(): List<NotaUnidade>
   + obterMediaArea(): Real [0..1]
   - converter(corpo: String): List<NotaUnidade>
@@ -50,7 +51,6 @@ class FonteNotasUnidade {
 }
 
 class MediaArea {
-  + areaConhecimento: String
   + nota: Real [0..1]
 }
 
@@ -72,6 +72,8 @@ FonteNotasUFG ..> ErroApi : <<throws>>
 FonteNotasArea ..> ErroApi : <<throws>>
 FonteNotasUnidade ..> ErroApi : <<throws>>
 
+MediaArea "0..*" --> "1" AreaConhecimento : areaConhecimento
+FonteNotasArea --> "1" AreaConhecimento : areaConhecimento
 NotaUnidade "0..*" --> "1" UnidadeAcademica : unidade
 NotaDimensao "0..*" --> "1" DimensaoQualidade : dimensao
 @enduml

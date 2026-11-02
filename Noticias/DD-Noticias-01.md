@@ -40,11 +40,11 @@ Trecho PlantUML:
 class Noticia {
   id: Integer
   titulo: String
-  resumo: String
-  urlImagem: String
+  resumo: String [0..1]
+  urlImagem: String [0..1]
   url: String
 }
-class Regional <<DD-Eventos-01>>
+class Regional <<Comum>>
 Regional "1" -- "0..*" Noticia : publica >
 ```
 

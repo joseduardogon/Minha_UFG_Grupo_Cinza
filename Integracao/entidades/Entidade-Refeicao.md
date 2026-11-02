@@ -26,13 +26,11 @@ Uma refeição servida em uma data: Café da Manhã, Almoço ou Jantar (os três
 
 | Com | Multiplicidade | Significado |
 |---|---|---|
-| Cardapio | 1..* para 1 | Cada refeição pertence a um cardápio (semana) no servidor; o app não usa essa ligação |
 | ItemCardapio | 1 para 0..* | Uma refeição tem vários itens |
 
 ## Regras e restrições
 
-- A `data` está entre `Cardapio.dataInicio` e `Cardapio.dataFim`.
-- Dentro de um cardápio, a combinação `tipo` e `data` não se repete.
+- A combinação `tipo` e `data` não se repete.
 - **O Jantar não tem sábado** (confirmado pelo seletor de cinco letras do Jantar, captura 26, versão 3.2.0; `P-RU-4`): não existe `Refeicao` do tipo JANTAR em data que caia em sábado. Café da Manhã e Almoço têm refeição de segunda a sábado, e nenhuma refeição tem domingo.
 
 ## Premissas a confirmar
@@ -55,8 +53,6 @@ enum TipoRefeicao {
   ALMOCO
   JANTAR
 }
-class Cardapio
 class ItemCardapio
-Cardapio "1" -- "1..*" Refeicao : reúne >
 Refeicao "1" -- "0..*" ItemCardapio : tem >
 ```

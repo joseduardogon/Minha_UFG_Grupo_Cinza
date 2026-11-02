@@ -477,3 +477,28 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-19 – Correção dos achados da integração (D-INT-08)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 2 de novembro de 2026.
+- **Contexto fornecido:** `Integracao/recebimento.md` (I-01 a I-12); decisões da Pessoa D sobre I-03, I-04, I-06, I-07, I-08 e I-12; arquivos de Locais, Segurança, Apps UFG, Eventos, Notícias, RU, AvalRegistrar e AvalConsultar.
+- **Itens produzidos:** recomendações para I-03, I-04, I-06, I-07, I-08 e I-12; correções nos arquivos de B, C e D listados na seção 4 do `recebimento.md`; novos `DD-Seguranca-01` e `DD-AppsUFG-01`; decisões de 02/11/2026 em `Docs/decisoes.md`; PNGs renderizados de novo.
+- **Uso da resposta:** correções a conferir pela Pessoa D antes do aviso a B e C.
+
+### Prompt 1
+
+> antes de te passar as decisões, o que você recomenda?
+
+### Prompt 2
+
+> concordo com todas. pode iniciar a D-INT-08
+
+### Prompt 3
+
+> 1. sim pode ser. 2. deixe b como autor. 3. sim.
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.

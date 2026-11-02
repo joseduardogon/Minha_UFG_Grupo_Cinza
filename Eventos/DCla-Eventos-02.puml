@@ -25,7 +25,7 @@ class FonteEventos {
   - converter(corpo: String): List<Evento>
 }
 
-class Regional <<DD-Eventos-01>>
+class Regional <<Comum>>
 
 class Evento {
   + id: Integer
