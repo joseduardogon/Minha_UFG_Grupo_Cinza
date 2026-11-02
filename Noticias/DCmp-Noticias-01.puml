@@ -1,8 +1,9 @@
 @startuml DCmp-Noticias-01
 title DCmp-Noticias-01 – Componentes do pacote Noticias
 skinparam componentStyle uml2
-skinparam nodesep 40
-skinparam ranksep 70
+skinparam nodesep 25
+skinparam ranksep 110
+left to right direction
 
 package "Noticias" {
   component "TelaNoticias" as Tela
@@ -14,13 +15,16 @@ package "Interfaces do pacote Comum" {
   rectangle "<<interface>>\nIControladorTelaRemota" as IControlador
   rectangle "<<interface>>\nILinkExterno" as ILinkExterno
   rectangle "<<interface>>\nIFonteDados" as IFonteDados
+  rectangle "<<interface>>\nIObservadorEstado" as IObservador
   rectangle "<<interface>>\nIAcessoApi" as IAcessoApi
 }
 
 Tela ..|> IFiltro : oferece
+Tela ..|> IObservador : oferece
 Fonte ..|> IFonteDados : oferece
 
 Tela ..> IControlador : requer
+Tela ..> IFonteDados : requer
 Tela ..> ILinkExterno : requer
 Tela ..> IAcessoApi : requer
 Fonte ..> IAcessoApi : requer

@@ -67,7 +67,7 @@ A tela de lista de Eventos foi capturada na versão 3.2.0 (capturas 19, 28 e 29)
 
 ### Classe Evento
 
-*Invariantes:* `titulo` não é vazio; `dataFim` é igual ou posterior a `dataInicio`; `idRegional` referencia uma regional existente; `url` é nula ou texto (um endereço vazio equivale a nenhum); `urlImagem` é nula ou texto (miniatura mostrada no cartão, P-EV-1). O local do evento não faz parte do objeto.
+*Invariantes:* `titulo` não é vazio; `dataFim` é igual ou posterior a `dataInicio`; o evento pertence a uma regional existente (associação com `Regional`); `url` é nula ou texto (um endereço vazio equivale a nenhum); `urlImagem` é nula ou texto (miniatura mostrada no cartão, P-EV-1). O local do evento não faz parte do objeto.
 
 **Tabela 3 – Contratos de Evento**
 

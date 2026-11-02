@@ -62,10 +62,20 @@ Decisão registrada: a entidade `Noticia` não tem `dataPublicacao`. A data só 
 - Captura 31 (versão 3.2.0): Notícias em modo avião: barra de título com seta de voltar e corpo totalmente em branco (estado indisponível).
 - Captura 1 (versão 3.2.0): menu inicial, com o cartão Notícias (ponto de entrada da tela).
 
+## Correções da revisão REV-PR10 (02/11/2026)
+
+Revisão da Pessoa D (`Integracao/revisoes/REV-PR10-Eventos-Noticias-RU.md`, branch `d/D-IND-producao-individual`). Correções aplicadas nesta pasta:
+
+- **B1:** `Regional` desenhada fora do pacote Comum e sem atributos (`DCla-Noticias-01`, `DCla-Noticias-02`).
+- **B2:** `idRegional` retirado de `Noticia` (`DD-Noticias-01`, `DCla-Noticias-02`, `Entidade-Noticia`); só a associação permanece.
+- **B5:** `DCmp-Noticias-01` passa a citar `IObservadorEstado` (oferecida) e `IFonteDados`, e declara que a tela cria o `ControladorTelaRemota` do Comum.
+- **B6:** a associação do controlador com `IObservadorEstado` usa o papel `observadores` (`DCla-Noticias-01`).
+- **B7:** `disparar(intencao)` é auto-chamada de `AberturaLinkExterno` e o Navegador recebe `abre a url`, sem retorno para quem não chamou (`DSeq-Noticias-03`).
+
 ## Próximos passos da pasta
 
 1. Conferir a ordem da lista (P-NO-5) sem nova captura: abrir a página de cada cartão da lista e comparar as datas "Em dd/mm/aa hh:mm." com a ordem dos cartões.
 2. Verificar com a equipe ou com o painel web se existe outra regional com notícias cadastradas (P-NO-1, P-NO-2, P-NO-6). Se só existir "GOIÂNIA", registrar que a faixa tem uma única aba e que a troca de regional não é exercitável na versão 3.2.0.
 3. O estado vazio (P-NO-9) depende de uma regional sem notícias e dificilmente será observável; se não for, mantê-lo como premissa pendente, explícita no PDF.
 4. Pessoa D revisar os itens e registrar a revisão no fim de cada `.md`.
-5. Pessoa D decidir onde fica a entidade `Regional` (pendência D-INT-03 do `DPac-Geral-01`), usada por Notícias, Eventos e Locais; hoje ela é referenciada com o estereótipo `<<Comum (proposta)>>`.
+5. Pessoa D decidir onde fica a entidade `Regional` (pendência D-INT-03 do `DPac-Geral-01`), usada por Notícias, Eventos e Locais; hoje ela é desenhada nos `DCla` fora do pacote Comum e sem atributos, com o estereótipo `<<DD-Eventos-01>>` (correção B1 da `REV-PR10`).

@@ -23,7 +23,6 @@ Acontecimento divulgado pela UFG, cadastrado pelo painel web e consultado no app
 | dataFim | Date | Sim | Último dia do evento; igual a `dataInicio` se o evento dura um dia |
 | url | String | Não | Endereço da página do evento, aberto no Navegador ao tocar no item; sem `url`, o toque não tem efeito (P-EV-4) |
 | urlImagem | String | Não | Endereço da imagem do evento, mostrada como miniatura circular no cartão da lista (P-EV-5: o formato do dado vem da API) |
-| idRegional | Integer | Sim | Regional do evento (referência a `Regional.id`) |
 
 ## Relacionamentos
 
@@ -59,7 +58,6 @@ class Evento {
   dataFim: Date
   url: String [0..1]
   urlImagem: String [0..1]
-  idRegional: Integer
 }
 Regional "1" -- "0..*" Evento : promove >
 ```

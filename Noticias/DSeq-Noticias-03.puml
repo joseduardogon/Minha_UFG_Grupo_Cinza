@@ -11,8 +11,9 @@ M -> T : aoTocarNoticia(noticia)
 T -> L : abrirUrl(noticia.url)
 L -> L : urlValida(url)
 L -> L : existeAppCompativel(intencao)
-L -> N : disparar(intencao)
-N --> M : mostra a página da notícia
+L -> L : disparar(intencao)
+L -> N : abre a url
+N -> M : mostra a página da notícia
 L --> T : ResultadoAbertura
 note over T : a tela descarta o ResultadoAbertura
 M -> T : aoExibir() [retorno do Navegador]

@@ -80,6 +80,16 @@ Decisões de modelagem relacionadas:
 - **Decisão corrigida:** `CalendarioEventos.trocarMes` deixou de selecionar o dia 1 e passou a manter o número do dia (P-EV-3 refutada, P-EV-7 e P-EV-8). A mudança está em `DCla-Eventos-01`, `Contrato-Eventos-01`, `DSeq-Eventos-04`, `DAtv-Eventos-02`, `DCdu-Eventos-01`, `ECA-Eventos-01` (ECA-EV-01) e `DEst-Eventos-01`.
 - A faixa de abas de regional só existe no estado EXIBINDO: o evento E1 sai somente dele (`DEst-Eventos-01`), enquanto os eventos de calendário (E2, E3 e E4) saem de qualquer estado de resultado.
 
+## Correções da revisão REV-PR10 (02/11/2026)
+
+Revisão da Pessoa D (`Integracao/revisoes/REV-PR10-Eventos-Noticias-RU.md`, branch `d/D-IND-producao-individual`). Correções aplicadas nesta pasta:
+
+- **B1:** `Regional` desenhada fora do pacote Comum e sem atributos (`DCla-Eventos-01`, `DCla-Eventos-02`).
+- **B2:** `idRegional` retirado de `Evento` e `Campus` (`DD-Eventos-01`, `DCla-Eventos-02`, `Contrato-Eventos-01`, fichas de entidade); só a associação permanece.
+- **B5:** `DCmp-Eventos-01` passa a citar `IObservadorEstado` (oferecida) e `IFonteDados`, e declara que a tela cria o `ControladorTelaRemota` do Comum.
+- **B6:** a associação do controlador com `IObservadorEstado` usa o papel `observadores` (`DCla-Eventos-01`).
+- **B7:** `disparar(intencao)` é auto-chamada de `AberturaLinkExterno` e o Navegador recebe `abre a url`, sem retorno para quem não chamou (`DSeq-Eventos-05`; mesmo defeito do B7, achado em Eventos).
+
 ## Próximos passos da pasta
 
 1. Capturar o que ainda falta de Eventos: o **toque em um dia** e o **toque em um cartão** (P-EV-12, P-EV-4), inclusive um evento sem endereço; a troca de mês para um **mês mais curto que o dia** (por exemplo, a partir do dia 31, P-EV-8); a tela com **mais de uma regional** (P-EV-2); a tela de Eventos em **modo avião**, para o estado indisponível (P-EV-11); e a **ordem** da lista em um dia com muitos eventos (P-EV-14). Se o app recarrega da API ao trocar mês ou dia (P-EV-13) só pode ser inferido por teste de rede, não por captura de tela.

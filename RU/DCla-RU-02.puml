@@ -24,12 +24,6 @@ class FonteCardapio {
   - converter(corpo: String): List<Refeicao>
 }
 
-class Cardapio {
-  + id: Integer
-  + dataInicio: Date
-  + dataFim: Date
-}
-
 class Refeicao {
   + id: Integer
   + tipo: TipoRefeicao
@@ -58,7 +52,6 @@ FonteCardapio --> "1" IFiltroCardapio : filtro
 FonteCardapio ..> Refeicao : <<create>>
 FonteCardapio ..> ItemCardapio : <<create>>
 FonteCardapio ..> CategoriaItem : <<create>>
-Cardapio "1" -- "1..*" Refeicao : reúne >
 Refeicao "1" -- "0..*" ItemCardapio : tem >
 ItemCardapio "0..*" --> "1" CategoriaItem : categoria
 Refeicao --> "1" TipoRefeicao : tipo

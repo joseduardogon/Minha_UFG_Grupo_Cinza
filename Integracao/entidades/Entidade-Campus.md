@@ -19,7 +19,6 @@ Unidade física da UFG, vinculada a uma regional (por exemplo, o Campus Samambai
 |---|---|---|---|
 | id | Integer | Sim | Identificador único do campus |
 | nome | String | Sim | Nome do campus, sem repetição dentro da regional |
-| idRegional | Integer | Sim | Regional à qual o campus pertence (referência a `Regional.id`) |
 
 ## Relacionamentos
 
@@ -35,7 +34,7 @@ Unidade física da UFG, vinculada a uma regional (por exemplo, o Campus Samambai
 
 ## Premissas a confirmar
 
-- A captura 6 (Locais, versão 3.2.0) mostra o título "Campus Samambaia" sobre a lista de locais (restaurantes, Instituto de Informática, laboratórios, herbário), o que sustenta a existência do campus e a associação com `Local`. Os demais atributos (`id`, `idRegional`) são escolha de modelagem, não observada. A modelagem de `Local` é da Pessoa B.
+- A captura 6 (Locais, versão 3.2.0) mostra o título "Campus Samambaia" sobre a lista de locais (restaurantes, Instituto de Informática, laboratórios, herbário), o que sustenta a existência do campus e a associação com `Local`. Os demais atributos (`id`, `nome`) são escolha de modelagem, não observada. A modelagem de `Local` é da Pessoa B.
 - Em Eventos o filtro é só por regional (aba "GOIÂNIA", capturas 19, 28 e 29); o campus aparece apenas no texto do local, na página do evento no portal (capturas 8 e 21), e por isso `Evento` não se liga a `Campus`.
 
 ## Trecho PlantUML (diagrama de dados)
@@ -50,7 +49,6 @@ class Regional {
 class Campus {
   id: Integer
   nome: String
-  idRegional: Integer
 }
 class Local <<Pessoa B>>
 Regional "1" -- "0..*" Campus : agrupa >

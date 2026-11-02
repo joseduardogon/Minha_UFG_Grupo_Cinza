@@ -33,7 +33,7 @@ Um item servido em uma refeição, com a categoria em que aparece. Na tela, cada
 
 ## Premissas a confirmar
 
-- Se "Pão francês / Bolo formigueiro", na categoria "Pães e quitandas" do Café da Manhã, é um item só ou dois itens exibidos juntos, separados por barra, não se sabe (premissa `P-RU-6`, em `RU/README.md`). As categorias do Almoço e do Jantar vistas nas capturas estão confirmadas (`P-RU-5`).
+- Se "Pão francês / Bolo formigueiro", na categoria "Pães e quitandas" do Café da Manhã, é um item só ou dois itens exibidos juntos, separados por barra, não se sabe (premissa `P-RU-6`, em `RU/README.md`). As categorias do Café da Manhã, do Almoço e do Jantar estão confirmadas (`P-RU-5`; lista completa informada pela Pessoa D na revisão REV-PR10, B4).
 
 ## Trecho PlantUML (diagrama de dados)
 

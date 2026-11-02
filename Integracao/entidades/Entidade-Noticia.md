@@ -21,7 +21,6 @@ Notícia divulgada pela UFG sobre uma regional, cadastrada pelo painel web e lis
 | resumo | String | Não | Texto curto exibido abaixo do título no cartão |
 | urlImagem | String | Não | Endereço da imagem de banner exibida no topo do cartão |
 | url | String | Sim | Endereço da notícia no portal da UFG, aberto no Navegador |
-| idRegional | Integer | Sim | Regional da notícia (referência a `Regional.id`) |
 
 ## Relacionamentos
 

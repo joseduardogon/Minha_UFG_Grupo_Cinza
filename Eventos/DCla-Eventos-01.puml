@@ -19,10 +19,6 @@ package "Comum" {
   }
   interface IAcessoApi <<Comum>>
   enum EstadoTela <<Comum>>
-  class Regional <<Comum (proposta)>> {
-    + id: Integer
-    + nome: String
-  }
 }
 
 class TelaEventos {
@@ -62,6 +58,7 @@ class CalendarioEventos {
 
 class Evento <<DCla-Eventos-02>>
 class FonteEventos <<DCla-Eventos-02>>
+class Regional <<DD-Eventos-01>>
 
 IObservadorEstado <|.. TelaEventos
 IFiltroEventos <|.. CalendarioEventos
@@ -73,7 +70,7 @@ TelaEventos --> "1" IAcessoApi : acesso
 TelaEventos --> "1..*" Regional : regionaisOferecidas
 TelaEventos ..> Controlador : <<create>>
 TelaEventos ..> FonteEventos : <<create>>
-Controlador --> "0..*" IObservadorEstado : registrarObservador(tela)
+Controlador --> "0..*" IObservadorEstado : observadores
 TelaEventos ..> Evento : <<use>>
 TelaEventos ..> EstadoTela : <<use>>
 CalendarioEventos --> "1" Regional : regionalSelecionada

@@ -9,7 +9,6 @@ package "Comum" {
   interface IAcessoApi <<Comum>> {
     + obter(caminho: String, parametros: Map<String, String>): RespostaApi
   }
-  class Regional <<Comum (proposta)>>
 }
 
 interface IFiltroNoticias <<DCla-Noticias-01>> {
@@ -25,13 +24,14 @@ class FonteNoticias {
   - converter(corpo: String): List<Noticia>
 }
 
+class Regional <<DD-Eventos-01>>
+
 class Noticia {
   + id: Integer
   + titulo: String
   + resumo: String
   + urlImagem: String
   + url: String
-  + idRegional: Integer
 }
 
 IFonteDados <|.. FonteNoticias

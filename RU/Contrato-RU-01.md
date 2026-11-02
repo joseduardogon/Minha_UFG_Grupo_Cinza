@@ -20,7 +20,7 @@ Premissas usadas:
 - **P-RU-3:** ao abrir a tela da refeição, uma só chamada traz a semana inteira da refeição; trocar o dia filtra os dados em memória, sem chamada à API (confirmada pelo autor).
 - **P-RU-4:** o seletor vai de segunda a sábado no Café da Manhã e no Almoço (seis datas) e de segunda a sexta no Jantar (cinco datas); não há letra para domingo (confirmada). O Jantar não tem refeição em sábado.
 - **P-RU-5:** os itens são agrupados em cartões por categoria; categorias do Café da Manhã e do Almoço e Jantar (confirmada).
-- **P-RU-6:** o separador " / " entre os itens da mesma categoria, se a categoria tem mais de um item, não foi confirmado; categorias abaixo de "Guarnição" não foram vistas.
+- **P-RU-6:** o separador " / " entre os itens da mesma categoria, se a categoria tem mais de um item, não foi confirmado.
 - **P-RU-7:** a barra e o fundo da tela têm a cor do dia selecionado: terça roxo, quarta vermelho, quinta laranja, sexta verde, sábado marrom (confirmada).
 - **P-RU-8:** no estado indisponível, a tela mostra barra azul, ilustração e "Cardápio indisponível.", sem data nem seletor (confirmada).
 - **P-RU-9:** os estados vazio e carregando e o dia sem itens não foram observados: o vazio usa a mensagem genérica do Comum; Carregando e Vazio supõem o mesmo layout do estado indisponível; o dia sem itens mantém cabeçalho e seletor.

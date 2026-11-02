@@ -19,10 +19,6 @@ package "Comum" {
   }
   interface IAcessoApi <<Comum>>
   enum EstadoTela <<Comum>>
-  class Regional <<Comum (proposta)>> {
-    + id: Integer
-    + nome: String
-  }
 }
 
 class TelaNoticias {
@@ -52,6 +48,7 @@ class FiltroNoticias {
 
 class Noticia <<DCla-Noticias-02>>
 class FonteNoticias <<DCla-Noticias-02>>
+class Regional <<DD-Eventos-01>>
 
 IObservadorEstado <|.. TelaNoticias
 IFiltroNoticias <|.. FiltroNoticias
@@ -63,7 +60,7 @@ TelaNoticias --> "1" IAcessoApi : acesso
 TelaNoticias --> "1..*" Regional : regionaisOferecidas
 TelaNoticias ..> Controlador : <<create>>
 TelaNoticias ..> FonteNoticias : <<create>>
-Controlador --> "0..*" IObservadorEstado : registrarObservador(tela)
+Controlador --> "0..*" IObservadorEstado : observadores
 TelaNoticias ..> Noticia : <<use>>
 TelaNoticias ..> EstadoTela : <<use>>
 FiltroNoticias --> "1" Regional : regionalSelecionada

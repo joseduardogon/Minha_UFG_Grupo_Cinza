@@ -50,7 +50,6 @@ class Regional {
 class Campus {
   id: Integer
   nome: String
-  idRegional: Integer
 }
 class Evento {
   id: Integer
@@ -59,7 +58,6 @@ class Evento {
   dataFim: Date
   url: String [0..1]
   urlImagem: String [0..1]
-  idRegional: Integer
 }
 class Noticia
 Regional "1" -- "0..*" Campus : agrupa >

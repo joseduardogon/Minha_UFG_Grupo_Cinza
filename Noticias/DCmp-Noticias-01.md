@@ -17,13 +17,13 @@ Fonte: [`DCmp-Noticias-01.puml`](DCmp-Noticias-01.puml)
 
 ## Descrição
 
-O pacote `Noticias` tem dois componentes. Eles dependem do pacote `Comum` apenas por interfaces, como pede o `DPac-Geral-01`, e não dependem de nenhum outro pacote de funcionalidade. A única referência a outro pacote é a entidade `Regional`, de dono C, cuja localização é pendência da integração (`DD-Eventos-01`, `DPac-Geral-01`).
+O pacote `Noticias` tem dois componentes. Eles dependem do pacote `Comum` por interfaces, como pede o `DPac-Geral-01`, com uma exceção: a `TelaNoticias` cria o controlador de estados, que é a classe concreta `ControladorTelaRemota<Noticia>` do Comum (`DCla-Noticias-01`, `DCmp-Comum-01`). Nenhum componente depende de outro pacote de funcionalidade. A única referência a outro pacote é a entidade `Regional`, de dono C, cuja localização é pendência da integração (`DD-Eventos-01`, `DPac-Geral-01`).
 
 **Tabela 1 – Componentes do pacote Noticias**
 
 | Componente | Responsabilidade | Interface oferecida | Interfaces requeridas (pacote Comum) | Classes |
 |---|---|---|---|---|
-| TelaNoticias | Exibe a barra de título (fixa), a faixa de abas de regional (só com a lista exibida, rolando junto com ela, capturas 16, 18 e 31) e a lista de cartões; guarda a regional selecionada; trata os toques do usuário; cria o controlador de estados | `IFiltroNoticias` | `IControladorTelaRemota`, `ILinkExterno`, `IAcessoApi` (só para entregá-la à fonte) | `DCla-Noticias-01` |
+| TelaNoticias | Exibe a barra de título (fixa), a faixa de abas de regional (só com a lista exibida, rolando junto com ela, capturas 16, 18 e 31) e a lista de cartões; guarda a regional selecionada; trata os toques do usuário; cria o controlador de estados | `IFiltroNoticias`, `IObservadorEstado` (recebe do controlador as mudanças de estado) | `IControladorTelaRemota`, `IFonteDados` (ao entregar a fonte ao controlador), `ILinkExterno`, `IAcessoApi` (só para entregá-la à fonte) | `DCla-Noticias-01` |
 | FonteNoticias | Busca as notícias da regional selecionada na API e as converte em objetos `Noticia` | `IFonteDados` (implementada para `Noticia`) | `IAcessoApi`, `IFiltroNoticias` | `DCla-Noticias-02` |
 
 **Como os componentes cooperam.** A `TelaNoticias` cria um controlador de estados (`ControladorTelaRemota<Noticia>`, pacote Comum) e entrega a ele a `FonteNoticias` como fonte de dados. Quando a regional muda, a tela pede `recarregar()` ao controlador, e a `FonteNoticias` lê a nova regional pela interface `IFiltroNoticias`. Esse desenho segue o modelo de uso descrito em `DCmp-Comum-01` e é o mesmo de `DCmp-Eventos-01`.

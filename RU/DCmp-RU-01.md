@@ -17,16 +17,16 @@ Fonte: [`DCmp-RU-01.puml`](DCmp-RU-01.puml)
 
 ## Descrição
 
-O pacote `RU` tem dois componentes. Eles dependem do pacote `Comum` apenas por interfaces, como pede o `DPac-Geral-01`, e não dependem de nenhum outro pacote de funcionalidade (o cardápio é único para todos os restaurantes: não há regional nem campus).
+O pacote `RU` tem dois componentes. Eles dependem do pacote `Comum` por interfaces, como pede o `DPac-Geral-01`, com uma exceção: a `TelaRefeicao` cria o controlador de estados, que é a classe concreta `ControladorTelaRemota<Refeicao>` do Comum (`DCla-RU-01`, `DCmp-Comum-01`). Nenhum componente depende de outro pacote de funcionalidade (o cardápio é único para todos os restaurantes: não há regional nem campus).
 
 **Tabela 1 – Componentes do pacote RU**
 
 | Componente | Responsabilidade | Interface oferecida | Interfaces requeridas (pacote Comum) | Classes |
 |---|---|---|---|---|
-| TelasRU | Exibe a tela RU (cartões das refeições) e a tela da refeição (data, cartões por categoria e seletor de dia); guarda o dia selecionado e filtra a semana em memória; trata os toques e a seta de voltar | `IFiltroCardapio` | `IControladorTelaRemota`, `IAcessoApi` (só para repassá-la à fonte) | `DCla-RU-01` |
+| TelasRU | Exibe a tela RU (cartões das refeições) e a tela da refeição (data, cartões por categoria e seletor de dia); guarda o dia selecionado e filtra a semana em memória; trata os toques e a seta de voltar | `IFiltroCardapio`, `IObservadorEstado` (recebe do controlador as mudanças de estado) | `IControladorTelaRemota`, `IFonteDados` (ao entregar a fonte ao controlador), `IAcessoApi` (só para repassá-la à fonte) | `DCla-RU-01` |
 | FonteCardapio | Busca na API, numa só chamada, as refeições da semana inteira da refeição escolhida e as converte em objetos `Refeicao`, cada um com os seus itens | `IFonteDados` (implementada para `Refeicao`) | `IAcessoApi`, `IFiltroCardapio` | `DCla-RU-02` |
 
-**Como os componentes cooperam.** Ao tocar no cartão de uma refeição, a `TelaRU` cria a `TelaRefeicao`. Ao ser exibida pela primeira vez, esta cria o filtro (`SelecaoCardapio`), a `FonteCardapio` e o controlador de estados (`ControladorTelaRemota<Refeicao>`, pacote Comum), e entrega a fonte ao controlador (`DSeq-RU-01`). Por isso `TelasRU` depende de `FonteCardapio` apenas para criá-la; todo o resto do acesso é por interface. A `FonteCardapio` lê pela interface `IFiltroCardapio` só a refeição escolhida e traz a semana inteira (P-RU-3). Quando o usuário troca o dia, a tela **não** pede nova carga: ela filtra, em memória, os dados que o controlador já guarda (`obterDados()`), como a Rádio faz com a sua programação (`DSeq-RU-02`). Esse desenho segue o modelo de uso de `DCmp-Comum-01`.
+**Como os componentes cooperam.** Ao tocar no cartão de uma refeição, a `TelaRU` cria a `TelaRefeicao`. Ao ser exibida pela primeira vez, esta cria o filtro (`SelecaoCardapio`), a `FonteCardapio` e o controlador de estados (`ControladorTelaRemota<Refeicao>`, pacote Comum), e entrega a fonte ao controlador (`DSeq-RU-01`). Por isso `TelasRU` depende de `FonteCardapio` apenas para criá-la; todo o resto do acesso é por interface, exceto o controlador de estados, também criado pela tela. A `FonteCardapio` lê pela interface `IFiltroCardapio` só a refeição escolhida e traz a semana inteira (P-RU-3). Quando o usuário troca o dia, a tela **não** pede nova carga: ela filtra, em memória, os dados que o controlador já guarda (`obterDados()`), como a Rádio faz com a sua programação (`DSeq-RU-02`). Esse desenho segue o modelo de uso de `DCmp-Comum-01`.
 
 **Decisão de projeto.** O filtro (`SelecaoCardapio`) guarda só a refeição, que é o que a fonte precisa saber; o dia selecionado é estado da tela e não chega à fonte. Assim, a fonte não conhece a interface gráfica e pode ser testada sozinha. A tela RU é estática e não usa o controlador (P-RU-2).
 

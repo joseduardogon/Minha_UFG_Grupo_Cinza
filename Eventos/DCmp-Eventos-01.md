@@ -17,13 +17,13 @@ Fonte: [`DCmp-Eventos-01.puml`](DCmp-Eventos-01.puml)
 
 ## Descrição
 
-O pacote `Eventos` tem dois componentes. Eles dependem do pacote `Comum` apenas por interfaces, como pede o `DPac-Geral-01`, e não dependem de nenhum outro pacote de funcionalidade.
+O pacote `Eventos` tem dois componentes. Eles dependem do pacote `Comum` por interfaces, como pede o `DPac-Geral-01`, com uma exceção: a `TelaEventos` cria o controlador de estados, que é a classe concreta `ControladorTelaRemota<Evento>` do Comum (`DCla-Eventos-01`, `DCmp-Comum-01`). Nenhum componente depende de outro pacote de funcionalidade.
 
 **Tabela 1 – Componentes do pacote Eventos**
 
 | Componente | Responsabilidade | Interface oferecida | Interfaces requeridas (pacote Comum) | Classes |
 |---|---|---|---|---|
-| TelaEventos | Exibe o calendário, a faixa de abas de regional e a lista de cartões; guarda a data e a regional selecionadas; trata os toques do usuário | `IFiltroEventos` | `IControladorTelaRemota`, `ILinkExterno`, `IAcessoApi` (só para entregá-lo à `FonteEventos`) | `DCla-Eventos-01` |
+| TelaEventos | Exibe o calendário, a faixa de abas de regional e a lista de cartões; guarda a data e a regional selecionadas; trata os toques do usuário | `IFiltroEventos`, `IObservadorEstado` (recebe do controlador as mudanças de estado) | `IControladorTelaRemota`, `IFonteDados` (ao entregar a fonte ao controlador), `ILinkExterno`, `IAcessoApi` (só para entregá-lo à `FonteEventos`) | `DCla-Eventos-01` |
 | FonteEventos | Busca os eventos da regional e da data selecionadas na API e os converte em objetos `Evento` | `IFonteDados` (implementada para `Evento`) | `IAcessoApi`, `IFiltroEventos` | `DCla-Eventos-02` |
 
 **Como os componentes cooperam.** Na primeira exibição, a `TelaEventos` cria a `FonteEventos` (entregando a ela o `IAcessoApi` e o seu calendário como `IFiltroEventos`) e um controlador de estados (`ControladorTelaRemota<Evento>`, pacote Comum), que recebe a `FonteEventos` como fonte de dados; a tela se registra nele como observador (`DSeq-Eventos-01`). Quando a data ou a regional mudam, a tela pede `recarregar()` ao controlador, e a `FonteEventos` lê o novo filtro pela interface `IFiltroEventos`. Esse desenho segue o modelo de uso descrito em `DCmp-Comum-01`.

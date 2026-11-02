@@ -24,9 +24,8 @@ Notícia divulgada pela UFG sobre uma regional, cadastrada pelo painel web e lis
 | resumo | String | Não | Texto curto exibido abaixo do título no cartão |
 | urlImagem | String | Não | Endereço da imagem de banner exibida no topo do cartão |
 | url | String | Sim | Endereço da notícia no portal da UFG, aberto no Navegador |
-| idRegional | Integer | Sim | Regional da notícia (referência a `Regional.id`) |
 
-**Associações:** Regional 1 — 0..* Noticia ("publica"). A entidade `Regional` (id, nome) é de dono C, compartilhada com Eventos e Locais, e tem a sua entrada em `DD-Eventos-01`; aqui ela só é referenciada.
+**Associações:** Regional 1 — 0..* Noticia ("publica"). A ligação com a regional é expressa pela associação, não por atributo de chave estrangeira (como em `DD-RU-01`; correção B2 da revisão REV-PR10). A entidade `Regional` (id, nome) é de dono C, compartilhada com Eventos e Locais, e tem a sua entrada em `DD-Eventos-01`; aqui ela só é referenciada.
 
 **Regras e restrições:** toda notícia tem `url`, pois é por ela que o usuário lê o conteúdo; `titulo` não é vazio.
 
@@ -44,7 +43,6 @@ class Noticia {
   resumo: String
   urlImagem: String
   url: String
-  idRegional: Integer
 }
 class Regional <<DD-Eventos-01>>
 Regional "1" -- "0..*" Noticia : publica >
