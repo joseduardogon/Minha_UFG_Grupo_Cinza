@@ -444,3 +444,36 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-18 – Recebimento e validação das entidades (D-INT-01)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 2 de novembro de 2026.
+- **Contexto fornecido:** roteiro da Pessoa D (Fase 3); contrato-base, seções 7 e 8; DDs de todos os pacotes; fichas de `Integracao/entidades/`; DCla de Locais, Segurança e Apps UFG.
+- **Itens produzidos:** `Integracao/recebimento.md` (checklist de recebimento, verificações de donos e da herança UA–Local, 12 conflitos e inconsistências, quadro de correções); classificação dos achados por tamanho da correção; nova atividade D-INT-08 no roteiro local.
+- **Uso da resposta:** conteúdo a conferir pela Pessoa D antes dos retornos a B e C.
+
+### Prompt 1
+
+> vamos iniciar a fase 3 do roteiro. o resto do time finalizou suas entregas individuais. me recapitule o que vai ser feito e qual o objetivo da fase 3.
+
+### Prompt 2
+
+> o que eu vou entregar no final dessa fase 3? não ficou muito claro pra mim.
+
+### Prompt 3
+
+> tá entendi. vamos para  D-INT-01. implemente. já fiz o pull da main para sincronizar a entrega do time.
+
+### Prompt 4
+
+> o acordado com o time foi o seguinte: achados e correções simples ou  curtas eu mesmo vou fazer para agilizar. tudo que você achou para ser repassado a B e C se enquadram nesse caso?
+
+### Prompt 5
+
+> remova a restrição do claude.md de alterar os arquivs de b e c(decisão final não questione). sobre as correções, seja curtas ou não, foi decidido que eu mesmo vou corrigi-las. registre isso na fase 3 do meu roteiro, seja como nova atividade ou alterardo atividade já existente.
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
