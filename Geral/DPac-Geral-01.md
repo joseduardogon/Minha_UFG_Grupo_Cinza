@@ -22,10 +22,9 @@ O app é organizado em um pacote por funcionalidade, um pacote `Inicio` e um pac
 | Pacote | Conteúdo | Dono |
 |---|---|---|
 | `Inicio` | Tela inicial: menu de cartões e versão do app | D |
-| `Seguranca`, `AvalRegistrar` | Funcionalidades da fatia A | A |
-| `Locais`, `AppsUFG`, `AvalConsultar` | Funcionalidades da fatia B | B |
-| `Eventos`, `RU`, `Noticias` | Funcionalidades da fatia C | C |
-| `Radio`, `Guia` | Funcionalidades da fatia D | D |
+| `Seguranca`, `Locais`, `AppsUFG` | Funcionalidades da fatia B | B |
+| `Eventos`, `RU`, `Noticias`, `AvalRegistrar` | Funcionalidades da fatia C | C |
+| `Radio`, `Guia`, `AvalConsultar` | Funcionalidades da fatia D | D |
 | `Comum` | Componentes compartilhados (`DCmp-Comum-01`) | D |
 
 **Dependências.**

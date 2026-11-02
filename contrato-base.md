@@ -6,10 +6,9 @@ Regras que todos seguem para produzir sua fatia sem conflitos na integração. R
 
 | Pessoa | Fatia | Revisor |
 |---|---|---|
-| A | Avaliação: registrar + Segurança | B |
-| B | Avaliação: consultar notas + Locais + Apps UFG | A |
-| C | Eventos + RU + Notícias | D |
-| D | Transversais + Rádio + Guia Estudantil | C |
+| B | Segurança + Locais + Apps UFG | Sem dupla fixa: quem estiver livre |
+| C | Eventos + RU + Notícias + Avaliação: registrar | D |
+| D | Transversais + Rádio + Guia Estudantil + Avaliação: consultar notas | C |
 
 ## 2. Datas
 
@@ -19,7 +18,7 @@ Regras que todos seguem para produzir sua fatia sem conflitos na integração. R
 
 | Etapa | Marco |
 |---|---|
-| 1 | Contrato publicado; A, B e C destravados pelo pacote Comum e pela arquitetura de D |
+| 1 | Contrato publicado; B e C destravados pelo pacote Comum e pela arquitetura de D |
 | 2 | Cada pessoa entrega ao menos uma funcionalidade com a cascata completa (pode entregar todas), junto com as entradas do dicionário de dados das suas entidades |
 | 3 | Integração por D: modelo de dados integrado, fechamento de DCdu geral, DPac e DImp, e rastreabilidade |
 | 4 | Tudo produzido (incluindo contratos e regras E-C-A) e revisado |
@@ -70,7 +69,7 @@ D publica o rascunho do diagrama de casos de uso geral; cada pessoa detalha os c
 |---|---|
 | Regional, Campus | C |
 | Local, Unidade Acadêmica, Área de conhecimento (CNPq) | B |
-| Usuário / identificação do avaliador | A |
+| Usuário / identificação do avaliador | C |
 
 - Unidade Acadêmica **é um** Local; nem todo Local é Unidade Acadêmica.
 - Quem precisa de uma entidade de outro dono a referencia, não a redefine.

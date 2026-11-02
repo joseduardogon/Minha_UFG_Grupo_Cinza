@@ -2,8 +2,8 @@
 
 Evolução: notas por UA, por área de conhecimento (CNPq) e da UFG.
 
-- **Dono (autor):** Pessoa B
-- **Revisor:** Pessoa A
+- **Dono (autor):** Pessoa D
+- **Revisor:** Pessoa C
 - **Prefixo de código dos itens:** `AvalConsultar` (ex.: `DAtv-AvalConsultar-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

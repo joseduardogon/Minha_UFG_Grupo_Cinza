@@ -19,7 +19,7 @@ Fonte: [`DIhc-AvalRegistrar-01.puml`](DIhc-AvalRegistrar-01.puml)
 
 Protótipo da `TelaAvaliacao`, a tela aberta pelo cartão "Avaliação de UA" da tela inicial (E9 do `DIhc-Inicio-01`). **Esta tela não existe no app atual**: a avaliação de UA é a funcionalidade nova do projeto, e o protótipo parte do enunciado e do contrato-base, sem captura de tela. O desenho está em PlantUML Salt e mostra a barra de título, com a seta de voltar e o nome da tela, um texto de apresentação (P-AR-16) e dois botões. Os rótulos `(E0)` a `(E3)` marcam os eventos de interação.
 
-A definição desta tela como ponto de entrada de `AvalRegistrar` e `AvalConsultar` é decisão da especificação do projeto (P-AR-1), a confirmar com Phablo Tavares Paixão (Pessoa D), responsável por `AvalConsultar`. O botão "Ver notas" abre a tela de `AvalConsultar`, que fica fora do escopo desta pasta e só é referenciada.
+A definição desta tela como ponto de entrada de `AvalRegistrar` e `AvalConsultar` é decisão da especificação do projeto (P-AR-1), confirmada em 31/10/2026 por Phablo Tavares Paixão (Pessoa D), responsável por `AvalConsultar` (`Docs/decisoes.md`). O botão "Ver notas" abre a tela de `AvalConsultar`, que fica fora do escopo desta pasta e só é referenciada.
 
 **Tabela 1 – Eventos de interação da `TelaAvaliacao`**
 

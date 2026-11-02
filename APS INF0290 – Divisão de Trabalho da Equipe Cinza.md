@@ -34,16 +34,15 @@ Todas as telas do app atual recarregam ao entrar e não têm cache. Sem internet
 
 | Pessoa | Fatia | Peso | Revisor |
 | --- | --- | --- | --- |
-| A | Avaliação: registrar (dona do modelo de dados da avaliação) + Segurança | 7 | B |
-| B | Avaliação: consultar notas (dona das regras de cálculo) + Locais + Apps UFG | 7,5 | A |
-| C | Eventos + RU + Notícias | 6,5 | D |
-| D | Transversais + Rádio + Guia Estudantil | 7 | C |
+| B | Segurança + Locais + Apps UFG | 5,5 | Sem dupla fixa: quem estiver livre |
+| C | Eventos + RU + Notícias + Avaliação: registrar (dona do modelo de dados da avaliação) | 12,5 | D |
+| D | Transversais + Rádio + Guia Estudantil + Avaliação: consultar notas (dona das regras de cálculo) | 10 | C |
 
-A Avaliação foi dividida em duas fatias com fronteira clara. A cuida de como uma avaliação nasce: estrutura de dimensões, elementos e questões, registro e validação. B cuida do que se calcula a partir dela: elementos → dimensão → avaliação → UA → área → UFG.
+A Avaliação foi dividida em duas fatias com fronteira clara. C cuida de como uma avaliação nasce: estrutura de dimensões, elementos e questões, registro e validação. D cuida do que se calcula a partir dela: elementos → dimensão → avaliação → UA → área → UFG.
 
 B também fica com Locais porque o Instituto de Informática aparece como local no mapa e como UA avaliada; o mesmo dono decide como os dois se relacionam. C fica com o padrão "lista do servidor filtrada por regional e data", comum a Eventos, Notícias e RU.
 
-As revisões são em dupla (A↔B, C↔D): o revisor já conhece o contexto, e todos são autores e revisores sem revisar o próprio item (regra 5).
+As revisões de C e D são em dupla (C↔D): o revisor já conhece o contexto. Os itens de B não têm dupla fixa: revisa quem estiver livre. Em todos os casos, ninguém revisa o próprio item (regra 5).
 
 ## O que são os transversais
 

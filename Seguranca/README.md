@@ -3,7 +3,7 @@
 Abertura da versão web e da Play Store para acionar a central de segurança.
 
 - **Dono (autor):** Pessoa B (Maicon Brendo da Silva)
-- **Revisor:** Revisor(a) a definir
+- **Revisor:** Sem dupla fixa: quem estiver livre
 - **Prefixo de código dos itens:** `Seguranca` (ex.: `DAtv-Seguranca-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

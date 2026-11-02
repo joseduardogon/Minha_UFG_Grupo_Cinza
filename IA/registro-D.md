@@ -377,3 +377,24 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-15 – Ajuste dos arquivos versionados ao replanejamento de 31/10 (D-INT-07)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 1 de novembro de 2026.
+- **Contexto fornecido:** contrato-base, divisão de trabalho, READMEs das pastas, `DPac-Geral-01` e itens de `AvalRegistrar/`.
+- **Itens produzidos:** ajustes em `contrato-base.md`, `APS INF0290 – Divisão de Trabalho da Equipe Cinza.md`, `Geral/DPac-Geral-01.md`, `AvalRegistrar/README.md`, `AvalRegistrar/DIhc-AvalRegistrar-01.md` e nos READMEs de `AvalConsultar`, `Seguranca`, `Locais` e `AppsUFG`.
+- **Uso da resposta:** levantamento das menções à divisão antiga e aplicação das mudanças aprovadas pela Pessoa D.
+
+### Prompt 1
+
+> sim podemos. antes de alterar me diga o que vai ser mudado
+
+### Prompt 2
+
+> beleza. pode ser a opção (a). não precisa da dota registrando a saida da pessoa A. faça tudo em um commit só.
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
