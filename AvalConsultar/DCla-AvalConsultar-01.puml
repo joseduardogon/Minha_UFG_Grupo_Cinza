@@ -54,6 +54,7 @@ class TelaNotasArea {
 }
 
 class TelaNotasUA {
+  - acesso: IAcessoApi
   - unidade: UnidadeAcademica
   - fonte: FonteNotasUnidade
   - controlador: IControladorTelaRemota<NotaDimensao>

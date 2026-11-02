@@ -19,7 +19,7 @@ Fonte: [`DAtv-AvalConsultar-01.puml`](DAtv-AvalConsultar-01.puml)
 
 Atividades do UC10.1 do `DCdu-AvalConsultar-01`, em raias: Membro, App e Servidor/API. A funcionalidade é nova e não existe no app atual.
 
-Ao tocar em "Ver notas" na `TelaAvaliacao` (E2 do `DIhc-AvalRegistrar-01`), o app abre a `TelaNotas` (`DIhc-AvalConsultar-01`), mostra o indicador de carregamento e pede ao Servidor/API a nota da UFG e as médias por área. A resposta segue o ciclo genérico de tela remota (`DEst-Comum-01`): exibindo, vazio ou indisponível. Nos dois últimos casos, o usuário só sai pela seta de voltar, pois o Comum não tem "tentar de novo". Área sem nenhuma UA avaliada aparece com "Sem avaliações" (P-AC-4); isso não é o estado vazio, que ocorre só quando não há área nenhuma.
+Ao tocar em "Ver notas" na `TelaAvaliacao` (E2 do `DIhc-AvalRegistrar-01`), o app abre a `TelaNotas` (`DIhc-AvalConsultar-01`), mostra o indicador de carregamento e pede ao Servidor/API a nota da UFG e as médias por área. A resposta segue o ciclo genérico de tela remota (`DEst-Comum-01`): exibindo, vazio ou indisponível. Nos dois últimos casos, o usuário só sai pela seta de voltar, pois o Comum não tem "tentar de novo"; por isso os três desfechos convergem na escolha do usuário, e a escolha de uma área só é possível quando a lista está exibida. Área sem nenhuma UA avaliada aparece com "Sem avaliações" (P-AC-4); isso não é o estado vazio, que ocorre só quando não há área nenhuma.
 
 Com as áreas exibidas, o usuário escolhe uma área, o que continua em `DAtv-AvalConsultar-02`, ou volta à `TelaAvaliacao`, e as notas em memória são descartadas.
 

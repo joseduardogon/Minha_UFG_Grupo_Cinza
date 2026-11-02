@@ -16,24 +16,26 @@ end note
 |App|
 if (Houve falha de comunicação?) then (sim)
   :Exibir mensagem de indisponibilidade;
-  stop
 elseif (Há unidades acadêmicas na área?) then (não)
   :Exibir mensagem de vazio;
-  stop
 else (sim)
   :Exibir a média da área e a lista de UAs\n(nome, sigla e nota, ou "Sem avaliações");
 endif
 |Membro|
-if (O que o usuário faz?) then (escolhe uma UA)
+if (O que o usuário faz?) then (escolhe uma UA\n(só se exibindo))
   :Tocar em uma UA;
   |App|
   :Abrir a TelaNotasUA\n(UC10.3, DAtv-AvalConsultar-03);
-  stop
 else (volta)
   |Membro|
   :Tocar na seta de voltar;
   |App|
   :Voltar à TelaNotas e recarregá-la\n(sem cache, DEst-Comum-01);
-  stop
+  note right
+    Única saída nos estados
+    vazio e indisponível
+    (aoVoltar, DEst-AvalConsultar-02).
+  end note
 endif
+stop
 @enduml

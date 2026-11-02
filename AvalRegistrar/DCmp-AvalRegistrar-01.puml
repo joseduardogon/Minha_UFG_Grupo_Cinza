@@ -19,7 +19,7 @@ package "Interfaces do pacote Comum" {
   rectangle "<<interface>>\nIAcessoApi" as IAcessoApi
 }
 
-package "Locais (pacote de Maicon)" {
+package "Locais (pacote de B)" {
   rectangle "<<entidade>>\nUnidadeAcademica" as UA
 }
 

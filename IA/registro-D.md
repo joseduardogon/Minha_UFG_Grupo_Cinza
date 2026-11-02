@@ -398,3 +398,20 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-16 – Correções da revisão do PR #12 (D-AVC)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 1 de novembro de 2026.
+- **Contexto fornecido:** parecer de revisão do PR #12 (Pessoa B) e itens de `AvalConsultar/`.
+- **Itens produzidos:** ajustes em `DCla-AvalConsultar-01` (atributo `acesso` de `TelaNotasUA`), `DAtv-AvalConsultar-01` e `02` (fluxo final reorganizado e saída pelos estados vazio e indisponível) e `DCmp-AvalRegistrar-01` (nome do pacote Locais por letra).
+- **Uso da resposta:** aplicação das correções apontadas na revisão, conferida pela Pessoa D.
+
+### Prompt 1
+
+> maicon fez o code review do pr. corrija os bloqueantes e faça as sugestões sugeridas. coloque em um commit só.
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.

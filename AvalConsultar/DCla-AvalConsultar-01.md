@@ -21,7 +21,7 @@ Classes do componente `TelasNotas`. Cada método `ao...` corresponde a um evento
 
 - **TelaNotas:** `aoExibir` (E0) cria a `FonteNotasUFG` e o controlador e chama `aoEntrarNaTela`; `aoEscolherArea` (E1) cria a `TelaNotasArea` da área; `aoVoltar` (E2) volta à `TelaAvaliacao`. Mostra a nota da UFG pedindo `obterNotaUfg()` à fonte depois do estado `EXIBINDO`.
 - **TelaNotasArea:** recebe a `MediaArea` tocada; `aoExibir` cria a `FonteNotasArea` com `area.areaConhecimento`; `aoEscolherUA` cria a `TelaNotasUA` com `nota.unidade`; `aoVoltar` volta à `TelaNotas`, que recarrega (sem cache).
-- **TelaNotasUA:** recebe a `UnidadeAcademica`; `aoExibir` cria a `FonteNotasUnidade`; `aoVoltar` volta à `TelaNotasArea`.
+- **TelaNotasUA:** recebe a `UnidadeAcademica` e guarda o `IAcessoApi` (`acesso`), como as outras duas telas; `aoExibir` cria a `FonteNotasUnidade`; `aoVoltar` volta à `TelaNotasArea`.
 - **aoMudarEstado** (das três): reage aos estados do Comum (`DCla-Comum-03`), mostrando carregando, lista, vazio ou indisponível.
 - **FormatoNota:** converte uma nota em texto com uma casa decimal ("4,3", P-AC-5), ou em "Sem avaliações" quando a nota está ausente (P-AC-4). Fica num só lugar para as três telas não repetirem a regra.
 
