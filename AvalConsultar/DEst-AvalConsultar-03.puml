@@ -1,0 +1,20 @@
+@startuml DEst-AvalConsultar-03
+title DEst-AvalConsultar-03 – Estados da TelaNotasUA
+hide empty description
+
+[*] --> Carregando : E0 aoExibir\n/ criar fonte e controlador;\naoEntrarNaTela()
+
+state Carregando : entry / mostrar indicador de carregamento
+state Exibindo : entry / mostrar nota da UA e notas por dimensão
+state Vazio : entry / mostrar "Sem avaliações"
+state "Indisponível" as Indisponivel : entry / mostrar mensagem de indisponibilidade
+
+Carregando --> Exibindo : aoMudarEstado(EXIBINDO)
+Carregando --> Vazio : aoMudarEstado(VAZIO)
+Carregando --> Indisponivel : aoMudarEstado(INDISPONIVEL)
+
+Carregando --> [*] : E1 aoVoltar\n(volta à TelaNotasArea)
+Exibindo --> [*] : E1 aoVoltar\n(volta à TelaNotasArea)
+Vazio --> [*] : E1 aoVoltar\n(volta à TelaNotasArea)
+Indisponivel --> [*] : E1 aoVoltar\n(volta à TelaNotasArea)
+@enduml

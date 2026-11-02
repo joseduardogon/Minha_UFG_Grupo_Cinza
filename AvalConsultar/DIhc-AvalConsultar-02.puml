@@ -1,0 +1,19 @@
+@startsalt DIhc-AvalConsultar-02
+{+
+  { [<] (E2) | <b>Ciências Exatas e da Terra }
+  ==
+  (E0: ao exibir a tela)
+  .
+  { <b>Média da área | <b>4,1 }
+  ==
+  Unidades acadêmicas
+  --
+  { Instituto de Informática (INF) | 4,3 | [>] (E1) }
+  --
+  { Instituto de Física (IF) | 3,9 | [>] (E1) }
+  --
+  { Instituto de Química (IQ) | Sem avaliações | [>] (E1) }
+  --
+  ...
+}
+@endsalt

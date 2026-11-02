@@ -1,0 +1,29 @@
+@startuml DAtv-AvalConsultar-03
+title DAtv-AvalConsultar-03 – Consultar as notas de uma UA por dimensão (UC10.3)
+
+|Membro|
+start
+note right
+  Pré-condição: a TelaNotasArea exibe as
+  UAs da área (DAtv-AvalConsultar-02).
+end note
+:**A3** Tocar em uma UA;
+|App|
+:Exibir a TelaNotasUA\ncom indicador de carregamento;
+:Solicitar a nota da UA\ne as notas por dimensão;
+|Servidor/API|
+:Devolver as notas da UA\nou falhar;
+|App|
+if (Houve falha de comunicação?) then (sim)
+  :Exibir mensagem de indisponibilidade;
+elseif (A UA tem avaliações?) then (não)
+  :Exibir mensagem de vazio\n("Sem avaliações");
+else (sim)
+  :Exibir a nota da UA\ne a nota de cada dimensão de qualidade;
+endif
+|Membro|
+:Tocar na seta de voltar;
+|App|
+:Voltar à TelaNotasArea e recarregá-la\n(sem cache, DEst-Comum-01);
+stop
+@enduml

@@ -1,0 +1,57 @@
+@startuml DSeq-AvalConsultar-01
+title DSeq-AvalConsultar-01 – Sequência de A1: tocar em "Ver notas" e carregar as notas da UFG
+actor "Membro" as M
+participant ":TelaAvaliacao" as T0
+participant "Android\n(Intent VER_NOTAS)" as I <<sistema>>
+participant ":TelaNotas" as T
+participant ":ControladorTelaRemota<MediaArea>" as K
+participant ":FonteNotasUFG" as F
+participant "FormatoNota" as N
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T0 : aoTocarConsultar()
+T0 -> I : disparar Intent implícito (VER_NOTAS)
+create T
+I -> T : TelaNotas(acesso)
+I -> T : aoExibir()
+create F
+T -> F : FonteNotasUFG(acesso)
+create K
+T -> K : ControladorTelaRemota<MediaArea>(fonte)
+T -> K : registrarObservador(this)
+T -> K : aoEntrarNaTela()
+group Carregar e exibir notas (referenciado em DSeq-AvalConsultar-02 e 03)
+  K -> T : aoMudarEstado(CARREGANDO)
+  T -> M : mostra o indicador de carregamento
+  K -> F : carregar()
+  F -> A : obter("/avaliacao/notas", {})
+  A -> S : GET nota da UFG e médias por área
+  alt resposta recebida
+    S --> A : JSON com a nota da UFG e as médias\n(calculadas pelo servidor)
+    A --> F : RespostaApi
+    F -> F : converter(corpo)\n(guarda notaUfg)
+    F --> K : List<MediaArea>
+    alt lista com itens
+      K -> T : aoMudarEstado(EXIBINDO)
+      T -> K : obterDados()
+      K --> T : List<MediaArea>
+      T -> F : obterNotaUfg()
+      F --> T : notaUfg
+      loop nota da UFG e cada área
+        T -> N : formatar(nota)
+        N --> T : "4,1" ou "Sem avaliações"
+      end
+      T -> M : mostra a nota da UFG e as áreas com suas médias
+    else lista vazia
+      K -> T : aoMudarEstado(VAZIO)
+      T -> M : mostra a mensagem de vazio
+    end
+  else falha de comunicação
+    A --> F : ErroApi
+    F --> K : ErroApi
+    K -> T : aoMudarEstado(INDISPONIVEL)
+    T -> M : mostra a mensagem de indisponibilidade
+  end
+end
+@enduml

@@ -1,0 +1,77 @@
+@startuml DCla-AvalConsultar-02
+title DCla-AvalConsultar-02 – Classes dos componentes FonteNotasUFG, FonteNotasArea e FonteNotasUnidade
+hide empty members
+
+package "Comum" {
+  interface "IFonteDados<T>" as IFonteDados <<Comum>> {
+    + carregar(): List<T>
+  }
+  interface IAcessoApi <<Comum>> {
+    + obter(caminho: String, parametros: Map<String, String>): RespostaApi
+  }
+  class ErroApi <<Comum>>
+}
+
+package "Locais" {
+  class UnidadeAcademica <<Locais>>
+}
+
+package "AvalRegistrar" {
+  class DimensaoQualidade <<AvalRegistrar>>
+}
+
+class FonteNotasUFG {
+  - acesso: IAcessoApi
+  - notaUfg: Real [0..1]
+  + FonteNotasUFG(acesso: IAcessoApi)
+  + carregar(): List<MediaArea>
+  + obterNotaUfg(): Real [0..1]
+  - converter(corpo: String): List<MediaArea>
+}
+
+class FonteNotasArea {
+  - acesso: IAcessoApi
+  - areaConhecimento: String
+  - mediaArea: Real [0..1]
+  + FonteNotasArea(acesso: IAcessoApi, areaConhecimento: String)
+  + carregar(): List<NotaUnidade>
+  + obterMediaArea(): Real [0..1]
+  - converter(corpo: String): List<NotaUnidade>
+}
+
+class FonteNotasUnidade {
+  - acesso: IAcessoApi
+  - unidade: UnidadeAcademica
+  - notaUnidade: Real [0..1]
+  + FonteNotasUnidade(acesso: IAcessoApi, unidade: UnidadeAcademica)
+  + carregar(): List<NotaDimensao>
+  + obterNotaUnidade(): Real [0..1]
+  - converter(corpo: String): List<NotaDimensao>
+}
+
+class MediaArea {
+  + areaConhecimento: String
+  + nota: Real [0..1]
+}
+
+class NotaUnidade {
+  + nota: Real [0..1]
+}
+
+class NotaDimensao {
+  + nota: Real
+}
+
+IFonteDados <|.. FonteNotasUFG
+IFonteDados <|.. FonteNotasArea
+IFonteDados <|.. FonteNotasUnidade
+FonteNotasUFG ..> MediaArea : <<create>>
+FonteNotasArea ..> NotaUnidade : <<create>>
+FonteNotasUnidade ..> NotaDimensao : <<create>>
+FonteNotasUFG ..> ErroApi : <<throws>>
+FonteNotasArea ..> ErroApi : <<throws>>
+FonteNotasUnidade ..> ErroApi : <<throws>>
+
+NotaUnidade "0..*" --> "1" UnidadeAcademica : unidade
+NotaDimensao "0..*" --> "1" DimensaoQualidade : dimensao
+@enduml

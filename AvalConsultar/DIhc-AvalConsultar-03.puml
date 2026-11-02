@@ -1,0 +1,19 @@
+@startsalt DIhc-AvalConsultar-03
+{+
+  { [<] (E1) | <b>Instituto de Informática (INF) }
+  ==
+  (E0: ao exibir a tela)
+  .
+  { <b>Nota da unidade | <b>4,3 }
+  ==
+  Notas por dimensão de qualidade
+  --
+  { Infraestrutura física | 4,0 }
+  --
+  { Corpo docente | 4,6 }
+  --
+  { Recursos pedagógicos | 4,4 }
+  --
+  { Condições ambientais | 4,2 }
+}
+@endsalt

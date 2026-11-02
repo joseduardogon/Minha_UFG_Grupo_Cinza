@@ -241,3 +241,177 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-10 – Revisão do PR #10 de Eventos, Notícias e RU (D-REV-02)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 31 de outubro de 2026.
+- **Contexto fornecido:** PR #10 da Pessoa C (branch `ultima_entrega(c)`), contrato-base, Comum, contexto da equipe e prints 06, 07 e 10 a 16.
+- **Uso da resposta:** identificação dos PRs pendentes; compilação dos diagramas; levantamento de achados, depois filtrados pela Pessoa D; parecer `Integracao/revisoes/REV-PR10-Eventos-Noticias-RU.md`; correção do texto de `DCla-Comum-03` (o RU não recarrega ao trocar de dia).
+
+<!-- O prompt 4 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
+
+### Prompt 1
+
+> instalei e autentiquei o gh. ja deve estar disponível. na verdade tem 2 pr do josé que vamos revisar. identiique ambos prs e me resuma o que tem pra ser revisado e qual deve ser revisado pimeiro (se fizer diferença a ordem )
+
+### Prompt 2
+
+> comece pelo #10, use D-REV-02 como código. antes de começar a revisão de fato, me diga o que você faz na revisão além de analisar o código. você deixa um comentário e já aceita e nega p pr? como funciona?
+
+### Prompt 3
+
+> pode sim.
+
+### Prompt 4
+
+> sobre os 8 bloqueantes:
+> 1-7. certo concordo são bloqueantes
+> 8. pode ignorar completamente análise de registro de ia. a regra vamos entrar em acordo depois.
+>
+>
+> sobre as sugestões: como não são bloqueantes, ignore completamente todas(decisão final não questione).
+>
+> sobre as decisões:
+> 1. fica de fora, ignore.
+> 2. sim a ele está certo, a correção seria no meu mesmo. sim pode gerar commit para isso (sem push ainda).
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-11 – Revisão do PR #11 de Avaliação – Registrar (D-REV-01)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 31 de outubro de 2026.
+- **Contexto fornecido:** PR #11 da Pessoa C (branch `a/avalregistrar-pr`), enunciado da APS, contrato-base, Comum e entidades de Locais.
+- **Uso da resposta:** compilação dos diagramas; levantamento de achados, depois filtrados pela Pessoa D; parecer `Integracao/revisoes/REV-PR11-AvalRegistrar.md` e texto da aprovação publicada no PR.
+
+<!-- O prompt 2 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
+
+### Prompt 1
+
+> pode começar o #11
+
+### Prompt 2
+
+> sobre os dois pontos
+> - concordo
+> - deixe fora do parecer mesmo. a gente tá revisando sem pessoa fixa, quem tiver livre revisa
+>
+> sobre esse PR, eu concordo com os bloqueantes mas alinhei com o josé e vamos fazer o seguinte: vou aceitar esse PR e eu mesmo vou pegar esses bloqueantes e corrigir em conjunto com a minha atividade na parte de avaliação. isso para agilizar o processo já que preciso dessas alterações do pr 11 para iniciar a minha parte e o josé não está livre nesse exato momento, portanto isso me atrasaria.
+>
+> portanto, decisão final: aceitar esse pr e eu mesmo corrigir os pontos na minha produção individual atividade.
+>
+> escreva o parecer, mostre o rascunho.
+
+### Prompt 3
+
+> aprovado. sobre o aviso, já remova essa proibição de alteração
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-12 – Avaliação – Consultar notas: comportamento (D-AVC-01)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 31 de outubro de 2026.
+- **Contexto fornecido:** enunciado da APS (Apêndice A), contrato-base, itens de `AvalRegistrar/` (PR #11), parecer `Integracao/revisoes/REV-PR11-AvalRegistrar.md`, `DD-Locais-01` e Comum.
+- **Itens produzidos:** correção dos bloqueantes B1 e B2 em `DAtv-AvalRegistrar-01` e `02` (commit à parte); `DCdu-AvalConsultar-01`, `DAtv-AvalConsultar-01` a `03`, `DIhc-AvalConsultar-01` a `03`, premissas no `AvalConsultar/README.md` e decisão de 31/10/2026 em `Docs/decisoes.md`.
+- **Uso da resposta:** rascunho dos diagramas e dos textos; as decisões de navegação e de cálculo foram tomadas pela Pessoa D entre opções apresentadas pela IA.
+
+### Prompt 1
+
+> vamos seguir com d-avc-01. precisa confirmar algo antes ou já tem tudo que precisa para fazer?
+
+### Prompt 2 (respostas às perguntas da IA)
+
+> Telas: "Drill-down 3 níveis". UA sem nota: "'Sem avaliações', fora". Médias: "Média de médias". P-AR-1: "Confirmar P-AR-1".
+
+### Prompt 3
+
+> sim
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-13 – Avaliação – Consultar notas: estrutura (D-AVC-02)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 1 de novembro de 2026.
+- **Contexto fornecido:** itens do D-AVC-01, pacote Comum, `DPac-Geral-01`, itens de `AvalRegistrar/` e `DD-Locais-01`.
+- **Itens produzidos:** `DD-AvalConsultar-01`, `DCmp-AvalConsultar-01`, `DCla-AvalConsultar-01` e `02`, ajustes em `DCla-AvalRegistrar-01`, `DCmp-AvalRegistrar-01` e `DPac-Geral-01`, decisão de 01/11/2026 em `Docs/decisoes.md` e premissas no `AvalConsultar/README.md`.
+- **Uso da resposta:** rascunho dos diagramas e dos textos; as decisões sobre o cálculo no servidor e a quebra do ciclo de pacotes foram tomadas pela Pessoa D entre opções apresentadas pela IA.
+
+### Prompt 1
+
+> certo, vamos para d-avc-02. tem algo a ser esclarecido por mim antes? se não, já implemente
+
+### Prompt 2 (respostas às perguntas da IA)
+
+> Ciclo: dependência só de entidade (manter `AvalConsultar` → `AvalRegistrar` e tirar a dependência contrária). Cálculo: "Servidor calcula".
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-14 – Avaliação – Consultar notas: detalhamento (D-AVC-03)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 1 de novembro de 2026.
+- **Contexto fornecido:** itens do D-AVC-01 e do D-AVC-02, pacote Comum e itens de `AvalRegistrar/` e de `Radio/` como modelo.
+- **Itens produzidos:** `DSeq-AvalConsultar-01` a `03`, `DEst-AvalConsultar-01` a `03`, `Contrato-AvalConsultar-01` (com as regras de cálculo R1 a R7) e `ECA-AvalConsultar-01`.
+- **Uso da resposta:** rascunho dos diagramas e dos textos, revisado pela Pessoa D.
+
+### Prompt 1
+
+> certo, vamos para d-avc-03. tem algo a ser esclarecido por mim antes? se não, já implemente
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-15 – Ajuste dos arquivos versionados ao replanejamento de 31/10 (D-INT-07)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 1 de novembro de 2026.
+- **Contexto fornecido:** contrato-base, divisão de trabalho, READMEs das pastas, `DPac-Geral-01` e itens de `AvalRegistrar/`.
+- **Itens produzidos:** ajustes em `contrato-base.md`, `APS INF0290 – Divisão de Trabalho da Equipe Cinza.md`, `Geral/DPac-Geral-01.md`, `AvalRegistrar/README.md`, `AvalRegistrar/DIhc-AvalRegistrar-01.md` e nos READMEs de `AvalConsultar`, `Seguranca`, `Locais` e `AppsUFG`.
+- **Uso da resposta:** levantamento das menções à divisão antiga e aplicação das mudanças aprovadas pela Pessoa D.
+
+### Prompt 1
+
+> sim podemos. antes de alterar me diga o que vai ser mudado
+
+### Prompt 2
+
+> beleza. pode ser a opção (a). não precisa da dota registrando a saida da pessoa A. faça tudo em um commit só.
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+
+## D-IA-16 – Correções da revisão do PR #12 (D-AVC)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 1 de novembro de 2026.
+- **Contexto fornecido:** parecer de revisão do PR #12 (Pessoa B) e itens de `AvalConsultar/`.
+- **Itens produzidos:** ajustes em `DCla-AvalConsultar-01` (atributo `acesso` de `TelaNotasUA`), `DAtv-AvalConsultar-01` e `02` (fluxo final reorganizado e saída pelos estados vazio e indisponível) e `DCmp-AvalRegistrar-01` (nome do pacote Locais por letra).
+- **Uso da resposta:** aplicação das correções apontadas na revisão, conferida pela Pessoa D.
+
+### Prompt 1
+
+> maicon fez o code review do pr. corrija os bloqueantes e faça as sugestões sugeridas. coloque em um commit só.
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.

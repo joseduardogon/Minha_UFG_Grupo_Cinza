@@ -1,0 +1,51 @@
+@startuml DCmp-AvalConsultar-01
+title DCmp-AvalConsultar-01 – Componentes do pacote AvalConsultar
+skinparam componentStyle uml2
+skinparam nodesep 40
+skinparam ranksep 90
+left to right direction
+
+package "AvalConsultar" {
+  component "TelasNotas" as Telas
+  component "FonteNotasUFG" as FonteUFG
+  component "FonteNotasArea" as FonteArea
+  component "FonteNotasUnidade" as FonteUA
+}
+
+package "Interfaces do pacote Comum" {
+  rectangle "<<interface>>\nIObservadorEstado" as IObservador
+  rectangle "<<interface>>\nIControladorTelaRemota" as IControlador
+  rectangle "<<interface>>\nIFonteDados" as IFonteDados
+  rectangle "<<interface>>\nIAcessoApi" as IAcessoApi
+}
+
+package "Locais (pacote de B)" {
+  rectangle "<<entidade>>\nUnidadeAcademica" as UA
+}
+
+package "AvalRegistrar (pacote de C)" {
+  rectangle "<<entidade>>\nDimensaoQualidade" as Dim
+}
+
+interface "Intent Android" as Intent
+
+Telas ..|> IObservador : oferece
+FonteUFG ..|> IFonteDados : oferece\n(MediaArea)
+FonteArea ..|> IFonteDados : oferece\n(NotaUnidade)
+FonteUA ..|> IFonteDados : oferece\n(NotaDimensao)
+
+Telas ..> IControlador : requer
+Telas ..> IAcessoApi : requer
+FonteUFG ..> IAcessoApi : requer
+FonteArea ..> IAcessoApi : requer
+FonteUA ..> IAcessoApi : requer
+
+Telas ..> FonteUFG : cria
+Telas ..> FonteArea : cria
+Telas ..> FonteUA : cria
+
+FonteArea ..> UA : usa
+FonteUA ..> UA : usa
+FonteUA ..> Dim : usa
+Telas ..> Intent : atende\n(VER_NOTAS)
+@enduml

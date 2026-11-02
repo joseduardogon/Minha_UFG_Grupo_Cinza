@@ -2,6 +2,18 @@
 
 Decisões de planejamento e de modelagem que alteram o contrato ou o roteiro. Uma entrada por decisão, da mais recente para a mais antiga.
 
+## 01/11/2026 – Cálculo das notas e dependências de AvalConsultar
+
+- **Decisão:** (1) só as notas por questão são armazenadas (`NotaQuestao`, de C); todas as médias (elemento, dimensão, avaliação, dimensão na UA, UA, área e UFG) são calculadas pelo Servidor/API a cada consulta e entregues prontas; o app só exibe (`DD-AvalConsultar-01`); (2) o botão "Ver notas" da `TelaAvaliacao` abre a `TelaNotas` por um Intent implícito do Android (ação `VER_NOTAS`), e não por referência de classe; (3) com isso, `AvalRegistrar` não depende de `AvalConsultar`, e `AvalConsultar` depende de `AvalRegistrar` só pela entidade `DimensaoQualidade`; `Inicio` deixa de depender de `AvalConsultar`, pois o cartão abre a `TelaAvaliacao`. Foram ajustados `DCla-AvalRegistrar-01`, `DCmp-AvalRegistrar-01` e `DPac-Geral-01`.
+- **Motivo:** a avaliação não pode ser editada nem excluída e o app não tem cache, então calcular na hora evita médias armazenadas fora de sincronia e mantém uma chamada pequena por tela. O Intent implícito remove o ciclo entre os dois pacotes da avaliação apontado no README de `AvalRegistrar`. Nenhuma interface do Comum muda.
+- **Alternativas:** o app calcular as médias a partir de todas as avaliações (descartada: muito tráfego e mais classes); guardar as médias no servidor (descartada: exige atualização a cada avaliação, sem ganho para o app); `NotaDimensao` com cópia do nome da dimensão (descartada: redundância com `DimensaoQualidade`); aceitar o ciclo de pacotes (descartada).
+
+## 31/10/2026 – Consulta de notas da Avaliação de UA (AvalConsultar)
+
+- **Decisão:** (1) confirma-se a P-AR-1: o cartão "Avaliação de UA" abre a `TelaAvaliacao`, e o botão "Ver notas" abre a `TelaNotas`; (2) a consulta tem três telas em profundidade: `TelaNotas` (nota da UFG e médias por área CNPq), `TelaNotasArea` (UAs da área com notas) e `TelaNotasUA` (notas por dimensão); (3) nota da UA = média das notas de suas avaliações; média da área = média das notas das UAs; nota da UFG = média das notas das UAs; (4) UA sem avaliação aparece com "Sem avaliações" e fica fora das médias; (5) dependência entre pacotes: só `AvalRegistrar` → `AvalConsultar`, pela navegação do botão "Ver notas"; `AvalConsultar` lê as entidades da avaliação pelo Servidor/API e não depende de `AvalRegistrar` na navegação. O ajuste do `DPac-Geral-01` fica para o D-AVC-02.
+- **Motivo:** o enunciado exige a nota por UA, a média por área CNPq e a nota da UFG, mas não define as telas nem a agregação entre avaliações. A média de médias segue a definição de nota da UFG do enunciado e mantém a mesma regra nos três níveis. Contar uma UA sem avaliação como zero distorceria as médias. Uma só direção de dependência evita o ciclo de pacotes apontado no README de `AvalRegistrar`.
+- **Alternativas:** duas telas, sem as notas por dimensão (descartada: perde a informação que o enunciado define no cálculo); tela única (descartada: lista longa e mistura níveis); média da área ponderada pelas avaliações (descartada: UAs com mais avaliações pesariam mais, diferente da regra da UFG); esconder UAs sem avaliação (descartada: o usuário não saberia se a UA existe).
+
 ## 20/10/2026 – Cartão "Avaliação de UA" na tela inicial
 
 - **Decisão:** a tela inicial mantém os oito cartões da versão 3.1.1 e ganha um nono, "Avaliação de UA", ponto de entrada único de `AvalRegistrar` e `AvalConsultar`. A tela aberta por ele é definida por A e B. O texto do `DPac-Geral-01` foi ajustado; o diagrama não muda.

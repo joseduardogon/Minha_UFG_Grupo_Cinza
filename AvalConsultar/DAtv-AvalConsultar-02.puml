@@ -1,0 +1,41 @@
+@startuml DAtv-AvalConsultar-02
+title DAtv-AvalConsultar-02 – Consultar as notas das UAs de uma área (UC10.2)
+
+|Membro|
+start
+note right
+  Pré-condição: a TelaNotas exibe as
+  áreas (DAtv-AvalConsultar-01).
+end note
+:**A2** Tocar em uma área;
+|App|
+:Exibir a TelaNotasArea\ncom indicador de carregamento;
+:Solicitar as unidades acadêmicas\nda área com suas notas;
+|Servidor/API|
+:Devolver as notas das UAs\nou falhar;
+|App|
+if (Houve falha de comunicação?) then (sim)
+  :Exibir mensagem de indisponibilidade;
+elseif (Há unidades acadêmicas na área?) then (não)
+  :Exibir mensagem de vazio;
+else (sim)
+  :Exibir a média da área e a lista de UAs\n(nome, sigla e nota, ou "Sem avaliações");
+endif
+|Membro|
+if (O que o usuário faz?) then (escolhe uma UA\n(só se exibindo))
+  :Tocar em uma UA;
+  |App|
+  :Abrir a TelaNotasUA\n(UC10.3, DAtv-AvalConsultar-03);
+else (volta)
+  |Membro|
+  :Tocar na seta de voltar;
+  |App|
+  :Voltar à TelaNotas e recarregá-la\n(sem cache, DEst-Comum-01);
+  note right
+    Única saída nos estados
+    vazio e indisponível
+    (aoVoltar, DEst-AvalConsultar-02).
+  end note
+endif
+stop
+@enduml

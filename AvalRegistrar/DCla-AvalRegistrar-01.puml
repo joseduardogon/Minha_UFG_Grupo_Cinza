@@ -28,9 +28,7 @@ package "Locais" {
   class UnidadeAcademica <<Locais>>
 }
 
-package "AvalConsultar" {
-  class "Tela de AvalConsultar" as TelaConsulta <<AvalConsultar>>
-}
+interface "Intent Android" as Intent <<Android>>
 
 package "Outros componentes de AvalRegistrar" {
   class FonteUnidades <<DCla-AvalRegistrar-02>>
@@ -103,7 +101,7 @@ IObservadorEstado <|.. TelaQuestionario
 
 TelaAvaliacao --> "1" IAcessoApi : acesso
 TelaAvaliacao ..> TelaEscolherUA : <<create>>
-TelaAvaliacao ..> TelaConsulta : <<use>>
+TelaAvaliacao ..> Intent : <<use>>\nação VER_NOTAS
 
 TelaEscolherUA --> "1" IAcessoApi : acesso
 TelaEscolherUA --> "1" IControlador : controlador

@@ -4,11 +4,28 @@ title DAtv-AvalRegistrar-02 – Responder o questionário de qualidade (UC09.2)
 |Avaliador|
 start
 note right
-  Pré-condição: a UA foi escolhida e o
-  questionário foi carregado (DAtv-AvalRegistrar-01, A2).
+  Pré-condição: a UA foi escolhida
+  (DAtv-AvalRegistrar-01, A2).
 end note
 |App|
-:Exibir a primeira dimensão ("Dimensão 1 de n"):\nelementos, questões e seletor de nota 0 a 5;
+:Exibir a TelaQuestionario\ncom indicador de carregamento;
+:Solicitar o questionário\n(dimensões, elementos e questões);
+note right
+  Carga disparada pela entrada na tela,
+  no DSeq-AvalRegistrar-02.
+end note
+|Servidor/API|
+:Devolver o questionário\nou falhar;
+|App|
+if (Houve falha de comunicação?) then (sim)
+  :Exibir mensagem de indisponibilidade;
+  stop
+elseif (Há dimensões no questionário?) then (não)
+  :Exibir mensagem de vazio;
+  stop
+else (sim)
+  :Exibir a primeira dimensão ("Dimensão 1 de n"):\nelementos, questões e seletor de nota 0 a 5;
+endif
 note right
   A1 e A2 não chamam o Servidor/API:
   o questionário já está em memória.
@@ -19,11 +36,17 @@ repeat
     :**A1** Dar nota (0 a 5)\na uma questão;
     |App|
     :Guardar a nota no rascunho\ne destacar a opção escolhida;
-  else (navega)
+  elseif () then (navega)
     |Avaliador|
     :**A2** Navegar entre as dimensões\n("Próxima" ou "Anterior");
     |App|
     :Atualizar a dimensão atual e exibir\nos elementos e as questões dela;
+  else (abandona)
+    |Avaliador|
+    :Tocar na seta de voltar;
+    |App|
+    :Descartar o rascunho\n(nada é enviado);
+    stop
   endif
 repeat while (Continua respondendo?) is (sim) not (não)
 |Avaliador|

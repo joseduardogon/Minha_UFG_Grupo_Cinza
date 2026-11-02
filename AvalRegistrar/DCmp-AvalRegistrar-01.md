@@ -33,7 +33,7 @@ O pacote `AvalRegistrar` tem quatro componentes. Eles dependem do pacote `Comum`
 **Dependências de outros pacotes.**
 
 - `Locais`: `UnidadeAcademica` é a entidade da lista (`FonteUnidades` a cria), da tela e do envio (`Avaliacao.unidade`).
-- `AvalConsultar`: o botão "Ver notas" da tela de entrada abre a tela de consulta de Phablo (P-AR-1), apenas referenciada. Essa dependência `AvalRegistrar` → `AvalConsultar` não consta no `DPac-Geral-01`, que só prevê a dependência contrária (`AvalConsultar` depende das entidades de `AvalRegistrar`, `DD-AvalRegistrar-01`); ela fica registrada como pendência para a integração.
+- `AvalConsultar`: nenhuma dependência de classe. O botão "Ver notas" dispara um Intent implícito do Android com a ação `VER_NOTAS`, atendido pela `TelaNotas` (`DCmp-AvalConsultar-01`). Assim fica só a dependência `AvalConsultar` → `AvalRegistrar` (uso da entidade `DimensaoQualidade`), sem ciclo no `DPac-Geral-01` (decisão de 01/11/2026 em `Docs/decisoes.md`).
 
 **Decisão de projeto.** Separar fontes e serviço de envio das telas deixa as telas sem conhecer o formato do JSON, e permite testar as conversões e o envio sozinhos. Como o questionário é o mesmo para toda UA (P-AR-9) e o app não guarda cache (P-AR-3), `FonteQuestionario` não recebe a UA escolhida; o envio é uma única chamada (P-AR-6).
 
