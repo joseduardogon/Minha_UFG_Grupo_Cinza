@@ -1,28 +1,36 @@
 @startuml DAtv-Noticias-01
-title DAtv-Noticias-01 – Atividades de UC-NO-01: consultar notícias de uma regional
+title DAtv-Noticias-01 – Atividades de UC05.1: consultar notícias de uma regional
 |Membro|
 start
 :**A1** Abre a tela Notícias;
 |App|
-:Seleciona a primeira aba de regional;
+:Exibe a barra de título e pede\nas notícias da primeira regional;
 repeat
-  :Pede ao servidor as notícias da regional;
   |Servidor/API|
   :Devolve as notícias ou falha;
   |App|
   if (Houve falha de comunicação?) then (sim)
-    :Exibe a mensagem de indisponibilidade;
+    :Mostra a tela em branco,\nsem abas e sem mensagem;
   elseif (Há notícias?) then (sim)
-    :Exibe um cartão por notícia\n(imagem, título e resumo);
+    :Mostra a faixa de abas e\num cartão por notícia\n(imagem, título e resumo);
+    |Membro|
+    if (Toca em outra aba de regional?) then (sim)
+      :**A2** Toca em outra aba de regional;
+      |App|
+      :Seleciona a regional tocada\ne pede as notícias dela;
+    else (não)
+    endif
   else (não)
-    :Exibe a mensagem de vazio;
+    :Mostra a mensagem de vazio,\nsem abas;
   endif
-  |Membro|
-  if (Toca em outra aba de regional?) then (sim)
-    :**A2** Toca em outra aba de regional;
-    |App|
-  else (não)
-  endif
-repeat while (Continua consultando?) is (sim) not (não)
+repeat while (Tocou em outra aba?) is (sim) not (não)
+|Membro|
+:Toca na seta de voltar;
+|App|
+:Descarta a regional selecionada\ne as notícias em memória;
+note right
+  Ao voltar do Navegador (DAtv-Noticias-02)
+  o ciclo se repete com a regional mantida.
+end note
 stop
 @enduml

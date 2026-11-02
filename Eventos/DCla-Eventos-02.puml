@@ -9,7 +9,6 @@ package "Comum" {
   interface IAcessoApi <<Comum>> {
     + obter(caminho: String, parametros: Map<String, String>): RespostaApi
   }
-  class Regional <<Comum (proposta)>>
 }
 
 interface IFiltroEventos <<DCla-Eventos-01>> {
@@ -26,13 +25,15 @@ class FonteEventos {
   - converter(corpo: String): List<Evento>
 }
 
+class Regional <<DD-Eventos-01>>
+
 class Evento {
   + id: Integer
   + titulo: String
   + dataInicio: Date
   + dataFim: Date
-  + local: String
-  + url: String
+  + url: String [0..1]
+  + urlImagem: String [0..1]
   + temUrl(): Boolean
 }
 
@@ -40,5 +41,5 @@ IFonteDados <|.. FonteEventos
 FonteEventos --> "1" IAcessoApi : acesso
 FonteEventos --> "1" IFiltroEventos : filtro
 FonteEventos ..> Evento : <<create>>
-Evento --> "1" Regional : regional
+Evento "0..*" --> "1" Regional : regional
 @enduml

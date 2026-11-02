@@ -1,0 +1,54 @@
+@startuml DSeq-Noticias-01
+title DSeq-Noticias-01 – Sequência de A1: abrir a tela Notícias
+actor "Membro" as M
+participant ":TelaNoticias" as T
+participant ":FiltroNoticias" as Fi
+participant ":FonteNoticias" as F
+participant ":ControladorTelaRemota<Noticia>" as K
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> T : aoExibir()
+note right of T : TelaNoticias foi criada pelo menu inicial ao tocar\nno cartão Notícias, com regionaisOferecidas (P-NO-6)
+group Primeira exibição (entrada pelo menu): criar filtro, fonte e controlador
+  create Fi
+  T -> Fi : <<create>>(regionaisOferecidas[0])
+  create F
+  T -> F : <<create>>(acesso, filtro)
+  create K
+  T -> K : <<create>>(fonte)
+  T -> K : registrarObservador(T)
+end
+T -> K : aoEntrarNaTela()
+group Carregar e exibir (referenciado em DSeq-Noticias-02 e 03)
+  K -> K : definirEstado(CARREGANDO)
+  K -> T : aoMudarEstado(CARREGANDO)
+  T -> M : mostra o indicador de carregamento
+
+  K -> F : carregar()
+  F -> Fi : obterRegionalSelecionada()
+  Fi --> F : regional
+  F -> A : obter("/noticias", {regional})
+  A -> S : GET /noticias?regional=..
+  alt resposta recebida
+    S --> A : JSON com as notícias
+    A --> F : RespostaApi
+    F -> F : converter(corpo)
+    F --> K : List<Noticia>
+    alt lista com itens
+      K -> T : aoMudarEstado(EXIBINDO)
+      T -> K : obterDados()
+      K --> T : List<Noticia>
+      T -> M : mostra a faixa de abas e um cartão\npor notícia (imagem, título e resumo)
+    else lista vazia
+      K -> T : aoMudarEstado(VAZIO)
+      T -> M : mostra a mensagem de vazio, sem abas (P-NO-9)
+    end
+  else falha de comunicação
+    A --> F : ErroApi
+    F --> K : ErroApi
+    K -> T : aoMudarEstado(INDISPONIVEL)
+    T -> M : mostra a tela em branco,\nsem abas e sem mensagem (P-NO-8)
+  end
+end
+@enduml

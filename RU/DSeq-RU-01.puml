@@ -1,0 +1,60 @@
+@startuml DSeq-RU-01
+title DSeq-RU-01 – Sequência de A1: tocar no cartão de uma refeição
+actor "Membro" as M
+participant ":TelaRU" as R
+participant ":TelaRefeicao" as T
+participant ":SelecaoCardapio" as C
+participant ":ControladorTelaRemota<Refeicao>" as K
+participant ":FonteCardapio" as F
+participant ":ClienteApi" as A
+participant "Servidor/API" as S <<sistema>>
+
+M -> R : aoTocarRefeicao(tipo)
+R -> T : <<create>>(tipo, hoje, acesso)
+R -> T : aoExibir()
+note over T : entrada: cria a seleção, a fonte e o controlador
+T -> C : <<create>>(tipo)
+T -> F : <<create>>(acesso, selecao)
+T -> K : <<create>>(fonte)
+T -> K : registrarObservador(this)
+T -> T : diaSelecionado = diaInicial()
+T -> K : aoEntrarNaTela()
+group Carregar e exibir
+  K -> T : aoMudarEstado(CARREGANDO)
+  T -> M : mostra a barra azul e o indicador de carregamento
+  K -> F : carregar()
+  F -> C : obterTipoRefeicao()
+  C --> F : tipo
+  F -> A : obter("/cardapio", {refeicao})
+  A -> S : GET /cardapio?refeicao=..
+  alt resposta recebida
+    S --> A : JSON com as refeições da semana
+    A --> F : RespostaApi
+    F -> F : converter(corpo)
+    F --> K : List<Refeicao>
+    alt lista com refeições
+      K -> T : aoMudarEstado(EXIBINDO)
+      T -> T : mostrarCabecalho()
+      T -> M : mostra a cor do dia, a data por extenso\ne o seletor de dia
+      T -> T : mostrarCardapioDoDia()
+      T -> K : obterDados()
+      K --> T : List<Refeicao> (semana em memória)
+      T -> T : refeicaoDoDia(diaSelecionado)
+      alt dia com itens
+        T -> T : agruparPorCategoria(itens)
+        T -> M : mostra um cartão por categoria
+      else dia sem itens
+        T -> M : mostra a mensagem de vazio
+      end
+    else lista vazia
+      K -> T : aoMudarEstado(VAZIO)
+      T -> M : mostra a mensagem de vazio
+    end
+  else falha de comunicação
+    A --> F : ErroApi
+    F --> K : ErroApi
+    K -> T : aoMudarEstado(INDISPONIVEL)
+    T -> M : mostra a ilustração e "Cardápio indisponível."
+  end
+end
+@enduml

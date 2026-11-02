@@ -1,0 +1,89 @@
+@startuml DCla-RU-01
+title DCla-RU-01 – Classes do componente TelasRU
+hide empty members
+
+package "Comum" {
+  interface "IControladorTelaRemota<Refeicao>" as IControlador <<Comum>> {
+    + aoEntrarNaTela(): void
+    + recarregar(): void
+    + obterEstado(): EstadoTela
+    + obterDados(): List<Refeicao>
+    + registrarObservador(o: IObservadorEstado): void
+  }
+  class "ControladorTelaRemota<Refeicao>" as Controlador <<Comum>> {
+    + ControladorTelaRemota(fonte: IFonteDados<Refeicao>)
+  }
+  interface IObservadorEstado <<Comum>> {
+    + aoMudarEstado(estado: EstadoTela): void
+  }
+  interface IAcessoApi <<Comum>> {
+    + obter(caminho: String, parametros: Map<String, String>): RespostaApi
+  }
+  enum EstadoTela <<Comum>>
+}
+
+class TelaRU {
+  - acesso: IAcessoApi
+  + TelaRU(acesso: IAcessoApi)
+  + aoExibir(): void
+  + aoTocarRefeicao(tipo: TipoRefeicao): void
+  + aoVoltar(): void
+}
+
+class TelaRefeicao {
+  - tipoRefeicao: TipoRefeicao
+  - hoje: Date
+  - acesso: IAcessoApi
+  - diaSelecionado: Date
+  - selecao: SelecaoCardapio
+  - controlador: IControladorTelaRemota<Refeicao>
+  + TelaRefeicao(tipo: TipoRefeicao, hoje: Date, acesso: IAcessoApi)
+  + aoExibir(): void
+  + aoEscolherDia(dia: Date): void
+  + aoVoltar(): void
+  + aoMudarEstado(estado: EstadoTela): void
+  - diasDisponiveis(tipo: TipoRefeicao): List<Date>
+  - diaInicial(): Date
+  - mostrarCabecalho(): void
+  - mostrarCardapioDoDia(): void
+  - refeicaoDoDia(dia: Date): Refeicao
+  - agruparPorCategoria(itens: List<ItemCardapio>): Map<CategoriaItem, List<ItemCardapio>>
+  - diaDaSemana(data: Date): Integer
+  - letraDoDia(dia: Date): String
+  - corDoDia(dia: Date): String
+  - dataPorExtenso(data: Date): String
+}
+
+interface IFiltroCardapio {
+  + obterTipoRefeicao(): TipoRefeicao
+}
+
+class SelecaoCardapio {
+  - tipoRefeicao: TipoRefeicao
+  + SelecaoCardapio(tipo: TipoRefeicao)
+  + obterTipoRefeicao(): TipoRefeicao
+}
+
+class FonteCardapio <<DCla-RU-02>>
+class Refeicao <<DCla-RU-02>>
+class ItemCardapio <<DCla-RU-02>>
+class CategoriaItem <<DCla-RU-02>>
+enum TipoRefeicao <<DCla-RU-02>>
+
+IControlador <|.. Controlador
+IObservadorEstado <|.. TelaRefeicao
+IFiltroCardapio <|.. SelecaoCardapio
+TelaRU --> "1" IAcessoApi : acesso
+TelaRU ..> TelaRefeicao : <<create>>
+TelaRU ..> TipoRefeicao : <<use>>
+TelaRefeicao --> "1" IAcessoApi : acesso
+TelaRefeicao *-- "0..1" SelecaoCardapio : selecao
+TelaRefeicao --> "0..1" IControlador : controlador
+TelaRefeicao ..> Controlador : <<create>>
+TelaRefeicao ..> FonteCardapio : <<create>>
+TelaRefeicao ..> Refeicao : <<use>>
+TelaRefeicao ..> ItemCardapio : <<use>>
+TelaRefeicao ..> CategoriaItem : <<use>>
+TelaRefeicao ..> EstadoTela : <<use>>
+SelecaoCardapio --> "1" TipoRefeicao : tipoRefeicao
+@enduml

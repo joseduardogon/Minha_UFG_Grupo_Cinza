@@ -1,0 +1,31 @@
+@startuml DEst-RU-02
+title DEst-RU-02 – Estados da tela da refeição
+hide empty description
+
+[*] --> Carregando : E0 aoExibir\n(entrada pela tela RU)\n/ diaSelecionado = diaInicial()
+
+state Carregando : entry / controlador.aoEntrarNaTela()
+
+state Resultado {
+  state "Exibindo" as Exibindo {
+    state "Dia com cardápio" as DiaComCardapio : entry / mostrar um cartão por categoria
+    state "Dia sem cardápio" as DiaVazio : entry / mostrar a mensagem de vazio
+    state c <<choice>>
+    [*] --> c
+    c --> DiaComCardapio : [refeicaoDoDia(diaSelecionado) tem itens]
+    c --> DiaVazio : [refeicaoDoDia(diaSelecionado) não tem itens]
+    DiaComCardapio --> c : E1 aoEscolherDia(dia)\n/ diaSelecionado = dia
+    DiaVazio --> c : E1 aoEscolherDia(dia)\n/ diaSelecionado = dia
+  }
+  state Vazio : entry / mostrar a mensagem de vazio
+  state "Indisponível" as Indisponivel : entry / mostrar a ilustração e\n"Cardápio indisponível."
+}
+
+Carregando --> Exibindo : carga concluída [semana com refeições]
+Carregando --> Vazio : carga concluída [semana sem refeições]
+Carregando --> Indisponivel : ErroApi [qualquer tipo]
+
+Resultado --> Carregando : E0 aoExibir\n(retorno ao app, dia mantido)
+
+Resultado --> [*] : E2 aoVoltar\n(volta à tela RU)
+@enduml

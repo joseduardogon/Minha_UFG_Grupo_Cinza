@@ -1,0 +1,14 @@
+@startuml DEst-RU-01
+title DEst-RU-01 – Estados da tela RU
+hide empty description
+
+[*] --> Exibindo : E0 aoExibir\n(E7 de DIhc-Inicio-01)
+
+state Exibindo : entry / mostrar os três cartões\ne o aviso "Cardápio sujeito a alterações!"
+state "Tela da refeição" as Refeicao : DEst-RU-02
+
+Exibindo --> Refeicao : E1 aoTocarRefeicao(tipo)\n/ cria a TelaRefeicao
+Refeicao --> Exibindo : E0 aoExibir\n(voltar da tela da refeição)
+
+Exibindo --> [*] : E2 aoVoltar\n(volta ao menu inicial)
+@enduml

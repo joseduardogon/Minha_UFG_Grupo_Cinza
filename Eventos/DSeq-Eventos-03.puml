@@ -8,7 +8,8 @@ participant ":FonteEventos" as F
 participant ":ClienteApi" as A
 participant "Servidor/API" as S <<sistema>>
 
-M -> T : escolherRegional(regional)
+M -> T : aoEscolherRegional(regional)
+note right of T : só no estado EXIBINDO: a faixa de abas\nde regional some no estado VAZIO
 T -> C : selecionarRegional(regional)
 T -> K : recarregar()
 ref over K, S : Carregar e exibir os eventos\n(grupo "Carregar e exibir" de DSeq-Eventos-01)

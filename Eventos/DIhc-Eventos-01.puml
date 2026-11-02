@@ -1,22 +1,37 @@
 @startsalt DIhc-Eventos-01
 {+
-  <b>Eventos
+  { [<] (E6) | <b>Eventos }
+  (E0: a tela foi exibida; hoje é 30/10/2026)
   ==
-  Regional: | [Goiânia  v] (E1)
-  ==
-  { [<] (E2) | <b>Outubro 2026 | [>] (E3) }
+  { [<] (E2) | <b>Outubro | [>] (E3) }
+  { . | 2026 }
   {#
-    Dom | Seg | Ter | Qua | Qui | Sex | Sáb
-    . | . | . | . | 1 | 2 | 3
-    4 | 5 | 6 | 7 | 8 | 9 | 10
-    11 | 12 | 13 | 14 | 15 | <b>[16] | 17
+    DOM | SEG | TER | QUA | QUI | SEX | SAB
+    . | . | . | . | 01 | 02 | 03
+    04 | 05 | 06 | 07 | 08 | 09 | 10
+    11 | 12 | 13 | 14 | 15 | 16 | 17
     18 | 19 | 20 | 21 | 22 | 23 | 24
-    25 | 26 | 27 | 28 | 29 | 30 | 31
+    25 | 26 | 27 | 28 | 29 | <b>[30] | 31
   }
-  (E4: toque em um dia)
+  (E4: toque em um dia; o dia selecionado tem círculo branco)
   ==
-  <b>Eventos de 16/10/2026
-  { [Título do evento A - 14/10 a 16/10] (E5) }
-  { [Título do evento B - 16/10] (E5) }
+  {/ <b>GOIÂNIA }
+  (E1: toque em uma aba de regional; só com a lista exibida)
+  {+
+    <&image> | <b>Exposição: Mulheres Negras na Literatura | (E5)
+    . | 19/10/2026 à 30/10/2026 | .
+  }
+  {+
+    <&image> | <b>Exposição "Memórias, Imagens e Arquiteturas Da Permanência", | (E5)
+    . | 13/10/2026 à 13/11/2026 | .
+  }
+  {+
+    <&image> | <b>Exposição "Inclusão em contradição: entre o dito, o feito e o vazio" | (E5)
+    . | 30/09/2026 à 14/12/2026 | .
+  }
+  ==
+  <i>Sem eventos no dia (captura 29): a aba de regional some
+  { <&circle-x> | <b>Sem eventos }
+  Não há eventos para esse dia!
 }
 @endsalt

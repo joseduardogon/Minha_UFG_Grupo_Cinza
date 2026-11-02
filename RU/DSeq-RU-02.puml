@@ -1,0 +1,22 @@
+@startuml DSeq-RU-02
+title DSeq-RU-02 – Sequência de A1: tocar em um dia do seletor
+actor "Membro" as M
+participant ":TelaRefeicao" as T
+participant ":ControladorTelaRemota<Refeicao>" as K
+
+M -> T : aoEscolherDia(dia)
+T -> T : diaSelecionado = dia
+T -> T : mostrarCabecalho()
+T -> M : destaca o dia, muda a cor da barra e do fundo\ne mostra a data por extenso
+T -> T : mostrarCardapioDoDia()
+T -> K : obterDados()
+K --> T : List<Refeicao> (semana em memória)
+T -> T : refeicaoDoDia(dia)
+alt dia com itens
+  T -> T : agruparPorCategoria(itens)
+  T -> M : mostra um cartão por categoria
+else dia sem itens
+  T -> M : mostra a mensagem de vazio
+end
+note over T, K : sem chamada à API e sem recarregar()
+@enduml
