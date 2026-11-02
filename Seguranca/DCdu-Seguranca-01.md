@@ -27,7 +27,7 @@ O diagrama detalha o caso de uso macro UC01 "Solicitar apoio de segurança" do `
 
 ---
 
-### UC01 – Acessar central de segurança via web
+### UC01.1 – Acessar central de segurança via web
 
 - **Ator principal:** Membro da comunidade UFG.
 - **Ator secundário:** Navegador.
@@ -41,7 +41,7 @@ O diagrama detalha o caso de uso macro UC01 "Solicitar apoio de segurança" do `
 
 ---
 
-### UC02 – Baixar aplicativo de segurança na Play Store
+### UC01.2 – Baixar aplicativo de segurança na Play Store
 
 - **Ator principal:** Membro da comunidade UFG.
 - **Ator secundário:** Play Store.

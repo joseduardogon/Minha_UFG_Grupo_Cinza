@@ -8,16 +8,16 @@ actor "Servidor/API" as API <<sistema>>
 actor "Provedor de mapa / GPS" as Mapa <<sistema>>
 
 rectangle "App Minha UFG – Locais" {
-  usecase "UC01\nConsultar lista\nde locais" as UC01
-  usecase "UC02\nVisualizar local\nno mapa" as UC02
-  usecase "UC03\nCentralizar em minha\nlocalização atual" as UC03
+  usecase "UC07.1\nConsultar lista\nde locais" as UC071
+  usecase "UC07.2\nVisualizar local\nno mapa" as UC072
+  usecase "UC07.3\nCentralizar em minha\nlocalização atual" as UC073
 }
 
-Membro --> UC01
-Membro --> UC02
-Membro --> UC03
+Membro --> UC071
+Membro --> UC072
+Membro --> UC073
 
-UC01 --> API
-UC02 --> Mapa
-UC03 --> Mapa
+UC071 --> API
+UC072 --> Mapa
+UC073 --> Mapa
 @enduml

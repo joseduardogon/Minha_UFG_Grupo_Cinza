@@ -519,3 +519,28 @@ ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026.
+
+## D-IA-21 – Fechamento dos modelos gerais (D-INT-03)
+
+- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **URL:** https://claude.com/claude-code
+- **Data de acesso:** 2 de novembro de 2026.
+- **Contexto fornecido:** `DCdu-Geral-01`, `DPac-Geral-01`, `DImp-Geral-01`, DCdu detalhados de B, C e D, DCla de Eventos, Notícias e Locais.
+- **Itens produzidos:** `DCdu-Geral-01` final (códigos dos macros e tabela de correspondência); renumeração dos casos de uso de Segurança (UC01.n), Rádio (UC02.n), Guia (UC03.1), Locais (UC07.n) e Apps UFG (UC08.n) nos DCdu e DAtv; `DPac-Geral-01` com `Regional` e `Campus` no Comum; `DImp-Geral-01` sem mudança.
+- **Uso da resposta:** a conferir pela Pessoa D; a Pessoa D avisa B e C da renumeração.
+
+### Prompt 1
+
+> já podemos ir para d-int-03? ou falta algo
+
+### Prompt 2
+
+> pode começar a d-int-03
+
+### Prompt 3
+
+> pode renumerar para ficar coerente. aviso o time depois. siga em frente
+
+### Referência (ABNT)
+
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026.

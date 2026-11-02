@@ -17,7 +17,7 @@ Fonte: [`DAtv-Seguranca-01.puml`](DAtv-Seguranca-01.puml)
 
 ## Descrição
 
-O diagrama modela o fluxo de atividades dos casos de uso `UC01` e `UC02` de `DCdu-Seguranca-01`, organizando as responsabilidades em quatro raias:
+O diagrama modela o fluxo de atividades dos casos de uso `UC01.1` e `UC01.2` de `DCdu-Seguranca-01`, organizando as responsabilidades em quatro raias:
 - **Usuário:** Interage com as opções em tela e com os aplicativos externos do dispositivo.
 - **App:** Renderiza a tela de Segurança e delega a abertura externa para a interface `ILinkExterno` (`DCla-Comum-01`).
 - **Navegador:** Aplicativo externo acionado para exibir a versão web da central de segurança.

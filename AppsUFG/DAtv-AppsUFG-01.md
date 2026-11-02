@@ -17,7 +17,7 @@ Fonte: [`DAtv-AppsUFG-01.puml`](DAtv-AppsUFG-01.puml)
 
 ## Descrição
 
-O diagrama modela as atividades de consulta ao catálogo de aplicativos institucionais da UFG e a subsequente solicitação de abertura da página do aplicativo na Google Play Store, correspondendo aos casos de uso `UC01` e `UC02` de `DCdu-AppsUFG-01`.
+O diagrama modela as atividades de consulta ao catálogo de aplicativos institucionais da UFG e a subsequente solicitação de abertura da página do aplicativo na Google Play Store, correspondendo aos casos de uso `UC08.1` e `UC08.2` de `DCdu-AppsUFG-01`.
 
 O fluxo é dividido em três raias de responsabilidade:
 - **Usuário:** Interage com as telas do app Minha UFG e com a loja de aplicativos externa.

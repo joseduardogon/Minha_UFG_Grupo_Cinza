@@ -1,5 +1,5 @@
 @startuml DAtv-Locais-01
-title DAtv-Locais-01 – Atividades de UC01: consultar lista de locais
+title DAtv-Locais-01 – Atividades de UC07.1: consultar lista de locais
 
 |Usuário|
 start
