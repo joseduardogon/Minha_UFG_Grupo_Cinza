@@ -5,7 +5,7 @@
 | **Código** | `DCdu-Locais-01` |
 | **Título** | Casos de uso de Locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DPac-Geral-01`, `DAtv-Locais-01`, `DAtv-Locais-02`, `DAtv-Locais-03`, `DIhc-Locais-01`, `DIhc-Locais-02`, `DCla-Comum-02`, `DCla-Comum-04` |
 

@@ -9,7 +9,7 @@ actor "Visualizador de PDF" as VisPDF <<sistema>>
 VisPDF -up-|> AppExt
 
 rectangle "App Minha UFG – Guia Estudantil" {
-  usecase "UC031.1\nConsultar guia\nestudantil" as UC031
+  usecase "UC03.1\nConsultar guia\nestudantil" as UC031
 }
 
 Membro --> UC031

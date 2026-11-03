@@ -11,8 +11,8 @@ Navegador -up-|> AppExt
 PlayStore -up-|> AppExt
 
 rectangle "App Minha UFG – Segurança" {
-  usecase "UC011.1\nAcessar central de\nsegurança via web" as UC011
-  usecase "UC011.2\nBaixar aplicativo de\nsegurança na Play Store" as UC012
+  usecase "UC01.1\nAcessar central de\nsegurança via web" as UC011
+  usecase "UC01.2\nBaixar aplicativo de\nsegurança na Play Store" as UC012
 }
 
 Membro --> UC011

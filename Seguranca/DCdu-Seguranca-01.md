@@ -5,7 +5,7 @@
 | **Código** | `DCdu-Seguranca-01` |
 | **Título** | Casos de uso de Segurança |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DPac-Geral-01`, `DAtv-Seguranca-01`, `DIhc-Seguranca-01`, `DCla-Comum-01` |
 
