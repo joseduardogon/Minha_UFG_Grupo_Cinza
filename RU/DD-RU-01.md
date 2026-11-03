@@ -17,17 +17,9 @@ O cardápio é cadastrado pelo painel web e consultado pelo app **por refeição
 
 **Decisão de modelagem: `Refeicao` por data.** Como a tela filtra a semana em memória pelo dia escolhido, cada `Refeicao` carrega a sua data, e a lista de `Refeicao` é o que o controlador do Comum guarda (`DCla-RU-02`). O dia da semana (as letras S, T, Q, Q, S, S do seletor: P-RU-4) é **derivado** da data, na tela (`TelaRefeicao.diaDaSemana`, `DCla-RU-01`); o RU não define enumeração de dia da semana. Se a Pessoa D preferir reutilizar o `DiaSemana` de `DD-Radio-01`, a decisão é da integração.
 
-**Decisão de modelagem: `Cardapio` mantido como agrupador.** `Cardapio` (a semana, de `dataInicio` a `dataFim`) existe no servidor, porque o painel web cadastra o cardápio por semana; **o app não o usa nem o instancia**, pois a resposta traz só as refeições, e a semana fica implícita nas datas. Foi mantido, e não removido, para registrar a regra de unicidade por semana e a ligação com as refeições; se a integração (D) preferir um modelo só com o que o app usa, pode retirá-lo, sem mudança alguma nas classes do app (`DCla-RU-01`, `DCla-RU-02`). A associação com `Refeicao` (1 — 1..*) descreve o servidor: no app, a `Refeicao` criada pela fonte não tem `Cardapio` associado, e por isso o `DCla-RU-02` não desenha `Cardapio` (`Contrato-RU-01`; correção B3 da revisão REV-PR10).
+**Decisão de modelagem: sem `Cardapio`.** O painel web cadastra o cardápio por semana, mas **o app não usa nem instancia essa semana**: a resposta traz só as refeições, e a semana fica implícita nas datas. Por isso a entidade `Cardapio` foi retirada na integração (02/11/2026, `Docs/decisoes.md`), sem mudança nas classes do app (`DCla-RU-01`, `DCla-RU-02`); a regra que ela carregava passou para `Refeicao` (a combinação `tipo` e `data` não se repete).
 
-**Tabela 1 – Cardapio**: cardápio da semana do RU, agrupador das refeições no servidor. É único para todos os restaurantes da UFG.
-
-| Atributo | Tipo | Descrição |
-|---|---|---|
-| id | Integer | Identificador único do cardápio |
-| dataInicio | Date | Primeiro dia da semana do cardápio |
-| dataFim | Date | Último dia da semana do cardápio |
-
-**Tabela 2 – Refeicao**: uma refeição servida em uma data (os três cartões da tela RU); reúne os itens dessa refeição nessa data. É a unidade que o app carrega.
+**Tabela 1 – Refeicao**: uma refeição servida em uma data (os três cartões da tela RU); reúne os itens dessa refeição nessa data. É a unidade que o app carrega.
 
 | Atributo | Tipo | Descrição |
 |---|---|---|
@@ -35,32 +27,30 @@ O cardápio é cadastrado pelo painel web e consultado pelo app **por refeição
 | tipo | TipoRefeicao | Qual refeição é: CAFE_DA_MANHA, ALMOCO ou JANTAR |
 | data | Date | Dia em que a refeição é servida; o dia da semana é obtido da data |
 
-**Tabela 3 – ItemCardapio**: um item servido em uma refeição, com a categoria em que aparece. Na tela, cada categoria é um cartão com o nome da categoria e a descrição dos itens (ex.: categoria "Leite", descrição "Leite desnatado e integral"; categoria "Prato Proteico", descrição "Bife bovino acebolado (1ª)").
+**Tabela 2 – ItemCardapio**: um item servido em uma refeição, com a categoria em que aparece. Na tela, cada categoria é um cartão com o nome da categoria e a descrição dos itens (ex.: categoria "Leite", descrição "Leite desnatado e integral"; categoria "Prato Proteico", descrição "Bife bovino acebolado (1ª)").
 
 | Atributo | Tipo | Descrição |
 |---|---|---|
 | id | Integer | Identificador único do item |
 | descricao | String | Texto do item, como exibido na tela; pode trazer um marcador, como "(1ª)" ou "(2ª)" |
 
-**Tabela 4 – CategoriaItem**: grupo em que os itens de uma refeição são apresentados, o título de cada cartão da tela da refeição. No Café da Manhã: "Leite", "Fruta", "Quitanda (vegana)", "Pães e quitandas" e "Complemento vegano". No Almoço e no Jantar: "Prato Proteico", "Opção Ovolactovegetariana", "Opção Vegana", "Guarnição", "Arroz", "Feijão", "Salada", "Refresco" e "Sobremesa" (lista completa informada pela Pessoa D na revisão REV-PR10 (B4); as capturas só chegam até "Guarnição", e os nomes exatos de "Arroz" a "Sobremesa" e de "Complemento vegano" na tela não foram vistos: P-RU-5).
+**Tabela 3 – CategoriaItem**: grupo em que os itens de uma refeição são apresentados, o título de cada cartão da tela da refeição. No Café da Manhã: "Leite", "Fruta", "Quitanda (vegana)", "Pães e quitandas" e "Complemento vegano". No Almoço e no Jantar: "Prato Proteico", "Opção Ovolactovegetariana", "Opção Vegana", "Guarnição", "Arroz", "Feijão", "Salada", "Refresco" e "Sobremesa" (lista completa informada pela Pessoa D na revisão REV-PR10 (B4); as capturas só chegam até "Guarnição", e os nomes exatos de "Arroz" a "Sobremesa" e de "Complemento vegano" na tela não foram vistos: P-RU-5).
 
 | Atributo | Tipo | Descrição |
 |---|---|---|
 | id | Integer | Identificador único da categoria |
 | nome | String | Nome da categoria, como exibido na tela |
 
-**Tabela 5 – TipoRefeicao** (enumeração): CAFE_DA_MANHA, ALMOCO, JANTAR.
+**Tabela 4 – TipoRefeicao** (enumeração): CAFE_DA_MANHA, ALMOCO, JANTAR.
 
 **Associações:**
 
-- Cardapio 1 — 1..* Refeicao ("reúne").
 - Refeicao 1 — 0..* ItemCardapio ("tem").
 - CategoriaItem 1 — 0..* ItemCardapio ("agrupa").
 
 **Regras e restrições:**
 
-- `Cardapio.dataFim` é igual ou posterior a `Cardapio.dataInicio`; existe no máximo um cardápio para cada semana.
-- `Refeicao.data` está entre `Cardapio.dataInicio` e `Cardapio.dataFim`; dentro de um cardápio, a combinação `tipo` e `data` não se repete.
+- A combinação `tipo` e `data` de `Refeicao` não se repete.
 - **O Jantar não tem sábado** (confirmado: o seletor do Jantar tem cinco letras, de segunda a sexta, na captura 26 da versão 3.2.0; P-RU-4): não existe `Refeicao` do tipo JANTAR em data que caia em sábado. Café da Manhã e Almoço têm refeição de segunda a sábado; nenhuma refeição tem domingo.
 - Todo item tem refeição e categoria; o nome da categoria é único.
 
@@ -69,11 +59,6 @@ Fora do DD: a data de hoje e o dia selecionado na tela são estado da tela (`Tel
 Trecho PlantUML:
 
 ```plantuml
-class Cardapio {
-  id: Integer
-  dataInicio: Date
-  dataFim: Date
-}
 class Refeicao {
   id: Integer
   tipo: TipoRefeicao
@@ -92,7 +77,6 @@ enum TipoRefeicao {
   ALMOCO
   JANTAR
 }
-Cardapio "1" -- "1..*" Refeicao : reúne >
 Refeicao "1" -- "0..*" ItemCardapio : tem >
 CategoriaItem "1" -- "0..*" ItemCardapio : agrupa >
 ```

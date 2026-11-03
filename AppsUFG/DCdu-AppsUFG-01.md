@@ -26,7 +26,7 @@ O diagrama detalha o caso de uso macro UC08 "Consultar apps UFG" do `DCdu-Geral-
 
 ---
 
-### UC01 – Visualizar catálogo de apps UFG
+### UC08.1 – Visualizar catálogo de apps UFG
 
 - **Ator principal:** Membro da comunidade UFG.
 - **Pré-condição:** O usuário está na tela inicial do app Minha UFG e toca no cartão "Apps UFG".
@@ -41,11 +41,11 @@ O diagrama detalha o caso de uso macro UC08 "Consultar apps UFG" do `DCdu-Geral-
 
 ---
 
-### UC02 – Abrir aplicativo na Play Store
+### UC08.2 – Abrir aplicativo na Play Store
 
 - **Ator principal:** Membro da comunidade UFG.
 - **Ator secundário:** Play Store.
-- **Pré-condição:** O catálogo de aplicativos está visível em tela (estende `UC01`).
+- **Pré-condição:** O catálogo de aplicativos está visível em tela (estende `UC08.1`).
 - **Fluxo principal:**
   1. O usuário toca em qualquer região do cartão correspondente ao aplicativo desejado (*RU UFG*, *INVENTARIO PATRIMONIAL* ou *CS - CANDIDATO*).
   2. O aplicativo identifica o identificador de pacote do aplicativo selecionado e aciona o componente de integração externa (`ILinkExterno.abrirLoja(idPacote)`).

@@ -5,9 +5,9 @@
 | **Código** | `DCla-Locais-02` |
 | **Título** | Classes de domínio e fonte de dados de Locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
-| **Rastreia para** | `DPac-Geral-01`, `DD-Locais-01`, `DCla-Locais-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DSeq-Locais-01` |
+| **Rastreia para** | `DPac-Geral-01`, `DCmp-Locais-01`, `DD-Locais-01`, `DCla-Locais-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DSeq-Locais-01`, `DD-Eventos-01` |
 
 ## Diagrama
 
@@ -21,9 +21,10 @@ O diagrama modela as entidades do modelo de domínio da funcionalidade Locais e 
 
 ### Camada de Domínio e Fonte de Dados
 
-- **`Local`:** Entidade base do domínio que representa qualquer ponto de interesse ou instalação no Campus Samambaia. Possui identificador, nome, foto circular, cor do marcador no mapa e coordenadas geográficas (`Coordenada` do pacote `Comum`). O método polimórfico `ehUnidadeAcademica()` retorna `false` por padrão.
-- **`UnidadeAcademica`:** Subclasse especializada de `Local` que representa unidades acadêmicas da universidade (institutos e faculdades). Adiciona os atributos `sigla` e `areaConhecimento`, sobrescrevendo `ehUnidadeAcademica()` para retornar `true`. Essa classe é compartilhada com o módulo de avaliação institucional, conforme seção 7 do `contrato-base.md`.
-- **`FonteLocais`:** Realização concreta da interface `IFonteDados<Local>` do pacote `Comum`. Encapsula a comunicação HTTP através de `IAcessoApi.obter("/locais")` e converte o corpo JSON retornado em instâncias de `Local` ou `UnidadeAcademica`.
+- **`Local`:** Entidade base do domínio que representa qualquer ponto de interesse ou instalação no Campus Samambaia. Possui identificador, nome, foto circular, cor do marcador no mapa, coordenadas geográficas (`Coordenada` do pacote `Comum`) e o campus a que pertence (`Campus`, entidade da Pessoa C no pacote `Comum`, `DD-Eventos-01`). O método polimórfico `ehUnidadeAcademica()` retorna `false` por padrão.
+- **`UnidadeAcademica`:** Subclasse especializada de `Local` que representa unidades acadêmicas da universidade (institutos e faculdades). Adiciona o atributo `sigla` e a grande área do conhecimento (`AreaConhecimento`, `DD-Locais-01`), sobrescrevendo `ehUnidadeAcademica()` para retornar `true`. Essa classe é compartilhada com o módulo de avaliação institucional, conforme seção 7 do `contrato-base.md`.
+- **`AreaConhecimento`:** grande área do conhecimento (CNPq/UFG) de cada UA, identificada pelo nome. É usada pela consulta de notas (`DCla-AvalConsultar-02`).
+- **`FonteLocais`:** Realização concreta da interface `IFonteDados<Local>` do pacote `Comum`. Encapsula a comunicação HTTP através de `IAcessoApi.obter("/locais")` e converte o corpo JSON retornado em instâncias de `Local` ou `UnidadeAcademica`, com o `Campus` e a `AreaConhecimento` correspondentes.
 
 ## Referências
 

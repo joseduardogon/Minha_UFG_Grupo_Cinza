@@ -17,7 +17,7 @@ Fonte: [`DAtv-Guia-01.puml`](DAtv-Guia-01.puml)
 
 ## Descrição
 
-Atividades do UC03 do `DCdu-Guia-01`, em quatro raias: Usuário, App, Android (seletor de apps) e Visualizador de PDF.
+Atividades do UC03.1 do `DCdu-Guia-01`, em quatro raias: Usuário, App, Android (seletor de apps) e Visualizador de PDF.
 
 O app só solicita a abertura: passa a URL externa do `guiaestudantil.pdf` e o tipo `application/pdf` ao componente LinkExterno do Comum (`ILinkExterno.abrirDocumento`, `DCla-Comum-01`). Quem baixa e exibe o PDF é o app escolhido. Falhas de download ou de abertura não retornam ao app; por isso o diagrama não tem ramo de erro.
 

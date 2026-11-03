@@ -46,7 +46,7 @@ Os identificadores (`id`) de dimensão, elemento e questão são inteiros atribu
 | Atributo | Tipo | Descrição |
 |---|---|---|
 | id | Integer | **Só no servidor.** Identificador da avaliação, atribuído no registro (P-AR-22) |
-| dataHoraRegistro | Date | **Só no servidor.** Data e hora em que o servidor registrou a avaliação (P-AR-22); o app não a envia nem a recebe |
+| dataHoraRegistro | DateTime | **Só no servidor.** Data e hora em que o servidor registrou a avaliação (P-AR-22); o app não a envia nem a recebe |
 
 No app, `Avaliacao` tem apenas as associações com `UnidadeAcademica` e `NotaQuestao` (`unidade` e `notas` em `DCla-AvalRegistrar-04`).
 
@@ -81,7 +81,7 @@ A questão a que a nota se refere é a associação `NotaQuestao` — `Questao` 
 1. Cada `NotaQuestao` liga uma nota (0 a 5) a uma `Questao`, e a `Questao` leva à sua `DimensaoQualidade` pelo caminho `Questao` → `ElementoEducacional` → `DimensaoQualidade`; é por esse caminho que as notas se agregam.
 2. Dentro de uma `Avaliacao`, a nota de um elemento é a média das notas de suas questões, a nota de uma dimensão é a média de seus elementos e a nota da avaliação é a média das dimensões (P-AR-12); o cálculo é de `AvalConsultar` e aqui só se registra.
 3. Como toda questão tem nota em toda avaliação (P-AR-5), essas médias não têm lacunas. Mas o questionário pode mudar entre uma avaliação e outra (P-AR-3, P-AR-21): avaliações antigas podem referenciar questões, elementos ou dimensões que já não estão no questionário vigente, e a agregação deve ser feita pelos `id`.
-4. A nota de uma UA, de uma área do conhecimento ou da UFG agrega várias avaliações, a partir de `Avaliacao.unidade` e de `UnidadeAcademica.areaConhecimento` (`DD-Locais-01`); como esta entrada não define a forma de agregar entre avaliações, ela é decisão de `AvalConsultar`.
+4. A nota de uma UA, de uma área do conhecimento ou da UFG agrega várias avaliações, a partir de `Avaliacao.unidade` e da `AreaConhecimento` da UA (`DD-Locais-01`); como esta entrada não define a forma de agregar entre avaliações, ela é decisão de `AvalConsultar`.
 5. Não há atributo de avaliador: não é possível filtrar, agrupar ou eliminar duplicatas por pessoa, e duas avaliações da mesma UA são independentes. Para ordenar ou filtrar no tempo, use `dataHoraRegistro`, que só existe no servidor.
 
 Trecho PlantUML:
@@ -104,7 +104,7 @@ class Questao {
 }
 class Avaliacao {
   id: Integer {só no servidor}
-  dataHoraRegistro: Date {só no servidor}
+  dataHoraRegistro: DateTime {só no servidor}
 }
 class NotaQuestao {
   valor: Integer {0..5}

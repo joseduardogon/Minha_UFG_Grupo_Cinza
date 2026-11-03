@@ -24,6 +24,7 @@ endif
 |Membro|
 if (O que o usuário faz?) then (escolhe uma área\n(só se exibindo))
   :Tocar em uma área;
+  -> \n\n\n\n;
   |App|
   :Abrir a TelaNotasArea\n(UC10.2, DAtv-AvalConsultar-02);
 else (volta)

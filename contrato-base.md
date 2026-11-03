@@ -69,9 +69,10 @@ D publica o rascunho do diagrama de casos de uso geral; cada pessoa detalha os c
 |---|---|
 | Regional, Campus | C |
 | Local, Unidade Acadêmica, Área de conhecimento (CNPq) | B |
-| Usuário / identificação do avaliador | C |
 
 - Unidade Acadêmica **é um** Local; nem todo Local é Unidade Acadêmica.
+- Regional e Campus ficam no pacote Comum, com C como dono da definição; Área de conhecimento é associação da UA, não atributo (decisões de 02/11/2026).
+- Não há entidade de usuário nem de avaliador: o Avaliador é só ator, porque a avaliação é anônima (decisão de 02/11/2026).
 - Quem precisa de uma entidade de outro dono a referencia, não a redefine.
 - **Formato de entrega a D:** entrada do dicionário de dados (nome, atributos, tipos, descrição) + trecho PlantUML.
 

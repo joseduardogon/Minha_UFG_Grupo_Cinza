@@ -1,9 +1,9 @@
-# DAtv-Locais-02 – Atividades de UC02: visualizar local no mapa
+# DAtv-Locais-02 – Atividades de UC07.2: visualizar local no mapa
 
 | Campo | Valor |
 |---|---|
 | **Código** | `DAtv-Locais-02` |
-| **Título** | Atividades de UC02: visualizar local no mapa |
+| **Título** | Atividades de UC07.2: visualizar local no mapa |
 | **Autor(a)** | Maicon Brendo da Silva |
 | **Revisor(a)** | Revisor(a) a definir |
 | **Status** | Em produção |
@@ -17,7 +17,7 @@ Fonte: [`DAtv-Locais-02.puml`](DAtv-Locais-02.puml)
 
 ## Descrição
 
-O diagrama detalha o fluxo de atividades do caso de uso `UC02: Visualizar local no mapa`, modelando a interação visual entre a aba de lista e a aba cartográfica através de três raias: **Usuário**, **App** e **Provedor de Mapa**.
+O diagrama detalha o fluxo de atividades do caso de uso `UC07.2: Visualizar local no mapa`, modelando a interação visual entre a aba de lista e a aba cartográfica através de três raias: **Usuário**, **App** e **Provedor de Mapa**.
 
 ### Dinâmica das atividades
 

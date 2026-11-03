@@ -27,7 +27,7 @@ Classes do componente TelaNoticias.
   - **`aoVoltar`:** encerra a tela e descarta o filtro e as notícias em memória.
 - **IControladorTelaRemota\<Noticia\>** (Comum) aparece com todas as suas operações atuais (`aoEntrarNaTela`, `recarregar`, `obterEstado`, `obterDados`, `registrarObservador`); a tela usa `aoEntrarNaTela`, `recarregar`, `obterDados` e `registrarObservador`. `ControladorTelaRemota<Noticia>` é a implementação do Comum, só instanciada aqui.
 - **FiltroNoticias** guarda a regional selecionada. Implementa `IFiltroNoticias`, interface que a `FonteNoticias` usa para ler a regional (`DCla-Noticias-02`). Diferente de Eventos, não há mês nem data: o único filtro de Notícias é a regional.
-- **Regional** é entidade de dono Pessoa C, compartilhada com Eventos e Locais (`DD-Eventos-01`). Está desenhada **fora do pacote Comum e sem atributos**, só como referência: o Comum não a define. A localização definitiva dela no `DPac-Geral-01` é pendência da integração (D-INT-03; correção B1 da revisão REV-PR10).
+- **Regional** é entidade de dono Pessoa C, compartilhada com Eventos e Locais (`DD-Eventos-01`). Está desenhada **sem atributos**, só como referência, com o estereótipo `<<Comum>>`: fica no pacote Comum (decisão da integração de 02/11/2026), e a Pessoa C continua dona da definição.
 
 As classes e interfaces dos estereótipos `<<Comum>>` pertencem ao pacote Comum e não são redefinidas aqui. Os contratos das operações estão em `Contrato-Noticias-01`.
 

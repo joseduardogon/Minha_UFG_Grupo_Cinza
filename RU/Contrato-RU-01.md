@@ -94,8 +94,7 @@ Premissas usadas:
 
 Invariantes das entidades; elas não têm operações, só atributos e associações.
 
-- **Cardapio:** `dataFim` é igual ou posterior a `dataInicio`. A fonte não instancia `Cardapio` (P-RU-10).
-- **Refeicao:** `tipo` e `data` não são nulos; a combinação `tipo` e `data` é única. **Se `tipo` é JANTAR, a `data` não cai em sábado** (o Jantar não tem sábado: P-RU-4, confirmada na captura 26); por isso `diasDisponiveis(JANTAR)` não tem sábado. Uma `Refeicao` criada pela fonte não tem `Cardapio` associado.
+- **Refeicao:** `tipo` e `data` não são nulos; a combinação `tipo` e `data` é única. **Se `tipo` é JANTAR, a `data` não cai em sábado** (o Jantar não tem sábado: P-RU-4, confirmada na captura 26); por isso `diasDisponiveis(JANTAR)` não tem sábado.
 - **ItemCardapio:** `descricao` não é vazia (pode trazer marcador, como "(1ª)"); tem exatamente uma `CategoriaItem` e pertence a uma `Refeicao`.
 - **CategoriaItem:** `nome` não é vazio.
 - **TipoRefeicao:** só admite `CAFE_DA_MANHA`, `ALMOCO` e `JANTAR` (P-RU-1).

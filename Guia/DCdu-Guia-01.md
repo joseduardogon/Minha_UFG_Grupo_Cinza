@@ -19,7 +19,7 @@ Fonte: [`DCdu-Guia-01.puml`](DCdu-Guia-01.puml)
 
 Detalha o caso de uso UC03 "Consultar guia estudantil" do `DCdu-Geral-01`. O Guia não tem tela própria: o cartão da tela inicial entrega o arquivo `guiaestudantil.pdf`, hospedado numa URL externa, a um app do aparelho escolhido pelo seletor de apps do Android. O ator secundário é o **Visualizador de PDF**, especialização de **Aplicativo externo**.
 
-**UC03 – Consultar guia estudantil**
+**UC03.1 – Consultar guia estudantil**
 
 - **Ator principal:** Membro da comunidade UFG (uso anônimo, sem login).
 - **Ator secundário:** Visualizador de PDF.

@@ -34,7 +34,6 @@ Só as notas por questão são guardadas; todas as médias são calculadas pelo 
 
 | Atributo | Tipo | Descrição |
 |---|---|---|
-| areaConhecimento | String | Nome da grande área, igual aos valores de `UnidadeAcademica.areaConhecimento` (`DD-Locais-01`) |
 | nota | Real [0..1] | Média de 0 a 5; ausente quando nenhuma UA da área tem avaliação (P-AC-4) |
 
 **Tabela 3 – NotaUnidade**: nota de uma unidade acadêmica.
@@ -51,15 +50,12 @@ Só as notas por questão são guardadas; todas as médias são calculadas pelo 
 
 A nota da UFG não é entidade: é um valor único devolvido com a lista de áreas (`FonteNotasUFG.obterNotaUfg`, `DCla-AvalConsultar-02`).
 
-**Associações:** `NotaUnidade` 0..* — 1 `UnidadeAcademica` ("unidade"); `NotaDimensao` 0..* — 1 `DimensaoQualidade` ("dimensao").
-
-**Observação para a integração (D-INT-01).** O contrato-base trata a Área de conhecimento (CNPq) como entidade de B, mas o `DD-Locais-01` a modela como atributo `String` de `UnidadeAcademica`. Por isso `MediaArea.areaConhecimento` também é `String`. Se B criar a entidade, o atributo vira associação `MediaArea` 0..* — 1 `AreaConhecimento`.
+**Associações:** `MediaArea` 0..* — 1 `AreaConhecimento` ("areaConhecimento"; entidade de B, `DD-Locais-01`); `NotaUnidade` 0..* — 1 `UnidadeAcademica` ("unidade"); `NotaDimensao` 0..* — 1 `DimensaoQualidade` ("dimensao").
 
 Trecho PlantUML:
 
 ```plantuml
 class MediaArea {
-  areaConhecimento: String
   nota: Real [0..1]
 }
 class NotaUnidade {
@@ -68,6 +64,7 @@ class NotaUnidade {
 class NotaDimensao {
   nota: Real
 }
+MediaArea "0..*" --> "1" AreaConhecimento : areaConhecimento
 NotaUnidade "0..*" --> "1" UnidadeAcademica : unidade
 NotaDimensao "0..*" --> "1" DimensaoQualidade : dimensao
 ```

@@ -54,7 +54,7 @@ A agregação usa os `id` de dimensão, elemento e questão, para que avaliaçõ
 
 ### Classes FonteNotasUFG, FonteNotasArea e FonteNotasUnidade
 
-*Invariantes:* `acesso` nunca é nulo; `areaConhecimento` não é vazio (FonteNotasArea); `unidade` não é nula (FonteNotasUnidade).
+*Invariantes:* `acesso` nunca é nulo; `areaConhecimento` não é nula (FonteNotasArea); `unidade` não é nula (FonteNotasUnidade).
 
 **Tabela 3 – Contratos das fontes**
 
@@ -62,12 +62,12 @@ A agregação usa os `id` de dimensão, elemento e questão, para que avaliaçõ
 |---|---|---|---|
 | Construtores | Parâmetros não nulos | Fonte pronta; valor agregado ausente; nenhuma chamada à API | – |
 | `FonteNotasUFG.carregar()` | – | A API foi chamada uma vez (`/avaliacao/notas`); devolve uma `MediaArea` por área, possivelmente lista vazia; `notaUfg` atualizada (R6, R7) | `ErroApi` de qualquer tipo, repassado sem tratamento |
-| `FonteNotasArea.carregar()` | – | A API foi chamada uma vez (`/avaliacao/notas/area`, `area = areaConhecimento`); devolve uma `NotaUnidade` por UA da área, possivelmente vazia; `mediaArea` atualizada (R5, R6) | Idem |
+| `FonteNotasArea.carregar()` | – | A API foi chamada uma vez (`/avaliacao/notas/area`, `area = areaConhecimento.nome`); devolve uma `NotaUnidade` por UA da área, possivelmente vazia; `mediaArea` atualizada (R5, R6) | Idem |
 | `FonteNotasUnidade.carregar()` | – | A API foi chamada uma vez (`/avaliacao/notas/unidade`, `unidade = unidade.id`); devolve uma `NotaDimensao` por dimensão avaliada, vazia se a UA não tem avaliações; `notaUnidade` atualizada (R4, R5) | Idem |
 | `obterNotaUfg()`, `obterMediaArea()`, `obterNotaUnidade()` | `carregar()` terminou sem erro | Devolve o valor agregado da última carga (pode ser ausente); o estado não muda | – |
 | `converter(corpo)` (privada, das três) | `corpo` é o texto da resposta | Devolve a lista e guarda o valor agregado | `ErroApi` `RESPOSTA_INVALIDA` se o texto não é JSON legível ou se alguma nota está fora de 0 a 5 |
 
-*Invariantes das entidades (`DD-AvalConsultar-01`):* toda nota presente está entre 0 e 5; `NotaDimensao.nota` está sempre presente; `MediaArea.areaConhecimento` não é vazio.
+*Invariantes das entidades (`DD-AvalConsultar-01`):* toda nota presente está entre 0 e 5; `NotaDimensao.nota` está sempre presente; `MediaArea.areaConhecimento` não é nula.
 
 ## Referências
 

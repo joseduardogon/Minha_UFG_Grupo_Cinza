@@ -1,9 +1,9 @@
-# DAtv-Locais-03 – Atividades de UC03: centralizar em minha localização atual
+# DAtv-Locais-03 – Atividades de UC07.3: centralizar em minha localização atual
 
 | Campo | Valor |
 |---|---|
 | **Código** | `DAtv-Locais-03` |
-| **Título** | Atividades de UC03: centralizar em minha localização atual |
+| **Título** | Atividades de UC07.3: centralizar em minha localização atual |
 | **Autor(a)** | Maicon Brendo da Silva |
 | **Revisor(a)** | Revisor(a) a definir |
 | **Status** | Em produção |
@@ -17,7 +17,7 @@ Fonte: [`DAtv-Locais-03.puml`](DAtv-Locais-03.puml)
 
 ## Descrição
 
-O diagrama detalha o fluxo de atividades do caso de uso `UC03: Centralizar em minha localização atual`, modelando a integração do app Minha UFG com os sensores de geolocalização do aparelho móvel e com o provedor de mapa, estruturado em quatro raias: **Usuário**, **App**, **Android / GPS** e **Provedor de Mapa**.
+O diagrama detalha o fluxo de atividades do caso de uso `UC07.3: Centralizar em minha localização atual`, modelando a integração do app Minha UFG com os sensores de geolocalização do aparelho móvel e com o provedor de mapa, estruturado em quatro raias: **Usuário**, **App**, **Android / GPS** e **Provedor de Mapa**.
 
 ### Dinâmica das atividades
 

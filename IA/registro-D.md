@@ -1,417 +1,100 @@
 # Registro de uso de IA – Pessoa D
 
-Formato de cada entrada: identificação da IA, URL, data de acesso, prompt completo e uso dado à resposta.
-A referência ABNT que vai para a bibliografia aparece no fim de cada entrada.
+Autor: Phablo (Pessoa D). Frente: transversais (DImp, DPac, pacote Comum, DCdu geral e tela inicial), Rádio, Guia Estudantil e Avaliação – Consultar notas, mais a integração (DDados e DD consolidados, recebimento das entidades e matriz de rastreabilidade) e a revisão dos itens da Pessoa C.
 
-## D-IA-01 – Planejamento da preparação do repositório (D-PRE-01)
+Formato de cada entrada: identificação da IA, URL, data de acesso, resumo do uso, divisão do trabalho e prompts. A referência ABNT que vai para a bibliografia aparece no fim de cada entrada.
 
-- **IA:** Anthropic. Claude (Claude Opus 5.5). Assistente de IA.
+## D-IA-01 – Preparação do repositório e desenho transversal inicial (D-PRE e D-DST)
+
+- **IA:** Anthropic. Claude (modelo Claude Opus 5.5). Assistente de IA.
 - **URL:** claude.ai
 - **Data de acesso:** 14 de outubro de 2026.
-- **Contexto fornecido:** enunciado da APS (2026-2-INF0290-Definio_de_APS.pdf), contrato-base.md, contexto-equipe.md, "Roteiro de atividades pessoa D semana 1" e 17 capturas de tela do app Minha UFG v3.1.1.
-- **Uso da resposta:** verificação de lacunas antes do D-PRE-01; geração da estrutura de pastas do repositório, do `Template-Item.md` e deste registro; orientação para aplicar as alterações via git bundle; definição dos atores e do rascunho do DCdu geral (D-DST-01); ajuste da seção 5 do contrato; geração do DPac e do DImp (D-DST-02) e dos componentes, classes e estados do pacote Comum (D-DST-03).
+- **Contexto fornecido pelo autor:** enunciado da APS, `contrato-base.md`, `contexto-equipe.md`, o roteiro de atividades da Pessoa D para a semana 1 e 17 capturas de tela do app Minha UFG v3.1.1.
 
-### Prompt 1
+### O que o autor fez
 
-> o arquivo "roteiro de atividades pessoa D semana 1" foi escrito para eu ter um passo a passo de execução da semana 1 estratégico. ele foi pensado em primeiramente destravar o time oferecento  a base inicial para eles trabalharem, posteriormente eu fazer as minhas entregas individuais, e só depois eu unificar as entregas do time para finalizar a semana 1. tem alguma pergunta importante que você deve me fazer ou já temos tudo o suficiente para seguir com o D-PRE-01? o repositório a ser usado já foi criado.
+- Definiu a estratégia da semana: primeiro destravar a equipe com a base comum, depois a produção individual e só então a integração.
+- Informou o repositório da equipe e a regra de não commitar na `main` (tudo por branch e pull request, abertos por ele).
+- Decidiu que o contrato prevalece sobre o `Guia_Diagramas.md` e que os documentos de apoio iam para `Docs/`.
+- Tomou as decisões de modelagem do DCdu geral: não há quinto membro, o Painel web fica só no DImp e "Play Store / navegador" vira o ator **Aplicativo externo**, com as especializações Play Store, Navegador e Visualizador de PDF.
+- Aplicou as alterações no repositório pela própria máquina (git bundle), revisou os diagramas e abriu os PRs.
 
-### Prompt 2
+### O que a IA fez, sob a direção do autor
 
-> sobre seus pontos
->
-> 1. https://github.com/joseduardogon/Minha_UFG_Grupo_Cinza/tree/main -> esse é o repositório. tá desorganizado com arquivos soltos. não está permitido commits na main, então teremos que criar branches e abrir pr (essa parte deixa comigo)
->
-> 2. esqueça o prazo. foque na semana 1, estamos fazendo a semana 1.
-> 3. pode ser concordo, siga assim
->
-> siga em frente com a implementação da d-pre-01. se tiver algum impasse, impedimento, ou dúvida me acione para esclarecimento.
+- Verificou lacunas antes do D-PRE-01 e propôs a estrutura de pastas, o `Template-Item.md` e o primeiro registro de IA.
+- Orientou a transferência das alterações por git bundle, com a sequência de comandos explicada.
+- Redigiu o rascunho do `DCdu-Geral-01` (D-DST-01), o ajuste da seção 5 do contrato, o `DPac-Geral-01` e o `DImp-Geral-01` (D-DST-02) e os componentes, classes e estados do pacote Comum (`DCmp-Comum-01`, `DCla-Comum-01` a `04`, `DEst-Comum-01`) (D-DST-03).
 
-### Prompt 3
+### Prompts (resumo cronológico)
 
-> fez push da branch para que eu consiga abrir o pr?
->
-> sobre as suas escolhas, tranquilo sem problemas,
->
-> sobre as decisões
->
-> 1. certo faz sentido. mova para Docs/
-> 2. prevalece o contrato, pois foi acordado com os partifipantes. depois converso com o time para removermos Guia_Diagramas.md
+1. 14/10: perguntar se havia alguma dúvida importante antes do D-PRE-01, explicando a estratégia do roteiro da semana 1.
+2. 14/10: informar o repositório, a proibição de commit na `main` e o foco na semana 1, e mandar seguir com o D-PRE-01.
+3. 14/10: pedir o push da branch, mover os documentos para `Docs/` e manter o contrato como regra.
+4. 14/10: pedir uma forma de levar as alterações do ambiente da IA para a máquina local e, depois, a sequência de comandos para aplicar os bundles no Ubuntu, conferindo a saída do terminal.
+5. 14/10: seguir com o D-DST-01, respondendo às dúvidas sobre membros, Painel web e Aplicativo externo.
+6. 14/10: mandar o bundle completo de D-DST-02 e D-DST-03 de uma vez, para revisão conjunta.
 
-### Prompt 4
-
-> tá, parece que você clonou o repo no seu ambiente local e fez as alterções. mas eu não tenho acesso ao seu ambiente local, como vou fazer? vou precisar clonar o repo na minha maquina e acessar com o claude code? mas como eu faria isso mantendo a configuração de projeto com todos os anexo que eu criei? me passe uma maneira de resolver esse impasse
-
-### Prompt 5
-
-> clonei a branch e entrei no diretório. baixei os bundles e deixei na pasta de downloads(/home/asus/Downloads). estou no ubuntu. me de a sequencia de comandos e o indicativo do que cada um faz
-
-### Prompt 6
-
-> [saída do terminal com os comandos git pull, git bundle verify, git fetch, git checkout, git log e git rebase, omitida]
->
-> até então, tudo correto né?
-
-### Prompt 7
-
-> abri o pr. quando ele for aceito, finalizaremos o D-PRE-01?
-
-### Prompt 8
-
-> vamos seguir com D-DST-01. tem alguma decisão ou informação pendente ou não deduzível que você precisa?
-
-### Prompt 9
-
-> 1. não tem quinto membro. eu sou o membro D. não se preocupe com nomes, pode chamar cada um de "pessoa A, pessoa B, Pessoa C"
-> 2. perfeito, mantenha o Painel web só no DImp
-> 3. certo, generalize "Play Store / navegador" num ator Aplicativo externo com três especializações: Play Store, Navegador e Visualizador de PDF
->
-> sobre o que você assumiu e deduziu, tá tudo correto.
->
-> com isso, qual a maneira mais pratica de você me enviar a implementação? via bundle? não vou abrir o PR ainda. vou deixar para abrir um pr único com os commits relativos a D-DST-01 até D-DST-03
-
-### Prompt 10
-
-> diagrama ok. vamos agilizar esse processo. já me mande de uma vez o bundle completo para D-DST-02 e D-DST-03. eu reviso tudo de uma vez e se tiver alguma inconsistencia e erro te aviso e vamos ajustando. mande o bundle detalhado e completo.
+Os prompts completos, quando tiverem mais de um parágrafo, vão para o apêndice de prompts do documento final (regra 6 do enunciado).
 
 ### Referência (ABNT)
 
 ANTHROPIC. **Claude**. Assistente de IA. Disponível em: claude.ai. Acesso em: 14 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
 
-<!-- Os dois prompts têm mais de um parágrafo, então vão para o apêndice de prompts. Preencher <X> na editoração. -->
+## D-IA-02 – Apoio à produção, à revisão e à integração do bloco D
 
-## D-IA-02 – Guia Estudantil: comportamento (D-IND-01)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
+- **IA:** Anthropic. Claude Code (modelo Claude Opus 5.5). Assistente de IA.
 - **URL:** https://claude.com/claude-code
-- **Data de acesso:** 20 de outubro de 2026.
-- **Contexto fornecido:** repositório da equipe, contrato-base.md, contexto-equipe.md, roteiro-pessoa-D.md e os prints 04 e 05 (Guia Estudantil).
-- **Uso da resposta:** plano do D-IND-01; geração de `DCdu-Guia-01`, `DAtv-Guia-01` e `DIhc-Guia-01` (.puml, .png e .md); registro da decisão "Guia Estudantil sem tela própria" em `Docs/decisoes.md`.
+- **Data de acesso:** de 19 de outubro a 2 de novembro de 2026.
+- **Contexto fornecido pelo autor:** enunciado da APS, repositório da equipe (contrato-base, divisão de trabalho, itens de B e C), `contexto-equipe.md`, o roteiro da Pessoa D, as capturas de tela do app e as instruções e correções descritas abaixo.
 
-### Prompt 1
+### O que o autor fez
 
-> vamos seguir com o roteiro-pessoa-d. fase 0 e 1 estão finalizadas. vamos para a fase 2 (D-IND-01). tem algo pendente para o início da fase 2? ou podemos seguir? seria interessante criar outra branch ou dá para seguir na atual?
+- Replanejou o próprio trabalho em duas ocasiões: em 19/10, para fazer a integração só depois das entregas individuais de todos; em 31/10, após a saída da Pessoa A, assumindo Avaliação – Consultar notas e a revisão do PR de Avaliação – Registrar.
+- Definiu as regras de trabalho: branch única para a fase 2, um commit por código, nenhum commit na `main`, PRs abertos em nome dele e sem menção à IA.
+- Aprovou ou ajustou cada plano antes da execução e respondeu às dúvidas sobre o comportamento real do app, com base no uso do aplicativo:
+  - Guia Estudantil: o PDF sempre vem de uma URL externa, e erros de abertura são do aparelho e não voltam ao app.
+  - Rádio: o app busca a semana inteira de uma vez e filtra o dia em memória; a URL do player é fixa; não há troca de dia por gesto; a nova entrada na tela refaz a chamada.
+  - Tela inicial: a versão é texto fixo.
+- Escolheu entre as opções de modelagem apresentadas pela IA: URL do Guia como configuração fixa; navegação em três níveis na consulta de notas; UA sem avaliação exibida como "Sem avaliações" e fora das médias; média de médias; cálculo das notas no servidor; quebra do ciclo entre os pacotes de avaliação mantendo só a dependência de entidade.
+- Na revisão dos PRs #10 e #11 da Pessoa C, filtrou os achados: manteve só os bloqueantes, descartou as sugestões e a análise do registro de IA, e combinou com a Pessoa C aceitar o PR #11 e corrigir ele mesmo os bloqueantes.
+- Recebeu as revisões da Pessoa B (PR #12 e problemas visuais nos diagramas de atividades) e mandou corrigir.
+- Na integração, combinou com a equipe que corrigiria ele mesmo todos os achados nos arquivos de B e C, aprovou as recomendações para cada conflito, autorizou a renumeração dos casos de uso e decidiu o que ficava só como observação.
+- Conferiu todos os itens produzidos e decidiu o que foi commitado, enviado e incluído nos PRs.
 
-### Prompt 2
+### O que a IA fez, sob a direção do autor
 
-> sim, apresente o plano do D-IND-01
+- Ajustou o roteiro local e as instruções de trabalho a cada replanejamento e montou o plano de cada código antes da execução.
+- Fase 2 (D-PLN-01 e D-IND-01 a 08): redigiu a cascata do Guia Estudantil (`DCdu`, `DAtv`, `DIhc`, `DD`, `DCmp`, `DCla`, `DSeq-Guia-01` e `02`, `DEst`, `Contrato`), a da Rádio (`DCdu`, `DAtv-Radio-01` a `03`, `DIhc`, `DD`, `DCmp`, `DCla-Radio-01` e `02`, `DSeq-Radio-01` a `03`, `DEst`, `Contrato`, `ECA`), a tela inicial (`DIhc-Inicio-01` e `DEst-Inicio-01`) e o fechamento do Comum (`Contrato-Comum-01` a `04`, `ECA-Comum-01`), além das decisões correspondentes em `Docs/decisoes.md`.
+- Revisões (D-REV-01 e D-REV-02): compilou os diagramas dos PRs #10 e #11, levantou os achados e redigiu os pareceres `REV-PR10` e `REV-PR11` e os textos publicados nos PRs; corrigiu o `DCla-Comum-03` apontado na revisão.
+- Avaliação – Consultar notas (D-AVC-01 a 03): corrigiu os bloqueantes B1 e B2 do PR #11 nos `DAtv-AvalRegistrar-01` e `02` e redigiu a cascata completa (`DCdu`, `DAtv-AvalConsultar-01` a `03`, `DIhc-01` a `03`, `DD`, `DCmp`, `DCla-01` e `02`, `DSeq-01` a `03`, `DEst-01` a `03`, `Contrato` com as regras de cálculo R1 a R7, `ECA`), com ajustes em `AvalRegistrar` e no `DPac-Geral-01`.
+- Ajustou os arquivos versionados ao replanejamento de 31/10 (D-INT-07) e aplicou as correções da revisão do PR #12 e das setas sobrepostas nos DAtv de avaliação.
+- Integração (D-INT-01 a 04 e 08): redigiu o `Integracao/recebimento.md` (checagem de donos, da herança UA–Local e 12 conflitos), recomendou as soluções e aplicou as correções nos arquivos de B, C e D (incluindo os novos `DD-Seguranca-01` e `DD-AppsUFG-01`); redigiu o `DDados-Geral-01` e o `DD-Geral-01`; fechou o `DCdu-Geral-01`, o `DPac-Geral-01` e o `DImp-Geral-01`, com a renumeração dos casos de uso; montou a matriz `Integracao/rastreabilidade.md`.
+- Gerou as imagens dos diagramas com o PlantUML, conferiu nomes, links e rastreabilidade por script e redigiu as mensagens de commit e os textos dos PRs.
+- Os textos produzidos foram revisados e ajustados pelo autor; o que não foi confirmado no app está marcado como premissa nos READMEs de cada pasta.
 
-### Prompt 3
+### Prompts (resumo cronológico)
 
-> sobre o plano proposto, aprovado, siga em frente com ele.
->
-> sobre as suas dúvidas:
-> 1. o pdf é sempre baixado de uma url externa.
-> 2. isso não é preocupação do app. vai aparecer o erro do próprio dispositivo (algo como "formato incompatível com o dispositivo"). o aplicativo não se preocupa com a capacidade de abertura do formato pdf do dispositivo. erros de abertura do pdf não retornam para o app.
-> 3. escolha o que for mais simples
+1. 19/10: resumir o papel da Pessoa D e o que faltava para fechar o D-DST-01.
+2. 19/10: replanejar o roteiro para entregar as etapas 1 e 2 antes da integração, aprovando as mudanças propostas e respondendo às dúvidas (D-PLN-01).
+3. 19/10: iniciar a fase 2 numa branch única, com um commit por código, e apresentar o plano do D-IND-01.
+4. 20/10: aprovar os planos e responder às dúvidas do Guia (D-IND-01 a 03), da Rádio (D-IND-04 a 06) e da tela inicial (D-IND-07), e seguir para o fechamento do Comum (D-IND-08).
+5. 20/10: recapitular a produção individual do dia.
+6. 31/10: tirar os prazos fixos dos arquivos locais de apoio, mantendo só as entregas.
+7. 31/10: registrar localmente a nova divisão de trabalho após a saída da Pessoa A e refazer o roteiro com checkboxes, incluindo a revisão do PR de Avaliação – Registrar e a consulta de notas.
+8. 31/10: revisar os PRs #10 e #11 da Pessoa C, filtrar os achados, publicar o parecer do #10 em nome do autor e aceitar o #11 com os bloqueantes corrigidos pelo próprio autor.
+9. 31/10 e 01/11: implementar D-AVC-01, 02 e 03, respondendo às perguntas de modelagem.
+10. 01/11: remover a atividade D-INT-06, ajustar os arquivos versionados à nova divisão (D-INT-07), redigir e abrir o PR da produção individual em nome do autor.
+11. 01/11: discutir a flexibilização da regra de registro de uso de IA combinada com o professor.
+12. 02/11: corrigir os bloqueantes e as sugestões da revisão do PR #12 feita pela Pessoa B.
+13. 02/11: revisar todos os diagramas e corrigir as setas sobrepostas relatadas pela Pessoa B.
+14. 02/11: iniciar a fase 3 (D-INT-01), permitir a alteração dos arquivos de B e C e registrar no roteiro que o autor corrige todos os achados (D-INT-08).
+15. 02/11: implementar D-INT-02, D-INT-03 (com a renumeração dos casos de uso) e D-INT-04, e preparar o texto do PR da integração.
+16. 02/11: refazer este registro no formato resumido usado pela Pessoa C.
+
+Os prompts completos, quando tiverem mais de um parágrafo, vão para o apêndice de prompts do documento final (regra 6 do enunciado).
 
 ### Referência (ABNT)
 
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
+ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 2 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
 
-<!-- O prompt 3 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
-
-## D-IA-03 – Guia Estudantil: estrutura (D-IND-02)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 20 de outubro de 2026.
-- **Contexto fornecido:** repositório da equipe, contrato-base.md, roteiro-pessoa-D.md, itens do D-IND-01 e do pacote Comum.
-- **Uso da resposta:** plano do D-IND-02; geração de `DD-Guia-01`, `DCmp-Guia-01` e `DCla-Guia-01`; registro da decisão "URL do Guia Estudantil como configuração fixa" em `Docs/decisoes.md`.
-
-### Prompt 1
-
-> push somente no fim da fase 2. vamos seguir para D-IND-02
-
-### Prompt 2
-
-> opção a, configuração fixa no app. pode seguir
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-04 – Guia Estudantil: detalhamento (D-IND-03)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 20 de outubro de 2026.
-- **Contexto fornecido:** repositório da equipe, itens do D-IND-01 e do D-IND-02, pacote Comum e itens de Eventos (padrão de DSeq e contratos).
-- **Uso da resposta:** geração de `DSeq-Guia-01`, `DSeq-Guia-02`, `DEst-Guia-01` e `Contrato-Guia-01`; justificativa da ausência de regras E-C-A no Guia.
-
-### Prompt 1
-
-> sim
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-05 – Rádio: comportamento (D-IND-04)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 20 de outubro de 2026.
-- **Contexto fornecido:** repositório da equipe, contexto-equipe.md, roteiro-pessoa-D.md, print 03 (Rádio) e pacote Comum.
-- **Uso da resposta:** plano do D-IND-04; geração de `DCdu-Radio-01`, `DAtv-Radio-01` a `03` e `DIhc-Radio-01`; registro da decisão "Carga semanal da programação da Rádio" em `Docs/decisoes.md`.
-
-### Prompt 1
-
-> sim, siga para o D-IND-04.
-
-### Prompt 2
-
-> sobre o plano proposto, aprovado, siga em frente com ele.
->
-> sobre as suas dúvidas:
-> 1. o app sempre busca a semana atual inteira de uma vez. filtra ao mudar de aba mas o dado já está em memória. por se tratar de apenas texto, o peso é bem baixo e o desempenho não é comprometido. mas se eu sair do rádio e entrar novamente, uma outra chamada de api é feita.
-> 2. fixa no app. não há parâmetro dinâmico que vai junto com a abertura do rádio. apenas abre a url fixa.
-> 3. não. só clicando no dia específico mesmo.
-> 4. como na semana atual a programação da rádio está cheia, não consigo verificar manualmente esse estado vazio. então siga com a mensagem genérica de vazio mesmo
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-<!-- O prompt 2 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
-
-## D-IA-06 – Rádio: estrutura (D-IND-05)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 20 de outubro de 2026.
-- **Contexto fornecido:** repositório da equipe, itens do D-IND-04, pacote Comum e itens de Eventos (padrão de componentes e classes).
-- **Uso da resposta:** geração de `DD-Radio-01`, `DCmp-Radio-01`, `DCla-Radio-01` e `DCla-Radio-02`; registro da decisão "Entidades da Rádio" em `Docs/decisoes.md`.
-
-### Prompt 1
-
-> está certo a sua dedução ao voltar. siga em frente com D-IND-05
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-07 – Rádio: detalhamento (D-IND-06)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 20 de outubro de 2026.
-- **Contexto fornecido:** repositório da equipe, itens do D-IND-04 e do D-IND-05, pacote Comum e itens de Eventos (padrão de DSeq, contratos e ECA).
-- **Uso da resposta:** geração de `DSeq-Radio-01` a `03`, `DEst-Radio-01`, `Contrato-Radio-01` e `ECA-Radio-01`.
-
-### Prompt 1
-
-> sim, siga para o D-IND-06
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-08 – Tela inicial (D-IND-07)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 20 de outubro de 2026.
-- **Contexto fornecido:** repositório da equipe, contexto-equipe.md, print 01 (tela inicial), `DPac-Geral-01` e itens do Guia e da Rádio.
-- **Uso da resposta:** identificação do conflito entre os 8 cartões do app e as dependências do `DPac-Geral-01`; geração de `DIhc-Inicio-01` e `DEst-Inicio-01`; ajuste do texto do `DPac-Geral-01`; registro da decisão "Cartão Avaliação de UA na tela inicial" em `Docs/decisoes.md`.
-
-### Prompt 1
-
-> sim, siga para o D-IND-07
-
-### Prompt 2
-
-> opção b, versão é só texto fixo. pode seguir
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-09 – Fechamento do Comum (D-IND-08)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 20 de outubro de 2026.
-- **Contexto fornecido:** repositório da equipe, classes e estados do pacote Comum, itens do Guia, da Rádio e de Eventos.
-- **Uso da resposta:** geração de `Contrato-Comum-01` a `04` e `ECA-Comum-01`; correção do texto de `DCla-Comum-03` e `DEst-Comum-01` (a Rádio não recarrega ao trocar de aba); texto do pedido de revisão à Pessoa C e do PR da fase 2.
-
-### Prompt 1
-
-> sim, siga para o D-IND-08
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 20 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-10 – Revisão do PR #10 de Eventos, Notícias e RU (D-REV-02)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 31 de outubro de 2026.
-- **Contexto fornecido:** PR #10 da Pessoa C (branch `ultima_entrega(c)`), contrato-base, Comum, contexto da equipe e prints 06, 07 e 10 a 16.
-- **Uso da resposta:** identificação dos PRs pendentes; compilação dos diagramas; levantamento de achados, depois filtrados pela Pessoa D; parecer `Integracao/revisoes/REV-PR10-Eventos-Noticias-RU.md`; correção do texto de `DCla-Comum-03` (o RU não recarrega ao trocar de dia).
-
-<!-- O prompt 4 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
-
-### Prompt 1
-
-> instalei e autentiquei o gh. ja deve estar disponível. na verdade tem 2 pr do josé que vamos revisar. identiique ambos prs e me resuma o que tem pra ser revisado e qual deve ser revisado pimeiro (se fizer diferença a ordem )
-
-### Prompt 2
-
-> comece pelo #10, use D-REV-02 como código. antes de começar a revisão de fato, me diga o que você faz na revisão além de analisar o código. você deixa um comentário e já aceita e nega p pr? como funciona?
-
-### Prompt 3
-
-> pode sim.
-
-### Prompt 4
-
-> sobre os 8 bloqueantes:
-> 1-7. certo concordo são bloqueantes
-> 8. pode ignorar completamente análise de registro de ia. a regra vamos entrar em acordo depois.
->
->
-> sobre as sugestões: como não são bloqueantes, ignore completamente todas(decisão final não questione).
->
-> sobre as decisões:
-> 1. fica de fora, ignore.
-> 2. sim a ele está certo, a correção seria no meu mesmo. sim pode gerar commit para isso (sem push ainda).
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-11 – Revisão do PR #11 de Avaliação – Registrar (D-REV-01)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 31 de outubro de 2026.
-- **Contexto fornecido:** PR #11 da Pessoa C (branch `a/avalregistrar-pr`), enunciado da APS, contrato-base, Comum e entidades de Locais.
-- **Uso da resposta:** compilação dos diagramas; levantamento de achados, depois filtrados pela Pessoa D; parecer `Integracao/revisoes/REV-PR11-AvalRegistrar.md` e texto da aprovação publicada no PR.
-
-<!-- O prompt 2 tem mais de um parágrafo, então vai para o apêndice de prompts. Preencher <X> na editoração. -->
-
-### Prompt 1
-
-> pode começar o #11
-
-### Prompt 2
-
-> sobre os dois pontos
-> - concordo
-> - deixe fora do parecer mesmo. a gente tá revisando sem pessoa fixa, quem tiver livre revisa
->
-> sobre esse PR, eu concordo com os bloqueantes mas alinhei com o josé e vamos fazer o seguinte: vou aceitar esse PR e eu mesmo vou pegar esses bloqueantes e corrigir em conjunto com a minha atividade na parte de avaliação. isso para agilizar o processo já que preciso dessas alterações do pr 11 para iniciar a minha parte e o josé não está livre nesse exato momento, portanto isso me atrasaria.
->
-> portanto, decisão final: aceitar esse pr e eu mesmo corrigir os pontos na minha produção individual atividade.
->
-> escreva o parecer, mostre o rascunho.
-
-### Prompt 3
-
-> aprovado. sobre o aviso, já remova essa proibição de alteração
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-12 – Avaliação – Consultar notas: comportamento (D-AVC-01)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 31 de outubro de 2026.
-- **Contexto fornecido:** enunciado da APS (Apêndice A), contrato-base, itens de `AvalRegistrar/` (PR #11), parecer `Integracao/revisoes/REV-PR11-AvalRegistrar.md`, `DD-Locais-01` e Comum.
-- **Itens produzidos:** correção dos bloqueantes B1 e B2 em `DAtv-AvalRegistrar-01` e `02` (commit à parte); `DCdu-AvalConsultar-01`, `DAtv-AvalConsultar-01` a `03`, `DIhc-AvalConsultar-01` a `03`, premissas no `AvalConsultar/README.md` e decisão de 31/10/2026 em `Docs/decisoes.md`.
-- **Uso da resposta:** rascunho dos diagramas e dos textos; as decisões de navegação e de cálculo foram tomadas pela Pessoa D entre opções apresentadas pela IA.
-
-### Prompt 1
-
-> vamos seguir com d-avc-01. precisa confirmar algo antes ou já tem tudo que precisa para fazer?
-
-### Prompt 2 (respostas às perguntas da IA)
-
-> Telas: "Drill-down 3 níveis". UA sem nota: "'Sem avaliações', fora". Médias: "Média de médias". P-AR-1: "Confirmar P-AR-1".
-
-### Prompt 3
-
-> sim
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 31 out. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-13 – Avaliação – Consultar notas: estrutura (D-AVC-02)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 1 de novembro de 2026.
-- **Contexto fornecido:** itens do D-AVC-01, pacote Comum, `DPac-Geral-01`, itens de `AvalRegistrar/` e `DD-Locais-01`.
-- **Itens produzidos:** `DD-AvalConsultar-01`, `DCmp-AvalConsultar-01`, `DCla-AvalConsultar-01` e `02`, ajustes em `DCla-AvalRegistrar-01`, `DCmp-AvalRegistrar-01` e `DPac-Geral-01`, decisão de 01/11/2026 em `Docs/decisoes.md` e premissas no `AvalConsultar/README.md`.
-- **Uso da resposta:** rascunho dos diagramas e dos textos; as decisões sobre o cálculo no servidor e a quebra do ciclo de pacotes foram tomadas pela Pessoa D entre opções apresentadas pela IA.
-
-### Prompt 1
-
-> certo, vamos para d-avc-02. tem algo a ser esclarecido por mim antes? se não, já implemente
-
-### Prompt 2 (respostas às perguntas da IA)
-
-> Ciclo: dependência só de entidade (manter `AvalConsultar` → `AvalRegistrar` e tirar a dependência contrária). Cálculo: "Servidor calcula".
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-14 – Avaliação – Consultar notas: detalhamento (D-AVC-03)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 1 de novembro de 2026.
-- **Contexto fornecido:** itens do D-AVC-01 e do D-AVC-02, pacote Comum e itens de `AvalRegistrar/` e de `Radio/` como modelo.
-- **Itens produzidos:** `DSeq-AvalConsultar-01` a `03`, `DEst-AvalConsultar-01` a `03`, `Contrato-AvalConsultar-01` (com as regras de cálculo R1 a R7) e `ECA-AvalConsultar-01`.
-- **Uso da resposta:** rascunho dos diagramas e dos textos, revisado pela Pessoa D.
-
-### Prompt 1
-
-> certo, vamos para d-avc-03. tem algo a ser esclarecido por mim antes? se não, já implemente
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-15 – Ajuste dos arquivos versionados ao replanejamento de 31/10 (D-INT-07)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 1 de novembro de 2026.
-- **Contexto fornecido:** contrato-base, divisão de trabalho, READMEs das pastas, `DPac-Geral-01` e itens de `AvalRegistrar/`.
-- **Itens produzidos:** ajustes em `contrato-base.md`, `APS INF0290 – Divisão de Trabalho da Equipe Cinza.md`, `Geral/DPac-Geral-01.md`, `AvalRegistrar/README.md`, `AvalRegistrar/DIhc-AvalRegistrar-01.md` e nos READMEs de `AvalConsultar`, `Seguranca`, `Locais` e `AppsUFG`.
-- **Uso da resposta:** levantamento das menções à divisão antiga e aplicação das mudanças aprovadas pela Pessoa D.
-
-### Prompt 1
-
-> sim podemos. antes de alterar me diga o que vai ser mudado
-
-### Prompt 2
-
-> beleza. pode ser a opção (a). não precisa da dota registrando a saida da pessoa A. faça tudo em um commit só.
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
-
-## D-IA-16 – Correções da revisão do PR #12 (D-AVC)
-
-- **IA:** Anthropic. Claude Code (Claude Opus 5.5). Assistente de IA.
-- **URL:** https://claude.com/claude-code
-- **Data de acesso:** 1 de novembro de 2026.
-- **Contexto fornecido:** parecer de revisão do PR #12 (Pessoa B) e itens de `AvalConsultar/`.
-- **Itens produzidos:** ajustes em `DCla-AvalConsultar-01` (atributo `acesso` de `TelaNotasUA`), `DAtv-AvalConsultar-01` e `02` (fluxo final reorganizado e saída pelos estados vazio e indisponível) e `DCmp-AvalRegistrar-01` (nome do pacote Locais por letra).
-- **Uso da resposta:** aplicação das correções apontadas na revisão, conferida pela Pessoa D.
-
-### Prompt 1
-
-> maicon fez o code review do pr. corrija os bloqueantes e faça as sugestões sugeridas. coloque em um commit só.
-
-### Referência (ABNT)
-
-ANTHROPIC. **Claude Code**. Assistente de IA. Disponível em: https://claude.com/claude-code. Acesso em: 1 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
+<!-- Preencher <X> na editoração, junto com o apêndice de prompts. -->

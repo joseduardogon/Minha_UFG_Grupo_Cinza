@@ -1,9 +1,9 @@
-# DAtv-Locais-01 – Atividades de UC01: consultar lista de locais
+# DAtv-Locais-01 – Atividades de UC07.1: consultar lista de locais
 
 | Campo | Valor |
 |---|---|
 | **Código** | `DAtv-Locais-01` |
-| **Título** | Atividades de UC01: consultar lista de locais |
+| **Título** | Atividades de UC07.1: consultar lista de locais |
 | **Autor(a)** | Maicon Brendo da Silva |
 | **Revisor(a)** | Revisor(a) a definir |
 | **Status** | Em produção |
@@ -17,7 +17,7 @@ Fonte: [`DAtv-Locais-01.puml`](DAtv-Locais-01.puml)
 
 ## Descrição
 
-O diagrama detalha o fluxo de atividades do caso de uso `UC01: Consultar lista de locais`, organizando as responsabilidades em três raias: **Usuário**, **App** e **Servidor/API**.
+O diagrama detalha o fluxo de atividades do caso de uso `UC07.1: Consultar lista de locais`, organizando as responsabilidades em três raias: **Usuário**, **App** e **Servidor/API**.
 
 ### Dinâmica das atividades
 

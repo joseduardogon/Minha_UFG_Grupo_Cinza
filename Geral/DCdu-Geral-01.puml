@@ -1,5 +1,5 @@
 @startuml DCdu-Geral-01
-title DCdu-Geral-01 – Casos de uso gerais do app Minha UFG (rascunho)
+title DCdu-Geral-01 – Casos de uso gerais do app Minha UFG
 left to right direction
 skinparam packageStyle rectangle
 
@@ -18,16 +18,16 @@ Navegador -up-|> AppExt
 VisPDF -up-|> AppExt
 
 rectangle "App Minha UFG" {
-  usecase "Solicitar apoio\nde segurança" as UC01
-  usecase "Consultar programação\nda rádio" as UC02
-  usecase "Consultar guia\nestudantil" as UC03
-  usecase "Consultar eventos" as UC04
-  usecase "Consultar notícias" as UC05
-  usecase "Consultar cardápio\ndo RU" as UC06
-  usecase "Localizar locais" as UC07
-  usecase "Consultar apps UFG" as UC08
-  usecase "Avaliar UA" as UC09
-  usecase "Consultar notas\nde avaliação" as UC10
+  usecase "UC01\nSolicitar apoio\nde segurança" as UC01
+  usecase "UC02\nConsultar programação\nda rádio" as UC02
+  usecase "UC03\nConsultar guia\nestudantil" as UC03
+  usecase "UC04\nConsultar eventos" as UC04
+  usecase "UC05\nConsultar notícias" as UC05
+  usecase "UC06\nConsultar cardápio\ndo RU" as UC06
+  usecase "UC07\nLocalizar locais" as UC07
+  usecase "UC08\nConsultar apps UFG" as UC08
+  usecase "UC09\nAvaliar UA" as UC09
+  usecase "UC10\nConsultar notas\nde avaliação" as UC10
 }
 
 Membro --> UC01

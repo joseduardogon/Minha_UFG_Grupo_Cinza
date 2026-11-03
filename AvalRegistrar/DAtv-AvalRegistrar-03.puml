@@ -20,6 +20,7 @@ if (Todas as questões têm nota?) then (sim)
     end note
     |Avaliador|
     :Tocar em "Concluir";
+    -> \n\n\n\n\n;
     |App|
     :Voltar à TelaAvaliacao;
     stop
@@ -28,11 +29,13 @@ if (Todas as questões têm nota?) then (sim)
     note right
       Desfecho: falha no envio.
     end note
+    -> \n\n;
     |Avaliador|
     :Tocar em "Enviar" de novo;
     stop
   endif
 else (não)
+  |App|
   :Marcar as questões pendentes, ir à dimensão\nda primeira pendente e exibir o aviso\nde que faltam notas;
   note right
     Nada é enviado.

@@ -10,9 +10,9 @@ actor "Navegador" as Nav <<sistema>>
 Nav -up-|> AppExt
 
 rectangle "App Minha UFG – Rádio" {
-  usecase "Consultar programação\nda rádio" as UC021
-  usecase "Trocar o dia da\nprogramação" as UC022
-  usecase "Ouvir a rádio" as UC023
+  usecase "UC02.1\nConsultar programação\nda rádio" as UC021
+  usecase "UC02.2\nTrocar o dia da\nprogramação" as UC022
+  usecase "UC02.3\nOuvir a rádio" as UC023
 }
 
 Membro --> UC021

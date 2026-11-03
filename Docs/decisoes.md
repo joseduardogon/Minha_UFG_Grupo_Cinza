@@ -2,6 +2,18 @@
 
 Decisões de planejamento e de modelagem que alteram o contrato ou o roteiro. Uma entrada por decisão, da mais recente para a mais antiga.
 
+## 02/11/2026 – Correção dos achados da integração pela Pessoa D
+
+- **Decisão:** os achados do recebimento das entidades (`Integracao/recebimento.md`), curtos ou não, são corrigidos pela Pessoa D diretamente nos arquivos de B e de C (atividade D-INT-08), sem repasse aos autores, que são avisados das mudanças.
+- **Motivo:** agilizar a integração, acordado com a equipe.
+- **Alternativas:** devolver cada achado ao autor (descartada: atrasa a integração).
+
+## 02/11/2026 – Modelo de dados da integração
+
+- **Decisão:** (1) não há entidade de usuário nem de avaliador; o Avaliador é só ator (linha retirada da seção 7 do contrato-base); (2) `Regional` e `Campus` ficam no pacote Comum, com C como dona da definição; (3) `Local.campus: String` vira a associação `Local 0..* — 1 Campus`; (4) a Área de conhecimento (CNPq) vira a entidade `AreaConhecimento` (só `nome`), de B, com `UnidadeAcademica 0..* — 1 AreaConhecimento`, e `MediaArea` se associa a ela; (5) `Cardapio` é retirado do modelo, e a regra "o par `tipo` e `data` não se repete" passa para `Refeicao`; (6) o RU continua derivando o dia da semana da data, sem reutilizar o `DiaSemana` da Rádio; (7) `AplicativoUFG` é configuração do app, e Segurança e Apps UFG não têm entidade (`DD-Seguranca-01`, `DD-AppsUFG-01`).
+- **Motivo:** (1) a avaliação é anônima e não guarda quem avaliou; (2) três pacotes de funcionalidade usam as entidades, e o `DPac-Geral-01` não permite dependência entre eles; (3) e (4) quem usa entidade de outro dono a referencia, não a redefine (contrato, seção 7); (5) o app não usa nem instancia `Cardapio` (critério 6); (6) Rádio (grade semanal sem datas) e RU (refeições com data) são conceitos diferentes, e o reuso criaria dependência entre pacotes; (7) o catálogo é fixo no app, como a URL do Guia.
+- **Alternativas:** (1) entidade vazia de avaliador (descartada: critério 6); (2) manter as entidades em Eventos (descartada: dependência entre pacotes de funcionalidade); (4) manter a área como `String` (descartada: contraria o dono definido no contrato); (5) manter `Cardapio` só como entidade do servidor (descartada); (6) enumeração `DiaSemana` compartilhada no Comum (descartada: sem ganho).
+
 ## 01/11/2026 – Cálculo das notas e dependências de AvalConsultar
 
 - **Decisão:** (1) só as notas por questão são armazenadas (`NotaQuestao`, de C); todas as médias (elemento, dimensão, avaliação, dimensão na UA, UA, área e UFG) são calculadas pelo Servidor/API a cada consulta e entregues prontas; o app só exibe (`DD-AvalConsultar-01`); (2) o botão "Ver notas" da `TelaAvaliacao` abre a `TelaNotas` por um Intent implícito do Android (ação `VER_NOTAS`), e não por referência de classe; (3) com isso, `AvalRegistrar` não depende de `AvalConsultar`, e `AvalConsultar` depende de `AvalRegistrar` só pela entidade `DimensaoQualidade`; `Inicio` deixa de depender de `AvalConsultar`, pois o cartão abre a `TelaAvaliacao`. Foram ajustados `DCla-AvalRegistrar-01`, `DCmp-AvalRegistrar-01` e `DPac-Geral-01`.

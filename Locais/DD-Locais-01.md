@@ -5,9 +5,9 @@
 | **Código** | `DD-Locais-01` |
 | **Título** | Entrada de DD de Locais e Unidades Acadêmicas |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | Pessoa C |
 | **Status** | Em produção |
-| **Rastreia para** | `DCla-Locais-02`, `DCdu-Locais-01`, `DD-Geral-01`, `DDados-Geral-01` |
+| **Rastreia para** | `DCla-Locais-02`, `DCdu-Locais-01`, `DD-Eventos-01`, `DD-Geral-01`, `DDados-Geral-01` |
 
 ## Descrição
 
@@ -27,7 +27,8 @@ Entidade que representa um prédio, instalação ou ponto de interesse geográfi
 | `nome` | String | Nome oficial do local exibido na lista e no mapa (ex.: *"Restaurante Universitário - Samambaia"*, *"Biblioteca Central"*) |
 | `fotoUrl` | String | URL ou caminho relativo da foto circular em miniatura exibida na lista de locais |
 | `corMarcador` | String | Código de cor do marcador circular no mapa (ex.: verde para unidades de ensino, laranja para bibliotecas, azul para serviços) |
-| `campus` | String | Nome do campus universitário de vinculação (fixo em *"Campus Samambaia"*) |
+
+O campus do local não é atributo: é a associação com `Campus` (entidade da Pessoa C, `DD-Eventos-01`, pacote `Comum`). Hoje todos os locais pertencem ao Campus Samambaia.
 
 ---
 
@@ -38,7 +39,18 @@ Especialização de `Local` que representa unidades de ensino, pesquisa e extens
 | Atributo | Tipo | Descrição |
 |---|---|---|
 | `sigla` | String | Sigla oficial da unidade acadêmica (ex.: *"INF"*, *"FEFD"*, *"ICB"*) |
-| `areaConhecimento` | String | Grande área do conhecimento conforme classificação CNPq/UFG (ex.: *"Ciências Exatas e da Terra"*, *"Ciências da Saúde"*), utilizada para cálculo e consolidação de médias nas funcionalidades de avaliação |
+
+A grande área do conhecimento da UA não é atributo: é a associação com `AreaConhecimento` (Tabela 3).
+
+---
+
+### Tabela 3 – AreaConhecimento
+
+Grande área do conhecimento conforme a classificação CNPq/UFG, à qual cada unidade acadêmica pertence. É usada para calcular e consolidar as médias da avaliação (`DD-AvalConsultar-01`).
+
+| Atributo | Tipo | Descrição |
+|---|---|---|
+| `nome` | String | Nome da grande área (ex.: *"Ciências Exatas e da Terra"*, *"Ciências da Saúde"*), sem repetição |
 
 ---
 
@@ -46,6 +58,8 @@ Especialização de `Local` que representa unidades de ensino, pesquisa e extens
 
 - `Local` 1 — 1 `Coordenada`: todo local possui exatamente uma coordenada geográfica (latitude e longitude) para posicionamento no mapa.
 - `Local` <|-- `UnidadeAcademica`: relação de herança/generalização.
+- `Local` 0..* — 1 `Campus`: todo local pertence a um único campus; um campus contém vários locais. `Campus` é da Pessoa C (`DD-Eventos-01`) e aqui só é referenciado.
+- `UnidadeAcademica` 0..* — 1 `AreaConhecimento`: toda UA pertence a uma única grande área; uma área agrupa várias UAs.
 
 ---
 
@@ -57,13 +71,17 @@ class Local {
   nome: String
   fotoUrl: String
   corMarcador: String
-  campus: String
 }
 
 class UnidadeAcademica {
   sigla: String
-  areaConhecimento: String
 }
+
+class AreaConhecimento {
+  nome: String
+}
+
+class Campus <<Comum>>
 
 class Coordenada <<Comum>> {
   latitude: Real
@@ -72,6 +90,8 @@ class Coordenada <<Comum>> {
 
 Local <|-- UnidadeAcademica
 Local "1" *-- "1" Coordenada : localiza-se em >
+Local "0..*" -- "1" Campus : pertence a >
+UnidadeAcademica "0..*" -- "1" AreaConhecimento : pertence a >
 ```
 
 ## Referências

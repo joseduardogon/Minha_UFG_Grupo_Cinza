@@ -78,4 +78,4 @@ Revisão da Pessoa D (`Integracao/revisoes/REV-PR10-Eventos-Noticias-RU.md`, bra
 2. Verificar com a equipe ou com o painel web se existe outra regional com notícias cadastradas (P-NO-1, P-NO-2, P-NO-6). Se só existir "GOIÂNIA", registrar que a faixa tem uma única aba e que a troca de regional não é exercitável na versão 3.2.0.
 3. O estado vazio (P-NO-9) depende de uma regional sem notícias e dificilmente será observável; se não for, mantê-lo como premissa pendente, explícita no PDF.
 4. Pessoa D revisar os itens e registrar a revisão no fim de cada `.md`.
-5. Pessoa D decidir onde fica a entidade `Regional` (pendência D-INT-03 do `DPac-Geral-01`), usada por Notícias, Eventos e Locais; hoje ela é desenhada nos `DCla` fora do pacote Comum e sem atributos, com o estereótipo `<<DD-Eventos-01>>` (correção B1 da `REV-PR10`).
+5. Decidido na integração (02/11/2026): a entidade `Regional`, usada por Notícias, Eventos e Locais, fica no pacote Comum; os `DCla` a desenham sem atributos, com o estereótipo `<<Comum>>`.

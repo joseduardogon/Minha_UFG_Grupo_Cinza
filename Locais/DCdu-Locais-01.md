@@ -5,7 +5,7 @@
 | **Código** | `DCdu-Locais-01` |
 | **Título** | Casos de uso de Locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DPac-Geral-01`, `DAtv-Locais-01`, `DAtv-Locais-02`, `DAtv-Locais-03`, `DIhc-Locais-01`, `DIhc-Locais-02`, `DCla-Comum-02`, `DCla-Comum-04` |
 
@@ -27,7 +27,7 @@ O diagrama detalha o caso de uso macro UC07 "Localizar locais" do `DCdu-Geral-01
 
 ---
 
-### UC01 – Consultar lista de locais
+### UC07.1 – Consultar lista de locais
 
 - **Ator principal:** Membro da comunidade UFG.
 - **Ator secundário:** Servidor/API.
@@ -43,7 +43,7 @@ O diagrama detalha o caso de uso macro UC07 "Localizar locais" do `DCdu-Geral-01
 
 ---
 
-### UC02 – Visualizar local no mapa
+### UC07.2 – Visualizar local no mapa
 
 - **Ator principal:** Membro da comunidade UFG.
 - **Ator secundário:** Provedor de mapa / GPS.
@@ -57,7 +57,7 @@ O diagrama detalha o caso de uso macro UC07 "Localizar locais" do `DCdu-Geral-01
 
 ---
 
-### UC03 – Centralizar em minha localização atual
+### UC07.3 – Centralizar em minha localização atual
 
 - **Ator principal:** Membro da comunidade UFG.
 - **Ator secundário:** Provedor de mapa / GPS.

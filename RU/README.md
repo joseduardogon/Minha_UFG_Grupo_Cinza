@@ -24,7 +24,7 @@ Legenda de status: **Pronto** = revisado e no repositório (contrato, seção 10
 | [`DAtv-RU-01`](DAtv-RU-01.md), [`02`](DAtv-RU-02.md) | Atividades de cada caso de uso (a `02` não consulta o servidor) | Em produção |
 | [`DIhc-RU-01`](DIhc-RU-01.md) | Protótipo da tela RU (cartões das três refeições), eventos E0 a E2 | Em produção |
 | [`DIhc-RU-02`](DIhc-RU-02.md) | Protótipo da tela da refeição (cor do dia, data, categorias, seletor vertical de dia e estado indisponível), eventos E0 a E2 | Em produção |
-| [`DD-RU-01`](DD-RU-01.md) | Entradas de DD: `Cardapio`, `Refeicao` (por data), `ItemCardapio`, `CategoriaItem` e `TipoRefeicao` | Em produção |
+| [`DD-RU-01`](DD-RU-01.md) | Entradas de DD: `Refeicao` (por data), `ItemCardapio`, `CategoriaItem` e `TipoRefeicao` | Em produção |
 | [`DSeq-RU-01`](DSeq-RU-01.md), [`02`](DSeq-RU-02.md) | Sequência de cada atividade de interação (tocar numa refeição, que carrega a semana; tocar num dia, que filtra em memória) | Em produção |
 | [`DEst-RU-01`](DEst-RU-01.md), [`02`](DEst-RU-02.md) | Estados da tela RU e da tela da refeição | Em produção |
 | [`DCmp-RU-01`](DCmp-RU-01.md) | Componentes do pacote (`TelasRU` e `FonteCardapio`) | Em produção |
@@ -32,7 +32,7 @@ Legenda de status: **Pronto** = revisado e no repositório (contrato, seção 10
 | [`Contrato-RU-01`](Contrato-RU-01.md) | Contratos das operações | Em produção |
 | [`ECA-RU-01`](ECA-RU-01.md) | Regras ativas (3 regras da tela da refeição e a regra confirmada do Jantar sem sábado) | Em produção |
 
-A cascata de RU está completa e foi atualizada em 30/10/2026 com as novas capturas e a informação do autor sobre a carga semanal. Falta a revisão da Pessoa D e a conferência das premissas pendentes abaixo. Entidades entregues para o modelo de dados (o conteúdo é o mesmo do `DD-RU-01`): [`Cardapio`](../Integracao/entidades/Entidade-Cardapio.md), [`Refeicao`](../Integracao/entidades/Entidade-Refeicao.md), [`CategoriaItem`](../Integracao/entidades/Entidade-CategoriaItem.md) e [`ItemCardapio`](../Integracao/entidades/Entidade-ItemCardapio.md).
+A cascata de RU está completa e foi atualizada em 30/10/2026 com as novas capturas e a informação do autor sobre a carga semanal. Falta a revisão da Pessoa D e a conferência das premissas pendentes abaixo. Entidades entregues para o modelo de dados (o conteúdo é o mesmo do `DD-RU-01`): [`Refeicao`](../Integracao/entidades/Entidade-Refeicao.md), [`CategoriaItem`](../Integracao/entidades/Entidade-CategoriaItem.md) e [`ItemCardapio`](../Integracao/entidades/Entidade-ItemCardapio.md).
 
 **Rótulos dos eventos de interação** (iguais em `DIhc`, `DEst`, `DSeq`, `DCla`, `Contrato` e `ECA`). A atividade `A1` de cada `DAtv` é a ação de interação que gera um `DSeq`.
 
@@ -82,7 +82,7 @@ O app tem duas telas (a partir do cartão RU do menu, captura 1): **RU**, com ba
 
 Revisão da Pessoa D (`Integracao/revisoes/REV-PR10-Eventos-Noticias-RU.md`, branch `d/D-IND-producao-individual`). Correções aplicadas nesta pasta:
 
-- **B3:** `Cardapio` saiu do `DCla-RU-02`, pois o app não o usa; ele continua no `DD-RU-01` como entidade do servidor, com a ressalva escrita lá.
+- **B3:** `Cardapio` saiu do `DCla-RU-02`, pois o app não o usa; depois, na integração (02/11/2026), saiu também do `DD-RU-01`.
 - **B4:** lista completa de categorias (Café: acrescenta "Complemento vegano"; Almoço e Jantar: "Arroz", "Feijão", "Salada", "Refresco" e "Sobremesa"), informada pela Pessoa D; a parte de categorias da P-RU-6 foi fechada, e o separador de itens continua pendente.
 - **B5:** `DCmp-RU-01` passa a citar `IObservadorEstado` (oferecida) e `IFonteDados`, e declara que a tela cria o `ControladorTelaRemota` do Comum (mesmo defeito do B5, achado em RU).
 
@@ -90,4 +90,4 @@ Revisão da Pessoa D (`Integracao/revisoes/REV-PR10-Eventos-Noticias-RU.md`, bra
 
 1. Capturar o que falta: a tela da refeição na segunda-feira (P-RU-12), a rolagem até o fim do Almoço e do Jantar, para conferir os nomes das últimas categorias (P-RU-5) e o separador de itens (P-RU-6), e um dia ou uma semana sem cardápio, se for possível (P-RU-9).
 2. Abrir o app num domingo e, no Jantar, num sábado, para ver qual dia é selecionado e qual semana é carregada (P-RU-13); e conferir o destino da seta de voltar nas duas telas (P-RU-11).
-3. Pessoa D revisar os itens e registrar a revisão no fim de cada `.md`; decidir na integração se `Cardapio` fica no `DD-Geral` (o app não o usa: `DD-RU-01`) e se o dia da semana reutiliza o `DiaSemana` da Rádio.
+3. Pessoa D revisar os itens e registrar a revisão no fim de cada `.md`; decidido na integração (02/11/2026): `Cardapio` sai do modelo e o dia da semana continua derivado da data, sem reutilizar o `DiaSemana` da Rádio.
