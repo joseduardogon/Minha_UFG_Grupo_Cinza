@@ -5,7 +5,7 @@
 | **Código** | `DIhc-AvalRegistrar-02` |
 | **Título** | Tela de escolha da unidade acadêmica (TelaEscolherUA) |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalRegistrar-01`, `DIhc-AvalRegistrar-01`, `DAtv-AvalRegistrar-01`, `DEst-AvalRegistrar-02`, `DEst-Comum-01`, `DSeq-AvalRegistrar-01`, `DSeq-AvalRegistrar-02`, `DCla-AvalRegistrar-01`, `DD-Locais-01` |
 

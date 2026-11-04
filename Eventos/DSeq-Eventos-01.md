@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-Eventos-01` |
 | **Título** | Sequência de A1: abrir a tela Eventos |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-Eventos-01`, `DIhc-Eventos-01`, `DCla-Eventos-01`, `DCla-Eventos-02`, `Contrato-Eventos-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DEst-Comum-01` |
 

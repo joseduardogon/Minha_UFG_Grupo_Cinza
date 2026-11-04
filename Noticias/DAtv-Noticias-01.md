@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-Noticias-01` |
 | **Título** | Atividades de UC05.1: consultar notícias de uma regional |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Noticias-01`, `DIhc-Noticias-01`, `DEst-Comum-01`, `DSeq-Noticias-01`, `DSeq-Noticias-02` |
 

@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-Eventos-01` |
 | **Título** | Contratos das operações do pacote Eventos |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Eventos-01`, `DCla-Eventos-02`, `DSeq-Eventos-01`, `DSeq-Eventos-02`, `DSeq-Eventos-03`, `DSeq-Eventos-04`, `DSeq-Eventos-05`, `ECA-Eventos-01`, `Contrato-Comum-01`, `Contrato-Comum-02`, `Contrato-Comum-03` |
 

@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-AvalConsultar-03` |
 | **Título** | Consultar as notas de uma UA por dimensão |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalConsultar-01`, `DIhc-AvalConsultar-02`, `DIhc-AvalConsultar-03`, `DAtv-AvalConsultar-02`, `DD-AvalRegistrar-01`, `DEst-Comum-01` |
 

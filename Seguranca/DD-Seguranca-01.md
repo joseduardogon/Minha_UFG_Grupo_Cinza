@@ -5,7 +5,7 @@
 | **Código** | `DD-Seguranca-01` |
 | **Título** | Entrada de DD da Segurança |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Pessoa C |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Seguranca-01`, `DCdu-Seguranca-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

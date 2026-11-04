@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-Noticias-03` |
 | **Título** | Sequência de A1 de UC05.2: tocar em uma notícia e voltar ao app |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-Noticias-02`, `DIhc-Noticias-01`, `DSeq-Noticias-01`, `DCla-Noticias-01`, `DCla-Comum-01`, `Contrato-Noticias-01`, `ECA-Noticias-01` |
 

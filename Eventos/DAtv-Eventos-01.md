@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-Eventos-01` |
 | **Título** | Atividades de UC04.1: consultar eventos por regional e data |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Eventos-01`, `DSeq-Eventos-01`, `DSeq-Eventos-02`, `DSeq-Eventos-03`, `DIhc-Eventos-01`, `DEst-Eventos-01`, `DEst-Comum-01` |
 

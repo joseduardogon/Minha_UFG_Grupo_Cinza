@@ -2,8 +2,8 @@
 
 Evolução: notas por UA, por área de conhecimento (CNPq) e da UFG.
 
-- **Dono (autor):** Pessoa D
-- **Revisor:** Pessoa C
+- **Dono (autor):** Phablo Tavares Paixão
+- **Revisor:** Maicon Brendo da Silva
 - **Prefixo de código dos itens:** `AvalConsultar` (ex.: `DAtv-AvalConsultar-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

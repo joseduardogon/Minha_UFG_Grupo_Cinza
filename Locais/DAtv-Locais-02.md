@@ -5,7 +5,7 @@
 | **Código** | `DAtv-Locais-02` |
 | **Título** | Atividades de UC07.2: visualizar local no mapa |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Locais-01`, `DIhc-Locais-01`, `DIhc-Locais-02`, `DCla-Comum-04`, `DSeq-Locais-02` |
 

@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCmp-Comum-01` |
 | **Título** | Componentes do pacote Comum |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em revisão |
 | **Rastreia para** | `DPac-Geral-01`, `DImp-Geral-01`, `DCla-Comum-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DCla-Comum-04`, `DEst-Comum-01` |
 

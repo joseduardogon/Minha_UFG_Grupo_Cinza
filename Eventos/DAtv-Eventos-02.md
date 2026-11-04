@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-Eventos-02` |
 | **Título** | Atividades de UC04.2: trocar o mês do calendário |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Eventos-01`, `DSeq-Eventos-04`, `DAtv-Eventos-01`, `DIhc-Eventos-01` |
 

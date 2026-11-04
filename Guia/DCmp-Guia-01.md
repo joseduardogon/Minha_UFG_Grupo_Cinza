@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCmp-Guia-01` |
 | **Título** | Componentes do pacote Guia |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DCmp-Comum-01`, `DCla-Guia-01`, `DAtv-Guia-01` |
 

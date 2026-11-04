@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DD-AvalConsultar-01` |
 | **Título** | Entrada de DD de Avaliação – Consultar notas |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-AvalConsultar-02`, `DCdu-AvalConsultar-01`, `DD-AvalRegistrar-01`, `DD-Locais-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

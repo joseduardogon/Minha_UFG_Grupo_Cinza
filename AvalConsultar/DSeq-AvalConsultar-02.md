@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-AvalConsultar-02` |
 | **Título** | Sequência de A2: tocar em uma área e carregar as notas das UAs |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-AvalConsultar-02`, `DIhc-AvalConsultar-01`, `DIhc-AvalConsultar-02`, `DCla-AvalConsultar-01`, `DCla-AvalConsultar-02`, `DSeq-AvalConsultar-01`, `DEst-AvalConsultar-02`, `Contrato-AvalConsultar-01` |
 

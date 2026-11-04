@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `ECA-AvalConsultar-01` |
 | **Título** | Regras E-C-A de Avaliação – Consultar notas |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-AvalConsultar-01`, `DEst-AvalConsultar-01`, `DEst-AvalConsultar-02`, `DEst-AvalConsultar-03`, `DEst-Comum-01`, `Contrato-AvalConsultar-01` |
 

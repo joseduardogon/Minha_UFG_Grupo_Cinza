@@ -5,7 +5,7 @@
 | **Código** | `DCdu-AvalRegistrar-01` |
 | **Título** | Casos de uso de Avaliação de UA (registrar) |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DPac-Geral-01`, `DIhc-Inicio-01`, `DD-Locais-01`, `DCla-Comum-02`, `DEst-Comum-01`, `DAtv-AvalRegistrar-01`, `DAtv-AvalRegistrar-02`, `DAtv-AvalRegistrar-03`, `DAtv-AvalRegistrar-04`, `DIhc-AvalRegistrar-01`, `DIhc-AvalRegistrar-02`, `DIhc-AvalRegistrar-03`, `DIhc-AvalRegistrar-04`, `DD-AvalRegistrar-01`, `DCmp-AvalRegistrar-01`, `DCla-AvalRegistrar-01`, `DCla-AvalRegistrar-02`, `DCla-AvalRegistrar-03`, `DCla-AvalRegistrar-04`, `DSeq-AvalRegistrar-01`, `DSeq-AvalRegistrar-02`, `DSeq-AvalRegistrar-03`, `DSeq-AvalRegistrar-04`, `DSeq-AvalRegistrar-05`, `DEst-AvalRegistrar-01`, `DEst-AvalRegistrar-02`, `DEst-AvalRegistrar-03`, `DEst-AvalRegistrar-04`, `Contrato-AvalRegistrar-01`, `ECA-AvalRegistrar-01` |
 

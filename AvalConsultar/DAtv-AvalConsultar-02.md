@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-AvalConsultar-02` |
 | **Título** | Consultar as notas das UAs de uma área |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalConsultar-01`, `DIhc-AvalConsultar-01`, `DIhc-AvalConsultar-02`, `DAtv-AvalConsultar-01`, `DAtv-AvalConsultar-03`, `DEst-Comum-01` |
 

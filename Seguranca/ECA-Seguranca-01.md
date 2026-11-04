@@ -5,7 +5,7 @@
 | **Código** | `ECA-Seguranca-01` |
 | **Título** | Regras E-C-A de Segurança |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Seguranca-01`, `DEst-Seguranca-01`, `Contrato-Seguranca-01` |
 

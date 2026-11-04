@@ -2,8 +2,8 @@
 
 Evolução do app: escolher a unidade acadêmica (UA), responder o questionário de qualidade (dimensões, elementos educacionais e questões), validar e enviar a avaliação.
 
-- **Dono (autor):** José Eduardo Gontijo de Carvalho (Pessoa C)
-- **Revisor:** Maicon Brendo da Silva (Pessoa B)
+- **Dono (autor):** José Eduardo Gontijo de Carvalho
+- **Revisor:** Maicon Brendo da Silva
 - **Prefixo de código dos itens:** `AvalRegistrar` (ex.: `DAtv-AvalRegistrar-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:
@@ -106,7 +106,7 @@ As premissas P-AR-20 a P-AR-31 foram criadas pelas frentes de estrutura (P-AR-20
 ## Pendências para outros
 
 - **Phablo Tavares Paixão (Pessoa D), responsável por `AvalConsultar`:** (1), (2) e (4) resolvidos: a P-AR-1 foi confirmada, a tela de "Ver notas" é a `TelaNotas` e o ciclo de pacotes foi eliminado com um Intent implícito do Android (decisões de 31/10/2026 e 01/11/2026 em `Docs/decisoes.md`). (3) O lugar das entidades da avaliação no modelo integrado (`DD-Geral-01`) será definido na integração (D-INT-02).
-- **Maicon Brendo da Silva (Pessoa B), revisor:** confirmar o questionário (dimensões, elementos e questões, premissas P-AR-3, P-AR-9 e P-AR-13 a P-AR-15), a referência à `UnidadeAcademica` de `DD-Locais-01` (premissa P-AR-2) e o uso do Comum (premissa P-AR-10).
+- **Maicon Brendo da Silva, revisor:** confirmar o questionário (dimensões, elementos e questões, premissas P-AR-3, P-AR-9 e P-AR-13 a P-AR-15), a referência à `UnidadeAcademica` de `DD-Locais-01` (premissa P-AR-2) e o uso do Comum (premissa P-AR-10).
 
 ## Texto proposto para `Docs/decisoes.md`
 

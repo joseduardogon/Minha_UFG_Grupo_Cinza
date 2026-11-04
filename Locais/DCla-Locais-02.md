@@ -5,7 +5,7 @@
 | **Código** | `DCla-Locais-02` |
 | **Título** | Classes de domínio e fonte de dados de Locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Maicon Brendo da Silva |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DCmp-Locais-01`, `DD-Locais-01`, `DCla-Locais-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DSeq-Locais-01`, `DD-Eventos-01` |
 

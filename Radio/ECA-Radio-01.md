@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `ECA-Radio-01` |
 | **Título** | Regras E-C-A da Rádio |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Radio-01`, `DEst-Radio-01`, `DEst-Comum-01`, `Contrato-Radio-01` |
 

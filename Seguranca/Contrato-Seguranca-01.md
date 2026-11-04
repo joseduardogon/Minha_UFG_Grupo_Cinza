@@ -5,7 +5,7 @@
 | **Código** | `Contrato-Seguranca-01` |
 | **Título** | Contratos das operações do pacote Seguranca |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Seguranca-01`, `DSeq-Seguranca-01`, `DSeq-Seguranca-02`, `DCla-Comum-01` |
 

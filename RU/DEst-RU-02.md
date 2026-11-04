@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DEst-RU-02` |
 | **Título** | Estados da tela da refeição |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DIhc-RU-02`, `DEst-RU-01`, `DEst-Comum-01`, `DCla-Comum-03`, `DSeq-RU-01`, `DSeq-RU-02`, `ECA-RU-01` |
 

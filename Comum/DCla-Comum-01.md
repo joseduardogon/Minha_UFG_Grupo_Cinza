@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCla-Comum-01` |
 | **Título** | Classes do componente LinkExterno |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em revisão |
 | **Rastreia para** | `DCmp-Comum-01`, `DImp-Geral-01`, `DCdu-Geral-01` |
 

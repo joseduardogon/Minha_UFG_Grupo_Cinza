@@ -5,7 +5,7 @@
 | **Código** | `Contrato-AppsUFG-01` |
 | **Título** | Contratos das operações do pacote Apps UFG |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-AppsUFG-01`, `DSeq-AppsUFG-01`, `DCla-Comum-01` |
 

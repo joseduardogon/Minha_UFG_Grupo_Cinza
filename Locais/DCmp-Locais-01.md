@@ -5,7 +5,7 @@
 | **Código** | `DCmp-Locais-01` |
 | **Título** | Componentes do pacote Locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DImp-Geral-01`, `DCmp-Comum-01`, `DCla-Locais-01`, `DCla-Locais-02` |
 

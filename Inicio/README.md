@@ -2,8 +2,8 @@
 
 Menu com os 8 cartões e a versão do app.
 
-- **Dono (autor):** Pessoa D
-- **Revisor:** Pessoa C
+- **Dono (autor):** Phablo Tavares Paixão
+- **Revisor:** José Eduardo Gontijo de Carvalho
 - **Prefixo de código dos itens:** `Inicio` (ex.: `DAtv-Inicio-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

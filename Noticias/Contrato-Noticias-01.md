@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-Noticias-01` |
 | **Título** | Contratos das operações do pacote Noticias |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Noticias-01`, `DCla-Noticias-02`, `DSeq-Noticias-01`, `DSeq-Noticias-02`, `DSeq-Noticias-03`, `DEst-Noticias-01`, `ECA-Noticias-01`, `DD-Noticias-01` |
 

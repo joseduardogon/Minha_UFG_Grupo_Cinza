@@ -5,7 +5,7 @@
 | **Código** | `DIhc-AppsUFG-01` |
 | **Título** | Interface da lista de aplicativos da UFG |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AppsUFG-01`, `DAtv-AppsUFG-01`, `DEst-AppsUFG-01`, `DSeq-AppsUFG-01` |
 

@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-AvalConsultar-03` |
 | **Título** | Sequência de A3: tocar em uma UA e carregar as notas por dimensão |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-AvalConsultar-03`, `DIhc-AvalConsultar-02`, `DIhc-AvalConsultar-03`, `DCla-AvalConsultar-01`, `DCla-AvalConsultar-02`, `DSeq-AvalConsultar-01`, `DEst-AvalConsultar-03`, `Contrato-AvalConsultar-01` |
 

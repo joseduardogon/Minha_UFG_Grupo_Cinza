@@ -3,8 +3,8 @@
 | Campo | Valor |
 |---|---|
 | **Entidade** | `Noticia` |
-| **Dono (autor)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Entregue a** | Phablo Tavares Paixão (Pessoa D), para integração no `DDados-Geral` e no `DD-Geral` |
+| **Dono (autor)** | José Eduardo Gontijo de Carvalho |
+| **Entregue a** | Phablo Tavares Paixão, para integração no `DDados-Geral` e no `DD-Geral` |
 | **Usada por** | Notícias (`DCla-Noticias-02`, `DD-Noticias-01`) |
 | **Status** | Entregue para integração (primeira versão) |
 

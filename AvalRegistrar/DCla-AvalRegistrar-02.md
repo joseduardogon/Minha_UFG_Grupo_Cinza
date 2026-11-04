@@ -5,7 +5,7 @@
 | **Código** | `DCla-AvalRegistrar-02` |
 | **Título** | Classes do componente FonteUnidades |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCmp-AvalRegistrar-01`, `DCla-AvalRegistrar-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DD-Locais-01`, `DSeq-AvalRegistrar-01` |
 

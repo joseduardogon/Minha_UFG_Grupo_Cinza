@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-RU-01` |
 | **Título** | Atividades de UC06.1: consultar o cardápio de uma refeição |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-RU-01`, `DSeq-RU-01`, `DIhc-RU-01`, `DIhc-RU-02`, `DEst-Comum-01` |
 

@@ -2,8 +2,8 @@
 
 Lista de notícias por regional com abertura de link externo.
 
-- **Dono (autor):** Pessoa C
-- **Revisor:** Pessoa D
+- **Dono (autor):** José Eduardo Gontijo de Carvalho
+- **Revisor:** Phablo Tavares Paixão
 - **Prefixo de código dos itens:** `Noticias` (ex.: `DAtv-Noticias-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:
@@ -12,7 +12,7 @@ Cada item de informação desta pasta é um par de arquivos com o mesmo nome:
 
 ## Como ler esta pasta
 
-Os itens seguem a **ordem de produção do contrato-base** (casos de uso, atividades, protótipo de IHC, componentes e classes, sequência, estados, contratos e regras E-C-A). Cada item é um par de arquivos com o mesmo nome: o `.md` explica o item e o `.puml` tem o diagrama (a imagem `.png` é gerada a partir do `.puml`). O campo **Rastreia para** de cada `.md` indica de quais outros itens ele depende ou qual detalha. Autor: José Eduardo Gontijo de Carvalho (Pessoa C). Revisor: Phablo Tavares Paixão (Pessoa D).
+Os itens seguem a **ordem de produção do contrato-base** (casos de uso, atividades, protótipo de IHC, componentes e classes, sequência, estados, contratos e regras E-C-A). Cada item é um par de arquivos com o mesmo nome: o `.md` explica o item e o `.puml` tem o diagrama (a imagem `.png` é gerada a partir do `.puml`). O campo **Rastreia para** de cada `.md` indica de quais outros itens ele depende ou qual detalha. Autor: José Eduardo Gontijo de Carvalho. Revisor: Phablo Tavares Paixão.
 
 Legenda de status: **Pronto** = revisado e no repositório (contrato, seção 10); **Em produção** = primeira versão escrita, ainda sem revisão; **A fazer** = ainda não iniciado.
 

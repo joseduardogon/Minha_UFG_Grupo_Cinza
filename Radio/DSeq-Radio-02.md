@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-Radio-02` |
 | **Título** | Sequência de E2: trocar o dia |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-Radio-02`, `DIhc-Radio-01`, `DCla-Radio-01`, `Contrato-Radio-01` |
 

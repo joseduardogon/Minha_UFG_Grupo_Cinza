@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCdu-Noticias-01` |
 | **Título** | Casos de uso da funcionalidade Notícias |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DAtv-Noticias-01`, `DAtv-Noticias-02`, `DIhc-Noticias-01`, `DCla-Comum-01`, `DEst-Comum-01` |
 

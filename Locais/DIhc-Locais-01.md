@@ -5,7 +5,7 @@
 | **Código** | `DIhc-Locais-01` |
 | **Título** | Interface da lista de locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Locais-01`, `DAtv-Locais-01`, `DIhc-Locais-02`, `DEst-Locais-01`, `DSeq-Locais-02` |
 

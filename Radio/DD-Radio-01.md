@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DD-Radio-01` |
 | **Título** | Entrada de DD da Rádio |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Radio-02`, `DCdu-Radio-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DIhc-AvalConsultar-01` |
 | **Título** | Protótipo da TelaNotas (UFG e áreas CNPq) |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalConsultar-01`, `DAtv-AvalConsultar-01`, `DIhc-AvalRegistrar-01`, `DIhc-AvalConsultar-02`, `DEst-Comum-01`, `DD-Locais-01` |
 

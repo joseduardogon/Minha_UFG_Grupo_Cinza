@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DEst-Guia-01` |
 | **Título** | Estados da abertura do guia estudantil |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DIhc-Guia-01`, `DSeq-Guia-01`, `DSeq-Guia-02`, `DEst-Inicio-01` |
 

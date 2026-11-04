@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-Noticias-02` |
 | **Título** | Atividades de UC05.2: abrir a notícia |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Noticias-01`, `DIhc-Noticias-01`, `DCla-Comum-01`, `DAtv-Noticias-01`, `DSeq-Noticias-03` |
 

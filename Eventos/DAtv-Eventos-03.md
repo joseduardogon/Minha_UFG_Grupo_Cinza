@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-Eventos-03` |
 | **Título** | Atividades de UC04.3: abrir a página do evento |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Eventos-01`, `DSeq-Eventos-05`, `DCla-Comum-01`, `DEst-Eventos-01` |
 

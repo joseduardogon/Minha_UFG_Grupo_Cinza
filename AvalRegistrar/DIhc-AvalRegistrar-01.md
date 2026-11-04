@@ -5,7 +5,7 @@
 | **Código** | `DIhc-AvalRegistrar-01` |
 | **Título** | Tela de entrada da avaliação de UA (TelaAvaliacao) |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalRegistrar-01`, `DIhc-Inicio-01`, `DAtv-AvalRegistrar-01`, `DEst-AvalRegistrar-01`, `DSeq-AvalRegistrar-01`, `DCla-AvalRegistrar-01` |
 

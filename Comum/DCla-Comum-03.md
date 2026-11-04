@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCla-Comum-03` |
 | **Título** | Classes do componente EstadosTelaRemota |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em revisão |
 | **Rastreia para** | `DCmp-Comum-01`, `DCla-Comum-02`, `DEst-Comum-01` |
 

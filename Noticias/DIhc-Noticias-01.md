@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DIhc-Noticias-01` |
 | **Título** | Protótipo da tela Notícias |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Noticias-01`, `DAtv-Noticias-01`, `DAtv-Noticias-02`, `DEst-Noticias-01`, `DCla-Noticias-01`, `DSeq-Noticias-01`, `DSeq-Noticias-02`, `DSeq-Noticias-03` |
 

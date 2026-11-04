@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-Guia-01` |
 | **Título** | Sequência de E1: tocar no cartão e abrir o guia |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-Guia-01`, `DIhc-Guia-01`, `DCla-Guia-01`, `DCla-Comum-01`, `Contrato-Guia-01`, `DIhc-Inicio-01` |
 

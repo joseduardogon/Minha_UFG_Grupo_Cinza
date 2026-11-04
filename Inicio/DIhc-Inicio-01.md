@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DIhc-Inicio-01` |
 | **Título** | Tela inicial |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DPac-Geral-01`, `DEst-Inicio-01`, `DIhc-Guia-01`, `DIhc-Radio-01`, `DIhc-Eventos-01` |
 

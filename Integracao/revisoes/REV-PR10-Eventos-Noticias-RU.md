@@ -1,8 +1,8 @@
 # REV-PR10 – Revisão de Eventos, Notícias e RU
 
 - **PR:** #10 "Complete documentation for Events, News, and RU" (branch `ultima_entrega(c)`, commit `c5baf2d`)
-- **Autor:** Pessoa C
-- **Revisor:** Pessoa D
+- **Autor:** José Eduardo Gontijo de Carvalho
+- **Revisor:** Phablo Tavares Paixão
 - **Data:** 31/10/2026
 - **Tarefa:** D-REV-02
 

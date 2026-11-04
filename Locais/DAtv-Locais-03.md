@@ -5,7 +5,7 @@
 | **Código** | `DAtv-Locais-03` |
 | **Título** | Atividades de UC07.3: centralizar em minha localização atual |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Locais-01`, `DIhc-Locais-02`, `DCla-Comum-04`, `DSeq-Locais-03` |
 

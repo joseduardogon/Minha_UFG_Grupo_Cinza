@@ -3,7 +3,7 @@
 | Campo | Valor |
 |---|---|
 | **Tarefa** | `D-INT-01` – Receber e validar as entidades |
-| **Responsável** | Pessoa D (integração) |
+| **Responsável** | Phablo Tavares Paixão (integração) |
 | **Data** | 02/11/2026 |
 | **Base** | `main` sincronizada com a branch `d/D-IND-producao-individual` em 02/11/2026 |
 | **Critérios** | Contrato-base, seção 7 (donos e formato de entrega) e seção 8 (avaliação); Apêndice B, critérios 4.1 e 4.2 |
@@ -75,6 +75,6 @@ Por decisão de 02/11/2026, todos os achados foram corrigidos pela Pessoa D (D-I
 | I-09 | Segurança sem entidade | `DD-Seguranca-01` (novo) | Corrigido |
 | I-10 | `[0..1]` em `resumo` e `urlImagem` | `DD-Noticias-01` | Corrigido |
 | I-11 | `dataHoraRegistro: DateTime` | `DD-AvalRegistrar-01` | Corrigido |
-| I-12 | Revisor: Pessoa C | `DD-Locais-01` | Corrigido |
+| I-12 | Revisor: José Eduardo Gontijo de Carvalho | `DD-Locais-01` | Corrigido |
 
 Todos os achados estão fechados; o D-INT-02 pode começar.

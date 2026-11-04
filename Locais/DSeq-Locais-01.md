@@ -5,7 +5,7 @@
 | **Código** | `DSeq-Locais-01` |
 | **Título** | Sequência de carga remota de locais via API |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Locais-01`, `DAtv-Locais-01`, `DIhc-Locais-01`, `DCla-Locais-01`, `DCla-Locais-02`, `DCla-Comum-02`, `DCla-Comum-03` |
 

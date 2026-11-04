@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-Noticias-01` |
 | **Título** | Sequência de A1: abrir a tela Notícias |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-Noticias-01`, `DIhc-Noticias-01`, `DCla-Noticias-01`, `DCla-Noticias-02`, `Contrato-Noticias-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DEst-Comum-01` |
 

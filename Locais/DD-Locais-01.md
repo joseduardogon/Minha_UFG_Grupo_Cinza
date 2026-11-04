@@ -5,7 +5,7 @@
 | **Código** | `DD-Locais-01` |
 | **Título** | Entrada de DD de Locais e Unidades Acadêmicas |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Pessoa C |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Locais-02`, `DCdu-Locais-01`, `DD-Eventos-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

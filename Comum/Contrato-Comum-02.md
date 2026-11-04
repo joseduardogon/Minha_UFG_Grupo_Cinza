@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-Comum-02` |
 | **Título** | Contratos do componente AcessoApi |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Comum-02`, `DCmp-Comum-01`, `DImp-Geral-01`, `ECA-Comum-01`, `DSeq-Radio-01`, `DSeq-Eventos-01` |
 

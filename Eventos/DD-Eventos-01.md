@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DD-Eventos-01` |
 | **Título** | Entrada de DD de Eventos |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Eventos-01`, `DCla-Eventos-02`, `DCdu-Eventos-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

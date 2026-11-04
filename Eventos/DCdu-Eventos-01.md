@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCdu-Eventos-01` |
 | **Título** | Casos de uso da funcionalidade Eventos |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DAtv-Eventos-01`, `DAtv-Eventos-02`, `DAtv-Eventos-03`, `DIhc-Eventos-01`, `DCla-Comum-01`, `DD-Eventos-01` |
 

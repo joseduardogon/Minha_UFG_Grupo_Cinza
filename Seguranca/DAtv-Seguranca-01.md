@@ -5,7 +5,7 @@
 | **Código** | `DAtv-Seguranca-01` |
 | **Título** | Solicitar apoio de segurança |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Seguranca-01`, `DIhc-Seguranca-01`, `DCla-Comum-01`, `DSeq-Seguranca-01`, `DSeq-Seguranca-02` |
 

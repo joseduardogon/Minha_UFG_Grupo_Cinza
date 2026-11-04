@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-Radio-01` |
 | **Título** | Sequência: entrar na tela e carregar a programação |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-Radio-01`, `DIhc-Radio-01`, `DCla-Radio-01`, `DCla-Radio-02`, `DCla-Comum-02`, `DCla-Comum-03`, `Contrato-Radio-01` |
 

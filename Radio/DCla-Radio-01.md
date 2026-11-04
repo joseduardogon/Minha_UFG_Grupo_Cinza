@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCla-Radio-01` |
 | **Título** | Classes do componente TelaRadio |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCmp-Radio-01`, `DIhc-Radio-01`, `DCla-Radio-02`, `DCla-Comum-01`, `DCla-Comum-03` |
 

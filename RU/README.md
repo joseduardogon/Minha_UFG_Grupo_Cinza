@@ -2,8 +2,8 @@
 
 Cardápio por refeição e dia da semana.
 
-- **Dono (autor):** Pessoa C
-- **Revisor:** Pessoa D
+- **Dono (autor):** José Eduardo Gontijo de Carvalho
+- **Revisor:** Phablo Tavares Paixão
 - **Prefixo de código dos itens:** `RU` (ex.: `DAtv-RU-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:
@@ -12,7 +12,7 @@ Cada item de informação desta pasta é um par de arquivos com o mesmo nome:
 
 ## Como ler esta pasta
 
-Os itens seguem a **ordem de produção do contrato-base** (casos de uso, atividades, protótipo de IHC, entidades, componentes e classes, sequência, estados, contratos e regras E-C-A). Cada item é um par de arquivos com o mesmo nome: o `.md` explica o item e o `.puml` tem o diagrama (a imagem `.png` é gerada a partir do `.puml`). O campo **Rastreia para** de cada `.md` indica de quais outros itens ele depende ou qual detalha. Autor: José Eduardo Gontijo de Carvalho (Pessoa C). Revisor: Phablo Tavares Paixão (Pessoa D).
+Os itens seguem a **ordem de produção do contrato-base** (casos de uso, atividades, protótipo de IHC, entidades, componentes e classes, sequência, estados, contratos e regras E-C-A). Cada item é um par de arquivos com o mesmo nome: o `.md` explica o item e o `.puml` tem o diagrama (a imagem `.png` é gerada a partir do `.puml`). O campo **Rastreia para** de cada `.md` indica de quais outros itens ele depende ou qual detalha. Autor: José Eduardo Gontijo de Carvalho. Revisor: Phablo Tavares Paixão.
 
 Legenda de status: **Pronto** = revisado e no repositório (contrato, seção 10); **Em produção** = primeira versão escrita, ainda sem revisão; **A fazer** = ainda não iniciado.
 
@@ -32,7 +32,7 @@ Legenda de status: **Pronto** = revisado e no repositório (contrato, seção 10
 | [`Contrato-RU-01`](Contrato-RU-01.md) | Contratos das operações | Em produção |
 | [`ECA-RU-01`](ECA-RU-01.md) | Regras ativas (3 regras da tela da refeição e a regra confirmada do Jantar sem sábado) | Em produção |
 
-A cascata de RU está completa e foi atualizada em 30/10/2026 com as novas capturas e a informação do autor sobre a carga semanal. Falta a revisão da Pessoa D e a conferência das premissas pendentes abaixo. Entidades entregues para o modelo de dados (o conteúdo é o mesmo do `DD-RU-01`): [`Refeicao`](../Integracao/entidades/Entidade-Refeicao.md), [`CategoriaItem`](../Integracao/entidades/Entidade-CategoriaItem.md) e [`ItemCardapio`](../Integracao/entidades/Entidade-ItemCardapio.md).
+A cascata de RU está completa e foi atualizada em 30/10/2026 com as novas capturas e a informação do autor sobre a carga semanal. Falta a revisão de Phablo Tavares Paixão e a conferência das premissas pendentes abaixo. Entidades entregues para o modelo de dados (o conteúdo é o mesmo do `DD-RU-01`): [`Refeicao`](../Integracao/entidades/Entidade-Refeicao.md), [`CategoriaItem`](../Integracao/entidades/Entidade-CategoriaItem.md) e [`ItemCardapio`](../Integracao/entidades/Entidade-ItemCardapio.md).
 
 **Rótulos dos eventos de interação** (iguais em `DIhc`, `DEst`, `DSeq`, `DCla`, `Contrato` e `ECA`). A atividade `A1` de cada `DAtv` é a ação de interação que gera um `DSeq`.
 

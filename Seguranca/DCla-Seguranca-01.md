@@ -5,7 +5,7 @@
 | **Código** | `DCla-Seguranca-01` |
 | **Título** | Classes do pacote Seguranca |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DCmp-Seguranca-01`, `DCla-Comum-01`, `DIhc-Seguranca-01`, `DSeq-Seguranca-01`, `DSeq-Seguranca-02` |
 

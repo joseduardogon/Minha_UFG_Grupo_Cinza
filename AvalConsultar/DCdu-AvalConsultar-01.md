@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCdu-AvalConsultar-01` |
 | **Título** | Casos de uso de Avaliação de UA (consultar notas) |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DIhc-AvalRegistrar-01`, `DD-AvalRegistrar-01`, `DD-Locais-01`, `DEst-Comum-01`, `DAtv-AvalConsultar-01`, `DAtv-AvalConsultar-02`, `DAtv-AvalConsultar-03`, `DIhc-AvalConsultar-01`, `DIhc-AvalConsultar-02`, `DIhc-AvalConsultar-03` |
 

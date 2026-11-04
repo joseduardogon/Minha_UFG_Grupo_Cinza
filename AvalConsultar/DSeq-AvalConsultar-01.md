@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-AvalConsultar-01` |
 | **Título** | Sequência de A1: tocar em "Ver notas" e carregar as notas da UFG |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-AvalConsultar-01`, `DIhc-AvalConsultar-01`, `DIhc-AvalRegistrar-01`, `DCla-AvalConsultar-01`, `DCla-AvalConsultar-02`, `DCla-AvalRegistrar-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DEst-AvalConsultar-01`, `Contrato-AvalConsultar-01` |
 

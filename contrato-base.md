@@ -1,14 +1,14 @@
 # Contrato Base – Equipe Cinza (APS INF0290)
 
-Regras que todos seguem para produzir sua fatia sem conflitos na integração. Responsável pelo contrato: **Pessoa D**.
+Regras que todos seguem para produzir sua fatia sem conflitos na integração. Responsável pelo contrato: **Phablo Tavares Paixão**.
 
 ## 1. Equipe e fatias
 
-| Pessoa | Fatia | Revisor |
-|---|---|---|
-| B | Segurança + Locais + Apps UFG | Sem dupla fixa: quem estiver livre |
-| C | Eventos + RU + Notícias + Avaliação: registrar | D |
-| D | Transversais + Rádio + Guia Estudantil + Avaliação: consultar notas | C |
+| Integrante | Nome completo | Fatia | Revisor(a) |
+|---|---|---|---|
+| B | Maicon Brendo da Silva | Segurança + Locais + Apps UFG | José Eduardo Gontijo de Carvalho |
+| C | José Eduardo Gontijo de Carvalho | Eventos + RU + Notícias + Avaliação: registrar | Phablo Tavares Paixão (Eventos, RU, Notícias) / Maicon Brendo da Silva (AvalRegistrar) |
+| D | Phablo Tavares Paixão | Transversais + Rádio + Guia Estudantil + Avaliação: consultar notas | José Eduardo Gontijo de Carvalho (Transversais, Rádio, Guia) / Maicon Brendo da Silva (AvalConsultar) |
 
 ## 2. Datas
 

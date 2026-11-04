@@ -5,7 +5,7 @@
 | **Código** | `DIhc-Locais-02` |
 | **Título** | Interface do mapa de locais com GPS |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Locais-01`, `DAtv-Locais-02`, `DAtv-Locais-03`, `DIhc-Locais-01`, `DEst-Locais-01`, `DSeq-Locais-03` |
 

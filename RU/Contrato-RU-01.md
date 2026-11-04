@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-RU-01` |
 | **Título** | Contratos das operações do pacote RU |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-RU-01`, `DCla-RU-02`, `DD-RU-01`, `DSeq-RU-01`, `DSeq-RU-02`, `DEst-RU-01`, `DEst-RU-02`, `ECA-RU-01` |
 

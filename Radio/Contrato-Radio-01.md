@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-Radio-01` |
 | **Título** | Contratos das operações do pacote Radio |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Radio-01`, `DCla-Radio-02`, `DSeq-Radio-01`, `DSeq-Radio-02`, `DSeq-Radio-03`, `ECA-Radio-01` |
 

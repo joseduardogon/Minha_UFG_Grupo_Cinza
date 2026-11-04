@@ -1,56 +1,48 @@
-# Registro de uso de IA – Pessoa B (Maicon Brendo da Silva)
+# Registro de uso de IA – Pessoa B
 
-Formato de cada entrada: identificação da IA, URL, data de acesso, prompt completo e uso dado à resposta.
-A referência ABNT que vai para a bibliografia aparece no fim de cada entrada.
+Autor: Maicon Brendo da Silva. Frente: Segurança, Locais e Apps UFG, mais a revisão dos PRs #12 (Avaliação – Consultar notas) e #13 (Integração).
 
-## B-IA-01 – Modelagem completa da funcionalidade Apps UFG
+Formato de cada entrada: identificação da IA, URL, data de acesso, resumo do uso, divisão do trabalho e prompts. A referência ABNT que vai para a bibliografia aparece no fim.
 
-- **IA:** Google. Antigravity (Gemini 2.5 Flash). Assistente de IA para Engenharia de Software.
-- **URL:** antigravity.google.com
-- **Data de acesso:** 29 de outubro de 2026.
-- **Contexto fornecido:** Enunciado da APS (INF0290/UFG), contrato-base.md, capturas de tela do app Minha UFG v3.1.1 (telas inicial, Apps UFG, Segurança, Locais e Mapa) e pacotes Comum e Geral do repositório.
-- **Uso da resposta:** Análise de engenharia reversa das telas reais de Apps UFG; formulação e refinamento participativo dos casos de uso (`DCdu-AppsUFG-01`), fluxo de atividades com raias (`DAtv-AppsUFG-01`), protótipo Salt com mapeamento de eventos (`DIhc-AppsUFG-01`), diagrama de classes e componentes com integração ao `ILinkExterno` (`DCla-AppsUFG-01`, `DCmp-AppsUFG-01`), diagrama de sequência (`DSeq-AppsUFG-01`), diagrama de estados de tela (`DEst-AppsUFG-01`), contratos formais de operação (`Contrato-AppsUFG-01`) e regras ativas Evento-Condição-Ação (`ECA-AppsUFG-01`).
-
-### Prompt principal
-
-> esse é o projeto final que nós precisamos fazer em grupo. houveram mudanças nas divisões das partes e atualmente eu sou responsável pelas partes: Locais + Apps UFG + Segurança. voce entendeu o projeto e consegue me ajudar? [...] primeiro de tudo, quero garantir que voce não faça nenhuma suposição de informações sobre o app. somente utilize o que já existe no repositório e quando formos trabalhar nas minhas funçoes, me pergunte exatamente o que precisa saber sobre o aplicativo para que eu lhe forneça as informações exatas. além disso, vamos fazer passo a passo tudo, e voce vai me informar o que voce irá trabalhar e validar comigo antes de gerar qualquer artefato. [...] vamos com a estratégia A [...] [fornecimento dos prints e dados exatos dos apps]
-
-### Referência bibliográfica
-
-GOOGLE. **Antigravity**. Assistente de IA para Engenharia de Software. Disponível em: https://antigravity.google.com. Acesso em: 29 out. 2026.
-
----
-
-## B-IA-02 – Modelagem completa da funcionalidade Segurança
+## B-IA-01 – Apoio à elaboração de rascunhos da fatia B e conferência de revisões
 
 - **IA:** Google. Antigravity (Gemini 2.5 Flash). Assistente de IA para Engenharia de Software.
-- **URL:** antigravity.google.com
-- **Data de acesso:** 29 de outubro de 2026.
-- **Contexto fornecido:** Captura da tela real "Minha UFG - Segurança" (v3.1.1), componentes compartilhados em Comum/ (`ILinkExterno`) e contrato da Equipe Cinza.
-- **Uso da resposta:** Elaboração da cascata completa de diagramas e especificações para a funcionalidade Segurança: casos de uso (`DCdu-Seguranca-01`), fluxo de atividades com raias (`DAtv-Seguranca-01`), protótipo Salt (`DIhc-Seguranca-01`), classes e componentes (`DCla-Seguranca-01`, `DCmp-Seguranca-01`), sequências para Navegador e Play Store (`DSeq-Seguranca-01`, `DSeq-Seguranca-02`), diagrama de estados (`DEst-Seguranca-01`), contratos formais (`Contrato-Seguranca-01`) e regras E-C-A (`ECA-Seguranca-01`), além da renderização automatizada dos diagramas PNG via script Python.
+- **URL:** https://antigravity.google.com
+- **Data de acesso:** de 29 de outubro a 03 de novembro de 2026.
+- **Contexto fornecido pelo autor:** enunciado da APS (INF0290/UFG), contrato-base da Equipe Cinza, capturas de tela reais do app Minha UFG v3.1.1 (telas inicial, Apps UFG, Segurança, Locais e Mapa do Campus Samambaia) e artefatos de Comum e Geral do repositório.
 
-### Prompt principal
+### O que o autor fez
 
-> antes de irmos para a parte de seguranças, precisamos dos .png dos diagramas. voce consegue renderizar a partir do .puml ou devo usar outra ferramenta (qual)? [...] vamos iniciar o alinhamento [...] [validação de cada decisão e autorização para geração completa dos artefatos]
+- Estabeleceu as diretrizes de trabalho e regras de conduta para o assistente: proibição total de inventar informações ou fazer suposições sem respaldo nas capturas do app real, determinando um processo estritamente iterativo com validação e aprovação prévia antes de qualquer avanço.
+- Realizou a engenharia reversa das telas reais das suas três funcionalidades, extraindo as regras de negócio a partir do uso do aplicativo:
+  - **Apps UFG:** identificou que o catálogo de aplicativos é fixo e que a interação se limita ao redirecionamento externo para a Play Store.
+  - **Segurança:** constatou que a funcionalidade possui apenas opções diretas de redirecionamento institucional (web via navegador e app via Play Store), sem necessidade de telas intermediárias ou de persistência de entidades.
+  - **Locais:** analisou a dinâmica entre lista textual e mapa interativo, a centralização GPS e os marcadores de cores; definiu a modelagem da herança `Local <|-- UnidadeAcademica` vinculada ao Campus Samambaia.
+- Avaliou criticamente, corrigiu, refinou e validou cada rascunho de diagrama e especificação gerado pela IA, ajustando textos, navegabilidade, parâmetros PlantUML e aderência ao roteiro antes de aprovar os artefatos definitivos.
+- Conduziu as revisões de integração (PRs #12 e #13), identificando inconsistências a partir da sua própria experiência de modelagem (como o erro visual de sobreposição de setas em diagramas de atividades, a falta de atributos privados em classes e divergências nos códigos de casos de uso), incumbindo a IA de checar os arquivos envolvidos e auxiliar na estruturação dos relatórios.
+- Decidiu o que seria versionado e submetido via branches e pull requests.
 
-### Referência bibliográfica
+### O que a IA fez, sob a direção do autor
 
-GOOGLE. **Antigravity**. Assistente de IA para Engenharia de Software. Disponível em: https://antigravity.google.com. Acesso em: 29 out. 2026.
+- Gerou rascunhos iniciais e propostas estruturais de código PlantUML e texto em Markdown para as funcionalidades da fatia B (`AppsUFG`, `Segurança` e `Locais`), baseando-se estritamente nas instruções, capturas e restrições fornecidas pelo autor.
+- Apoiou a formalização das entradas `DD-Seguranca-01` e `DD-AppsUFG-01` a partir da constatação do autor de que os módulos tratam de configurações fixas sem entidades de domínio.
+- Atuou como ferramenta de suporte nas revisões: realizou a checagem cruzada de sintaxe PlantUML, conferiu a existência de arquivos e métodos conforme as suspeitas levantadas pelo autor e auxiliou na formatação dos pareceres `REV-PR12-AvalConsultar.md` e `REV-PR13-Integracao.md`.
+- Todos os rascunhos gerados passaram por triagem, correção e aprovação manual do autor antes de qualquer consolidação no repositório.
 
----
+### Prompts (resumo cronológico)
 
-## B-IA-03 – Modelagem completa da funcionalidade Locais
+1. 29/10: Definição das regras de conduta para a IA, exigindo processo iterativo sem suposições não comprovadas por capturas do app.
+2. 29/10: Envio dos dados e telas de Apps UFG, solicitando rascunhos iniciais da cascata de casos de uso, fluxo de atividades, classes e contratos para posterior validação do autor.
+3. 29/10: Envio da tela de Segurança e solicitação de rascunhos para os fluxos externos de navegador e Play Store.
+4. 30/10: Discussão conceitual sobre a diferenciação entre `Local` e `UnidadeAcademica`, definição dos fluxos do mapa com GPS e elaboração de rascunhos dos diagramas de Locais para correção do autor.
+5. 01/11: Organização do processo de revisão por pares e solicitação de verificação das regras de negócio de Avaliação no PR #12, com validação do autor sobre a sobreposição de setas nos diagramas de atividades.
+6. 02/11: Apoio na auditoria do PR #13 (Integração), realizando a checagem cruzada dos diagramas gerais e localizando os arquivos com divergências de prefixo (`UC011.1` e `UC031.1`) apontadas pelo autor.
+7. 03/11: Conferência dos ajustes realizados no PR #13 e adequação do registro de IA ao padrão resumido da equipe.
 
-- **IA:** Google. Antigravity (Gemini 2.5 Flash). Assistente de IA para Engenharia de Software.
-- **URL:** antigravity.google.com
-- **Data de acesso:** 30 de outubro de 2026.
-- **Contexto fornecido:** Capturas reais do Campus Samambaia (Aba Lista de Locais e Aba Mapa com marcadores coloridos e botão flutuante de GPS), contrato-base.md (propriedade das entidades compartilhadas Local e UnidadeAcademica) e componentes reutilizáveis de Comum/ (`IProvedorMapa`, `ILocalizacao`, `IControladorTelaRemota`, `IAcessoApi`).
-- **Uso da resposta:** Modelagem conceitual e comportamental completa de Locais: Casos de Uso (`DCdu-Locais-01`), fluxos de atividades modulares para cada caso de uso (`DAtv-Locais-01`, `DAtv-Locais-02`, `DAtv-Locais-03`), protótipos de tela Salt para a lista e para o mapa (`DIhc-Locais-01`, `DIhc-Locais-02`), Dicionário de Dados oficial de `Local` e `UnidadeAcademica` (`DD-Locais-01`), diagramas de classes de interface, controle, dados e domínio (`DCla-Locais-01`, `DCla-Locais-02`), componentes com dependências arquiteturais (`DCmp-Locais-01`), diagramas de sequência para carga remota, foco no mapa e centralização GPS (`DSeq-Locais-01`, `DSeq-Locais-02`, `DSeq-Locais-03`), diagrama de estados de tela (`DEst-Locais-01`), contratos formais de operação (`Contrato-Locais-01`) e regras ativas Evento-Condição-Ação (`ECA-Locais-01`), além de correções geométricas de layout e renderização de todos os diagramas em PNG.
+Os prompts completos, quando tiverem mais de um parágrafo, vão para o apêndice de prompts do documento final (regra 6 do enunciado).
 
-### Prompt principal
+### Referência (ABNT)
 
-> então, a lista de locais aparentemente vem de uma api. portanto acho que não precisamos listar todos os locais, podemos apenas definir a estrutura dessa classe. como foi feito para eventos [...] me explique como funciona essa diferenciação entre UA e não UA? [...] como funciona a implementação do mapa com gps no aplicativo e como funciona o clique no local abrindo o local no mapa [...] [validação modular passo a passo da cascata inteira de Locais]
+GOOGLE. **Antigravity**. Assistente de IA para Engenharia de Software. Disponível em: https://antigravity.google.com. Acesso em: 03 nov. 2026. Questão: Apêndice <X>, Seção <X.1>.
 
-### Referência bibliográfica
-
-GOOGLE. **Antigravity**. Assistente de IA para Engenharia de Software. Disponível em: https://antigravity.google.com. Acesso em: 30 out. 2026.
+<!-- Preencher <X> na editoração, junto com o apêndice de prompts. -->

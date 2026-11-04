@@ -5,7 +5,7 @@
 | **Código** | `DSeq-AvalRegistrar-02` |
 | **Título** | Sequência de E1: escolher a UA e carregar o questionário |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalRegistrar-01`, `DAtv-AvalRegistrar-01`, `DIhc-AvalRegistrar-02`, `DIhc-AvalRegistrar-03`, `DCla-AvalRegistrar-01`, `DCla-AvalRegistrar-03`, `DCla-AvalRegistrar-04`, `DCla-Comum-02`, `DCla-Comum-03`, `DEst-Comum-01`, `DSeq-AvalRegistrar-01`, `Contrato-AvalRegistrar-01` |
 

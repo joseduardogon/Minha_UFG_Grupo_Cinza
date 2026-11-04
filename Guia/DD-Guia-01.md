@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DD-Guia-01` |
 | **Título** | Entrada de DD do Guia Estudantil |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Guia-01`, `DCdu-Guia-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

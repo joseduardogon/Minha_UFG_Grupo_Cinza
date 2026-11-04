@@ -5,7 +5,7 @@
 | **Código** | `DIhc-Seguranca-01` |
 | **Título** | Interface da tela de Segurança |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Seguranca-01`, `DAtv-Seguranca-01`, `DEst-Seguranca-01`, `DSeq-Seguranca-01`, `DSeq-Seguranca-02` |
 

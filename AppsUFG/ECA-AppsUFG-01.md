@@ -5,7 +5,7 @@
 | **Código** | `ECA-AppsUFG-01` |
 | **Título** | Regras E-C-A de Apps UFG |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-AppsUFG-01`, `DEst-AppsUFG-01`, `Contrato-AppsUFG-01` |
 

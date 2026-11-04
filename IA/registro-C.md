@@ -1,6 +1,6 @@
 # Registro de uso de IA – Pessoa C
 
-Autor: José Eduardo Gontijo de Carvalho (Pessoa C). Frente: Eventos, RU e Notícias, mais as entidades Regional e Campus.
+Autor: José Eduardo Gontijo de Carvalho. Frente: Eventos, RU e Notícias, mais as entidades Regional e Campus.
 
 Formato de cada entrada: identificação da IA, URL, data de acesso, resumo do uso, divisão do trabalho e prompts. A referência ABNT que vai para a bibliografia aparece no fim.
 

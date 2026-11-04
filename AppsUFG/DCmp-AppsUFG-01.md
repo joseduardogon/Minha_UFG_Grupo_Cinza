@@ -5,7 +5,7 @@
 | **Código** | `DCmp-AppsUFG-01` |
 | **Título** | Componentes do pacote Apps UFG |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DImp-Geral-01`, `DCmp-Comum-01`, `DCla-AppsUFG-01` |
 

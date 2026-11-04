@@ -5,7 +5,7 @@
 | **Código** | `DAtv-AppsUFG-01` |
 | **Título** | Consultar apps UFG e abrir na loja |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AppsUFG-01`, `DIhc-AppsUFG-01`, `DCla-Comum-01`, `DSeq-AppsUFG-01` |
 

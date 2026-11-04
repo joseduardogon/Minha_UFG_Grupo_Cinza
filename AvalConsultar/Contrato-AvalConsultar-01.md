@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-AvalConsultar-01` |
 | **Título** | Contratos de Avaliação – Consultar notas |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-AvalConsultar-01`, `DCla-AvalConsultar-02`, `DD-AvalConsultar-01`, `DSeq-AvalConsultar-01`, `DSeq-AvalConsultar-02`, `DSeq-AvalConsultar-03`, `DEst-AvalConsultar-01`, `DEst-AvalConsultar-02`, `DEst-AvalConsultar-03`, `ECA-AvalConsultar-01`, `DCla-Comum-02`, `DCla-Comum-03` |
 
