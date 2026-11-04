@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-Comum-04` |
 | **Título** | Contratos do componente ProvedorMapa |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Comum-04`, `DCmp-Comum-01`, `DImp-Geral-01` |
 

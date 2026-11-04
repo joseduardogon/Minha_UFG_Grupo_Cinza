@@ -5,7 +5,7 @@
 | **Código** | `DIhc-AvalRegistrar-04` |
 | **Título** | Tela de confirmação da avaliação (TelaConfirmacao) |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalRegistrar-01`, `DIhc-AvalRegistrar-01`, `DIhc-AvalRegistrar-03`, `DAtv-AvalRegistrar-03`, `DEst-AvalRegistrar-04`, `DSeq-AvalRegistrar-05`, `DCla-AvalRegistrar-01` |
 

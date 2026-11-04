@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-Guia-01` |
 | **Título** | Contratos das operações do pacote Guia |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Guia-01`, `DSeq-Guia-01`, `DCla-Comum-01` |
 

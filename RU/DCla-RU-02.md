@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCla-RU-02` |
 | **Título** | Classes do componente FonteCardapio |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCmp-RU-01`, `DD-RU-01`, `DCla-RU-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DSeq-RU-01`, `Contrato-RU-01` |
 

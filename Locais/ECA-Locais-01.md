@@ -5,7 +5,7 @@
 | **Código** | `ECA-Locais-01` |
 | **Título** | Regras E-C-A de Locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Locais-01`, `DEst-Locais-01`, `Contrato-Locais-01` |
 

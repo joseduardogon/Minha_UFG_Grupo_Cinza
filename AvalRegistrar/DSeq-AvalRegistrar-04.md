@@ -5,7 +5,7 @@
 | **Código** | `DSeq-AvalRegistrar-04` |
 | **Título** | Sequência de E2/E3: navegar entre dimensões |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalRegistrar-01`, `DAtv-AvalRegistrar-02`, `DIhc-AvalRegistrar-03`, `DEst-AvalRegistrar-03`, `DCla-AvalRegistrar-01`, `DCla-Comum-03`, `Contrato-AvalRegistrar-01` |
 

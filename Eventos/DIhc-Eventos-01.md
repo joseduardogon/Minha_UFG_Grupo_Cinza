@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DIhc-Eventos-01` |
 | **Título** | Protótipo da tela Eventos |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Eventos-01`, `DAtv-Eventos-01`, `DAtv-Eventos-02`, `DAtv-Eventos-03`, `DEst-Eventos-01`, `DCla-Eventos-01`, `DSeq-Eventos-01`, `DSeq-Eventos-02`, `DSeq-Eventos-03`, `DSeq-Eventos-04`, `DSeq-Eventos-05` |
 

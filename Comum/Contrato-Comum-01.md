@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-Comum-01` |
 | **Título** | Contratos do componente LinkExterno |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Comum-01`, `DCmp-Comum-01`, `ECA-Comum-01`, `DSeq-Guia-01`, `DSeq-Radio-03` |
 

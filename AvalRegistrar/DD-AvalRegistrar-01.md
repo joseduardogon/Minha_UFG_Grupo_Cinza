@@ -5,7 +5,7 @@
 | **Código** | `DD-AvalRegistrar-01` |
 | **Título** | Entrada de DD de Avaliação de UA (registrar) |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalRegistrar-01`, `DCla-AvalRegistrar-03`, `DCla-AvalRegistrar-04`, `DD-Locais-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

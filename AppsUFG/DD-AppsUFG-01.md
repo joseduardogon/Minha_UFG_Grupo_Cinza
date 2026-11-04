@@ -5,7 +5,7 @@
 | **Código** | `DD-AppsUFG-01` |
 | **Título** | Entrada de DD dos Apps UFG |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Pessoa C |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-AppsUFG-01`, `DCdu-AppsUFG-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

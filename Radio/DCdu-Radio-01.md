@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCdu-Radio-01` |
 | **Título** | Casos de uso da Rádio |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DAtv-Radio-01`, `DAtv-Radio-02`, `DAtv-Radio-03`, `DIhc-Radio-01` |
 

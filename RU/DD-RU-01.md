@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DD-RU-01` |
 | **Título** | Entrada de DD do RU |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-RU-02`, `DCdu-RU-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

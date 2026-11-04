@@ -2,8 +2,8 @@
 
 Programação semanal da Rádio UFG e abertura do player externo.
 
-- **Dono (autor):** Pessoa D
-- **Revisor:** Pessoa C
+- **Dono (autor):** Phablo Tavares Paixão
+- **Revisor:** José Eduardo Gontijo de Carvalho
 - **Prefixo de código dos itens:** `Radio` (ex.: `DAtv-Radio-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

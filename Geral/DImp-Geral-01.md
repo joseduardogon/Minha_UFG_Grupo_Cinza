@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DImp-Geral-01` |
 | **Título** | Implantação do sistema Minha UFG |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em revisão |
 | **Rastreia para** | `DCdu-Geral-01`, `DPac-Geral-01`, `DCmp-Comum-01`, `DCla-Comum-01`, `DCla-Comum-02`, `DCla-Comum-04` |
 

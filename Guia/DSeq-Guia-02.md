@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-Guia-02` |
 | **Título** | Sequência de E2/E3: retorno do seletor de apps |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-Guia-01`, `DIhc-Guia-01`, `DEst-Guia-01`, `DCdu-Guia-01` |
 

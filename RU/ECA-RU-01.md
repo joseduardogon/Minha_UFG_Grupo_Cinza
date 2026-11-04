@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `ECA-RU-01` |
 | **Título** | Regras ativas (evento-condição-ação) do pacote RU |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-RU-01`, `DEst-RU-02`, `DEst-Comum-01`, `ECA-Comum-01`, `Contrato-RU-01` |
 

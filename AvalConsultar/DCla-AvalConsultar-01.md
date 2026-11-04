@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCla-AvalConsultar-01` |
 | **Título** | Classes do componente TelasNotas |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCmp-AvalConsultar-01`, `DCla-AvalConsultar-02`, `DCla-Comum-03`, `DIhc-AvalConsultar-01`, `DIhc-AvalConsultar-02`, `DIhc-AvalConsultar-03`, `DAtv-AvalConsultar-01`, `DAtv-AvalConsultar-02`, `DAtv-AvalConsultar-03`, `DD-Locais-01` |
 

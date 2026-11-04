@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-Radio-02` |
 | **Título** | Trocar o dia da programação |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Radio-01`, `DAtv-Radio-01`, `DIhc-Radio-01` |
 

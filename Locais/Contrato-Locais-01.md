@@ -5,7 +5,7 @@
 | **Código** | `Contrato-Locais-01` |
 | **Título** | Contratos das operações do pacote Locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Locais-01`, `DCla-Locais-02`, `DSeq-Locais-01`, `DSeq-Locais-02`, `DSeq-Locais-03`, `DCla-Comum-03`, `DCla-Comum-04` |
 

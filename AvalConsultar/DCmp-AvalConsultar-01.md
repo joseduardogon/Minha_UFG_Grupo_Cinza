@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCmp-AvalConsultar-01` |
 | **Título** | Componentes do pacote AvalConsultar |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DCmp-Comum-01`, `DCmp-AvalRegistrar-01`, `DCla-AvalConsultar-01`, `DCla-AvalConsultar-02`, `DD-AvalConsultar-01`, `DIhc-AvalConsultar-01`, `DIhc-AvalConsultar-02`, `DIhc-AvalConsultar-03` |
 

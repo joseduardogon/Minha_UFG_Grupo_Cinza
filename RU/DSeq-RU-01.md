@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-RU-01` |
 | **Título** | Sequência de A1: tocar no cartão de uma refeição |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-RU-01`, `DIhc-RU-01`, `DIhc-RU-02`, `DCla-RU-01`, `DCla-RU-02`, `DCla-Comum-02`, `DCla-Comum-03`, `DEst-Comum-01`, `Contrato-RU-01` |
 

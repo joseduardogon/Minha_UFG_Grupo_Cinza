@@ -5,7 +5,7 @@
 | **Código** | `DEst-AvalRegistrar-04` |
 | **Título** | Estados da TelaConfirmacao |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DIhc-AvalRegistrar-04`, `DEst-AvalRegistrar-01`, `DEst-AvalRegistrar-03`, `DSeq-AvalRegistrar-05`, `DCla-AvalRegistrar-01` |
 

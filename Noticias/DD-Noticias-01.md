@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DD-Noticias-01` |
 | **Título** | Entrada de DD de Notícias |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Noticias-02`, `DCdu-Noticias-01`, `DD-Eventos-01`, `DD-Geral-01`, `DDados-Geral-01` |
 

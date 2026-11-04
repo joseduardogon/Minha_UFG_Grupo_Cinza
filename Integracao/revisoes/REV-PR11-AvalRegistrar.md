@@ -1,8 +1,8 @@
 # REV-PR11 – Revisão de Avaliação – Registrar
 
 - **PR:** #11 "Reapply 'Document AvalRegistrar specification'" (branch `a/avalregistrar-pr`, commit `e6dbf88`)
-- **Autor:** Pessoa C
-- **Revisor:** Pessoa D
+- **Autor:** José Eduardo Gontijo de Carvalho
+- **Revisor:** Phablo Tavares Paixão
 - **Data:** 31/10/2026
 - **Tarefa:** D-REV-01
 

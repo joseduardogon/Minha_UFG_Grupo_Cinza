@@ -5,7 +5,7 @@
 | **Código** | `DEst-AppsUFG-01` |
 | **Título** | Estados da tela de Apps UFG |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AppsUFG-01`, `DIhc-AppsUFG-01`, `DIhc-Inicio-01`, `DSeq-AppsUFG-01` |
 

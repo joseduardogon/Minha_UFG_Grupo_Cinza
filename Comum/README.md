@@ -2,8 +2,8 @@
 
 Componentes compartilhados (contrato, seção 9): Abertura de link externo, Acesso à API, Estados de tela remota e Provedor de mapa. Modelados uma vez aqui e só referenciados pelos demais.
 
-- **Dono (autor):** Pessoa D
-- **Revisor:** Pessoa C
+- **Dono (autor):** Phablo Tavares Paixão
+- **Revisor:** José Eduardo Gontijo de Carvalho
 - **Prefixo de código dos itens:** `Comum` (ex.: `DAtv-Comum-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

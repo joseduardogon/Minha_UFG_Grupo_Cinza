@@ -5,7 +5,7 @@
 | **Código** | `ECA-AvalRegistrar-01` |
 | **Título** | Regras E-C-A de Avaliação de UA (registrar) |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-AvalRegistrar-01`, `DCla-AvalRegistrar-04`, `DEst-AvalRegistrar-02`, `DEst-AvalRegistrar-03`, `DEst-Comum-01`, `ECA-Comum-01`, `Contrato-AvalRegistrar-01` |
 

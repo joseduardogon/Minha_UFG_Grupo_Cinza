@@ -1,6 +1,6 @@
 # Registro de uso de IA – Pessoa D
 
-Autor: Phablo (Pessoa D). Frente: transversais (DImp, DPac, pacote Comum, DCdu geral e tela inicial), Rádio, Guia Estudantil e Avaliação – Consultar notas, mais a integração (DDados e DD consolidados, recebimento das entidades e matriz de rastreabilidade) e a revisão dos itens da Pessoa C.
+Autor: Phablo Tavares Paixão. Frente: transversais (DImp, DPac, pacote Comum, DCdu geral e tela inicial), Rádio, Guia Estudantil e Avaliação – Consultar notas, mais a integração (DDados e DD consolidados, recebimento das entidades e matriz de rastreabilidade) e a revisão dos itens de José Eduardo Gontijo de Carvalho.
 
 Formato de cada entrada: identificação da IA, URL, data de acesso, resumo do uso, divisão do trabalho e prompts. A referência ABNT que vai para a bibliografia aparece no fim de cada entrada.
 

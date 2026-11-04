@@ -2,8 +2,8 @@
 
 Lista fixa de aplicativos da UFG com abertura da Play Store.
 
-- **Dono (autor):** Pessoa B
-- **Revisor:** Sem dupla fixa: quem estiver livre
+- **Dono (autor):** Maicon Brendo da Silva
+- **Revisor:** José Eduardo Gontijo de Carvalho
 - **Prefixo de código dos itens:** `AppsUFG` (ex.: `DAtv-AppsUFG-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

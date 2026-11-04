@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DIhc-RU-01` |
 | **Título** | Protótipo da tela RU (escolha da refeição) |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-RU-01`, `DAtv-RU-01`, `DIhc-RU-02`, `DIhc-Inicio-01`, `DEst-RU-01`, `DSeq-RU-01` |
 

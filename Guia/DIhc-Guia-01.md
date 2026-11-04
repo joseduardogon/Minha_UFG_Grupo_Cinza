@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DIhc-Guia-01` |
 | **Título** | Abertura do guia estudantil pelo seletor de apps |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Guia-01`, `DAtv-Guia-01`, `DIhc-Inicio-01`, `DEst-Guia-01` |
 

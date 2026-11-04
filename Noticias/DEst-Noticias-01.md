@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DEst-Noticias-01` |
 | **Título** | Estados da tela Notícias |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DIhc-Noticias-01`, `DEst-Comum-01`, `DCla-Comum-03`, `DSeq-Noticias-01`, `DSeq-Noticias-02`, `DSeq-Noticias-03`, `ECA-Noticias-01` |
 

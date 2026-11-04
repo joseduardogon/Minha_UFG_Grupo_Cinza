@@ -2,8 +2,8 @@
 
 Abertura do guiaestudantil.pdf pelo seletor de apps do Android.
 
-- **Dono (autor):** Pessoa D
-- **Revisor:** Pessoa C
+- **Dono (autor):** Phablo Tavares Paixão
+- **Revisor:** José Eduardo Gontijo de Carvalho
 - **Prefixo de código dos itens:** `Guia` (ex.: `DAtv-Guia-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

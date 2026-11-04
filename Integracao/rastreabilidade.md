@@ -3,7 +3,7 @@
 | Campo | Valor |
 |---|---|
 | **Tarefa** | `D-INT-04` – Rastreabilidade |
-| **Responsável** | Pessoa D (integração) |
+| **Responsável** | Phablo Tavares Paixão (integração) |
 | **Data** | 02/11/2026 |
 | **Critério** | Apêndice B, critério 5.2 |
 
@@ -29,7 +29,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 ## 3. Matriz
 
 
-### Geral (dono: Pessoa D)
+### Geral (dono: Phablo Tavares Paixão)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -39,14 +39,14 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `DPac-Geral-01` | `DCdu-Geral-01`, `DImp-Geral-01`, `DCmp-Comum-01`, `DCmp-Seguranca-01`, `DCmp-Radio-01`, `DCmp-Guia-01`, `DCmp-Eventos-01`, `DCmp-Noticias-01`, `DCmp-RU-01`, `DCmp-Locais-01`, `DCmp-AppsUFG-01`, `DCmp-AvalRegistrar-01`, `DCmp-AvalConsultar-01`, `DIhc-Inicio-01`, `DDados-Geral-01`, `DD-Geral-01` | `DCdu-AppsUFG-01`, `DCdu-AvalRegistrar-01`, `DCdu-Geral-01`, `DCdu-Locais-01`, `DCdu-Seguranca-01`, `DCla-AppsUFG-01`, `DCla-Locais-01`, `DCla-Locais-02`, `DCla-Seguranca-01`, `DCmp-AppsUFG-01`, `DCmp-AvalConsultar-01`, `DCmp-AvalRegistrar-01`, `DCmp-Comum-01`, `DCmp-Eventos-01`, `DCmp-Guia-01`, `DCmp-Locais-01`, `DCmp-Noticias-01`, `DCmp-RU-01`, `DCmp-Radio-01`, `DCmp-Seguranca-01`, `DDados-Geral-01`, `DEst-Inicio-01`, `DIhc-Inicio-01`, `DImp-Geral-01` |
 | `DImp-Geral-01` | `DCdu-Geral-01`, `DPac-Geral-01`, `DCmp-Comum-01`, `DCla-Comum-01`, `DCla-Comum-02`, `DCla-Comum-04` | `Contrato-Comum-02`, `Contrato-Comum-04`, `DCdu-Geral-01`, `DCla-Comum-01`, `DCla-Comum-02`, `DCla-Comum-04`, `DCmp-AppsUFG-01`, `DCmp-Comum-01`, `DCmp-Locais-01`, `DCmp-Seguranca-01`, `DPac-Geral-01` |
 
-### Inicio (dono: Pessoa D)
+### Inicio (dono: Phablo Tavares Paixão)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
 | `DIhc-Inicio-01` | `DCdu-Geral-01`, `DPac-Geral-01`, `DEst-Inicio-01`, `DIhc-Guia-01`, `DIhc-Radio-01`, `DIhc-Eventos-01` | `DCdu-AvalRegistrar-01`, `DEst-AppsUFG-01`, `DEst-Inicio-01`, `DEst-Seguranca-01`, `DIhc-AvalRegistrar-01`, `DIhc-Guia-01`, `DIhc-RU-01`, `DPac-Geral-01`, `DSeq-Guia-01` |
 | `DEst-Inicio-01` | `DIhc-Inicio-01`, `DEst-Guia-01`, `DEst-Radio-01`, `DEst-Eventos-01`, `DPac-Geral-01` | `DEst-Guia-01`, `DEst-RU-01`, `DIhc-Inicio-01` |
 
-### Comum (dono: Pessoa D)
+### Comum (dono: Phablo Tavares Paixão)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -62,7 +62,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `Contrato-Comum-04` | `DCla-Comum-04`, `DCmp-Comum-01`, `DImp-Geral-01` | – |
 | `ECA-Comum-01` | `DCla-Comum-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DEst-Comum-01`, `Contrato-Comum-01`, `Contrato-Comum-02`, `Contrato-Comum-03` | `Contrato-Comum-01`, `Contrato-Comum-02`, `Contrato-Comum-03`, `ECA-AvalRegistrar-01`, `ECA-Eventos-01`, `ECA-Noticias-01`, `ECA-RU-01` |
 
-### Seguranca (dono: Pessoa B)
+### Seguranca (dono: Maicon Brendo da Silva)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -78,7 +78,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `Contrato-Seguranca-01` | `DCla-Seguranca-01`, `DSeq-Seguranca-01`, `DSeq-Seguranca-02`, `DCla-Comum-01` | `ECA-Seguranca-01` |
 | `ECA-Seguranca-01` | `DCla-Seguranca-01`, `DEst-Seguranca-01`, `Contrato-Seguranca-01` | – |
 
-### Locais (dono: Pessoa B)
+### Locais (dono: Maicon Brendo da Silva)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -99,7 +99,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `Contrato-Locais-01` | `DCla-Locais-01`, `DCla-Locais-02`, `DSeq-Locais-01`, `DSeq-Locais-02`, `DSeq-Locais-03`, `DCla-Comum-03`, `DCla-Comum-04` | `ECA-Locais-01` |
 | `ECA-Locais-01` | `DCla-Locais-01`, `DEst-Locais-01`, `Contrato-Locais-01` | – |
 
-### AppsUFG (dono: Pessoa B)
+### AppsUFG (dono: Maicon Brendo da Silva)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -114,7 +114,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `Contrato-AppsUFG-01` | `DCla-AppsUFG-01`, `DSeq-AppsUFG-01`, `DCla-Comum-01` | `ECA-AppsUFG-01` |
 | `ECA-AppsUFG-01` | `DCla-AppsUFG-01`, `DEst-AppsUFG-01`, `Contrato-AppsUFG-01` | – |
 
-### Radio (dono: Pessoa D)
+### Radio (dono: Phablo Tavares Paixão)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -134,7 +134,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `Contrato-Radio-01` | `DCla-Radio-01`, `DCla-Radio-02`, `DSeq-Radio-01`, `DSeq-Radio-02`, `DSeq-Radio-03`, `ECA-Radio-01` | `Contrato-Comum-03`, `DSeq-Radio-01`, `DSeq-Radio-02`, `ECA-Radio-01` |
 | `ECA-Radio-01` | `DCla-Radio-01`, `DEst-Radio-01`, `DEst-Comum-01`, `Contrato-Radio-01` | `Contrato-Radio-01`, `DEst-Radio-01`, `DSeq-Radio-03` |
 
-### Guia (dono: Pessoa D)
+### Guia (dono: Phablo Tavares Paixão)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -149,7 +149,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `DEst-Guia-01` | `DIhc-Guia-01`, `DSeq-Guia-01`, `DSeq-Guia-02`, `DEst-Inicio-01` | `DEst-Inicio-01`, `DIhc-Guia-01`, `DSeq-Guia-02` |
 | `Contrato-Guia-01` | `DCla-Guia-01`, `DSeq-Guia-01`, `DCla-Comum-01` | `DSeq-Guia-01` |
 
-### AvalConsultar (dono: Pessoa D)
+### AvalConsultar (dono: Phablo Tavares Paixão)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -173,7 +173,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `Contrato-AvalConsultar-01` | `DCla-AvalConsultar-01`, `DCla-AvalConsultar-02`, `DD-AvalConsultar-01`, `DSeq-AvalConsultar-01`, `DSeq-AvalConsultar-02`, `DSeq-AvalConsultar-03`, `DEst-AvalConsultar-01`, `DEst-AvalConsultar-02`, `DEst-AvalConsultar-03`, `ECA-AvalConsultar-01`, `DCla-Comum-02`, `DCla-Comum-03` | `DEst-AvalConsultar-01`, `DEst-AvalConsultar-02`, `DEst-AvalConsultar-03`, `DSeq-AvalConsultar-01`, `DSeq-AvalConsultar-02`, `DSeq-AvalConsultar-03`, `ECA-AvalConsultar-01` |
 | `ECA-AvalConsultar-01` | `DCla-AvalConsultar-01`, `DEst-AvalConsultar-01`, `DEst-AvalConsultar-02`, `DEst-AvalConsultar-03`, `DEst-Comum-01`, `Contrato-AvalConsultar-01` | `Contrato-AvalConsultar-01`, `DEst-AvalConsultar-01`, `DEst-AvalConsultar-02`, `DEst-AvalConsultar-03` |
 
-### Eventos (dono: Pessoa C)
+### Eventos (dono: José Eduardo Gontijo de Carvalho)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -195,7 +195,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `Contrato-Eventos-01` | `DCla-Eventos-01`, `DCla-Eventos-02`, `DSeq-Eventos-01`, `DSeq-Eventos-02`, `DSeq-Eventos-03`, `DSeq-Eventos-04`, `DSeq-Eventos-05`, `ECA-Eventos-01`, `Contrato-Comum-01`, `Contrato-Comum-02`, `Contrato-Comum-03` | `Contrato-Comum-03`, `DCla-Eventos-01`, `DCla-Eventos-02`, `DSeq-Eventos-01`, `DSeq-Eventos-02`, `DSeq-Eventos-03`, `DSeq-Eventos-04`, `DSeq-Eventos-05`, `ECA-Eventos-01` |
 | `ECA-Eventos-01` | `DCla-Eventos-01`, `DEst-Eventos-01`, `DEst-Comum-01`, `Contrato-Eventos-01`, `ECA-Comum-01` | `Contrato-Eventos-01`, `DEst-Eventos-01` |
 
-### RU (dono: Pessoa C)
+### RU (dono: José Eduardo Gontijo de Carvalho)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -215,7 +215,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `Contrato-RU-01` | `DCla-RU-01`, `DCla-RU-02`, `DD-RU-01`, `DSeq-RU-01`, `DSeq-RU-02`, `DEst-RU-01`, `DEst-RU-02`, `ECA-RU-01` | `DCla-RU-01`, `DCla-RU-02`, `DEst-RU-01`, `DSeq-RU-01`, `DSeq-RU-02`, `ECA-RU-01` |
 | `ECA-RU-01` | `DCla-RU-01`, `DEst-RU-02`, `DEst-Comum-01`, `ECA-Comum-01`, `Contrato-RU-01` | `Contrato-RU-01`, `DEst-RU-02`, `DSeq-RU-02` |
 
-### Noticias (dono: Pessoa C)
+### Noticias (dono: José Eduardo Gontijo de Carvalho)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|
@@ -234,7 +234,7 @@ Observação, sem correção (decisão da Pessoa D, 02/11/2026): itens que nenhu
 | `Contrato-Noticias-01` | `DCla-Noticias-01`, `DCla-Noticias-02`, `DSeq-Noticias-01`, `DSeq-Noticias-02`, `DSeq-Noticias-03`, `DEst-Noticias-01`, `ECA-Noticias-01`, `DD-Noticias-01` | `DCla-Noticias-01`, `DCla-Noticias-02`, `DSeq-Noticias-01`, `DSeq-Noticias-02`, `DSeq-Noticias-03`, `ECA-Noticias-01` |
 | `ECA-Noticias-01` | `DCla-Noticias-01`, `DEst-Noticias-01`, `DEst-Comum-01`, `ECA-Comum-01`, `Contrato-Noticias-01` | `Contrato-Noticias-01`, `DEst-Noticias-01`, `DSeq-Noticias-03` |
 
-### AvalRegistrar (dono: Pessoa C)
+### AvalRegistrar (dono: José Eduardo Gontijo de Carvalho)
 
 | Item | Rastreia para | Rastreado por |
 |---|---|---|

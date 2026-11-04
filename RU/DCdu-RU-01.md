@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCdu-RU-01` |
 | **Título** | Casos de uso do Restaurante Universitário |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DAtv-RU-01`, `DAtv-RU-02`, `DIhc-RU-01`, `DIhc-RU-02`, `DEst-Comum-01` |
 

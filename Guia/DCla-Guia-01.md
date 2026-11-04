@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCla-Guia-01` |
 | **Título** | Classes do componente AberturaGuia |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCmp-Guia-01`, `DCla-Comum-01`, `DD-Guia-01`, `DAtv-Guia-01` |
 

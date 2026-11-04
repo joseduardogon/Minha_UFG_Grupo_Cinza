@@ -5,7 +5,7 @@
 | **Código** | `DCla-Locais-01` |
 | **Título** | Classes de interface e controle de Locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DCmp-Locais-01`, `DCla-Comum-03`, `DCla-Comum-04`, `DIhc-Locais-01`, `DIhc-Locais-02`, `DSeq-Locais-01`, `DSeq-Locais-02`, `DSeq-Locais-03` |
 

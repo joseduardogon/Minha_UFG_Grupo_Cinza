@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DEst-AvalConsultar-03` |
 | **Título** | Estados da TelaNotasUA |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DIhc-AvalConsultar-03`, `DCla-AvalConsultar-01`, `DEst-Comum-01`, `DSeq-AvalConsultar-03`, `ECA-AvalConsultar-01`, `Contrato-AvalConsultar-01` |
 

@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCla-AvalConsultar-02` |
 | **Título** | Classes das fontes de notas |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCmp-AvalConsultar-01`, `DCla-AvalConsultar-01`, `DD-AvalConsultar-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DD-AvalRegistrar-01`, `DD-Locais-01` |
 

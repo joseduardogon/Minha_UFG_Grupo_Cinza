@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DEst-Radio-01` |
 | **Título** | Estados da tela da Rádio |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DIhc-Radio-01`, `DEst-Comum-01`, `DSeq-Radio-01`, `DSeq-Radio-02`, `DSeq-Radio-03`, `ECA-Radio-01` |
 

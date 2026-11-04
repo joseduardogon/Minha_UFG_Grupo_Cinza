@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DD-Geral-01` |
 | **Título** | Dicionário de dados consolidado |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DDados-Geral-01`, `DD-Eventos-01`, `DD-Noticias-01`, `DD-RU-01`, `DD-Radio-01`, `DD-Locais-01`, `DD-AvalRegistrar-01`, `DD-AvalConsultar-01`, `DD-Guia-01`, `DD-Seguranca-01`, `DD-AppsUFG-01`, `DCla-Comum-04` |
 

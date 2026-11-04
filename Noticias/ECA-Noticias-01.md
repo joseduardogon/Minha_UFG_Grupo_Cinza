@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `ECA-Noticias-01` |
 | **Título** | Regras ativas (evento-condição-ação) do pacote Noticias |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Noticias-01`, `DEst-Noticias-01`, `DEst-Comum-01`, `ECA-Comum-01`, `Contrato-Noticias-01` |
 

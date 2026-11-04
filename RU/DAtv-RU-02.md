@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-RU-02` |
 | **Título** | Atividades de UC06.2: escolher o dia da semana |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-RU-01`, `DAtv-RU-01`, `DSeq-RU-02`, `DIhc-RU-02`, `DEst-Comum-01` |
 

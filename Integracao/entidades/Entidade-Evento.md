@@ -3,8 +3,8 @@
 | Campo | Valor |
 |---|---|
 | **Entidade** | `Evento` |
-| **Dono (autor)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Entregue a** | Phablo Tavares Paixão (Pessoa D), para integração no `DDados-Geral` e no `DD-Geral` |
+| **Dono (autor)** | José Eduardo Gontijo de Carvalho |
+| **Entregue a** | Phablo Tavares Paixão, para integração no `DDados-Geral` e no `DD-Geral` |
 | **Usada por** | Eventos (`DCla-Eventos-02`) |
 | **Status** | Entregue para integração |
 | **Conteúdo igual ao de** | `DD-Eventos-01` (Tabela 3 e associações) |

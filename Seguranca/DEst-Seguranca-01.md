@@ -5,7 +5,7 @@
 | **Código** | `DEst-Seguranca-01` |
 | **Título** | Estados da tela de Segurança |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Seguranca-01`, `DIhc-Seguranca-01`, `DIhc-Inicio-01`, `DSeq-Seguranca-01`, `DSeq-Seguranca-02` |
 

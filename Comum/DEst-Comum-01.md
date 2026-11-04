@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DEst-Comum-01` |
 | **Título** | Estados genéricos de tela com conteúdo remoto |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em revisão |
 | **Rastreia para** | `DCla-Comum-03`, `DCmp-Comum-01` |
 

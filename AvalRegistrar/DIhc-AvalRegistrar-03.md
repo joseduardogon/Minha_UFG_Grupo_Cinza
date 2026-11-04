@@ -5,7 +5,7 @@
 | **Código** | `DIhc-AvalRegistrar-03` |
 | **Título** | Tela do questionário de qualidade (TelaQuestionario) |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalRegistrar-01`, `DIhc-AvalRegistrar-02`, `DIhc-AvalRegistrar-04`, `DAtv-AvalRegistrar-02`, `DAtv-AvalRegistrar-03`, `DEst-AvalRegistrar-03`, `DEst-Comum-01`, `DSeq-AvalRegistrar-02`, `DSeq-AvalRegistrar-03`, `DSeq-AvalRegistrar-04`, `DSeq-AvalRegistrar-05`, `DCla-AvalRegistrar-01` |
 

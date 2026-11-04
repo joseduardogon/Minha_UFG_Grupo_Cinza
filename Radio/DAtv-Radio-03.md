@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-Radio-03` |
 | **Título** | Ouvir a rádio |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Radio-01`, `DIhc-Radio-01`, `DCla-Comum-01`, `DAtv-Radio-01` |
 

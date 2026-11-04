@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-Radio-03` |
 | **Título** | Sequência de E3: ouvir a rádio |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-Radio-03`, `DIhc-Radio-01`, `DCla-Radio-01`, `DCla-Comum-01`, `DSeq-Radio-01`, `ECA-Radio-01` |
 

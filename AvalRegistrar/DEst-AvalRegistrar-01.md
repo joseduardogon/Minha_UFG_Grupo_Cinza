@@ -5,7 +5,7 @@
 | **Código** | `DEst-AvalRegistrar-01` |
 | **Título** | Estados da TelaAvaliacao |
 | **Autor(a)** | José Eduardo Gontijo de Carvalho |
-| **Revisor(a)** | Maicon Brendo da Silva (Pessoa B) |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DIhc-AvalRegistrar-01`, `DEst-AvalRegistrar-02`, `DEst-AvalRegistrar-04`, `DSeq-AvalRegistrar-01`, `DCla-AvalRegistrar-01` |
 

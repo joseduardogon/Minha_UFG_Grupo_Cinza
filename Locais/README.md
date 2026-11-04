@@ -2,8 +2,8 @@
 
 Lista de locais do Campus Samambaia, mapa com categorias e GPS.
 
-- **Dono (autor):** Pessoa B
-- **Revisor:** Sem dupla fixa: quem estiver livre
+- **Dono (autor):** Maicon Brendo da Silva
+- **Revisor:** José Eduardo Gontijo de Carvalho
 - **Prefixo de código dos itens:** `Locais` (ex.: `DAtv-Locais-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

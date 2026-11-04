@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCmp-Eventos-01` |
 | **Título** | Componentes do pacote Eventos |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DCmp-Comum-01`, `DCla-Eventos-01`, `DCla-Eventos-02`, `DSeq-Eventos-01` |
 

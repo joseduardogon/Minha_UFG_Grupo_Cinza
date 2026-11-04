@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DEst-Inicio-01` |
 | **Título** | Estados da tela inicial |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DIhc-Inicio-01`, `DEst-Guia-01`, `DEst-Radio-01`, `DEst-Eventos-01`, `DPac-Geral-01` |
 

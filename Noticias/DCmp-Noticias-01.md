@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCmp-Noticias-01` |
 | **Título** | Componentes do pacote Noticias |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DCmp-Comum-01`, `DCla-Noticias-01`, `DCla-Noticias-02`, `DSeq-Noticias-01` |
 

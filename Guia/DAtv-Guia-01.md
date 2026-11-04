@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-Guia-01` |
 | **Título** | Consultar guia estudantil |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Guia-01`, `DIhc-Guia-01`, `DCla-Comum-01` |
 

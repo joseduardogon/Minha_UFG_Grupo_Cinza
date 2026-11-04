@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCla-RU-01` |
 | **Título** | Classes do componente TelasRU |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCmp-RU-01`, `DCla-RU-02`, `DCla-Comum-02`, `DCla-Comum-03`, `DIhc-RU-01`, `DIhc-RU-02`, `DSeq-RU-01`, `DSeq-RU-02`, `Contrato-RU-01` |
 

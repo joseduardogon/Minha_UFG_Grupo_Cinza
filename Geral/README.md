@@ -2,8 +2,8 @@
 
 Artefatos do sistema inteiro: DCdu-Geral, DImp-Geral, DPac-Geral, DDados-Geral e DD-Geral.
 
-- **Dono (autor):** Pessoa D
-- **Revisor:** Pessoa C
+- **Dono (autor):** Phablo Tavares Paixão
+- **Revisor:** José Eduardo Gontijo de Carvalho
 - **Prefixo de código dos itens:** `Geral` (ex.: `DAtv-Geral-01`)
 
 Cada item de informação desta pasta é um par de arquivos com o mesmo nome:

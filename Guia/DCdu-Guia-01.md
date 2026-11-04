@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCdu-Guia-01` |
 | **Título** | Casos de uso do Guia Estudantil |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Geral-01`, `DAtv-Guia-01`, `DIhc-Guia-01`, `DCla-Comum-01` |
 

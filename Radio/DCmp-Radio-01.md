@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCmp-Radio-01` |
 | **Título** | Componentes do pacote Radio |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DPac-Geral-01`, `DCmp-Comum-01`, `DCla-Radio-01`, `DCla-Radio-02`, `DAtv-Radio-01` |
 

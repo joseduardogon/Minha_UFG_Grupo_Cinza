@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DAtv-AvalConsultar-01` |
 | **Título** | Consultar a nota da UFG e as médias por área CNPq |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | Maicon Brendo da Silva |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-AvalConsultar-01`, `DIhc-AvalConsultar-01`, `DIhc-AvalRegistrar-01`, `DAtv-AvalConsultar-02`, `DEst-Comum-01` |
 

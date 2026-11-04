@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DSeq-RU-02` |
 | **Título** | Sequência de A1: tocar em um dia do seletor |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DAtv-RU-02`, `DIhc-RU-02`, `DSeq-RU-01`, `DCla-RU-01`, `Contrato-RU-01`, `ECA-RU-01` |
 

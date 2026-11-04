@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `Contrato-Comum-03` |
 | **Título** | Contratos do componente EstadosTelaRemota |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCla-Comum-03`, `DEst-Comum-01`, `ECA-Comum-01`, `Contrato-Radio-01`, `Contrato-Eventos-01` |
 

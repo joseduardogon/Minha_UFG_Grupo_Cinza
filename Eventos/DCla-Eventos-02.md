@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCla-Eventos-02` |
 | **Título** | Classes do componente FonteEventos |
-| **Autor(a)** | José Eduardo Gontijo de Carvalho (Pessoa C) |
-| **Revisor(a)** | Phablo Tavares Paixão (Pessoa D) |
+| **Autor(a)** | José Eduardo Gontijo de Carvalho |
+| **Revisor(a)** | Phablo Tavares Paixão |
 | **Status** | Em produção |
 | **Rastreia para** | `DCmp-Eventos-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DCla-Eventos-01`, `DSeq-Eventos-01`, `DSeq-Eventos-05`, `Contrato-Eventos-01`, `DD-Eventos-01` |
 

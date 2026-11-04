@@ -5,7 +5,7 @@
 | **Código** | `DEst-Locais-01` |
 | **Título** | Estados da tela de Locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Locais-01`, `DIhc-Locais-01`, `DIhc-Locais-02`, `DEst-Comum-01`, `DSeq-Locais-01`, `DSeq-Locais-02`, `DSeq-Locais-03` |
 

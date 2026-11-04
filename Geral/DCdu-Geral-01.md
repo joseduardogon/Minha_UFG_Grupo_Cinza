@@ -4,8 +4,8 @@
 |---|---|
 | **Código** | `DCdu-Geral-01` |
 | **Título** | Casos de uso gerais do app Minha UFG |
-| **Autor(a)** | Pessoa D |
-| **Revisor(a)** | Pessoa C |
+| **Autor(a)** | Phablo Tavares Paixão |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em revisão |
 | **Rastreia para** | `DCdu-Seguranca-01`, `DCdu-Radio-01`, `DCdu-Guia-01`, `DCdu-Eventos-01`, `DCdu-Noticias-01`, `DCdu-RU-01`, `DCdu-Locais-01`, `DCdu-AppsUFG-01`, `DCdu-AvalRegistrar-01`, `DCdu-AvalConsultar-01`, `DImp-Geral-01`, `DPac-Geral-01` |
 

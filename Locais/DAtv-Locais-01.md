@@ -5,7 +5,7 @@
 | **Código** | `DAtv-Locais-01` |
 | **Título** | Atividades de UC07.1: consultar lista de locais |
 | **Autor(a)** | Maicon Brendo da Silva |
-| **Revisor(a)** | Revisor(a) a definir |
+| **Revisor(a)** | José Eduardo Gontijo de Carvalho |
 | **Status** | Em produção |
 | **Rastreia para** | `DCdu-Locais-01`, `DIhc-Locais-01`, `DCla-Comum-02`, `DCla-Comum-03`, `DSeq-Locais-01` |
 
